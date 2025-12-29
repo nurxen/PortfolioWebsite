@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurxen | 3D Artist & Game Developer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Shrikhand y Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shrikhand&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'nb-blue': '#4F647D',       
+                        'nb-brown': '#905757',      
+                        'nb-white': '#FFFFFF',       
+                        'nb-peach': '#F6D6CB',      
+                        'nb-text-dark': '#3F3F3F',  
+                        'nb-bg': '#FFF9F2',         
+                        'nb-blue-dark': '#43647F',  
+                    },
+                    fontFamily: {
+                        'display': ['"Shrikhand"', 'cursive'], 
+                        'body': ['"Manrope"', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'cozy': '1.5rem',
+                        'super': '3.5rem',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'marquee': 'marquee 40s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FFF9F2;
+            color: #3F3F3F;
+            font-family: 'Manrope', sans-serif;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb {
+            background-color: #F6D6CB; 
+            border-radius: 99px;
+            border: 3px solid #FFF9F2; 
+        }
+
+        h1, h2, h3, .font-display {
+            font-family: 'Shrikhand', cursive;
+            letter-spacing: 0.02em;
+            color: #4F647D;
+        }
+        
+        .subtitle {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            color: #905757;
+            font-size: 1.15rem; 
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            line-height: 1.2;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 100%;
+            height: 10px;
+            background-image: url("data:image/svg+xml,%3Csvg width='200' height='20' viewBox='0 0 200 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,10 Q25,0 50,10 T100,10 T150,10 T200,10' fill='none' stroke='%23F6D6CB' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+        }
+
+        @media (min-width: 768px) {
+            .subtitle { font-size: 1.3rem; }
+        }
+
+        .nav-link { 
+            font-weight: 800; color: #4F647D; font-size: 0.75rem;
+            text-transform: uppercase; letter-spacing: 0.15em; cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover { color: #905757; }
+
+        .btn-standard {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+            background-color: #4F647D; color: #FFF9F2; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 0.1em; padding: 1.1rem 2.2rem;
+            border-radius: 99px; border: 2px solid #4F647D;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .btn-standard:hover {
+            background-color: #FFF9F2; color: #4F647D; transform: translateY(-2px);
+        }
+
+        .btn-peach-skill {
+            display: inline-flex; align-items: center; justify-content: center;
+            background-color: #F6D6CB; color: #905757; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 0.05em; padding: 0.5rem 1.25rem;
+            border-radius: 99px; border: 2px solid #F6D6CB;
+            transition: all 0.3s ease;
+            font-size: 0.65rem;
+        }
+        .btn-peach-skill:hover {
+            background-color: #FFF9F2; border-color: #905757; transform: scale(1.05);
+        }
+
+        /* --- CIRCULAR SLIDER --- */
+        .comparison-slider-circle { 
+            position: relative; width: 100%; max-width: 500px; aspect-ratio: 1/1;
+            margin: 0 auto; overflow: hidden; border-radius: 50%; 
+            border: 10px solid #FFFFFF; box-shadow: 0 15px 40px rgba(246, 214, 203, 0.4);
+            cursor: col-resize;
+        }
+        .comparison-slider-circle img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+        .comparison-overlay-circle { position: absolute; top: 0; left: 0; width: 50%; height: 100%; overflow: hidden; border-right: 4px solid #FFFFFF; z-index: 2; }
+        .comparison-overlay-circle img { width: 500px; height: 500px; max-width: none; }
+        .comparison-handle-circle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: #FFFFFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 10; color: #4F647D; }
+
+        .bubble-tag-hero {
+            background: #F6D6CB; 
+            border: 2px solid transparent; 
+            padding: 0.6rem 1.5rem;
+            border-radius: 99px; 
+            font-size: 0.75rem; 
+            font-weight: 800; 
+            color: #905757;
+            text-transform: uppercase; 
+            letter-spacing: 0.05em; 
+            display: flex; 
+            align-items: center; 
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+        .bubble-tag-hero:hover { 
+            background: #FFF9F2; 
+            color: #905757; 
+            border-color: #905757; 
+            transform: translateY(-2px); 
+        }
+
+        /* Waves */
+        .wave-top { fill: #F6D6CB; transform: rotate(180deg); margin-bottom: -1px; }
+        .wave-bottom { fill: #F6D6CB; margin-top: -1px; }
+
+        /* Timeline Styles */
+        .award-timeline-container { position: relative; padding-left: 3rem; }
+        .award-timeline-line { position: absolute; left: 1.5rem; top: 0; bottom: 0; width: 4px; background: #F6D6CB; border-radius: 99px; opacity: 0.6; }
+        .award-timeline-dot { position: absolute; left: 0; top: 0; width: 3.2rem; height: 3.2rem; background: #FFFFFF; border: 4px solid #4F647D; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 10; color: #4F647D; }
+        .award-timeline-content { background: #FFFFFF; padding: 2.5rem; border-radius: 3rem; border: 2px solid #F6D6CB; margin-bottom: 3rem; }
+
+        /* Footer Wave */
+        .footer-wave {
+            width: 100%;
+            height: 100px;
+            fill: #4F647D;
+            display: block;
+        }
+
+        .reveal-section { opacity: 0; transform: translateY(30px); }
+        .page-view { display: none; }
+        .page-view.active { display: block; animation: fadeIn 0.6s ease; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body class="selection:bg-nb-peach selection:text-nb-brown">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-8 py-5 bg-nb-bg/90 backdrop-blur-md border-b border-nb-peach" id="navbar">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center">
+            <a href="javascript:void(0)" onclick="showPage('about')" class="font-display text-3xl hover:text-nb-brown transition-colors">
+                nurxen<span class="text-nb-brown text-4xl">.</span>
+            </a>
+            <div class="flex flex-wrap justify-center items-center gap-8 mt-4 lg:mt-0">
+                <a onclick="showPage('about')" class="nav-link">ABOUT ME</a>
+                <a onclick="showPage('artwork')" class="nav-link">ARTWORK</a>
+                <a onclick="showPage('games')" class="nav-link">VIDEOGAMES</a>
+                <a onclick="scrollToSection('awards')" class="nav-link">AWARDS</a>
+                <a onclick="scrollToSection('skills')" class="nav-link">SKILLS</a>
+                <a onclick="scrollToSection('contact')" class="nav-link">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PÁGINA: ABOUT ME -->
+    <main id="page-about" class="page-view active pt-48">
+        
+        <section class="max-w-7xl mx-auto px-8">
+            <!-- Hero -->
+            <div class="text-center max-w-4xl mx-auto mb-28 reveal-section">
+                <h1 class="text-6xl md:text-8xl mb-6">Hi! I'm Nuria</h1>
+                <p class="subtitle mb-12">3D Artist & Game Developer</p>
+                
+                <div class="flex flex-wrap justify-center gap-3 mb-10 max-w-3xl mx-auto">
+                    <div class="bubble-tag-hero"><i class="fa-solid fa-house-circle-check"></i> Cozy isometric scenes full of detail</div>
+                    <div class="bubble-tag-hero"><i class="fa-solid fa-cube"></i> Asset creation</div>
+                    <div class="bubble-tag-hero"><i class="fa-solid fa-gamepad"></i> Game development and prototyping</div>
+                    <div class="bubble-tag-hero"><i class="fa-solid fa-wand-magic-sparkles"></i> Cute and immersive 3D environments</div>
+                </div>
+                
+                <p class="text-lg text-nb-text-dark mb-12 leading-relaxed max-w-4xl mx-auto font-medium">
+                    Passionate about creating unique and immersive experiences. Currently studying game design and development, I blend programming with 3D modeling to bring ideas to life. I’ve participated in several game jams and proudly released <strong>Unchained on Steam</strong>, turning an idea into a playable reality. I’m always working on new 3D artworks, constantly improving and experimenting. Let’s connect and create something meaningful.
+                </p>
+                
+                <div class="bg-nb-peach/10 p-10 rounded-[4rem] border-2 border-nb-peach/40 max-w-3xl mx-auto">
+                    <p class="font-bold text-nb-blue text-[10px] uppercase tracking-[0.2em] mb-6 opacity-60 text-center">Explore my creative journey!</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <a href="https://www.artstation.com/" target="_blank" class="bg-nb-white p-6 rounded-3xl border border-nb-peach/60 flex items-center gap-4 transition hover:border-nb-blue group shadow-sm">
+                            <i class="fa-brands fa-artstation text-nb-blue text-3xl"></i>
+                            <div class="text-left">
+                                <p class="font-bold text-nb-blue text-lg">ArtStation</p>
+                                <p class="text-[10px] text-nb-text-dark uppercase opacity-60 font-bold tracking-widest">Full Portfolio</p>
+                            </div>
+                        </a>
+                        <a href="https://cara.app/" target="_blank" class="bg-nb-white p-6 rounded-3xl border border-nb-peach/60 flex items-center gap-4 transition hover:border-nb-blue group shadow-sm">
+                            <i class="fa-solid fa-palette text-nb-brown text-3xl"></i>
+                            <div class="text-left">
+                                <p class="font-bold text-nb-blue text-lg">Cara</p>
+                                <p class="text-[10px] text-nb-text-dark uppercase opacity-60 font-bold tracking-widest">WIP & Sketches</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MARQUEE ACTUALIZADO -->
+            <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] +mr-[50vw] bg-nb-peach/10 border-y border-nb-peach/30 py-4 mb-28 overflow-hidden">
+                <div class="flex whitespace-nowrap animate-marquee">
+                    <div class="flex items-center gap-16 px-8">
+                        <span class="font-display text-lg text-nb-brown uppercase">3D Artist</span>
+                        <i class="fa-solid fa-star text-nb-brown opacity-20 text-xs"></i>
+                        <span class="font-display text-lg text-nb-brown uppercase">Animation</span>
+                        <i class="fa-solid fa-star text-nb-brown opacity-20 text-xs"></i>
+                        <span class="font-display text-lg text-nb-brown uppercase">Digital Art</span>
+                        <i class="fa-solid fa-star text-nb-brown opacity-20 text-xs"></i>
+                        <span class="font-display text-lg text-nb-brown uppercase">Programmer</span>
+                        <i class="fa-solid fa-star text-nb-brown opacity-20 text-xs"></i>
+                        <span class="font-display text-lg text-nb-brown uppercase">Game Developer</span>
+                    </div>
+                    <div class="flex items-center gap-16 px-8">
+                        <span class="font-display text-lg text-nb-brown uppercase">3D Artist</span>
+                        <i class="fa-solid fa-star text-nb-brown opacity-20 text-xs"></i>
+                        <span class="font-display text-lg text-nb-brown uppercase">Animation</span>
+                        <i class="fa-solid fa-star text-nb-brown opacity-20 text-xs"></i>
+                        <span class="font-display text-lg text-nb-brown uppercase">Digital Art</span>
+                        <i class="fa-solid fa-star text-nb-brown opacity-20 text-xs"></i>
+                        <span class="font-display text-lg text-nb-brown uppercase">Programmer</span>
+                        <i class="fa-solid fa-star text-nb-brown opacity-20 text-xs"></i>
+                        <span class="font-display text-lg text-nb-brown uppercase">Game Developer</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual Process -->
+            <div id="artwork-preview" class="mb-40 reveal-section">
+                <div class="text-center mb-10">
+                    <p class="subtitle mb-12">Visual Process</p>
+                    <h2 class="text-4xl md:text-5xl mt-2 mb-10 text-nb-blue">3D Environments</h2>
+                    
+                    <div class="flex justify-center mb-16">
+                        <button onclick="showPage('artwork')" class="btn-standard">GALLERY <i class="fa-solid fa-arrow-right ml-2"></i></button>
+                    </div>
+                    
+                    <div class="max-w-4xl mx-auto relative px-6">
+                        <div class="flex justify-between max-w-[500px] mx-auto mb-2 px-4 translate-y-6">
+                            <span class="bg-nb-brown px-5 py-1.5 rounded-full text-[10px] font-bold text-nb-white uppercase tracking-widest shadow-lg z-10">Antes</span>
+                            <span class="bg-nb-brown px-5 py-1.5 rounded-full text-[10px] font-bold text-nb-white uppercase tracking-widest shadow-lg z-10">Después</span>
+                        </div>
+                        
+                        <div class="comparison-slider-circle" id="compare-slider">
+                            <img src="https://placehold.co/1000x1000/4F647D/FFFFFF?text=Final+Render" alt="After">
+                            <div class="comparison-overlay-circle" id="compare-overlay">
+                                <img src="https://placehold.co/1000x1000/F6D6CB/905757?text=Clay+Process" alt="Before">
+                            </div>
+                            <div class="comparison-handle-circle" id="compare-handle">
+                                <i class="fa-solid fa-arrows-left-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIDEOGAMES PREVIEW HOME -->
+        <section id="games-preview" class="bg-nb-peach/10 py-32 px-8 border-y border-nb-peach/20 reveal-section">
+            <div class="max-w-7xl mx-auto text-center">
+                <p class="subtitle mb-12">Featured Projects</p>
+                <h2 class="text-4xl md:text-7xl mb-12">Play My Stories</h2>
+                <div class="flex justify-center gap-6 text-nb-brown font-extrabold text-[15px] mb-12 uppercase tracking-widest">
+                    <span class="bg-nb-white px-9 py-4 rounded-full border border-nb-peach/40 shadow-sm">8 Projects</span>
+                    <span class="bg-nb-white px-9 py-4 rounded-full border border-nb-peach/40 shadow-sm">1 In Progress</span>
+                </div>
+                <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                    <div class="bg-nb-white border border-nb-peach/40 rounded-[3.5rem] p-5 group shadow-sm transition hover:shadow-md">
+                        <div class="aspect-video mb-6 overflow-hidden rounded-[2.5rem]">
+                            <img src="https://placehold.co/800x450/4F647D/FFFFFF?text=UNCHAINED" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <h3 class="text-3xl text-center pb-4 text-nb-blue font-display">UNCHAINED</h3>
+                    </div>
+                    <div class="bg-nb-white border border-nb-peach/40 rounded-[3.5rem] p-5 group shadow-sm transition hover:shadow-md">
+                        <div class="aspect-video mb-6 overflow-hidden rounded-[2.5rem]">
+                            <img src="https://placehold.co/800x450/905757/FFFFFF?text=ONCE+BUTTON+A+TIME" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <h3 class="text-3xl text-center pb-4 text-nb-blue font-display">ONCE BUTTON A TIME</h3>
+                    </div>
+                </div>
+                <div class="mt-16">
+                    <button onclick="showPage('games')" class="btn-standard">FULL LIST <i class="fa-solid fa-gamepad ml-2"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section id="awards" class="max-w-7xl mx-auto px-8 pt-32 mb-20 reveal-section">
+            <div class="text-center mb-24">
+                <p class="subtitle mb-12">Milestones</p>
+                <h2 class="text-4xl md:text-7xl">Achievements</h2>
+            </div>
+            
+            <div class="award-timeline-container max-w-4xl mx-auto">
+                <div class="award-timeline-line"></div>
+                <div class="award-timeline-item reveal-section">
+                    <div class="award-timeline-dot"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="award-timeline-content text-left">
+                        <h3 class="text-2xl mb-2 text-nb-blue font-display">Devuego Awards</h3>
+                        <p class="subtitle !text-[10px] mb-4 !after:bottom-[-4px]">National Finalist</p>
+                        <p class="text-sm text-nb-text-dark leading-relaxed">Nominated for <strong>Best Game Jam Game</strong>! A milestone for Once Button a Time.</p>
+                    </div>
+                </div>
+                <div class="award-timeline-item reveal-section">
+                    <div class="award-timeline-dot"><i class="fa-solid fa-medal"></i></div>
+                    <div class="award-timeline-content text-left">
+                        <h3 class="text-2xl mb-2 text-nb-blue font-display">Game Scholars Jam</h3>
+                        <p class="subtitle !text-[10px] mb-4 !after:bottom-[-4px]">First Place Winner</p>
+                        <p class="text-sm text-nb-text-dark leading-relaxed">Proud winners of the <strong>Game Scholars Jam</strong>! Top prize for Unchained.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNICAL SKILLS SECTION -->
+        <section id="skills" class="relative w-screen left-1/2 right-1/2 -ml-[50vw] +mr-[50vw]">
+            <svg class="wave-top" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,80C672,64,768,64,864,80C960,96,1056,128,1152,128C1248,128,1344,96,1392,80L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+            </svg>
+
+            <div class="bg-nb-peach py-20 px-8">
+                <div class="max-w-7xl mx-auto text-center">
+                    <div class="bg-nb-peach border-4 border-nb-blue p-12 md:p-20">
+                        <p class="subtitle mb-12 !text-nb-white !after:hidden opacity-90">Toolkit</p>
+                        <h2 class="text-5xl md:text-7xl mb-20 text-nb-blue font-display uppercase">Technical Skills</h2>
+                        
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="bg-nb-bg flex flex-col items-center justify-center p-10 shadow-sm text-left rounded-[3rem]">
+                                <div class="w-16 h-16 bg-nb-peach/20 rounded-full flex items-center justify-center text-3xl text-nb-blue mb-6 border border-nb-peach/30"><i class="fa-solid fa-cube"></i></div>
+                                <h3 class="text-xl md:text-2xl mb-4 text-nb-blue font-display">3D Softwares</h3>
+                                <p class="text-xs text-nb-text-dark leading-relaxed mb-6 font-medium">I have extensive experience modeling, texturing, and rendering 3D assets for various projects. I focus on creating visually compelling models.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="btn-peach-skill">BLENDER</span>
+                                    <span class="btn-peach-skill">SUBSTANCE</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-nb-bg flex flex-col items-center justify-center p-10 shadow-sm text-left rounded-[3rem]">
+                                <div class="w-16 h-16 bg-nb-peach/20 rounded-full flex items-center justify-center text-3xl text-nb-blue mb-6 border border-nb-peach/30"><i class="fa-solid fa-gamepad"></i></div>
+                                <h3 class="text-xl md:text-2xl mb-4 text-nb-blue font-display">Game Engine</h3>
+                                <p class="text-xs text-nb-text-dark leading-relaxed mb-6 font-medium">Skilled in designing and developing interactive experiences, from gameplay mechanics to level design. Comfortable with 2D & 3D projects.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="btn-peach-skill">UNITY 3D</span>
+                                    <span class="btn-peach-skill">UNREAL</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-nb-bg flex flex-col items-center justify-center p-10 shadow-sm text-left rounded-[3rem]">
+                                <div class="w-16 h-16 bg-nb-peach/20 rounded-full flex items-center justify-center text-3xl text-nb-blue mb-6 border border-nb-peach/30"><i class="fa-solid fa-code"></i></div>
+                                <h3 class="text-xl md:text-2xl mb-4 text-nb-blue font-display">Programming</h3>
+                                <p class="text-xs text-nb-text-dark leading-relaxed mb-6 font-medium">Proficient in writing clean, maintainable code for multiple platforms. Specialized in game development and logic foundation.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="btn-peach-skill">C#</span>
+                                    <span class="btn-peach-skill">PYTHON</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <svg class="wave-bottom" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,80C672,64,768,64,864,80C960,96,1056,128,1152,128C1248,128,1344,96,1392,80L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+            </svg>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="max-w-7xl mx-auto px-8 mb-40 pt-24 reveal-section">
+            <div class="bg-nb-white p-12 md:p-24 rounded-[4rem] border-2 border-nb-peach shadow-sm text-center">
+                <p class="subtitle mb-12">Let's Connect</p>
+                <h1 class="text-5xl md:text-8xl mb-20 text-nb-blue font-display uppercase">Say hey!</h1>
+                <form class="space-y-6 max-w-2xl mx-auto text-left">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Your Name" class="w-full bg-nb-bg border-2 border-nb-peach/40 rounded-2xl p-5 outline-none focus:border-nb-blue transition text-sm">
+                        <input type="email" placeholder="Email Address" class="w-full bg-nb-bg border-2 border-nb-peach/40 rounded-2xl p-5 outline-none focus:border-nb-blue transition text-sm">
+                    </div>
+                    <textarea rows="5" placeholder="Your message..." class="w-full bg-nb-bg border-2 border-nb-peach/40 rounded-3xl p-6 outline-none focus:border-nb-blue transition resize-none text-sm"></textarea>
+                    <button type="submit" class="btn-standard w-full py-5 text-sm uppercase">Send Magic!</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Instagram Banner -->
+        <section class="mb-20 px-8 text-center reveal-section">
+            <div class="max-w-7xl mx-auto py-12 border-t border-nb-peach/20">
+                <p class="font-display text-2xl text-nb-blue mb-4">Instagram</p>
+                <a href="https://www.instagram.com/nurxen_" target="_blank" class="group inline-flex flex-col items-center">
+                    <span class="text-4xl md:text-6xl text-nb-brown font-bold tracking-tight transition-transform group-hover:scale-105">@nurxen_</span>
+                    <span class="mt-4 text-xs font-bold text-nb-blue uppercase tracking-widest opacity-40">See more on @nurxen_</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- PÁGINA: ARTWORK (PORTFOLIO COMPLETO) -->
+    <main id="page-artwork" class="page-view pt-48 pb-32">
+        <div class="max-w-7xl mx-auto px-8">
+            <!-- 1. HERO / INTRO ARTWORK -->
+            <div class="text-center mb-32 reveal-section">
+                <p class="subtitle mb-6">3D Portfolio</p>
+                <h1 class="text-6xl md:text-9xl mb-8 font-display text-nb-blue">Stylized Worlds</h1>
+                <p class="text-xl text-nb-text-dark max-w-2xl mx-auto font-medium">3D Artist specialized in stylized assets, shaders & expressive animation.</p>
+            </div>
+
+            <!-- 2. CASE STUDY: PROYECTO DESTACADO (Desglose Profesional) -->
+            <section class="mb-40 reveal-section">
+                <div class="bg-nb-studio p-8 md:p-20 rounded-[4rem] text-nb-white shadow-2xl">
+                    <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                        <div>
+                            <span class="bg-nb-peach text-nb-brown text-[10px] font-black px-4 py-1.5 rounded-full tracking-widest uppercase">Featured Case Study</span>
+                            <h2 class="text-5xl md:text-7xl mt-6 mb-8 font-display">The Cozy Studio</h2>
+                            <p class="text-nb-white/70 text-lg leading-relaxed mb-10">Environment asset creado para un videojuego estilizado. Enfoque en la optimización de polígonos, lectura visual clara y materiales PBR suaves que responden a la iluminación dinámica.</p>
+                            <div class="flex flex-wrap gap-4">
+                                <span class="tech-tag bg-nb-white/10 text-nb-white border-nb-white/20 px-4 py-1.5 rounded-full text-[10px] font-bold">BLENDER</span>
+                                <span class="tech-tag bg-nb-white/10 text-nb-white border-nb-white/20 px-4 py-1.5 rounded-full text-[10px] font-bold">SUBSTANCE</span>
+                                <span class="tech-tag bg-nb-white/10 text-nb-white border-nb-white/20 px-4 py-1.5 rounded-full text-[10px] font-bold">UNITY</span>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <img src="https://placehold.co/1000x1000/4F647D/FFF?text=Hero+Render" class="case-study-img w-full shadow-2xl">
+                        </div>
+                    </div>
+
+                    <!-- Pipeline Breakdown -->
+                    <div class="grid md:grid-cols-3 gap-10">
+                        <div class="space-y-6">
+                            <div class="aspect-video bg-nb-studio border-2 border-nb-white/10 rounded-3xl overflow-hidden">
+                                <img src="https://placehold.co/600x400/222/FFF?text=Wireframe+Malla" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-display text-nb-peach">01. Modeling</h3>
+                            <p class="text-xs opacity-60 leading-relaxed">Topología limpia con flujo de aristas optimizado para deformación y rendimiento. Mid-poly workflow.</p>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="aspect-video bg-nb-studio border-2 border-nb-white/10 rounded-3xl overflow-hidden grid grid-cols-2 p-1 gap-1">
+                                <div class="bg-gray-700 h-full rounded-lg"></div>
+                                <div class="bg-gray-600 h-full rounded-lg"></div>
+                                <div class="bg-gray-800 h-full rounded-lg"></div>
+                                <div class="bg-gray-500 h-full rounded-lg"></div>
+                            </div>
+                            <h3 class="text-xl font-display text-nb-peach">02. UVs & Texturing</h3>
+                            <p class="text-xs opacity-60 leading-relaxed">Materiales PBR. Desglose de mapas: Base Color, Roughness y Normal Map. Uso eficiente del espacio UV.</p>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="aspect-video bg-nb-studio border-2 border-nb-white/10 rounded-3xl overflow-hidden">
+                                <img src="https://placehold.co/600x400/444/FFF?text=Mood+Lighting" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-display text-nb-peach">03. Lighting</h3>
+                            <p class="text-xs opacity-60 leading-relaxed">Setup de iluminación cinemática para resaltar formas y crear una atmósfera acogedora (cozy mood).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. GAME ASSETS / PROPS (Grid Técnico) -->
+            <section class="mb-40 reveal-section">
+                <div class="text-center mb-16">
+                    <p class="subtitle">Game-Ready Assets</p>
+                    <h2 class="text-5xl md:text-7xl font-display text-nb-blue">Props & Environment</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Asset Card 1 -->
+                    <div class="art-hover-card bg-nb-white border border-nb-peach">
+                        <img src="https://placehold.co/800x800/F6D6CB/905757?text=Modular+Wall" class="w-full aspect-square object-cover">
+                        <div class="art-hover-overlay text-nb-white">
+                            <h4 class="font-display text-2xl mb-4">Old Town Wall</h4>
+                            <div class="text-[10px] font-black space-y-2 uppercase tracking-widest opacity-90">
+                                <p>Polycount: 1,240 Tris</p>
+                                <p>Textures: 1 Set 2K</p>
+                                <p>Software: Blender</p>
+                            </div>
+                            <div class="mt-8 flex gap-2">
+                                <i class="fa-solid fa-cube opacity-50"></i>
+                                <i class="fa-solid fa-gamepad opacity-50"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Asset Card 2 -->
+                    <div class="art-hover-card bg-nb-white border border-nb-peach">
+                        <img src="https://placehold.co/800x800/4F647D/FFF?text=Game+Chest" class="w-full aspect-square object-cover">
+                        <div class="art-hover-overlay text-nb-white">
+                            <h4 class="font-display text-2xl mb-4">Magic Chest</h4>
+                            <div class="text-[10px] font-black space-y-2 uppercase tracking-widest opacity-90">
+                                <p>Polycount: 850 Tris</p>
+                                <p>Textures: Handpainted</p>
+                                <p>Software: Substance</p>
+                            </div>
+                            <div class="mt-8">
+                                <button class="bg-nb-peach text-nb-brown px-4 py-1 rounded-full text-[8px] font-black">VIEW WIREFRAME</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Asset Card 3 -->
+                    <div class="art-hover-card bg-nb-white border border-nb-peach">
+                        <img src="https://placehold.co/800x800/905757/FFF?text=Cozy+Lamp" class="w-full aspect-square object-cover">
+                        <div class="art-hover-overlay text-nb-white">
+                            <h4 class="font-display text-2xl mb-4">Vintage Lamp</h4>
+                            <div class="text-[10px] font-black space-y-2 uppercase tracking-widest opacity-90">
+                                <p>Polycount: 2,100 Tris</p>
+                                <p>High-to-Low Workflow</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. SHADERS (NPR / Stylized) -->
+            <section class="mb-40 reveal-section">
+                <div class="bg-nb-peach/10 p-12 md:p-20 rounded-[4rem] border-2 border-nb-peach/30">
+                    <div class="grid lg:grid-cols-2 gap-16 items-center">
+                        <div class="order-2 lg:order-1">
+                            <div class="comp-slider" id="shader-slider">
+                                <img src="https://placehold.co/1200x800/4F647D/FFF?text=Toon+Shader+Final" class="w-full h-full object-cover">
+                                <div class="comp-overlay" id="shader-overlay">
+                                    <img src="https://placehold.co/1200x800/999/FFF?text=Base+Color+Only" class="w-full h-full object-cover">
+                                </div>
+                                <div class="comp-handle" id="shader-handle"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
+                            </div>
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <p class="subtitle">Custom Shaders</p>
+                            <h2 class="text-4xl md:text-6xl font-display text-nb-blue mb-8">NPR & Toon Shading</h2>
+                            <p class="text-sm font-medium text-nb-text-dark leading-relaxed mb-10">Desarrollo de shaders personalizados en tiempo real. Este Breakdown visual muestra el control artístico sobre el Ramp Shading, el Outline procedimental y la luz rim para lograr una estética anime/cartoon consistente.</p>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-4 text-xs font-bold text-nb-blue">
+                                    <i class="fa-solid fa-circle-check text-nb-brown"></i> Control de sombras por rampa
+                                </li>
+                                <li class="flex items-center gap-4 text-xs font-bold text-nb-blue">
+                                    <i class="fa-solid fa-circle-check text-nb-brown"></i> Outlines por Inverted Hull
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. ANIMACIÓN -->
+            <section class="mb-40 reveal-section">
+                <div class="text-center mb-16">
+                    <p class="subtitle">Movement</p>
+                    <h2 class="text-5xl md:text-7xl font-display text-nb-blue">Animation Clips</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div class="bg-nb-white p-4 rounded-[3rem] border border-nb-peach shadow-sm">
+                        <div class="aspect-video bg-nb-studio rounded-[2.5rem] overflow-hidden">
+                            <img src="https://placehold.co/800x450/4F647D/FFF?text=Loop+Animado+1" class="w-full h-full object-cover">
+                        </div>
+                        <p class="mt-6 text-center text-[10px] font-black uppercase text-nb-brown tracking-widest">Character Rigging & Idle Loop</p>
+                    </div>
+                    <div class="bg-nb-white p-4 rounded-[3rem] border border-nb-peach shadow-sm">
+                        <div class="aspect-video bg-nb-studio rounded-[2.5rem] overflow-hidden">
+                            <img src="https://placehold.co/800x450/905757/FFF?text=Environmental+FX" class="w-full h-full object-cover">
+                        </div>
+                        <p class="mt-6 text-center text-[10px] font-black uppercase text-nb-brown tracking-widest">Stylized Wind & Particles FX</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. GALERÍA RENDERS FINALES -->
+            <section class="mb-40 reveal-section">
+                <div class="text-center mb-16">
+                    <p class="subtitle">Final Gallery</p>
+                    <h2 class="text-5xl md:text-7xl font-display text-nb-blue">Cinematic Renders</h2>
+                </div>
+                <div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+                    <img src="https://placehold.co/600x800/F6D6CB/905757?text=Render+Full+1" class="w-full rounded-[2rem] shadow-lg hover:scale-[1.02] transition cursor-zoom-in">
+                    <img src="https://placehold.co/600x400/4F647D/FFF?text=Render+Full+2" class="w-full rounded-[2rem] shadow-lg hover:scale-[1.02] transition cursor-zoom-in">
+                    <img src="https://placehold.co/600x600/905757/FFF?text=Render+Full+3" class="w-full rounded-[2rem] shadow-lg hover:scale-[1.02] transition cursor-zoom-in">
+                    <img src="https://placehold.co/600x900/4F647D/FFF?text=Render+Full+4" class="w-full rounded-[2rem] shadow-lg hover:scale-[1.02] transition cursor-zoom-in">
+                    <img src="https://placehold.co/600x450/F6D6CB/905757?text=Render+Full+5" class="w-full rounded-[2rem] shadow-lg hover:scale-[1.02] transition cursor-zoom-in">
+                </div>
+            </section>
+
+            <!-- 7. CTA PROFESIONAL -->
+            <section class="text-center py-20 bg-nb-blue rounded-[4rem] text-nb-white reveal-section">
+                <p class="text-[10px] font-black uppercase tracking-[0.3em] mb-6 opacity-60">Open for opportunities</p>
+                <h2 class="text-5xl md:text-8xl mb-12 font-display">Available for Work</h2>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <button onclick="scrollToSection('contact')" class="bg-nb-peach text-nb-brown font-black px-12 py-5 rounded-full hover:scale-105 transition shadow-xl">HIRE ME AS 3D ARTIST</button>
+                    <a href="#" class="border-2 border-nb-peach/40 px-12 py-5 rounded-full font-black text-xs uppercase hover:bg-nb-peach/10 transition">DOWNLOAD PORTFOLIO (PDF)</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- PÁGINA: VIDEOGAMES (NUEVA VERSIÓN BASADA EN BEACONS) -->
+    <main id="page-games" class="page-view pt-48 pb-32 px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <!-- Header My Videogames -->
+            <div class="mb-20 reveal-section">
+                <p class="subtitle mb-8">Portfolio</p>
+                <h1 class="text-6xl md:text-8xl mb-12 font-display uppercase text-nb-blue">My Videogames</h1>
+                
+                <div class="flex justify-center gap-6 text-nb-brown font-extrabold text-[15px] mb-12 uppercase tracking-widest">
+                    <div class="bg-nb-white px-9 py-4 rounded-full border border-nb-peach/40 shadow-sm flex flex-col">
+                        <span class="text-3xl font-display text-nb-blue">8</span>
+                        <span class="text-[9px] opacity-60">Total Projects</span>
+                    </div>
+                    <div class="bg-nb-white px-9 py-4 rounded-full border border-nb-peach/40 shadow-sm flex flex-col">
+                        <span class="text-3xl font-display text-nb-blue">1</span>
+                        <span class="text-[9px] opacity-60">On Going</span>
+                    </div>
+                </div>
+
+                <p class="text-lg text-nb-text-dark leading-relaxed max-w-3xl mx-auto font-medium italic">
+                    "Here you will find cozy and detailed art with warm color palettes, assets with a cartoon and adorable style. Click on each project to see more."
+                </p>
+            </div>
+
+            <!-- Listado de Juegos -->
+            <div class="grid gap-20 max-w-5xl mx-auto text-left">
+                
+                <!-- UNCHAINED -->
+                <div class="bg-nb-white p-10 md:p-14 rounded-[4rem] border-2 border-nb-peach shadow-sm reveal-section group">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="aspect-video overflow-hidden rounded-[2.5rem] shadow-lg">
+                            <img src="https://placehold.co/800x450/4F647D/FFFFFF?text=UNCHAINED" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="bg-nb-blue text-nb-white text-[10px] px-4 py-1 rounded-full font-bold">STEAM</span>
+                                <span class="bg-nb-peach text-nb-brown text-[10px] px-4 py-1 rounded-full font-bold">FEATURED</span>
+                            </div>
+                            <h3 class="text-4xl mb-6 font-display text-nb-blue">UNCHAINED</h3>
+                            <p class="text-sm text-nb-text-dark leading-relaxed mb-8">
+                                UNCHAINED is a psychological horror game where you explore an abandoned virtual desktop that hides a terrible secret. The deeper you dive into this 2D and 3D experience, the more secrets you’ll uncover about the projects left behind by the previous owner.
+                            </p>
+                            <a href="https://store.steampowered.com/" target="_blank" class="btn-standard text-xs">DISCOVER ON STEAM <i class="fa-brands fa-steam ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ONCE BUTTON A TIME -->
+                <div class="bg-nb-white p-10 md:p-14 rounded-[4rem] border-2 border-nb-peach shadow-sm reveal-section group">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="md:order-2 aspect-video overflow-hidden rounded-[2.5rem] shadow-lg">
+                            <img src="https://placehold.co/800x450/905757/FFFFFF?text=ONCE+BUTTON+A+TIME" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:order-1">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="bg-nb-brown text-nb-white text-[10px] px-4 py-1 rounded-full font-bold">ITCH.IO</span>
+                                <span class="bg-nb-peach text-nb-brown text-[10px] px-4 py-1 rounded-full font-bold">PUZZLE</span>
+                            </div>
+                            <h3 class="text-4xl mb-6 font-display text-nb-blue">ONCE BUTTON A TIME</h3>
+                            <p class="text-sm text-nb-text-dark leading-relaxed mb-8">
+                                After an accident with the family cat, Carioca the rag doll lost her button eyes. Byron, the stuffed dog, lends her one of his colorful buttons, with which Carioca will see the world in a whole new way. Solve puzzles and reachGeorge to recover your eyes!
+                            </p>
+                            <a href="https://itch.io/" target="_blank" class="btn-standard text-xs">DISCOVER ON ITCH.IO <i class="fa-brands fa-itch-io ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ANT & ESTRES -->
+                <div class="bg-nb-white p-10 md:p-14 rounded-[4rem] border-2 border-nb-peach shadow-sm reveal-section group">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="aspect-video overflow-hidden rounded-[2.5rem] shadow-lg">
+                            <img src="https://placehold.co/800x450/F6D6CB/4F647D?text=ANT+AND+ESTRES" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="bg-nb-brown text-nb-white text-[10px] px-4 py-1 rounded-full font-bold">ITCH.IO</span>
+                                <span class="bg-nb-peach text-nb-brown text-[10px] px-4 py-1 rounded-full font-bold">CLICKER</span>
+                            </div>
+                            <h3 class="text-4xl mb-6 font-display text-nb-blue">ANT & ESTRES</h3>
+                            <p class="text-sm text-nb-text-dark leading-relaxed mb-8">
+                                Welcome to Ant & Stress, the ultimate clicker where your finger is a weapon and the enemy… a rock-hard candy. Recruit a crazy army of ants that work their tails off while you focus on what really matters: SMASHING THE NUT!
+                            </p>
+                            <a href="https://itch.io/" target="_blank" class="btn-standard text-xs">SMASH THE NUT <i class="fa-solid fa-bug ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UNCHAINED JAM WINNER -->
+                <div class="bg-nb-white p-10 md:p-14 rounded-[4rem] border-2 border-nb-peach shadow-sm reveal-section group">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="md:order-2 aspect-video overflow-hidden rounded-[2.5rem] shadow-lg">
+                            <img src="https://placehold.co/800x450/4F647D/FFFFFF?text=UNCHAINED+JAM" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:order-1">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="bg-nb-brown text-nb-white text-[10px] px-4 py-1 rounded-full font-bold">ITCH.IO</span>
+                                <span class="bg-nb-peach text-nb-brown text-[10px] px-4 py-1 rounded-full font-bold">JAM WINNER</span>
+                            </div>
+                            <h3 class="text-4xl mb-6 font-display text-nb-blue">UNCHAINED - JAM WINNER</h3>
+                            <p class="text-sm text-nb-text-dark leading-relaxed mb-8">
+                                It is the year 1997. The rise of technology has begun, but something else lurks in the development of the latest innovations in AI... A retro psychological experience born from a Game Jam.
+                            </p>
+                            <a href="https://itch.io/" target="_blank" class="btn-standard text-xs">PLAY JAM VERSION <i class="fa-solid fa-trophy ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Explore More Games Footer -->
+            <div class="mt-32 p-16 rounded-[4rem] bg-nb-peach/10 border-2 border-nb-peach/30 reveal-section">
+                <h2 class="text-4xl font-display text-nb-blue mb-8">Explore more games</h2>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="https://store.steampowered.com/" target="_blank" class="flex items-center gap-4 bg-nb-white px-8 py-5 rounded-3xl border border-nb-peach/40 hover:border-nb-blue transition shadow-sm group">
+                        <i class="fa-brands fa-steam text-4xl text-nb-blue transition-transform group-hover:scale-110"></i>
+                        <span class="font-bold text-nb-blue">Steam Portfolio</span>
+                    </a>
+                    <a href="https://itch.io/" target="_blank" class="flex items-center gap-4 bg-nb-white px-8 py-5 rounded-3xl border border-nb-peach/40 hover:border-nb-blue transition shadow-sm group">
+                        <i class="fa-brands fa-itch-io text-4xl text-nb-brown transition-transform group-hover:scale-110"></i>
+                        <span class="font-bold text-nb-blue">Itch.io Projects</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-20 text-center">
+                <button onclick="showPage('about')" class="btn-standard">BACK HOME</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <div class="w-full mt-20">
+        <svg class="footer-wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,139,576,170.7C672,203,768,245,864,240C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+        <footer class="bg-nb-blue py-16 px-10">
+            <div class="max-w-7xl mx-auto text-nb-white">
+                <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-16 mb-20">
+                    <div>
+                        <a href="javascript:void(0)" onclick="showPage('about')" class="font-display text-7xl text-nb-bg hover:text-nb-peach transition-colors">
+                            nurxen<span class="text-nb-peach">.</span>
+                        </a>
+                        <p class="mt-6 text-nb-bg/60 font-bold uppercase tracking-widest text-xs">3D Artist & Developer</p>
+                        
+                        <!-- Redes Sociales -->
+                        <div class="flex gap-6 mt-8">
+                            <a href="https://www.instagram.com/nurxen_" target="_blank" class="text-2xl hover:text-nb-peach transition"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.artstation.com/" target="_blank" class="text-2xl hover:text-nb-peach transition"><i class="fa-brands fa-artstation"></i></a>
+                            <a href="https://cara.app/" target="_blank" class="text-2xl hover:text-nb-peach transition"><i class="fa-solid fa-palette"></i></a>
+                            <a href="https://www.linkedin.com/" target="_blank" class="text-2xl hover:text-nb-peach transition"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-16 reveal-section text-left">
+                        <div class="flex flex-col gap-4">
+                            <p class="font-body text-nb-peach opacity-60 text-xs uppercase tracking-widest font-bold">Explore</p>
+                            <a onclick="showPage('artwork')" class="text-sm font-bold text-nb-bg hover:text-nb-peach transition cursor-pointer">Portfolio</a>
+                            <a onclick="showPage('games')" class="text-sm font-bold text-nb-bg hover:text-nb-peach transition cursor-pointer">Games</a>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <p class="font-body text-nb-peach opacity-60 text-xs uppercase tracking-widest font-bold">Connect</p>
+                            <a href="mailto:contact@nurxen.com" class="text-sm font-bold text-nb-bg hover:text-nb-peach transition underline underline-offset-8">Email Me</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row justify-between items-center gap-8 pt-12 border-t border-nb-bg/10">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-nb-bg/40">©2025 Nurxen. All Rights Reserved.</p>
+                    <div class="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-nb-bg/40">
+                        <span>Powered by Magic & Blender</span>
+                        <i class="fa-solid fa-heart text-nb-peach"></i>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // --- NAVEGACIÓN ---
+        function showPage(pageId) {
+            document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
+            const target = document.getElementById('page-' + pageId);
+            if(target) {
+                target.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            reveal();
+        }
+
+        function scrollToSection(sectionId) {
+            const aboutPage = document.getElementById('page-about');
+            if(!aboutPage.classList.contains('active')) {
+                showPage('about');
+                setTimeout(() => {
+                    const section = document.getElementById(sectionId);
+                    if(section) section.scrollIntoView({ behavior: 'smooth' });
+                }, 500);
+            } else {
+                const section = document.getElementById(sectionId);
+                if(section) section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // --- GSAP REVEAL ---
+        gsap.registerPlugin(ScrollTrigger);
+        function reveal() {
+            const reveals = document.querySelectorAll(".reveal-section");
+            reveals.forEach((element, i) => {
+                gsap.fromTo(element, 
+                    { y: 30, opacity: 0 },
+                    {
+                        duration: 0.8,
+                        y: 0,
+                        opacity: 1,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: element,
+                            start: "top 95%",
+                        },
+                        delay: i * 0.1 
+                    }
+                );
+            });
+        }
+        reveal();
+
+        // --- SLIDER INTERACTIVO CIRCULAR ---
+        const sliderContainer = document.getElementById('compare-slider');
+        const sliderOverlay = document.getElementById('compare-overlay');
+        const sliderHandle = document.getElementById('compare-handle');
+        let isDragging = false;
+
+        function updateSlider(x) {
+            if(!sliderContainer) return;
+            const rect = sliderContainer.getBoundingClientRect();
+            let position = ((x - rect.left) / rect.width) * 100;
+            if (position < 0) position = 0; if (position > 100) position = 100;
+            sliderOverlay.style.width = `${position}%`;
+            sliderHandle.style.left = `${position}%`;
+        }
+
+        if(sliderContainer) {
+            sliderContainer.addEventListener('mousedown', () => isDragging = true);
+            window.addEventListener('mouseup', () => isDragging = false);
+            window.addEventListener('mousemove', (e) => { if (isDragging) updateSlider(e.clientX); });
+            sliderContainer.addEventListener('touchstart', () => isDragging = true);
+            window.addEventListener('touchend', () => isDragging = false);
+            window.addEventListener('touchmove', (e) => { if (isDragging) updateSlider(e.touches[0].clientX); });
+            sliderContainer.addEventListener('click', (e) => updateSlider(e.clientX));
+        }
+    </script>
+</body>
+</html>
