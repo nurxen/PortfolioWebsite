@@ -79,18 +79,68 @@
             background-color: #FFF9F2; border-color: #905757; transform: scale(1.05);
         }
 
-        /* --- CIRCULAR SLIDER --- */
+        /* --- CIRCULAR SLIDER CORREGIDO --- */
         .comparison-slider-circle { 
-            position: relative; width: 100%; max-width: 500px; aspect-ratio: 1/1;
-            margin: 0 auto; overflow: hidden; border-radius: 50%; 
-            border: 10px solid #FFFFFF; box-shadow: 0 15px 40px rgba(246, 214, 203, 0.4);
+            position: relative; 
+            width: 600px; /* Tamaño fijo para mayor estabilidad */
+            height: 600px; 
+            margin: 0 auto; 
+            overflow: hidden; 
+            border-radius: 50%; 
+            border: 10px solid #FFFFFF; 
+            box-shadow: 0 15px 40px rgba(246, 214, 203, 0.4);
             cursor: col-resize;
         }
-        .comparison-slider-circle img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
-        .comparison-overlay-circle { position: absolute; top: 0; left: 0; width: 50%; height: 100%; overflow: hidden; border-right: 4px solid #FFFFFF; z-index: 2; }
-        .comparison-overlay-circle img { width: 500px; height: 500px; max-width: none; }
-        .comparison-handle-circle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: #FFFFFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 10; color: #4F647D; }
 
+        /* Ambas imágenes deben ser idénticas en comportamiento */
+        .comparison-slider-circle img { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 600px; /* Debe coincidir con el ancho del padre */
+            height: 600px; /* Debe coincidir con el alto del padre */
+            object-fit: cover; 
+            display: block;
+            max-width: none; /* Evita interferencias de otros estilos */
+        }
+
+        .comparison-overlay-circle { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 50%; 
+            height: 100%; 
+            overflow: hidden; 
+            border-right: 4px solid #FFFFFF; 
+            z-index: 2; 
+        }
+
+        /* IMPORTANTE: La imagen dentro del overlay NO debe heredar 
+        el ancho del overlay (50%), sino mantener el ancho total (600px) 
+        para que encaje perfectamente sobre la de abajo.
+        */
+        .comparison-overlay-circle img { 
+            width: 600px !important; 
+            height: 600px !important; 
+        }
+
+        .comparison-handle-circle { 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; /* Esto lo moverá tu JavaScript */
+            transform: translate(-50%, -50%); 
+            width: 50px; 
+            height: 50px; 
+            background: #FFFFFF; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            z-index: 10; 
+            color: #4F647D; 
+            pointer-events: none; /* Para que no interfiera con el arrastre */
+        }
         /* Slider Comparativa Rectangular */
         .comp-slider { 
             position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 2rem; 
