@@ -1,212 +1,371 @@
- body {
-            background-color: #FFF9F2;
-            color: #3F3F3F;
-            font-family: 'Manrope', sans-serif;
-            overflow-x: hidden;
-        }
+body {
+  background-color: #fff9f2;
+  color: #3f3f3f;
+  font-family: "Manrope", sans-serif;
+  overflow-x: hidden;
+}
 
-        ::-webkit-scrollbar { width: 10px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb {
-            background-color: #F6D6CB; 
-            border-radius: 99px;
-            border: 3px solid #FFF9F2; 
-        }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #f6d6cb;
+  border-radius: 99px;
+  border: 3px solid #fff9f2;
+}
 
-        h1, h2, h3, .font-display {
-            font-family: 'Shrikhand', cursive;
-            letter-spacing: 0.02em;
-            color: #4F647D;
-        }
-        
-        .subtitle {
-            font-family: 'Manrope', sans-serif;
-            font-weight: 800;
-            color: #905757;
-            font-size: 1.15rem; 
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            line-height: 1.2;
-            position: relative;
-            display: inline-block;
-            margin-bottom: 0.5rem;
-        }
-        .subtitle::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -8px;
-            width: 100%;
-            height: 10px;
-            background-image: url("data:image/svg+xml,%3Csvg width='200' height='20' viewBox='0 0 200 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,10 Q25,0 50,10 T100,10 T150,10 T200,10' fill='none' stroke='%23F6D6CB' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E");
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            opacity: 0.8;
-        }
+h1,
+h2,
+h3,
+.font-display {
+  font-family: "Shrikhand", cursive;
+  letter-spacing: 0.02em;
+  color: #4f647d;
+}
 
-        @media (min-width: 768px) {
-            .subtitle { font-size: 1.3rem; }
-        }
+.subtitle {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: #905757;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+.subtitle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg width='200' height='20' viewBox='0 0 200 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,10 Q25,0 50,10 T100,10 T150,10 T200,10' fill='none' stroke='%23F6D6CB' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
 
-        .nav-link { 
-            font-weight: 800; color: #4F647D; font-size: 0.75rem;
-            text-transform: uppercase; letter-spacing: 0.15em; cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        .nav-link:hover { color: #905757; }
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 1.3rem;
+  }
+}
 
-        .btn-standard {
-            display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
-            background-color: #4F647D; color: #FFF9F2; font-weight: 800;
-            text-transform: uppercase; letter-spacing: 0.1em; padding: 1.1rem 2.2rem;
-            border-radius: 99px; border: 2px solid #4F647D;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        .btn-standard:hover {
-            background-color: #FFF9F2; color: #4F647D; transform: translateY(-2px);
-        }
+.nav-link {
+  font-weight: 800;
+  color: #4f647d;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.nav-link:hover {
+  color: #905757;
+}
 
-        .btn-peach-skill {
-            display: inline-flex; align-items: center; justify-content: center;
-            background-color: #F6D6CB; color: #905757; font-weight: 800;
-            text-transform: uppercase; letter-spacing: 0.05em; padding: 0.5rem 1.25rem;
-            border-radius: 99px; border: 2px solid #F6D6CB;
-            transition: all 0.3s ease;
-            font-size: 0.65rem;
-        }
-        .btn-peach-skill:hover {
-            background-color: #FFF9F2; border-color: #905757; transform: scale(1.05);
-        }
+.btn-standard {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background-color: #4f647d;
+  color: #fff9f2;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 1.1rem 2.2rem;
+  border-radius: 99px;
+  border: 2px solid #4f647d;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn-standard:hover {
+  background-color: #fff9f2;
+  color: #4f647d;
+  transform: translateY(-2px);
+}
 
-        /* --- CIRCULAR SLIDER CORREGIDO --- */
-        .comparison-slider-circle { 
-            position: relative; 
-            width: 600px; /* Tamaño fijo para mayor estabilidad */
-            height: 600px; 
-            margin: 0 auto; 
-            overflow: hidden; 
-            border-radius: 50%; 
-            border: 10px solid #FFFFFF; 
-            box-shadow: 0 15px 40px rgba(246, 214, 203, 0.4);
-            cursor: col-resize;
-        }
+.btn-standard-inverted {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background-color: #fff9f2; /* Antes era azul, ahora blanco */
+  color: #4f647d; /* Antes blanco, ahora azul */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 1.1rem 2.2rem;
+  border-radius: 99px;
+  border: 2px solid #fff9f2; /* Bordes también invertidos */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
 
-        /* Ambas imágenes deben ser idénticas en comportamiento */
-        .comparison-slider-circle img { 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 600px; /* Debe coincidir con el ancho del padre */
-            height: 600px; /* Debe coincidir con el alto del padre */
-            object-fit: cover; 
-            display: block;
-            max-width: none; /* Evita interferencias de otros estilos */
-        }
+.btn-standard-inverted:hover {
+  background-color: #4f647d; /* Fondo azul al pasar el mouse */
+  color: #fff9f2; /* Texto blanco al pasar el mouse */
+  transform: translateY(-2px);
+}
 
-        .comparison-overlay-circle { 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 50%; 
-            height: 100%; 
-            overflow: hidden; 
-            border-right: 4px solid #FFFFFF; 
-            z-index: 2; 
-        }
+.btn-peach-skill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6d6cb;
+  color: #905757;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 1.25rem;
+  border-radius: 99px;
+  border: 2px solid #f6d6cb;
+  transition: all 0.3s ease;
+  font-size: 0.65rem;
+}
+.btn-peach-skill:hover {
+  background-color: #fff9f2;
+  border-color: #905757;
+  transform: scale(1.05);
+}
 
-        /* IMPORTANTE: La imagen dentro del overlay NO debe heredar 
+/* --- CIRCULAR SLIDER CORREGIDO --- */
+.comparison-slider-circle {
+  position: relative;
+  width: 600px; /* Tamaño fijo para mayor estabilidad */
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 10px solid #ffffff;
+  box-shadow: 0 15px 40px rgba(246, 214, 203, 0.4);
+  cursor: col-resize;
+}
+
+/* Ambas imágenes deben ser idénticas en comportamiento */
+.comparison-slider-circle img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px; /* Debe coincidir con el ancho del padre */
+  height: 600px; /* Debe coincidir con el alto del padre */
+  object-fit: cover;
+  display: block;
+  max-width: none; /* Evita interferencias de otros estilos */
+}
+
+.comparison-overlay-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  border-right: 4px solid #ffffff;
+  z-index: 2;
+}
+
+/* IMPORTANTE: La imagen dentro del overlay NO debe heredar 
         el ancho del overlay (50%), sino mantener el ancho total (600px) 
         para que encaje perfectamente sobre la de abajo.
         */
-        .comparison-overlay-circle img { 
-            width: 600px !important; 
-            height: 600px !important; 
-        }
+.comparison-overlay-circle img {
+  width: 600px !important;
+  height: 600px !important;
+}
 
-        .comparison-handle-circle { 
-            position: absolute; 
-            top: 50%; 
-            left: 50%; /* Esto lo moverá tu JavaScript */
-            transform: translate(-50%, -50%); 
-            width: 50px; 
-            height: 50px; 
-            background: #FFFFFF; 
-            border-radius: 50%; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-            z-index: 10; 
-            color: #4F647D; 
-            pointer-events: none; /* Para que no interfiera con el arrastre */
-        }
-        /* Slider Comparativa Rectangular */
-        .comp-slider { 
-            position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 2rem; 
-            border: 6px solid #FFF; cursor: col-resize;
-        }
-        .comp-overlay { position: absolute; top: 0; left: 0; width: 50%; height: 100%; overflow: hidden; border-right: 3px solid #FFF; z-index: 2; }
-        .comp-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; background: #FFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 10; color: #4F647D; box-shadow: 0 0 15px rgba(0,0,0,0.2); }
+.comparison-handle-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%; /* Esto lo moverá tu JavaScript */
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  color: #4f647d;
+  pointer-events: none; /* Para que no interfiera con el arrastre */
+}
+/* Slider Comparativa Rectangular */
+.comp-slider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 2rem;
+  border: 6px solid #fff;
+  cursor: col-resize;
+}
+.comp-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  z-index: 2;
+}
+.comp-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  color: #4f647d;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
 
-        .bubble-tag-hero {
-            background: #F6D6CB; 
-            border: 2px solid transparent; 
-            padding: 0.6rem 1.5rem;
-            border-radius: 99px; 
-            font-size: 0.75rem; 
-            font-weight: 800; 
-            color: #905757;
-            text-transform: uppercase; 
-            letter-spacing: 0.05em; 
-            display: flex; 
-            align-items: center; 
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-            text-align: left;
-        }
-        .bubble-tag-hero:hover { 
-            background: #FFF9F2; 
-            color: #905757; 
-            border-color: #905757; 
-            transform: translateY(-2px); 
-        }
+.bubble-tag-hero {
+  background: #f6d6cb;
+  border: 2px solid transparent;
+  padding: 0.6rem 1.5rem;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #905757;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+.bubble-tag-hero:hover {
+  background: #fff9f2;
+  color: #905757;
+  border-color: #905757;
+  transform: translateY(-2px);
+}
 
-        /* Portfolio Cards */
-        .art-hover-card {
-            position: relative; overflow: hidden; border-radius: 2rem; cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .art-hover-card:hover { transform: translateY(-5px); }
-        .art-hover-overlay {
-            position: absolute; inset: 0; background: rgba(79, 100, 125, 0.92);
-            opacity: 0; transition: all 0.4s ease; display: flex; flex-direction: column;
-            justify-content: center; align-items: center; text-align: center; padding: 2rem;
-        }
-        .art-hover-card:hover .art-hover-overlay { opacity: 1; }
+/* Portfolio Cards */
+.art-hover-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.art-hover-card:hover {
+  transform: translateY(-5px);
+}
+.art-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(79, 100, 125, 0.92);
+  opacity: 0;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+.art-hover-card:hover .art-hover-overlay {
+  opacity: 1;
+}
 
-        /* Case Study Visuals */
-        .case-study-img { border-radius: 2.5rem; border: 4px solid #FFF; box-shadow: 0 15px 40px rgba(0,0,0,0.2); }
+/* Case Study Visuals */
+.case-study-img {
+  border-radius: 2.5rem;
+  border: 4px solid #fff;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
 
-        /* Waves */
-        .wave-top { fill: #F6D6CB; transform: rotate(180deg); margin-bottom: -1px; }
-        .wave-bottom { fill: #F6D6CB; margin-top: -1px; }
+/* Waves */
+.wave-top {
+  fill: #f6d6cb;
+  transform: rotate(180deg);
+  margin-bottom: -1px;
+}
+.wave-bottom {
+  fill: #f6d6cb;
+  margin-top: -1px;
+}
 
-        /* Timeline Styles */
-        .award-timeline-container { position: relative; padding-left: 3rem; }
-        .award-timeline-line { position: absolute; left: 1.5rem; top: 0; bottom: 0; width: 4px; background: #F6D6CB; border-radius: 99px; opacity: 0.6; }
-        .award-timeline-dot { position: absolute; left: 0; top: 0; width: 3.2rem; height: 3.2rem; background: #FFFFFF; border: 4px solid #4F647D; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 10; color: #4F647D; }
-        .award-timeline-content { background: #FFFFFF; padding: 2.5rem; border-radius: 3rem; border: 2px solid #F6D6CB; margin-bottom: 3rem; }
+/* Timeline Styles */
+.award-timeline-container {
+  position: relative;
+  padding-left: 3rem;
+}
+.award-timeline-line {
+  position: absolute;
+  left: 1.5rem;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #f6d6cb;
+  border-radius: 99px;
+  opacity: 0.6;
+}
+.award-timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3.2rem;
+  height: 3.2rem;
+  background: #ffffff;
+  border: 4px solid #4f647d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  color: #4f647d;
+}
+.award-timeline-content {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 3rem;
+  border: 2px solid #f6d6cb;
+  margin-bottom: 3rem;
+}
 
-        /* Footer Wave */
-        .footer-wave {
-            width: 100%;
-            height: 100px;
-            fill: #4F647D;
-            display: block;
-        }
+/* Footer Wave */
+.footer-wave {
+  width: 100%;
+  height: 100px;
+  fill: #4f647d;
+  display: block;
+}
 
-        .reveal-section { opacity: 0; transform: translateY(30px); }
-        .page-view { display: none; }
-        .page-view.active { display: block; animation: fadeIn 0.6s ease; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.reveal-section {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.page-view {
+  display: none;
+}
+.page-view.active {
+  display: block;
+  animation: fadeIn 0.6s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

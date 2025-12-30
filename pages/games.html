@@ -1,83 +1,259 @@
-<!-- PÁGINA: VIDEOGAMES -->
-<main id="page-games" class="page-view pt-48 pb-32 px-8 bg-nb-blue">
-    <div class="max-w-7xl mx-auto text-center">
-        <div class="mb-20 reveal-section">
-            <p class="subtitle mb-8 !text-nb-peach !after:bg-nb-peach">Portfolio</p>
-            <h1 class="text-6xl md:text-8xl mb-12 font-display uppercase text-white">My Videogames</h1>
-            
-            <div class="flex justify-center gap-6 text-nb-blue font-extrabold text-[15px] mb-12 uppercase tracking-widest">
-                <div class="bg-nb-peach px-9 py-4 rounded-full shadow-lg flex flex-col">
-                    <span class="text-3xl font-display text-nb-blue">8</span>
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nurxen | Videogames</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shrikhand&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "nb-blue": "#4F647D",
+                        "nb-brown": "#905757",
+                        "nb-white": "#FFFFFF",
+                        "nb-peach": "#F6D6CB",
+                        "nb-text-dark": "#3F3F3F",
+                        "nb-bg": "#FFF9F2",
+                        "nb-blue-dark": "#43647F",
+                        "nb-studio": "#121212",
+                    },
+                    fontFamily: {
+                        display: ['"Shrikhand"', "cursive"],
+                        body: ['"Manrope"', "sans-serif"],
+                    },
+                    borderRadius: {
+                        cozy: "1.5rem",
+                        super: "3.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .media-scroll::-webkit-scrollbar { height: 6px; }
+        .media-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); border-radius: 10px; }
+        .media-scroll::-webkit-scrollbar-thumb { background: #F6D6CB; border-radius: 10px; }
+    </style>
+</head>
+
+<body class="bg-nb-blue selection:bg-nb-peach selection:text-nb-brown font-body">
+    <nav class="absolute top-0 left-0 right-0 z-50 px-8 py-10 bg-transparent" id="navbar">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center text-white">
+            <a href="../index.html" class="font-display text-4xl md:text-5xl text-white hover:text-white/80 transition-colors">nurxen<span class="text-white text-5xl">.</span></a>
+            <div class="flex flex-wrap justify-center items-center gap-12 mt-6 lg:mt-0">
+                <a href="../index.html" class="text-lg tracking-widest font-medium hover:opacity-70 transition-opacity">ABOUT ME</a>
+                <a href="artwork.html" class="text-lg tracking-widest font-medium hover:opacity-70 transition-opacity">ARTWORK</a>
+                <a href="games.html" class="text-lg tracking-widest font-medium hover:opacity-70 transition-opacity underline decoration-nb-peach underline-offset-8">VIDEOGAMES</a>
+                <a href="../index.html" class="text-lg tracking-widest font-medium hover:opacity-70 transition-opacity">AWARDS</a>
+                <a href="../index.html" class="text-lg tracking-widest font-medium hover:opacity-70 transition-opacity">SKILLS</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative w-screen h-[110vh] min-h-[500px] flex items-center justify-center overflow-hidden mb-24">
+        <div class="absolute inset-0 z-0">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                <source src="../assets/videos/TRAILERS/trailer videojuegos.mp4" type="video/mp4" />
+            </video>
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+        <div class="relative z-10 text-center reveal-section">
+            <p class="text-nb-peach uppercase tracking-[0.3em] font-bold mb-8">Portfolio</p>
+            <h1 class="text-6xl md:text-9xl mb-12 font-display text-white drop-shadow-2xl">My Videogames</h1>
+            <div class="flex justify-center gap-6 text-nb-blue font-extrabold text-[15px] uppercase tracking-widest">
+                <div class="bg-nb-peach px-9 py-4 rounded-full shadow-lg text-center">
+                    <span class="text-3xl font-display text-nb-blue block">8</span>
                     <span class="text-[9px] opacity-60">Total Projects</span>
                 </div>
-                <div class="bg-white px-9 py-4 rounded-full shadow-lg flex flex-col">
-                    <span class="text-3xl font-display text-nb-blue">1</span>
+                <div class="bg-white px-9 py-4 rounded-full shadow-lg text-center">
+                    <span class="text-3xl font-display text-nb-blue block">1</span>
                     <span class="text-[9px] opacity-60">On Going</span>
                 </div>
             </div>
-
-            <p class="text-lg text-white/90 leading-relaxed max-w-3xl mx-auto font-medium italic">
-                "Here you will find cozy and detailed art with warm color palettes, assets with a cartoon and adorable style. Click on each project to see more."
-            </p>
         </div>
+    </section>
 
-        <div class="grid gap-20 max-w-5xl mx-auto text-left">
-            
-            <div class="bg-white/10 backdrop-blur-md p-10 md:p-14 rounded-[4rem] border border-white/20 shadow-2xl reveal-section group">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="aspect-video overflow-hidden rounded-[2.5rem] shadow-lg">
-                        <img src="https://placehold.co/800x450/4F647D/FFFFFF?text=UNCHAINED" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+    <section class="max-w-4xl mx-auto px-8 text-center mb-32 reveal-section">
+        <p class="text-2xl text-white/90 leading-relaxed font-medium italic">
+            "Here you will find cozy and detailed art with warm color palettes, cartoon style assets, and animations showing my creative process."
+        </p>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-8 pb-32 space-y-32">
+        
+        <!-- UNCHAINED STEAM -->
+        <article class="reveal-section">
+            <div class="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border border-white/20 shadow-2xl">
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
+                    <div class="aspect-video overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/10">
+                        <img src="../assets/images/games/UNCHAINED - STEAM/header.jpg" class="w-full h-full object-cover" />
                     </div>
                     <div>
                         <div class="flex items-center gap-3 mb-4">
                             <span class="bg-white text-nb-blue text-[10px] px-4 py-1 rounded-full font-bold">STEAM</span>
-                            <span class="bg-nb-peach text-nb-brown text-[10px] px-4 py-1 rounded-full font-bold">FEATURED</span>
+                            <span class="bg-nb-peach text-nb-brown text-[10px] px-4 py-1 rounded-full font-bold">PSYCHOLOGICAL HORROR</span>
                         </div>
-                        <h3 class="text-4xl mb-6 font-display text-white">UNCHAINED</h3>
-                        <p class="text-sm text-white/80 leading-relaxed mb-8 font-medium">
-                            UNCHAINED is a psychological horror game where you explore an abandoned virtual desktop that hides a terrible secret. The deeper you dive into this 2D and 3D experience, the more secrets you’ll uncover about the projects left behind by the previous owner.
+                        <h3 class="text-5xl mb-6 font-display text-white uppercase">UNCHAINED</h3>
+                        <p class="text-white/80 leading-relaxed mb-8">
+                            Explore an abandoned virtual desktop that hides a terrible secret. The deeper you dive into this 2D and 3D experience, the more secrets you’ll uncover about the previous owner.
                         </p>
-                        <a href="https://store.steampowered.com/" target="_blank" class="px-8 py-4 bg-nb-peach text-nb-blue rounded-full font-bold text-xs hover:bg-white transition-all inline-block uppercase tracking-widest shadow-lg">DISCOVER ON STEAM <i class="fa-brands fa-steam ml-2"></i></a>
+                        <a href="https://store.steampowered.com/app/3234310/UNCHAINED/" target="_blank" class="inline-block px-8 py-4 bg-nb-peach text-nb-blue rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white transition shadow-lg">
+                            Play on Steam <i class="fa-brands fa-steam ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="md:col-span-2 aspect-video rounded-3xl overflow-hidden bg-black border border-white/10 shadow-inner">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="../assets/videos/TRAILERS/trailer unchained 3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="grid grid-cols-1 gap-4">
+                        <img src="../assets/images/games/UNCHAINED - STEAM/gameplay1.jpg" class="rounded-2xl h-full w-full object-cover border border-white/10 hover:scale-105 transition duration-500 shadow-md">
+                        <img src="../assets/images/games/UNCHAINED - STEAM/imagekjb.png" class="rounded-2xl h-full w-full object-cover border border-white/10 hover:scale-105 transition duration-500 shadow-md">
                     </div>
                 </div>
             </div>
+        </article>
 
-            <div class="bg-white/10 backdrop-blur-md p-10 md:p-14 rounded-[4rem] border border-white/20 shadow-2xl reveal-section group">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="md:order-2 aspect-video overflow-hidden rounded-[2.5rem] shadow-lg">
-                        <img src="https://placehold.co/800x450/905757/FFFFFF?text=ONCE+BUTTON+A+TIME" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        <!-- OBAT -->
+        <article class="reveal-section">
+            <div class="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border border-white/20 shadow-2xl">
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
+                    <div class="lg:order-2 aspect-video overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/10">
+                        <img src="../assets/images/games/OBAT/Hgd5yj.png" class="w-full h-full object-cover" />
                     </div>
-                    <div class="md:order-1">
+                    <div class="lg:order-1">
                         <div class="flex items-center gap-3 mb-4">
                             <span class="bg-nb-brown text-white text-[10px] px-4 py-1 rounded-full font-bold">ITCH.IO</span>
                             <span class="bg-nb-peach text-nb-brown text-[10px] px-4 py-1 rounded-full font-bold">PUZZLE</span>
                         </div>
-                        <h3 class="text-4xl mb-6 font-display text-white">ONCE BUTTON A TIME</h3>
-                        <p class="text-sm text-white/80 leading-relaxed mb-8 font-medium">
-                            After an accident with the family cat, Carioca the rag doll lost her button eyes. Byron, the stuffed dog, lends her one of his colorful buttons, with which Carioca will see the world in a whole new way. Solve puzzles and reach George to recover your eyes!
+                        <h3 class="text-5xl mb-6 font-display text-white uppercase">Once Button a Time</h3>
+                        <p class="text-white/80 leading-relaxed mb-8">
+                            Carioca the rag doll lost her button eyes. Use colorful buttons to see the world in new ways and reach the master tailor George.
                         </p>
-                        <a href="https://itch.io/" target="_blank" class="px-8 py-4 bg-nb-peach text-nb-blue rounded-full font-bold text-xs hover:bg-white transition-all inline-block uppercase tracking-widest shadow-lg">DISCOVER ON ITCH.IO <i class="fa-brands fa-itch-io ml-2"></i></a>
+                        <a href="https://origamingcreations.itch.io/once-button-a-time" target="_blank" class="inline-block px-8 py-4 bg-white text-nb-blue rounded-full font-bold text-xs uppercase tracking-widest hover:bg-nb-peach transition shadow-lg">
+                            Play on Itch.io <i class="fa-brands fa-itch-io ml-2"></i>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="mt-32 p-16 rounded-[4rem] bg-white/5 border border-white/10 reveal-section">
-            <h2 class="text-4xl font-display text-nb-peach mb-8">Explore more games</h2>
-            <div class="flex flex-wrap justify-center gap-6">
-                <a href="https://store.steampowered.com/" target="_blank" class="flex items-center gap-4 bg-white px-8 py-5 rounded-3xl hover:bg-nb-peach transition shadow-lg group">
-                    <i class="fa-brands fa-steam text-4xl text-nb-blue transition-transform group-hover:scale-110"></i>
-                    <span class="font-bold text-nb-blue">Steam Portfolio</span>
-                </a>
-                <a href="https://itch.io/" target="_blank" class="flex items-center gap-4 bg-white px-8 py-5 rounded-3xl hover:bg-nb-peach transition shadow-lg group">
-                    <i class="fa-brands fa-itch-io text-4xl text-nb-brown transition-transform group-hover:scale-110"></i>
-                    <span class="font-bold text-nb-blue">Itch.io Projects</span>
-                </a>
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="md:col-span-2 aspect-video rounded-3xl overflow-hidden bg-black border border-white/10">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="../assets/videos/TRAILERS/OBAT trailer .mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <img src="../assets/images/games/OBAT/gameplay/2.png" class="rounded-2xl aspect-video w-full object-cover border border-white/10 hover:scale-105 transition shadow-md">
+                    <img src="../assets/images/games/OBAT/gameplay/3.png" class="rounded-2xl aspect-video w-full object-cover border border-white/10 hover:scale-105 transition shadow-md">
+                
+                </div>
             </div>
-        </div>
+        </article>
 
-        <div class="mt-20 text-center">
-            <button onclick="showPage('about')" class="px-10 py-4 border-2 border-white text-white rounded-full font-bold uppercase tracking-widest hover:bg-white hover:text-nb-blue transition-all">BACK HOME</button>
+        <!-- ANT&ESTRES -->
+        <article class="reveal-section">
+            <div class="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border border-white/20 shadow-2xl">
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
+                    <div class="aspect-video overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/10 bg-nb-blue-dark/30">
+                        <img src="../assets/images/games/ANT/cover.jpg" class="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="bg-nb-brown text-white text-[10px] px-4 py-1 rounded-full font-bold">ITCH.IO</span>
+                            <span class="bg-nb-peach text-nb-brown text-[10px] px-4 py-1 rounded-full font-bold">CLICKER</span>
+                        </div>
+                        <h3 class="text-5xl mb-6 font-display text-white uppercase">ANT&ESTRES</h3>
+                        <p class="text-white/80 leading-relaxed mb-8">
+                            Smash the Mammoth Nut! Recruit a crazy army of ants and click mercilessly until you reach the center of the candy.
+                        </p>
+                        <a href="https://tokpary.itch.io/antyestres" target="_blank" class="inline-block px-8 py-4 bg-nb-peach text-nb-blue rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white transition shadow-lg">
+                            Smas the Nut <i class="fa-solid fa-bug ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 overflow-x-auto pb-4 media-scroll">
+                    <video autoplay muted loop playsinline class="h-48 rounded-2xl border border-white/10 shadow-lg">
+                        <source src="../assets/videos/TRAILERS/TRAILER ANTIESTRES 2.mp4" type="video/mp4">
+                    </video>
+                    <img src="../assets/images/games/atiestres/Fk0PCd.png" class="h-48 rounded-2xl border border-white/10 shadow-lg">
+                </div>
+            </div>
+        </article>
+
+        <!-- UNCHAINED JAM -->
+        <article class="reveal-section">
+            <div class="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border border-white/20 shadow-2xl">
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
+                    <div class="aspect-video overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/10 bg-nb-blue-dark/30">
+                        <img src="../assets/images/games/ANT/cover.jpg" class="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="bg-nb-brown text-white text-[10px] px-4 py-1 rounded-full font-bold">ITCH.IO</span>
+                            <span class="bg-nb-peach text-nb-brown text-[10px] px-4 py-1 rounded-full font-bold">CLICKER</span>
+                        </div>
+                        <h3 class="text-5xl mb-6 font-display text-white uppercase">UNCHAINED JAM</h3>
+                        <p class="text-white/80 leading-relaxed mb-8">
+                            Smash the Mammoth Nut! Recruit a crazy army of ants and click mercilessly until you reach the center of the candy.
+                        </p>
+                        <a href="https://reibax.itch.io/unchained" target="_blank" class="inline-block px-8 py-4 bg-nb-peach text-nb-blue rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white transition shadow-lg">
+                            Smas the Nut <i class="fa-solid fa-bug ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 overflow-x-auto pb-4 media-scroll">
+                    <video autoplay muted loop playsinline class="h-48 rounded-2xl border border-white/10 shadow-lg">
+                        <source src="../assets/videos/TRAILERS/ant_trailer.mp4" type="video/mp4">
+                    </video>
+                    <img src="../assets/images/games/ANT/gameplay1.jpg" class="h-48 rounded-2xl border border-white/10 shadow-lg">
+                    <img src="../assets/images/games/ANT/gameplay2.jpg" class="h-48 rounded-2xl border border-white/10 shadow-lg">
+                    <img src="../assets/images/games/ANT/gameplay3.jpg" class="h-48 rounded-2xl border border-white/10 shadow-lg">
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section class="text-center pb-32 reveal-section">
+        <h2 class="text-white font-display text-5xl mb-10">Explore more games</h2>
+        <a href="https://nuriia.itch.io/" target="_blank" class="inline-flex items-center gap-4 px-12 py-6 bg-white text-nb-blue rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-2xl">
+            Click here! <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </section>
+
+    <footer class="bg-nb-blue py-20 px-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto text-nb-white text-center">
+            <a href="index.html" class="font-display text-6xl hover:text-nb-peach transition">nurxen<span class="text-nb-peach">.</span></a>
+            <p class="mt-6 text-xs uppercase tracking-widest opacity-60">©2025 Nurxen · All Rights Reserved</p>
         </div>
-    </div>
-</main>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        document.querySelectorAll(".reveal-section").forEach((el, i) => {
+            gsap.fromTo(el, { y: 30, opacity: 0 }, {
+                y: 0, opacity: 1, duration: 0.8, delay: i * 0.1,
+                scrollTrigger: { trigger: el, start: "top 90%" }
+            });
+        });
+    </script>
+</body>
+</html>
