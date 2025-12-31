@@ -73,29 +73,24 @@
 <body class="bg-nb-bg selection:bg-nb-peach selection:text-nb-brown font-body">
 
     <!-- NAVBAR -->
-    <nav class="absolute top-0 left-0 right-0 z-50 px-8 py-10 bg-transparent" id="navbar">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center text-white">
-            <a href="index.html"
-                class="font-display text-4xl md:text-5xl text-white hover:text-white/80 transition-colors">
-                nurxen<span class="text-white text-5xl">.</span>
+<nav class="absolute top-0 left-0 right-0 z-50 px-8 py-10 bg-transparent" id="navbar">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center text-white">
+        <a href="index.html" class="font-display text-4xl md:text-5xl text-white hover:text-white/80 transition-colors">
+            nurxen<span class="text-nb-peach text-5xl">.</span>
+        </a>
+        
+        <div class="flex flex-wrap justify-center items-center gap-10 mt-6 lg:mt-0">
+            <a href="index.html" class="text-sm tracking-widest font-bold hover:text-nb-peach transition-colors uppercase">About Me</a>
+            
+            <a href="pages/artwork.html" class="text-sm tracking-widest font-bold hover:text-nb-peach transition-colors uppercase">Artwork</a>
+            <a href="pages/games.html" class="text-sm tracking-widest font-bold hover:text-nb-peach transition-colors uppercase">Videogames</a>
+            
+            <a href="index.html#contact" class="px-6 py-2 border-2 border-nb-peach text-nb-peach rounded-full text-xs font-black tracking-widest uppercase hover:bg-nb-peach hover:text-nb-brown transition-all">
+                Contact
             </a>
-            <div class="flex flex-wrap justify-center items-center gap-12 mt-6 lg:mt-0">
-                <a href="index.html"
-                    class="text-lg tracking-widest font-medium hover:opacity-70 transition-opacity text-white">ABOUT
-                    ME</a>
-                <a href="pages/artwork.html"
-                    class="text-lg tracking-widest font-medium hover:opacity-70 transition-opacity text-white">ARTWORK</a>
-                <a href="pages/games.html"
-                    class="text-lg tracking-widest font-medium hover:opacity-70 transition-opacity text-white">VIDEOGAMES</a>
-                <a href="#awards"
-                    class="text-lg tracking-widest font-medium hover:opacity-70 transition-opacity text-white">AWARDS</a>
-                <a href="#skills"
-                    class="text-lg tracking-widest font-medium hover:opacity-70 transition-opacity text-white">SKILLS</a>
-                <a href="#contact"
-                    class="text-lg tracking-widest font-medium hover:opacity-70 transition-opacity text-white">CONTACT</a>
-            </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- HERO SECTION: THE ART OF COZINESS -->
     <main id="page-about" class="page-view active pt-15 bg-nb-bg">
@@ -375,31 +370,31 @@
                     </div>
                 </div>
 
-               <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-    <div
-        class="bg-white/10 backdrop-blur-md border border-white/20 rounded-[3.5rem] p-5 group shadow-2xl transition hover:bg-white/20">
-        <div class="mb-6 rounded-[2.5rem] overflow-hidden flex justify-center items-center bg-black/10">
-            <img src="assets/images/games/UNCHAINED - JAM/ggUOZs.png"
-                class="w-full h-auto object-contain group-hover:scale-105 transition duration-500">
-        </div>
-        <h3 class="text-3xl text-center pb-4 text-white font-display">UNCHAINED</h3>
-    </div>
+                <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                    <div
+                        class="bg-white/10 backdrop-blur-md border border-white/20 rounded-[3.5rem] p-5 group shadow-2xl transition hover:bg-white/20">
+                        <div class="mb-6 rounded-[2.5rem] overflow-hidden flex justify-center items-center bg-black/10">
+                            <img src="assets/images/games/UNCHAINED - JAM/ggUOZs.png"
+                                class="w-full h-auto object-contain group-hover:scale-105 transition duration-500">
+                        </div>
+                        <h3 class="text-3xl text-center pb-4 text-white font-display">UNCHAINED</h3>
+                    </div>
 
-    <div
-        class="bg-white/10 backdrop-blur-md border border-white/20 rounded-[3.5rem] p-5 group shadow-2xl transition hover:bg-white/20">
-        <div class="mb-6 rounded-[2.5rem] overflow-hidden flex justify-center items-center bg-black/10">
-            <img src="assets/images/games/OBAT/Hgd5yj.png"
-                class="w-full h-auto object-contain group-hover:scale-105 transition duration-500">
-        </div>
-        <h3 class="text-3xl text-center pb-4 text-white font-display">ONCE BUTTON A TIME</h3>
-    </div>
-</div>
+                    <div
+                        class="bg-white/10 backdrop-blur-md border border-white/20 rounded-[3.5rem] p-5 group shadow-2xl transition hover:bg-white/20">
+                        <div class="mb-6 rounded-[2.5rem] overflow-hidden flex justify-center items-center bg-black/10">
+                            <img src="assets/images/games/OBAT/Hgd5yj.png"
+                                class="w-full h-auto object-contain group-hover:scale-105 transition duration-500">
+                        </div>
+                        <h3 class="text-3xl text-center pb-4 text-white font-display">ONCE BUTTON A TIME</h3>
+                    </div>
+                </div>
 
-<div class="mt-20">
-    <a href="pages/games.html" class="btn-standard-inverted fa-solid fa-gamepad ml-2">
-        VIEW ALL GAMES
-    </a>
-</div>
+                <div class="mt-20">
+                    <a href="pages/games.html" class="btn-standard-inverted fa-solid fa-gamepad ml-2">
+                        PLAY ALL GAMES
+                    </a>
+                </div>
 
         </section>
 
@@ -688,115 +683,49 @@
     </div>
 
     <!-- SCRIPTS -->
-    <script>
-        // --- NAVIGATION ---
-        function showPage(pageId) {
-            document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
-            const target = document.getElementById('page-' + pageId);
-            if (target) {
-                target.classList.add('active');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-            reveal();
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+<div id="side-nav" class="fixed right-6 top-1/2 -translate-y-1/2 z-[100] hidden xl:flex flex-col gap-10 items-center transition-colors duration-500 text-nb-blue/40">
+    
+    <div class="h-20 w-px bg-current opacity-20"></div> <a href="#page-about" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">
+        Intro
+    </a>
+    
+    <a href="#skills" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">
+        Skills
+    </a>
+    
+    <a href="#awards" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">
+        Awards
+    </a>
+
+    <a href="#contact" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">
+        Contact
+    </a>
+    
+    <div class="h-20 w-px bg-current opacity-20"></div>
+
+</div>
+
+<script>
+    window.addEventListener('scroll', () => {
+        const sideNav = document.getElementById('side-nav');
+        const gamesSection = document.getElementById('games-preview');
+        
+        if (!sideNav || !gamesSection) return;
+
+        const rect = gamesSection.getBoundingClientRect();
+
+        // Si la sección de juegos (azul) está cruzando la mitad de la pantalla
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            sideNav.classList.remove('text-nb-blue/40');
+            sideNav.classList.add('text-white/60'); // Un blanco un poco más fuerte para que se vea sobre el azul
+        } else {
+            sideNav.classList.remove('text-white/60');
+            sideNav.classList.add('text-nb-blue/40');
         }
-
-        function scrollToSection(sectionId) {
-            const aboutPage = document.getElementById('page-about');
-            if (!aboutPage.classList.contains('active')) {
-                showPage('about');
-                setTimeout(() => {
-                    const section = document.getElementById(sectionId);
-                    if (section) section.scrollIntoView({ behavior: 'smooth' });
-                }, 500);
-            } else {
-                const section = document.getElementById(sectionId);
-                if (section) section.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-
-        // --- GSAP REVEAL ---
-        gsap.registerPlugin(ScrollTrigger);
-        function reveal() {
-            const reveals = document.querySelectorAll(".reveal-section");
-            reveals.forEach((element, i) => {
-                gsap.fromTo(element,
-                    { y: 30, opacity: 0 },
-                    {
-                        duration: 0.8,
-                        y: 0,
-                        opacity: 1,
-                        ease: "power2.out",
-                        scrollTrigger: {
-                            trigger: element,
-                            start: "top 95%",
-                        },
-                        delay: i * 0.05
-                    }
-                );
-            });
-        }
-        reveal();
-
-        // --- SLIDER LOGIC ---
-        function initSlider(idContainer, idOverlay, idHandle) {
-            const container = document.getElementById(idContainer);
-            const overlay = document.getElementById(idOverlay);
-            const handle = document.getElementById(idHandle);
-            if (!container) return;
-
-            let isDragging = false;
-            const update = (x) => {
-                const rect = container.getBoundingClientRect();
-                let position = ((x - rect.left) / rect.width) * 100;
-                position = Math.max(0, Math.min(position, 100));
-                overlay.style.width = `${position}%`;
-                handle.style.left = `${position}%`;
-            };
-
-            container.addEventListener('mousedown', () => isDragging = true);
-            window.addEventListener('mouseup', () => isDragging = false);
-            window.addEventListener('mousemove', (e) => { if (isDragging) update(e.clientX); });
-            container.addEventListener('touchstart', () => isDragging = true);
-            window.addEventListener('touchend', () => isDragging = false);
-            window.addEventListener('touchmove', (e) => { if (isDragging) update(e.touches[0].clientX); });
-            container.addEventListener('click', (e) => update(e.clientX));
-        }
-
-        window.addEventListener('load', () => {
-            initSlider('compare-slider', 'compare-overlay', 'compare-handle');
-        });
-
-        // --- BACK TO TOP ---
-        const backToTopBtn = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                backToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-10');
-                backToTopBtn.classList.add('opacity-100', 'visible', 'translate-y-0');
-            } else {
-                backToTopBtn.classList.add('opacity-0', 'invisible', 'translate-y-10');
-                backToTopBtn.classList.remove('opacity-100', 'visible', 'translate-y-0');
-            }
-        });
-        backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    </script>
-
-    <style>
-        .animate-marquee {
-            display: flex;
-            width: 200%;
-            animation: marquee 20s linear infinite;
-        }
-
-        @keyframes marquee {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-    </style>
+    });
+</script>
 </body>
 
 </html>

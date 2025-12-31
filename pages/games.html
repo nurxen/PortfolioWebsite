@@ -52,18 +52,24 @@
 </head>
 
 <body class="bg-nb-blue selection:bg-nb-peach selection:text-nb-brown font-body">
-    <nav class="absolute top-0 left-0 right-0 z-50 px-8 py-10 bg-transparent" id="navbar">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center text-white">
-            <a href="../index.html" class="font-display text-4xl md:text-5xl text-white hover:text-white/80 transition-colors">nurxen<span class="text-white text-5xl">.</span></a>
-            <div class="flex flex-wrap justify-center items-center gap-12 mt-6 lg:mt-0">
-                <a href="../index.html" class="text-lg tracking-widest font-medium hover:opacity-70 transition-opacity">ABOUT ME</a>
-                <a href="artwork.html" class="text-lg tracking-widest font-medium hover:opacity-70 transition-opacity">ARTWORK</a>
-                <a href="games.html" class="text-lg tracking-widest font-medium hover:opacity-70 transition-opacity underline decoration-nb-peach underline-offset-8">VIDEOGAMES</a>
-                <a href="../index.html" class="text-lg tracking-widest font-medium hover:opacity-70 transition-opacity">AWARDS</a>
-                <a href="../index.html" class="text-lg tracking-widest font-medium hover:opacity-70 transition-opacity">SKILLS</a>
-            </div>
+<nav class="absolute top-0 left-0 right-0 z-50 px-8 py-10 bg-transparent" id="navbar">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center text-white">
+        <a href="../index.html" class="font-display text-4xl md:text-5xl text-white hover:text-white/80 transition-colors">
+            nurxen<span class="text-nb-peach text-5xl">.</span>
+        </a>
+        
+        <div class="flex flex-wrap justify-center items-center gap-10 mt-6 lg:mt-0">
+            <a href="../index.html" class="text-sm tracking-widest font-bold hover:text-nb-peach transition-colors uppercase">About Me</a>
+            
+            <a href="artwork.html" class="text-sm tracking-widest font-bold hover:text-nb-peach transition-colors uppercase">Artwork</a>
+            <a href="games.html" class="text-sm tracking-widest font-bold hover:text-nb-peach transition-colors uppercase">Videogames</a>
+            
+            <a href="../index.html#contact" class="px-6 py-2 border-2 border-nb-peach text-nb-peach rounded-full text-xs font-black tracking-widest uppercase hover:bg-nb-peach hover:text-nb-brown transition-all">
+                Contact
+            </a>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <section class="relative w-screen h-[110vh] min-h-[500px] flex items-center justify-center overflow-hidden mb-24">
         <div class="absolute inset-0 z-0">
@@ -255,5 +261,24 @@
             });
         });
     </script>
+
+    <div class="fixed right-6 top-1/2 -translate-y-1/2 z-[100] hidden xl:flex flex-col gap-14 items-center text-white/40">
+    <div class="h-20 w-px bg-white/20"></div>
+    
+    <a href="#unchained" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">
+        Unchained
+    </a>
+    <a href="#obat" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">
+        O.B.A.T
+    </a>
+    <a href="#ant-estres" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">
+        Ant&Estres
+    </a>
+    <a href="#jam-version" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">
+        Jam
+    </a>
+    
+    <div class="h-20 w-px bg-white/20"></div>
+</div>
 </body>
 </html>
