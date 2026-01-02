@@ -6,18 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nurxen | Videogames</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
+    <!-- Favicon -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shrikhand&display=swap"
-        rel="stylesheet" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shrikhand&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="../css/styles.css" />
 
+    <!-- Tailwind CSS Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -40,37 +38,53 @@
                         cozy: "1.5rem",
                         super: "3.5rem",
                     },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'marquee': 'marquee 40s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        }
+                    }
                 },
             },
         };
     </script>
-    <style>
-        .media-scroll::-webkit-scrollbar { height: 6px; }
-        .media-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); border-radius: 10px; }
-        .media-scroll::-webkit-scrollbar-thumb { background: #F6D6CB; border-radius: 10px; }
-    </style>
 </head>
 
 <body class="bg-nb-blue selection:bg-nb-peach selection:text-nb-brown font-body">
-<nav class="absolute top-0 left-0 right-0 z-50 px-8 py-10 bg-transparent" id="navbar">
-    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center text-white">
-        <a href="../index.html" class="font-display text-4xl md:text-5xl text-white hover:text-white/80 transition-colors">
-            nurxen<span class="text-nb-peach text-5xl">.</span>
-        </a>
-        
-        <div class="flex flex-wrap justify-center items-center gap-10 mt-6 lg:mt-0">
-            <a href="../index.html" class="text-sm tracking-widest font-bold hover:text-nb-peach transition-colors uppercase">About Me</a>
-            
-            <a href="artwork.html" class="text-sm tracking-widest font-bold hover:text-nb-peach transition-colors uppercase">Artwork</a>
-            <a href="games.html" class="text-sm tracking-widest font-bold hover:text-nb-peach transition-colors uppercase">Videogames</a>
-            
-            <a href="../index.html#contact" class="px-6 py-2 border-2 border-nb-peach text-nb-peach rounded-full text-xs font-black tracking-widest uppercase hover:bg-nb-peach hover:text-nb-brown transition-all">
-                Contact
-            </a>
-        </div>
-    </div>
-</nav>
 
+    <!-- Navbar -->
+    <nav class="absolute top-0 left-0 right-0 z-50 px-8 py-10 bg-transparent" id="navbar">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center text-white">
+            <a href="../index.html" class="font-display text-4xl md:text-5xl text-white hover:text-white/80 transition-colors">
+                nurxen<span class="text-nb-peach text-5xl">.</span>
+            </a>
+
+            <div class="flex flex-wrap justify-center items-center gap-10 mt-6 lg:mt-0">
+                <a href="../index.html" class="text-sm tracking-widest font-bold hover:text-nb-peach transition-colors uppercase">
+                    About Me
+                </a>
+                <a href="artwork.html" class="text-sm tracking-widest font-bold hover:text-nb-peach transition-colors uppercase">
+                    Artwork
+                </a>
+                <a href="games.html" class="text-sm tracking-widest font-bold text-nb-white transition-colors uppercase border-b-2 border-nb-peach pb-1">
+                    Videogames
+                </a>
+                <a href="contact.html" class="px-6 py-2 border-2 border-nb-peach text-nb-peach rounded-full text-xs font-black tracking-widest uppercase hover:bg-nb-peach hover:text-nb-brown transition-all">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
     <section class="relative w-screen h-[110vh] min-h-[500px] flex items-center justify-center overflow-hidden mb-24">
         <div class="absolute inset-0 z-0">
             <video autoplay muted loop playsinline class="w-full h-full object-cover">
@@ -78,9 +92,13 @@
             </video>
             <div class="absolute inset-0 bg-black/60"></div>
         </div>
+
         <div class="relative z-10 text-center reveal-section">
-            <p class="text-nb-peach uppercase tracking-[0.3em] font-bold mb-8">Portfolio</p>
+            <div class="inline-block px-4 py-1.5 mb-8 border border-nb-peach rounded-full">
+                <p class="text-nb-white font-black text-[10px] uppercase tracking-[0.3em]">Portfolio 2026</p>
+            </div>
             <h1 class="text-6xl md:text-9xl mb-12 font-display text-white drop-shadow-2xl">My Videogames</h1>
+            
             <div class="flex justify-center gap-6 text-nb-blue font-extrabold text-[15px] uppercase tracking-widest">
                 <div class="bg-nb-peach px-9 py-4 rounded-full shadow-lg text-center">
                     <span class="text-3xl font-display text-nb-blue block">8</span>
@@ -94,6 +112,7 @@
         </div>
     </section>
 
+    <!-- Games Section -->
     <section class="max-w-4xl mx-auto px-8 text-center mb-32 reveal-section">
         <p class="text-2xl text-white/90 leading-relaxed font-medium italic">
             "Here you will find cozy and detailed art with warm color palettes, cartoon style assets, and animations showing my creative process."
@@ -101,9 +120,9 @@
     </section>
 
     <section class="max-w-6xl mx-auto px-8 pb-32 space-y-32">
-        
-        <!-- UNCHAINED STEAM -->
-        <article class="reveal-section">
+
+        <!-- UNCHAINED -->
+        <article class="reveal-section" id="unchained">
             <div class="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border border-white/20 shadow-2xl">
                 <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
                     <div class="aspect-video overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/10">
@@ -138,8 +157,8 @@
             </div>
         </article>
 
-        <!-- OBAT -->
-        <article class="reveal-section">
+        <!-- O.B.A.T -->
+        <article class="reveal-section" id="obat">
             <div class="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border border-white/20 shadow-2xl">
                 <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
                     <div class="lg:order-2 aspect-video overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/10">
@@ -168,13 +187,12 @@
                     </div>
                     <img src="../assets/images/games/OBAT/gameplay/2.png" class="rounded-2xl aspect-video w-full object-cover border border-white/10 hover:scale-105 transition shadow-md">
                     <img src="../assets/images/games/OBAT/gameplay/3.png" class="rounded-2xl aspect-video w-full object-cover border border-white/10 hover:scale-105 transition shadow-md">
-                
                 </div>
             </div>
         </article>
 
         <!-- ANT&ESTRES -->
-        <article class="reveal-section">
+        <article class="reveal-section" id="ant-estres">
             <div class="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border border-white/20 shadow-2xl">
                 <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
                     <div class="aspect-video overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/10 bg-nb-blue-dark/30">
@@ -204,8 +222,8 @@
             </div>
         </article>
 
-        <!-- UNCHAINED JAM -->
-        <article class="reveal-section">
+        <!-- UNCHAINED JAM VERSION -->
+        <article class="reveal-section" id="jam-version">
             <div class="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border border-white/20 shadow-2xl">
                 <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
                     <div class="aspect-video overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/10 bg-nb-blue-dark/30">
@@ -238,6 +256,7 @@
         </article>
     </section>
 
+    <!-- Explore More Section -->
     <section class="text-center pb-32 reveal-section">
         <h2 class="text-white font-display text-5xl mb-10">Explore more games</h2>
         <a href="https://nuriia.itch.io/" target="_blank" class="inline-flex items-center gap-4 px-12 py-6 bg-white text-nb-blue rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-2xl">
@@ -245,40 +264,124 @@
         </a>
     </section>
 
-    <footer class="bg-nb-blue py-20 px-10 border-t border-white/10">
-        <div class="max-w-7xl mx-auto text-nb-white text-center">
-            <a href="index.html" class="font-display text-6xl hover:text-nb-peach transition">nurxen<span class="text-nb-peach">.</span></a>
-            <p class="mt-6 text-xs uppercase tracking-widest opacity-60">©2025 Nurxen · All Rights Reserved</p>
+    <!-- Contact Section -->
+    <section class="max-w-4xl mx-auto px-8 pb-20 text-center reveal-section">
+        <div class="border-t border-white/10 pt-10">
+            <p class="text-white/60 mb-6 font-medium">¿Buscas un desarrollador para tu próximo juego?</p>
+            <div class="flex justify-center gap-6">
+                 <a href="contact.html" class="text-nb-peach font-black uppercase text-xs tracking-widest hover:text-white transition-colors border-b-2 border-transparent hover:border-nb-peach pb-1">
+                    Contactame
+                </a>
+                <span class="text-white/20">•</span>
+                <a href="../files/CV_2025_English.pdf" target="_blank"
+                    rel="noopener noreferrer" class="text-nb-peach font-black uppercase text-xs tracking-widest hover:text-white transition-colors border-b-2 border-transparent hover:border-nb-peach pb-1">
+                    See CV
+                </a>
+            </div>
         </div>
-    </footer>
+    </section>
+
+    <!-- Footer -->
+    <div class="w-full mt-20">
+        <svg class="footer-wave w-full h-[150px]" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path class="fill-nb-bg" d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,139,576,170.7C672,203,768,245,864,240C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+
+        <footer class="bg-nb-bg py-16 px-10 relative z-10">
+            <div class="max-w-7xl mx-auto text-nb-blue">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16 text-left">
+                    
+                    <div class="lg:col-span-2">
+                        <a href="../index.html" class="font-display text-6xl md:text-7xl text-nb-blue hover:text-nb-brown transition-colors block mb-4">
+                            nurxen<span class="text-nb-brown">.</span>
+                        </a>
+                        <p class="text-nb-blue/60 font-bold uppercase tracking-widest text-xs mb-8">
+                            3D Artist & Game Developer
+                        </p>
+                        
+                        <div class="flex gap-6">
+                            <a href="https://www.instagram.com/nurxen_" target="_blank" class="w-10 h-10 rounded-full border border-nb-blue/20 flex items-center justify-center hover:bg-nb-blue hover:text-white hover:border-nb-blue transition-all duration-300">
+                                <i class="fa-brands fa-instagram text-lg"></i>
+                            </a>
+                            <a href="https://www.artstation.com/nurxen1" target="_blank" class="w-10 h-10 rounded-full border border-nb-blue/20 flex items-center justify-center hover:bg-nb-blue hover:text-white hover:border-nb-blue transition-all duration-300">
+                                <i class="fa-brands fa-artstation text-lg"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank" class="w-10 h-10 rounded-full border border-nb-blue/20 flex items-center justify-center hover:bg-nb-blue hover:text-white hover:border-nb-blue transition-all duration-300">
+                                <i class="fa-brands fa-linkedin-in text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <p class="font-body text-nb-brown opacity-60 text-xs uppercase tracking-widest font-black mb-2">Explore</p>
+                        <a href="../index.html" class="text-sm font-bold hover:text-nb-brown transition-all duration-300">Home</a>
+                        <a href="artwork.html" class="text-sm font-bold hover:text-nb-brown transition-all duration-300">Artwork Gallery</a>
+                        <a href="games.html" class="text-sm font-bold hover:text-nb-brown transition-all duration-300">Videogames</a>
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <p class="font-body text-nb-brown opacity-60 text-xs uppercase tracking-widest font-black mb-2">Get in Touch</p>
+                        <a href="contact.html" class="text-sm font-bold hover:text-nb-brown transition-all duration-300">Contact Form</a>
+                        <a href="mailto:nurxen21@gmail.com" class="text-sm font-bold hover:text-nb-brown transition underline underline-offset-8">Email Me</a>
+                        <p class="text-xs text-nb-blue/60 mt-4">Available for freelance.</p>
+                    </div>
+                </div>
+
+                <div class="pt-10 border-t border-nb-blue/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-nb-blue/40">
+                        ©2026 Nurxen. All Rights Reserved.
+                    </p>
+                    
+                    <div class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-nb-blue/40">
+                        <span>Made with cozy vibes & Blender</span>
+                        <i class="fa-solid fa-heart text-nb-brown animate-pulse"></i>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Side Navigation -->
+    <div class="fixed right-6 top-1/2 -translate-y-1/2 z-[100] hidden xl:flex flex-col gap-14 items-center text-white/40">
+        <div class="h-20 w-px bg-white/20"></div>
+        <a href="#unchained" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">Unchained</a>
+        <a href="#obat" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">O.B.A.T</a>
+        <a href="#ant-estres" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">Ant&Estres</a>
+        <a href="#jam-version" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">Jam</a>
+        <div class="h-20 w-px bg-white/20"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-10 right-10 z-[60] w-14 h-14 bg-nb-brown text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:scale-110 hover:bg-nb-blue transform translate-y-10">
+        <i class="fa-solid fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/theme.js"></script>
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
         document.querySelectorAll(".reveal-section").forEach((el, i) => {
-            gsap.fromTo(el, { y: 30, opacity: 0 }, {
-                y: 0, opacity: 1, duration: 0.8, delay: i * 0.1,
-                scrollTrigger: { trigger: el, start: "top 90%" }
+            gsap.fromTo(el, {
+                y: 30,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                delay: i * 0.1,
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 90%"
+                }
             });
         });
     </script>
-
-    <div class="fixed right-6 top-1/2 -translate-y-1/2 z-[100] hidden xl:flex flex-col gap-14 items-center text-white/40">
-    <div class="h-20 w-px bg-white/20"></div>
-    
-    <a href="#unchained" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">
-        Unchained
-    </a>
-    <a href="#obat" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">
-        O.B.A.T
-    </a>
-    <a href="#ant-estres" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">
-        Ant&Estres
-    </a>
-    <a href="#jam-version" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">
-        Jam
-    </a>
-    
-    <div class="h-20 w-px bg-white/20"></div>
-</div>
 </body>
+
 </html>

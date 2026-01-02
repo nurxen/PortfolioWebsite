@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nurxen | 3D Artist & Game Developer</title>
 
-    <!-- Tailwind CSS con configuración extendida -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Tailwind CSS CDN with custom configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -49,57 +56,41 @@
             }
         }
     </script>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shrikhand&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-
-    <!-- Theme JS -->
-    <script src="js/theme.js" defer></script>
 </head>
 
 <body class="bg-nb-bg selection:bg-nb-peach selection:text-nb-brown font-body">
 
-    <!-- NAVBAR -->
-<nav class="absolute top-0 left-0 right-0 z-50 px-8 py-10 bg-transparent" id="navbar">
-    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center text-white">
-        <a href="index.html" class="font-display text-4xl md:text-5xl text-white hover:text-white/80 transition-colors">
-            nurxen<span class="text-nb-peach text-5xl">.</span>
-        </a>
-        
-        <div class="flex flex-wrap justify-center items-center gap-10 mt-6 lg:mt-0">
-            <a href="index.html" class="text-sm tracking-widest font-bold hover:text-nb-peach transition-colors uppercase">About Me</a>
-            
-            <a href="pages/artwork.html" class="text-sm tracking-widest font-bold hover:text-nb-peach transition-colors uppercase">Artwork</a>
-            <a href="pages/games.html" class="text-sm tracking-widest font-bold hover:text-nb-peach transition-colors uppercase">Videogames</a>
-            
-            <a href="index.html#contact" class="px-6 py-2 border-2 border-nb-peach text-nb-peach rounded-full text-xs font-black tracking-widest uppercase hover:bg-nb-peach hover:text-nb-brown transition-all">
-                Contact
+    <!-- Navbar -->
+    <nav class="absolute top-0 left-0 right-0 z-50 px-8 py-10 bg-transparent" id="navbar">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center text-white">
+            <a href="index.html" class="font-display text-4xl md:text-5xl text-white hover:text-white/80 transition-colors">
+                nurxen<span class="text-nb-peach text-5xl">.</span>
             </a>
+
+            <div class="flex flex-wrap justify-center items-center gap-10 mt-6 lg:mt-0">
+                <a href="index.html" class="text-sm tracking-widest font-bold text-nb-white transition-colors uppercase border-b-2 border-nb-peach pb-1">
+                    About Me
+                </a>
+                <a href="pages/artwork.html" class="text-sm tracking-widest font-bold hover:text-nb-peach transition-colors uppercase">
+                    Artwork
+                </a>
+                <a href="pages/games.html" class="text-sm tracking-widest font-bold hover:text-nb-peach transition-colors uppercase">
+                    Videogames
+                </a>
+                <a href="pages/contact.html" class="px-6 py-2 border-2 border-nb-peach text-nb-peach rounded-full text-xs font-black tracking-widest uppercase hover:bg-nb-peach hover:text-nb-brown transition-all">
+                    Contact
+                </a>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-    <!-- HERO SECTION: THE ART OF COZINESS -->
+    <!-- Main Content -->
     <main id="page-about" class="page-view active pt-15 bg-nb-bg">
-        <section
-            class="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-[125vh] min-h-[600px] mb-20 overflow-hidden flex items-end justify-center pb-24">
-
+        
+        <!-- Hero Section -->
+        <section class="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-[125vh] min-h-[600px] mb-20 overflow-hidden flex items-end justify-center pb-24">
             <div class="absolute inset-0 z-0">
-                <img src="assets/images/artwork/3D/otoño mesa/render definitivo.png" alt="Cozy Background"
-                    class="w-full h-full object-cover">
+                <img src="assets/images/artwork/3D/otoño mesa/render definitivo.png" alt="Cozy Background" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
             </div>
 
@@ -107,17 +98,12 @@
                 <h1 class="font-display text-6xl md:text-8xl text-white leading-tight mb-6 drop-shadow-lg">
                     The art <br> <span class="italic font-serif">of coziness</span>
                 </h1>
-
-                <p
-                    class="text-xl md:text-2xl text-white mb-12 leading-relaxed font-medium drop-shadow-md max-w-2xl mx-auto">
-                    Welcome to my cozy corner where you will find my cute art full of warmth, scenes with a lot of
-                    detail that will embrace your soul.
+                <p class="text-xl md:text-2xl text-white mb-12 leading-relaxed font-medium drop-shadow-md max-w-2xl mx-auto">
+                    Welcome to my cozy corner where you will find my cute art full of warmth, scenes with a lot of detail that will embrace your soul.
                 </p>
-
                 <a href="pages/artwork.html" class="btn-standard">
                     SEE MY ART
                 </a>
-
             </div>
 
             <div class="absolute bottom-10 right-10 z-10 ">
@@ -127,31 +113,33 @@
             </div>
         </section>
 
-        <!-- PÁGINA: ABOUT ME (HOME) -->
-        <section class="max-w-7xl mx-auto px-8">
-            <!-- Hero -->
-            <div class="text-center max-w-4xl mx-auto mb-28 reveal-section">
+        <!-- About me Section -->
+        <section class="max-w-7xl mx-auto px-4 md:px-40">
+            <div class="text-center max-w-4xl mx-auto mb-28 reveal-section relative"> 
+                <img src="assets/images/ui/Cafe.png" 
+                class="absolute -top-10 -right-4 md:-right-20 w-24 md:w-32 rotate-12 animate-float opacity-90 z-0 pointer-events-none select-none hidden md:block" 
+                alt="Decoracion Cafe">
 
-                <h1 class="text-6xl md:text-8xl mb-6">Hi! I'm Nuria</h1>
+                <img src="assets/images/ui/Planta.png" 
+                    class="absolute bottom-0 -left-10 md:-left-32 w-32 md:w-48 -rotate-6 animate-float opacity-80 z-0 pointer-events-none select-none hidden md:block" 
+                    style="animation-delay: 2s;"
+                    alt="Decoracion Planta">
+
+                <h1 class="text-6xl md:text-8xl mb-6 relative z-10">Hi! I'm Nuria</h1>            
                 <p class="subtitle mb-12">3D Artist & Game Developer</p>
 
                 <div class="flex flex-wrap justify-center gap-3 mb-10 max-w-3xl mx-auto">
-                    <div class="bubble-tag-hero"></i> 3D ARTIST </div>
-                    <div class="bubble-tag-hero"></i> ANIMATION </div>
-                    <div class="bubble-tag-hero"></i> GAME DEVELOPER </div>
-                    <div class="bubble-tag-hero"></i> PROGRAMMER </div>
+                    <div class="bubble-tag-hero"> 3D ARTIST </div>
+                    <div class="bubble-tag-hero"> ANIMATION </div>
+                    <div class="bubble-tag-hero"> GAME DEVELOPER </div>
+                    <div class="bubble-tag-hero"> PROGRAMMER </div>
                 </div>
 
-                <p class="text-lg text-nb-text-dark mb-8 leading-relaxed max-w-4xl mx-auto font-medium text-center">
-                    Passionate about creating unique and immersive experiences. Currently studying game design and
-                    development, I blend programming with 3D modeling to bring ideas to life. I’ve participated in
-                    several game jams and proudly released Unchained on Steam, turning an idea into a playable reality.
-                    I’m always working on new 3D artworks, constantly improving and experimenting. Let’s connect and
-                    create something meaningful.
+                <p class="text-lg text-nb-text-dark mb-8 leading-relaxed max-w-4xl mx-auto font-medium text-justify">
+                    Passionate about creating unique and immersive experiences. Currently studying game design and development, I blend programming with 3D modeling to bring ideas to life. I’ve participated in several game jams and proudly released Unchained on Steam, turning an idea into a playable reality. I’m always working on new 3D artworks, constantly improving and experimenting. Let’s connect and create something meaningful.
                 </p>
-
+                        
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-5xl mx-auto mb-12">
-
                     <div class="bg-nb-blue p-8 md:p-10 rounded-[3rem] border-2 border-white/10 shadow-xl flex flex-col">
                         <h3 class="font-display text-white text-2xl mb-6">I specialize in:</h3>
                         <ul class="space-y-4 text-white/90 font-medium">
@@ -174,100 +162,87 @@
                         </ul>
                     </div>
 
-                    <div
-                        class="bg-nb-blue p-8 md:p-10 rounded-[3rem] border-2 border-white/10 shadow-xl flex flex-col justify-between">
+                    <div class="bg-nb-blue p-8 md:p-10 rounded-[3rem] border-2 border-white/10 shadow-xl flex flex-col justify-between">
                         <p class="font-display text-white text-2xl mb-6"> Explore my creative journey! </p>
-
                         <div class="grid grid-cols-1 gap-4">
-                            <a href="https://www.artstation.com/nurxen1" target="_blank"
-                                class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/20 flex items-center gap-4 transition all duration-300 hover:bg-white hover:border-white group shadow-sm">
-                                <i
-                                    class="fa-brands fa-artstation text-white group-hover:text-nb-blue text-2xl transition-colors"></i>
+                            <a href="https://www.artstation.com/nurxen1" target="_blank" class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/20 flex items-center gap-4 transition all duration-300 hover:bg-white hover:border-white group shadow-sm">
+                                <i class="fa-brands fa-artstation text-white group-hover:text-nb-blue text-2xl transition-colors"></i>
                                 <div class="text-left">
-                                    <p
-                                        class="font-bold text-white group-hover:text-nb-blue text-base transition-colors">
-                                        ArtStation</p>
-                                    <p
-                                        class="text-[9px] text-white/60 group-hover:text-nb-blue/60 uppercase font-bold tracking-widest transition-colors">
-                                        Full Portfolio</p>
+                                    <p class="font-bold text-white group-hover:text-nb-blue text-base transition-colors">ArtStation</p>
+                                    <p class="text-[9px] text-white/60 group-hover:text-nb-blue/60 uppercase font-bold tracking-widest transition-colors">Full Portfolio</p>
                                 </div>
                             </a>
-
-                            <a href="https://cara.app/nurxen" target="_blank"
-                                class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/20 flex items-center gap-4 transition all duration-300 hover:bg-white hover:border-white group shadow-sm">
-                                <i
-                                    class="fa-solid fa-palette text-white group-hover:text-nb-blue text-2xl transition-colors"></i>
+                            <a href="https://cara.app/nurxen" target="_blank" class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/20 flex items-center gap-4 transition all duration-300 hover:bg-white hover:border-white group shadow-sm">
+                                <i class="fa-solid fa-palette text-white group-hover:text-nb-blue text-2xl transition-colors"></i>
                                 <div class="text-left">
-                                    <p
-                                        class="font-bold text-white group-hover:text-nb-blue text-base transition-colors">
-                                        Cara</p>
-                                    <p
-                                        class="text-[9px] text-white/60 group-hover:text-nb-blue/60 uppercase font-bold tracking-widest transition-colors">
-                                        WIP & Sketches</p>
+                                    <p class="font-bold text-white group-hover:text-nb-blue text-base transition-colors">Cara</p>
+                                    <p class="text-[9px] text-white/60 group-hover:text-nb-blue/60 uppercase font-bold tracking-widest transition-colors">WIP & Sketches</p>
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- MARQUEE ACTUALIZADO -->
-                <div
-                    class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-nb-brown border-y border-nb-brown/30 py-6 mb-28 overflow-hidden">
-                    <div class="flex whitespace-nowrap animate-marquee">
-                        <div class="flex items-center gap-16 px-8">
-                            <span class="font-display text-lg text-white uppercase">3D Artist</span>
-                            <i class="fa-solid fa-star text-white opacity-40 text-xs"></i>
-                            <span class="font-display text-lg text-white uppercase">Animation</span>
-                            <i class="fa-solid fa-star text-white opacity-40 text-xs"></i>
-                            <span class="font-display text-lg text-white uppercase">Digital Art</span>
-                            <i class="fa-solid fa-star text-white opacity-40 text-xs"></i>
-                            <span class="font-display text-lg text-white uppercase">Programmer</span>
-                            <i class="fa-solid fa-star text-white opacity-40 text-xs"></i>
-                            <span class="font-display text-lg text-white uppercase">Game Developer</span>
-                        </div>
-                        <div class="flex items-center gap-16 px-8">
-                            <span class="font-display text-lg text-white uppercase">3D Artist</span>
-                            <i class="fa-solid fa-star text-white opacity-40 text-xs"></i>
-                            <span class="font-display text-lg text-white uppercase">Animation</span>
-                            <i class="fa-solid fa-star text-white opacity-40 text-xs"></i>
-                            <span class="font-display text-lg text-white uppercase">Digital Art</span>
-                            <i class="fa-solid fa-star text-white opacity-40 text-xs"></i>
-                            <span class="font-display text-lg text-white uppercase">Programmer</span>
-                            <i class="fa-solid fa-star text-white opacity-40 text-xs"></i>
-                            <span class="font-display text-lg text-white uppercase">Game Developer</span>
-                        </div>
+                <!-- Skills Marquee -->
+                <div class="w-screen absolute left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-nb-brown border-y border-nb-brown/30 py-8 mb-32 -mt-54 overflow-hidden">
+                <div class="flex whitespace-nowrap animate-marquee">
+                    
+                    <!-- Bloque 1 -->
+                    <div class="flex items-center gap-10 px-12 marquee-content">
+                    <span class="font-display text-4xl text-white uppercase">3D Artist</span>
+                    <i class="fa-solid fa-star text-white opacity-40 text-base"></i>
+                    <span class="font-display text-4xl text-white uppercase">Animation</span>
+                    <i class="fa-solid fa-star text-white opacity-40 text-base"></i>
+                    <span class="font-display text-4xl text-white uppercase">Digital Art</span>
+                    <i class="fa-solid fa-star text-white opacity-40 text-base"></i>
+                    <span class="font-display text-4xl text-white uppercase">Programmer</span>
+                    <i class="fa-solid fa-star text-white opacity-40 text-base"></i>
+                    <span class="font-display text-4xl text-white uppercase">Game Developer</span>
+                    <i class="fa-solid fa-star text-white opacity-40 text-base"></i>
                     </div>
+
+                    <!-- Bloque 2 (clon) -->
+                    <div class="flex items-center gap-10 px-0 marquee-content">
+                    <span class="font-display text-4xl text-white uppercase">3D Artist</span>
+                    <i class="fa-solid fa-star text-white opacity-40 text-base"></i>
+                    <span class="font-display text-4xl text-white uppercase">Animation</span>
+                    <i class="fa-solid fa-star text-white opacity-40 text-base"></i>
+                    <span class="font-display text-4xl text-white uppercase">Digital Art</span>
+                    <i class="fa-solid fa-star text-white opacity-40 text-base"></i>
+                    <span class="font-display text-4xl text-white uppercase">Programmer</span>
+                    <i class="fa-solid fa-star text-white opacity-40 text-base"></i>
+                    <span class="font-display text-4xl text-white uppercase">Game Developer</span>
+                    <i class="fa-solid fa-star text-white opacity-40 text-base"></i>
+                    </div>
+
                 </div>
+                </div>
+
         </section>
+        
+        <!-- Artwork Preview Section -->
+        <div id="artwork-preview" class="mb-32 reveal-section max-w-[1500px] mx-auto px-10 py-16">
 
-        <!-- Visual Process -->
-        <div id="artwork-preview" class="mb-32 reveal-section max-w-[1400px] mx-auto px-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-16 gap-x-32 items-center">
-
                 <div class="text-left max-w-lg">
                     <p class="subtitle mb-4">Visual Process</p>
                     <h2 class="text-4xl md:text-5xl lg:text-6xl mb-8 text-nb-blue leading-tight">
                         3D Environments
                     </h2>
                     <p class="text-nb-text-dark mb-10 text-lg leading-relaxed">
-                        Explore the transition from the initial clay modeling and blockout phase to the final rendered
-                        environment.
+                        Explore the transition from the initial clay modeling and blockout phase to the final rendered environment.
                     </p>
                     <div class="flex justify-start">
                         <a href="pages/artwork.html" class="btn-standard fa-solid fa-palette ml-2">
                             GALLERY
                         </a>
-
                     </div>
                 </div>
 
                 <div class="relative flex items-center justify-center lg:justify-end py-10">
-
-                    <span
-                        class="absolute left-[-40px] lg:left-[-30px] top-1/2 -translate-y-1/2 bg-nb-brown px-4 py-2 rounded-full text-[10px] font-bold text-nb-white uppercase tracking-widest shadow-lg z-30 border border-nb-white/20 hidden md:block">
+                    <span class="absolute left-[-40px] lg:left-[-30px] top-1/2 -translate-y-1/2 bg-nb-brown px-4 py-2 rounded-full text-[10px] font-bold text-nb-white uppercase tracking-widest shadow-lg z-30 border border-nb-white/20 hidden md:block">
                         Antes
                     </span>
-
                     <div class="comparison-slider-circle shadow-2xl" id="compare-slider">
                         <img src="assets/images/artwork/3D/radio car/FINAL.png" alt="After">
                         <div class="comparison-overlay-circle" id="compare-overlay">
@@ -277,35 +252,27 @@
                             <i class="fa-solid fa-arrows-left-right"></i>
                         </div>
                     </div>
-
-                    <span
-                        class="absolute right-[-40px] lg:right-[-40px] top-1/2 -translate-y-1/2 bg-nb-brown px-4 py-2 rounded-full text-[10px] font-bold text-nb-white uppercase tracking-widest shadow-lg z-30 border border-nb-white/20 hidden md:block">
+                    <span class="absolute right-[-40px] lg:right-[-40px] top-1/2 -translate-y-1/2 bg-nb-brown px-4 py-2 rounded-full text-[10px] font-bold text-nb-white uppercase tracking-widest shadow-lg z-30 border border-nb-white/20 hidden md:block">
                         Después
                     </span>
                 </div>
-
             </div>
         </div>
 
-
-        <!-- VIDEOGAMES PREVIEW HOME -->
-        <div id="artwork-preview" class="mb-0 reveal-section max-w-[1400px] mx-auto px-10">
-        </div>
+        <div id="artwork-preview" class="mb-0 reveal-section max-w-[1400px] mx-auto px-10"></div>
 
         <div class="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] -mt-1">
             <svg class="block w-full h-[100px]" viewBox="0 0 1440 120" preserveAspectRatio="none">
-                <path class="fill-nb-blue"
-                    d="M0,64L80,74.7C160,85,320,107,480,112C640,117,800,107,960,90.7C1120,75,1280,53,1360,42.7L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z">
-                </path>
+                <path class="fill-nb-blue" d="M0,64L80,74.7C160,85,320,107,480,112C640,117,800,107,960,90.7C1120,75,1280,53,1360,42.7L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
             </svg>
         </div>
 
+        <!-- Games Preview Section -->
         <section id="games-preview" class="bg-nb-blue py-32 px-8 overflow-hidden">
 
             <div class="relative w-full mb-20 py-4 bg-white/5 border-y border-white/10">
                 <div class="flex whitespace-nowrap animate-marquee">
-                    <div
-                        class="flex items-center gap-10 text-white/40 font-display text-2xl uppercase tracking-[0.3em]">
+                    <div class="flex items-center gap-10 text-white/40 font-display text-2xl uppercase tracking-[0.3em]">
                         <span>Coming Soon</span>
                         <i class="fa-solid fa-gamepad text-nb-peach animate-bounce"></i>
                         <span>New Adventures</span>
@@ -322,72 +289,58 @@
                 </div>
             </div>
 
-            <div class="max-w-7xl mx-auto text-center">
+            <div class="max-w-7xl mx-auto text-center relative"> <img src="assets/images/ui/MandoConsola.png" 
+                    class="absolute top-10 left-10 md:left-[15%] w-24 md:w-36 -rotate-12 animate-float z-10 pointer-events-none select-none opacity-80 mix-blend-overlay md:mix-blend-normal" 
+                    alt="Game Controller">
+
                 <p class="subtitle mb-12 !text-nb-peach !after:bg-nb-peach">Featured Projects</p>
-                <h2 class="text-4xl md:text-7xl mb-12 text-white font-display">Play My Stories</h2>
+                <h2 class="text-4xl md:text-7xl mb-12 text-white font-display relative z-20">Play My Stories</h2>
 
-                <!-- STATS BADGES: DINÁMICAS Y COZY -->
                 <div class="flex flex-col md:flex-row justify-center items-center gap-12 mb-20 reveal-section">
-
-                    <!-- Proyectos Finalizados -->
                     <div class="relative group">
-
-                        <div class="relative flex items-center gap-5 bg-white/10 backdrop-blur-md border border-white/20 p-3 pr-10 rounded-full shadow-2xl transition-all duration-500"
-                            style="animation-delay: 0s;">
-                            <!-- Icono en círculo sólido -->
-                            <div
-                                class="w-16 h-16 bg-nb-peach rounded-full flex items-center justify-center text-nb-blue shadow-inner transform transition-transform">
+                        <div class="relative flex items-center gap-5 bg-white/10 backdrop-blur-md border border-white/20 p-3 pr-10 rounded-full shadow-2xl transition-all duration-500" style="animation-delay: 0s;">
+                            <div class="w-16 h-16 bg-nb-peach rounded-full flex items-center justify-center text-nb-blue shadow-inner transform transition-transform">
                                 <i class="fa-solid fa-gamepad text-2xl"></i>
                             </div>
-                            <!-- Texto -->
                             <div class="flex flex-col text-left">
                                 <span class="text-4xl font-display text-white leading-none">8</span>
-                                <span
-                                    class="text-[10px] text-nb-peach font-black uppercase tracking-[0.2em] mt-1">Released</span>
+                                <span class="text-[10px] text-nb-peach font-black uppercase tracking-[0.2em] mt-1">Released</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Proyecto en Proceso -->
                     <div class="relative group">
-                        <div
-                            class="absolute -inset-4 bg-white/5 rounded-full blur-xl opacity-0 transition-opacity duration-500">
-                        </div>
-
-                        <div class="relative flex items-center gap-5 bg-white/10 backdrop-blur-md border border-white/20 p-3 pr-10 rounded-full shadow-2xl transition-all duration-500"
-                            style="animation-delay: 1s;">
-                            <!-- Icono con punto de notificación animado -->
-                            <div
-                                class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-nb-blue shadow-inner relative transform transition-transform">
+                        <div class="absolute -inset-4 bg-white/5 rounded-full blur-xl opacity-0 transition-opacity duration-500"></div>
+                        <div class="relative flex items-center gap-5 bg-white/10 backdrop-blur-md border border-white/20 p-3 pr-10 rounded-full shadow-2xl transition-all duration-500" style="animation-delay: 1s;">
+                            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-nb-blue shadow-inner relative transform transition-transform">
                                 <i class="fa-solid fa-code text-2xl"></i>
                             </div>
                             <div class="flex flex-col text-left">
                                 <span class="text-4xl font-display text-white leading-none">1</span>
-                                <span class="text-[10px] text-white/60 font-black uppercase tracking-[0.2em] mt-1">In
-                                    Progress</span>
+                                <span class="text-[10px] text-white/60 font-black uppercase tracking-[0.2em] mt-1">In Progress</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-                    <div
-                        class="bg-white/10 backdrop-blur-md border border-white/20 rounded-[3.5rem] p-5 group shadow-2xl transition hover:bg-white/20">
-                        <div class="mb-6 rounded-[2.5rem] overflow-hidden flex justify-center items-center bg-black/10">
-                            <img src="assets/images/games/UNCHAINED - JAM/ggUOZs.png"
-                                class="w-full h-auto object-contain group-hover:scale-105 transition duration-500">
+                    <a href="https://store.steampowered.com/app/3234310/UNCHAINED/" target="_blank" class="block">
+                        <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-[3.5rem] p-5 group shadow-2xl transition hover:bg-white/20">
+                            <div class="mb-6 rounded-[2.5rem] overflow-hidden flex justify-center items-center bg-black/10">
+                                <img src="assets/images/games/UNCHAINED - JAM/ggUOZs.png" class="w-full h-auto object-contain group-hover:scale-105 transition duration-500">
+                            </div>
+                            <h3 class="text-3xl text-center pb-4 text-white font-display">UNCHAINED</h3>
                         </div>
-                        <h3 class="text-3xl text-center pb-4 text-white font-display">UNCHAINED</h3>
-                    </div>
+                    </a>
 
-                    <div
-                        class="bg-white/10 backdrop-blur-md border border-white/20 rounded-[3.5rem] p-5 group shadow-2xl transition hover:bg-white/20">
-                        <div class="mb-6 rounded-[2.5rem] overflow-hidden flex justify-center items-center bg-black/10">
-                            <img src="assets/images/games/OBAT/Hgd5yj.png"
-                                class="w-full h-auto object-contain group-hover:scale-105 transition duration-500">
+                    <a href="https://origamingcreations.itch.io/once-button-a-time" target="_blank" class="block">
+                        <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-[3.5rem] p-5 group shadow-2xl transition hover:bg-white/20">
+                            <div class="mb-6 rounded-[2.5rem] overflow-hidden flex justify-center items-center bg-black/10">
+                                <img src="assets/images/games/OBAT/Hgd5yj.png" class="w-full h-auto object-contain group-hover:scale-105 transition duration-500">
+                            </div>
+                            <h3 class="text-3xl text-center pb-4 text-white font-display">ONCE BUTTON A TIME</h3>
                         </div>
-                        <h3 class="text-3xl text-center pb-4 text-white font-display">ONCE BUTTON A TIME</h3>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="mt-20">
@@ -395,94 +348,117 @@
                         PLAY ALL GAMES
                     </a>
                 </div>
-
+            </div>
         </section>
 
-        <!-- TECHNICAL SKILLS SECTION -->
+        <!-- Skills Section -->
         <section id="skills" class="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+        
+        <!-- Fondo exterior: Cambiado de azul fuerte a un crema/blanco suave para "respirar" -->
+        <div class="bg-nb-bg py-20 px-4 md:px-8">
+            <div class="max-w-7xl mx-auto text-center">
+                
+                <div class="relative bg-nb-peach/50 border-[4px] border-nb-blue/30 border-dashed p-8 md:p-20 rounded-[3rem]">
+    
+                    <img src="assets/images/ui/Libro.png" 
+                        class="absolute top-6 right-24 w-32 md:w-40 animate-float z-0 pointer-events-none select-none" 
+                        style="animation-delay: 1.5s;"
+                        alt="Knowledge Book">
+                    
+                    <!-- Decorative Pins/Screws (Suavizados) -->
+                    <div class="absolute top-6 left-6 w-3 h-3 rounded-full bg-nb-blue/50"></div>
+                    <div class="absolute top-6 right-6 w-3 h-3 rounded-full bg-nb-blue/50"></div>
+                    <div class="absolute bottom-6 left-6 w-3 h-3 rounded-full bg-nb-blue/50"></div>
+                    <div class="absolute bottom-6 right-6 w-3 h-3 rounded-full bg-nb-blue/50"></div>
 
-            <svg class="block w-full h-[120px] transform rotate-180" viewBox="0 0 1440 120" preserveAspectRatio="none">
-                <path class="fill-nb-peach"
-                    d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,80C672,64,768,64,864,80C960,96,1056,128,1152,128C1248,128,1344,96,1392,80L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
-                </path>
-            </svg>
+                    <p class="subtitle mb-12">My Toolkit</p>
+                    <h2 class="text-5xl md:text-6xl mb-16 text-nb-blue font-display drop-shadow-sm">Technical Skills</h2>
 
-            <div class="bg-nb-peach py-20 px-8">
-                <div class="max-w-7xl mx-auto text-center">
-                    <div class="bg-nb-peach border-4 border-nb-blue p-12 md:p-20 rounded-[3rem]">
-                        <p class="subtitle mb-12">Toolkit</p>
-                        <!-- Titulo sin mayusculas sostenidas -->
-                        <h2 class="text-5xl md:text-7xl mb-20 text-nb-blue font-display">Technical Skills</h2>
-
-                        <div class="grid md:grid-cols-3 gap-8">
-                            <div
-                                class="bg-nb-bg flex flex-col items-center justify-center p-10 shadow-sm text-left rounded-[3rem]">
-                                <div
-                                    class="w-16 h-16 bg-nb-peach/20 rounded-full flex items-center justify-center text-3xl text-nb-blue mb-6 border border-nb-peach/30">
-                                    <i class="fa-solid fa-cube"></i>
-                                </div>
-                                <h3 class="text-xl md:text-2xl mb-4 text-nb-blue font-display">3D Softwares</h3>
-                                <p class="text-xs text-nb-text-dark leading-relaxed mb-6 font-medium">I have extensive
-                                    experience modeling, texturing, and rendering 3D assets for various projects. I
-                                    focus on creating visually compelling models.</p>
-                                <div class="flex flex-wrap gap-2 justify-center">
-                                    <span class="btn-peach-skill">SUBSTANCE PAINTER</span>
-                                    <span class="btn-peach-skill">3DS MAX</span>
-                                    <span class="btn-peach-skill">BLENDER</span>
-                                    <span class="btn-peach-skill">SKETCH UP</span>
-
-                                </div>
-                            </div>
-
-                            <div
-                                class="bg-nb-bg flex flex-col items-center justify-center p-10 shadow-sm text-left rounded-[3rem]">
-                                <div
-                                    class="w-16 h-16 bg-nb-peach/20 rounded-full flex items-center justify-center text-3xl text-nb-blue mb-6 border border-nb-peach/30">
+                    <div class="grid md:grid-cols-3 gap-8 md:gap-6 items-center perspective-1000">
+                        
+                        <!-- CARD 1: Game Engine (Left) -->
+                        <div class="bg-white flex flex-col items-center justify-center p-6 rounded-[2.5rem] border-2 border-nb-blue/30 shadow-[6px_6px_0px_rgba(141,169,196,0.3)] transform md:-rotate-1 hover:rotate-0 hover:-translate-y-2 transition-all duration-300 group z-10 h-full">
+                            <div class="w-full h-full border border-dashed border-nb-blue/20 rounded-[2rem] p-6 flex flex-col items-center">
+                                <div class="w-16 h-16 bg-nb-peach rounded-full flex items-center justify-center text-3xl text-nb-blue mb-4">
                                     <i class="fa-solid fa-gamepad"></i>
                                 </div>
-                                <h3 class="text-xl md:text-2xl mb-4 text-nb-blue font-display">Game Engine</h3>
-                                <p class="text-xs text-nb-text-dark leading-relaxed mb-6 font-medium">Skilled in
-                                    designing and developing interactive experiences, from gameplay mechanics to level
-                                    design. Comfortable with 2D & 3D projects.</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="btn-peach-skill">UNITY 3D</span>
-                                </div>
-                            </div>
+                                <h3 class="text-xl mb-2 text-nb-blue font-display uppercase tracking-wider">Game Engine</h3>
+                                <div class="w-10 h-1 bg-nb-blue/20 rounded-full mb-4"></div>
+                                <p class="text-[11px] text-nb-text-dark font-medium text-center mb-6 leading-relaxed">Designing interactive worlds and gameplay mechanics.</p>
+                                
+                                <!-- Label añadido -->
+                                <span class="text-[10px] font-bold text-nb-blue/40 uppercase tracking-widest mb-3">Engine</span>
 
-                            <div
-                                class="bg-nb-bg flex flex-col items-center justify-center p-10 shadow-sm text-left rounded-[3rem]">
-                                <div
-                                    class="w-16 h-16 bg-nb-peach/20 rounded-full flex items-center justify-center text-3xl text-nb-blue mb-6 border border-nb-peach/30">
-                                    <i class="fa-solid fa-code"></i>
-                                </div>
-                                <h3 class="text-xl md:text-2xl mb-4 text-nb-blue font-display">Programming</h3>
-                                <p class="text-xs text-nb-text-dark leading-relaxed mb-6 font-medium">Proficient in
-                                    writing clean, maintainable code for multiple platforms. Specialized in game
-                                    development and logic foundation.</p>
-                                <div class="flex flex-wrap gap-2 justify-center">
-                                    <span class="btn-peach-skill">C#</span>
-                                    <span class="btn-peach-skill">JAVA</span>
-                                    <span class="btn-peach-skill">JAVASCRIPT</span>
-                                    <span class="btn-peach-skill">PYTHON</span>
-                                    <span class="btn-peach-skill">C++</span>
+                                <div class="mt-auto flex flex-wrap gap-2 justify-center">
+                                    <!-- Botón más grande -->
+                                    <span class="px-6 py-3 bg-nb-blue/10 text-nb-blue text-[13px] font-bold uppercase rounded-xl">Unity 3D</span>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- CARD 2: 3D Softwares (Center - MAIN FOCUS) -->
+                        <div class="bg-white flex flex-col items-center justify-center p-6 rounded-[3rem] border-2 border-nb-brown/40 shadow-[10px_10px_0px_rgba(196,164,150,0.3)] transform md:-translate-y-4 md:scale-105 hover:-translate-y-6 transition-all duration-300 group z-20 h-full relative">
+                            <!-- Badge -->
+                            <div class="absolute -top-4 bg-nb-brown text-white px-5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-sm transform -rotate-1">
+                                ★ Main Focus ★
+                            </div>
+
+                            <div class="w-full h-full border border-dashed border-nb-brown/20 rounded-[2.5rem] p-6 flex flex-col items-center">
+                                <div class="w-20 h-20 bg-nb-blue rounded-full flex items-center justify-center text-4xl text-white mb-5 border-4 border-nb-peach shadow-sm transition-transform">
+                                    <i class="fa-solid fa-cube"></i>
+                                </div>
+                                <h3 class="text-2xl mb-2 text-nb-brown font-display uppercase tracking-wider">3D Softwares</h3>
+                                <div class="w-14 h-1 bg-nb-brown/20 rounded-full mb-4"></div>
+                                <p class="text-xs text-nb-text-dark font-medium text-center mb-6 leading-relaxed">Modeling, texturing & rendering high-quality assets.</p>
+                                
+                                <!-- Label añadido -->
+                                <span class="text-[10px] font-bold text-nb-brown/40 uppercase tracking-widest mb-3">Software Stack</span>
+
+                                <div class="mt-auto flex flex-wrap gap-2 justify-center max-w-[90%]">
+                                    <!-- Botones más grandes -->
+                                    <span class="px-4 py-2 bg-nb-peach text-nb-brown text-[11px] font-bold uppercase rounded-xl">Blender</span>
+                                    <span class="px-4 py-2 bg-nb-peach text-nb-brown text-[11px] font-bold uppercase rounded-xl">Substance</span>
+                                    <span class="px-4 py-2 bg-nb-peach text-nb-brown text-[11px] font-bold uppercase rounded-xl">3ds Max</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 3: Programming (Right) -->
+                        <div class="bg-white flex flex-col items-center justify-center p-6 rounded-[2.5rem] border-2 border-nb-blue/30 shadow-[6px_6px_0px_rgba(141,169,196,0.3)] transform md:rotate-1 hover:rotate-0 hover:-translate-y-2 transition-all duration-300 group z-10 h-full">
+                            <div class="w-full h-full border border-dashed border-nb-blue/20 rounded-[2rem] p-6 flex flex-col items-center">
+                                <div class="w-16 h-16 bg-nb-peach rounded-full flex items-center justify-center text-3xl text-nb-blue mb-4">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <h3 class="text-xl mb-2 text-nb-blue font-display uppercase tracking-wider">Programming</h3>
+                                <div class="w-10 h-1 bg-nb-blue/20 rounded-full mb-4"></div>
+                                <p class="text-[11px] text-nb-text-dark font-medium text-center mb-6 leading-relaxed">Writing clean logic for game systems.</p>
+                                
+                                <!-- Label añadido -->
+                                <span class="text-[10px] font-bold text-nb-blue/40 uppercase tracking-widest mb-3">Languages</span>
+
+                                <div class="mt-auto flex flex-wrap gap-2 justify-center">
+                                    <span class="px-6 py-3 bg-nb-blue/10 text-nb-blue text-[13px] font-bold uppercase rounded-xl">C#</span>
+                                    <span class="px-6 py-3 bg-nb-blue/10 text-nb-blue text-[13px] font-bold uppercase rounded-xl">Java</span>
+                                    <span class="px-6 py-3 bg-nb-blue/10 text-nb-blue text-[13px] font-bold uppercase rounded-xl">C++</span>
+                                    <span class="px-6 py-3     bg-nb-blue/10 text-nb-blue text-[13px] font-bold uppercase rounded-xl">JS</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <svg class="wave-bottom" viewBox="0 0 1440 120" preserveAspectRatio="none">
-                <path
-                    d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,80C672,64,768,64,864,80C960,96,1056,128,1152,128C1248,128,1344,96,1392,80L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
-                </path>
-            </svg>
-        </section>
+        <!-- Awards Section -->
+        <section id="awards" class="max-w-7xl mx-auto px-8 pt-32 mb-40 reveal-section relative">
+    
+            <img src="assets/images/ui/Trofeo.png" 
+                class="absolute top-6 right-0 md:right-20 w-40 md:w-64 opacity-35 rotate-12 z-0 pointer-events-none select-none transition-all duration-700" 
+                alt="Trophy Background">
 
-
-        <!-- Achievements -->
-        <section id="awards" class="max-w-7xl mx-auto px-8 pt-32 mb-40 reveal-section">
-            <div class="text-center mb-24">
+            <div class="text-center mb-24 relative z-10">
                 <p class="subtitle mb-12">Milestones</p>
                 <h2 class="text-5xl md:text-7xl font-display text-nb-blue">Achievements</h2>
             </div>
@@ -494,13 +470,11 @@
                     <div class="award-timeline-dot w-12 h-12 flex items-center justify-center">
                         <i class="fa-solid fa-trophy"></i>
                     </div>
-                    <div
-                        class="award-timeline-content ml-16 text-left bg-white p-8 rounded-[2rem] shadow-sm border border-nb-peach/20">
+                    <div class="award-timeline-content ml-16 text-left bg-white p-8 rounded-[2rem] shadow-sm border border-nb-peach/20">
                         <h3 class="text-2xl mb-2 text-nb-blue font-display">Devuego Awards</h3>
                         <p class="subtitle !text-[10px] mb-4 !after:bottom-[-4px]">National Finalist</p>
                         <p class="text-sm text-nb-text-dark leading-relaxed">
-                            Nominated for <strong>Best Game Jam Game</strong> at the national Devuego Awards! A huge
-                            milestone for <span class="text-nb-brown font-bold">Once Button a Time</span>.
+                            Nominated for <strong>Best Game Jam Game</strong> at the national Devuego Awards! A huge milestone for <span class="text-nb-brown font-bold">Once Button a Time</span>.
                         </p>
                     </div>
                 </div>
@@ -509,13 +483,11 @@
                     <div class="award-timeline-dot w-12 h-12 flex items-center justify-center">
                         <i class="fa-solid fa-crown"></i>
                     </div>
-                    <div
-                        class="award-timeline-content ml-16 text-left bg-white p-8 rounded-[2rem] shadow-sm border border-nb-peach/20">
+                    <div class="award-timeline-content ml-16 text-left bg-white p-8 rounded-[2rem] shadow-sm border border-nb-peach/20">
                         <h3 class="text-2xl mb-2 text-nb-blue font-display">Game Scholars Jam</h3>
                         <p class="subtitle !text-[10px] mb-4 !after:bottom-[-4px]">First Place Winner</p>
                         <p class="text-sm text-nb-text-dark leading-relaxed">
-                            Proud champions of the <strong>Game Scholars Game Jam</strong>! Awarded top prize for the
-                            development of <span class="text-nb-brown font-bold">Unchained (Jam Version)</span>.
+                            Proud champions of the <strong>Game Scholars Game Jam</strong>! Awarded top prize for the development of <span class="text-nb-brown font-bold">Unchained (Jam Version)</span>.
                         </p>
                     </div>
                 </div>
@@ -524,208 +496,168 @@
                     <div class="award-timeline-dot w-12 h-12 flex items-center justify-center">
                         <i class="fa-solid fa-medal"></i>
                     </div>
-                    <div
-                        class="award-timeline-content ml-16 text-left bg-white p-8 rounded-[2rem] shadow-sm border border-nb-peach/20">
+                    <div class="award-timeline-content ml-16 text-left bg-white p-8 rounded-[2rem] shadow-sm border border-nb-peach/20">
                         <h3 class="text-2xl mb-2 text-nb-blue font-display">Virtual Core Jam</h3>
                         <p class="subtitle !text-[10px] mb-4 !after:bottom-[-4px]">Third Place Winner</p>
                         <p class="text-sm text-nb-text-dark leading-relaxed">
-                            Awarded <strong>Third Place</strong> among numerous participants in the Virtual Core Game
-                            Jam with <span class="text-nb-brown font-bold">Once Button a Time</span>.
+                            Awarded <strong>Third Place</strong> among numerous participants in the Virtual Core Game Jam with <span class="text-nb-brown font-bold">Once Button a Time</span>.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
+        <section id="contact-cv" class="mb-40 reveal-section px-8">
+            <div class="max-w-5xl mx-auto bg-white rounded-[4rem] p-12 md:p-20 shadow-2xl border-2 border-nb-peach/20 text-center relative overflow-visible">
+                
+                <img src="assets/images/ui/AvionPapel.png" 
+                    class="absolute -top-12 -right-12 md:-right-20 w-32 md:w-48 rotate-[20deg] animate-float z-20 pointer-events-none select-none drop-shadow-xl" 
+                    style="animation-duration: 4s;"
+                    alt="Paper Plane">
+
+                <img src="assets/images/ui/Sobre_correo.png" 
+                    class="absolute -bottom-10 -left-10 w-24 md:w-36 -rotate-12 z-20 pointer-events-none select-none drop-shadow-md" 
+                    alt="Envelope">
+
+                <div class="absolute inset-0 overflow-hidden rounded-[4rem] z-0">
+                    <div class="absolute -top-24 -left-24 w-64 h-64 bg-nb-peach/30 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-nb-blue/10 rounded-full blur-3xl"></div>
+                </div>  
+                <div class="relative z-10">
+                    <p class="text-nb-brown font-black text-[11px] uppercase tracking-[0.4em] mb-6">Let's work together</p>
+                    <h2 class="text-5xl md:text-7xl font-display text-nb-blue mb-8 leading-tight">¿Tienes un proyecto en mente?</h2>
+                    <p class="text-lg text-nb-text-dark/70 mb-12 font-medium max-w-2xl mx-auto leading-relaxed">
+                        Estoy disponible para oportunidades freelance y posiciones Full-time como 3D Artist o Technical Artist. Si te gusta mi estilo, creemos algo mágico juntos.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <a href="pages/contact.html" class="group px-10 py-5 bg-nb-blue text-white rounded-full text-xs font-black tracking-widest uppercase transition-all hover:bg-nb-brown hover:scale-105 shadow-xl flex items-center gap-3">
+                            <i class="fa-solid fa-paper-plane text-sm group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform"></i>
+                            Ir a Contacto
+                        </a>
+                        
+                        <a href="files/CV_2025_English.pdf" target="_blank"
+                            rel="noopener noreferrer" class="px-10 py-5 bg-white text-nb-blue border-2 border-nb-blue/10 rounded-full text-xs font-black tracking-widest uppercase transition-all hover:border-nb-peach hover:bg-nb-bg flex items-center gap-3 group">
+                            <i class="fa-solid fa-file-arrow-down text-sm group-hover:text-nb-brown transition-colors"></i>
+                            See CV
+                        </a>
+
+                        
+                    </div>
+
+                    <div class="mt-16 pt-10 border-t border-nb-bg flex flex-wrap justify-center gap-8 opacity-60">
+                        <a href="https://www.artstation.com/nurxen1" target="_blank" class="text-[10px] font-black uppercase tracking-widest text-nb-blue hover:text-nb-brown transition-colors">ArtStation</a>
+                        <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank" class="text-[10px] font-black uppercase tracking-widest text-nb-blue hover:text-nb-brown transition-colors">LinkedIn</a>
+                        <a href="https://cara.app/nurxen" target="_blank" class="text-[10px] font-black uppercase tracking-widest text-nb-blue hover:text-nb-brown transition-colors">Cara</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="max-w-7xl mx-auto px-8 mb-40 pt-24 reveal-section">
-        <div class="bg-nb-white p-12 md:p-20 rounded-[4rem] border-2 border-nb-peach shadow-sm">
-
-            <div class="grid lg:grid-cols-2 gap-16 items-start">
-
-                <div class="text-left">
-                    <p class="subtitle mb-6 !after:hidden">Let's Connect</p>
-                    <h2 class="text-5xl md:text-7xl mb-12 text-nb-blue font-display">Say hey!</h2>
-
-                    <div class="space-y-10">
-                        <div>
-                            <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-nb-peach mb-3">Email
-                                Address</h4>
-                            <a href="mailto:nurxen21@gmail.com"
-                                class="text-2xl md:text-3xl font-display text-nb-blue hover:text-nb-brown transition-colors">
-                                nurxen21@gmail.com
-                            </a>
-                        </div>
-
-                        <div>
-                            <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-nb-peach mb-6">Social
-                                Media</h4>
-                            <div class="flex flex-wrap gap-6 text-3xl text-nb-blue">
-                                <a href="#" class="hover:text-nb-peach transition-transform hover:scale-110"><i
-                                        class="fa-brands fa-instagram"></i></a>
-                                <a href="#" class="hover:text-nb-peach transition-transform hover:scale-110"><i
-                                        class="fa-brands fa-tiktok"></i></a>
-                                <a href="#" class="hover:text-nb-peach transition-transform hover:scale-110"><i
-                                        class="fa-brands fa-x-twitter"></i></a>
-                                <a href="#" class="hover:text-nb-peach transition-transform hover:scale-110"><i
-                                        class="fa-brands fa-linkedin"></i></a>
-                                <a href="#" class="hover:text-nb-peach transition-transform hover:scale-110"><i
-                                        class="fa-brands fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-nb-bg/50 p-8 md:p-12 rounded-[3rem] border border-nb-peach/30">
-                    <h3 class="text-2xl font-display text-nb-blue mb-8">Write me...</h3>
-                    <form class="space-y-4">
-                        <div class="grid md:grid-cols-1 gap-4">
-                            <input type="text" placeholder="Your Name"
-                                class="w-full bg-nb-white border-2 border-nb-peach/20 rounded-2xl p-4 outline-none focus:border-nb-blue transition text-sm">
-                            <input type="email" placeholder="Email Address"
-                                class="w-full bg-nb-white border-2 border-nb-peach/20 rounded-2xl p-4 outline-none focus:border-nb-blue transition text-sm">
-                        </div>
-                        <textarea rows="4" placeholder="Your message..."
-                            class="w-full bg-nb-white border-2 border-nb-peach/20 rounded-3xl p-5 outline-none focus:border-nb-blue transition resize-none text-sm"></textarea>
-                        <button type="submit"
-                            class="w-full py-4 bg-nb-blue text-white rounded-full font-bold uppercase tracking-widest hover:bg-nb-brown transition-all shadow-lg text-xs">
-                            Send Magic!
-                        </button>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Instagram Banner -->
-    <section class="mb-20 px-8 text-center reveal-section">
-        <div class="max-w-7xl mx-auto py-12 border-t border-nb-peach/20">
-            <p class="font-display text-2xl text-nb-blue mb-4">Instagram</p>
-            <a href="https://www.instagram.com/nurxen_" target="_blank" class="group inline-flex flex-col items-center">
-                <span
-                    class="text-4xl md:text-6xl text-nb-brown font-bold tracking-tight transition-transform group-hover:scale-105">@nurxen_</span>
-                <span class="mt-4 text-xs font-bold text-nb-blue uppercase tracking-widest opacity-40">See more on
-                    @nurxen_</span>
-            </a>
-        </div>
-    </section>
-
-    <button id="backToTop"
-        class="fixed bottom-10 right-10 z-[60] w-14 h-14 bg-nb-brown text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:scale-110 hover:bg-nb-blue transform translate-y-10">
-        <i class="fa-solid fa-arrow-up text-xl"></i>
-    </button>
-
-    <!-- FOOTER -->
+    <!-- Footer -->
     <div class="w-full mt-20">
         <svg class="footer-wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
-            <path
-                d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,139,576,170.7C672,203,768,245,864,240C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-            </path>
+            <path d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,139,576,170.7C672,203,768,245,864,240C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
         </svg>
-        <footer class="bg-nb-blue py-16 px-10">
-            <div class="max-w-7xl mx-auto text-nb-white">
-                <div
-                    class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-16 mb-20 text-left">
-                    <div>
-                        <a href="javascript:void(0)" onclick="showPage('about')"
-                            class="font-display text-7xl text-nb-bg hover:text-nb-peach transition-colors">
+
+        <footer class="bg-nb-blue py-16 px-10 relative z-10">
+            <div class="max-w-7xl mx-auto text-nb-bg">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16 text-left">
+                    
+                    <div class="lg:col-span-2">
+                        <a href="index.html" class="font-display text-6xl md:text-7xl text-nb-bg hover:text-nb-peach transition-colors block mb-4">
                             nurxen<span class="text-nb-peach">.</span>
                         </a>
-                        <p class="mt-6 text-nb-bg/60 font-bold uppercase tracking-widest text-xs">3D Artist & Developer
+                        <p class="text-nb-bg/60 font-bold uppercase tracking-widest text-xs mb-8">
+                            3D Artist & Game Developer
                         </p>
-
-                        <div class="flex gap-6 mt-8">
-                            <a href="https://www.instagram.com/nurxen_" target="_blank"
-                                class="text-2xl hover:text-nb-peach transition"><i
-                                    class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.artstation.com/" target="_blank"
-                                class="text-2xl hover:text-nb-peach transition"><i
-                                    class="fa-brands fa-artstation"></i></a>
-                            <a href="https://www.linkedin.com/" target="_blank"
-                                class="text-2xl hover:text-nb-peach transition"><i
-                                    class="fa-brands fa-linkedin"></i></a>
+                        
+                        <div class="flex gap-6">
+                            <a href="https://www.instagram.com/nurxen_" target="_blank" class="w-10 h-10 rounded-full border border-nb-bg/20 flex items-center justify-center hover:bg-nb-peach hover:text-nb-brown hover:border-nb-peach transition-all duration-300">
+                                <i class="fa-brands fa-instagram text-lg"></i>
+                            </a>
+                            <a href="https://www.artstation.com/nurxen1" target="_blank" class="w-10 h-10 rounded-full border border-nb-bg/20 flex items-center justify-center hover:bg-nb-peach hover:text-nb-brown hover:border-nb-peach transition-all duration-300">
+                                <i class="fa-brands fa-artstation text-lg"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank" class="w-10 h-10 rounded-full border border-nb-bg/20 flex items-center justify-center hover:bg-nb-peach hover:text-nb-brown hover:border-nb-peach transition-all duration-300">
+                                <i class="fa-brands fa-linkedin-in text-lg"></i>
+                            </a>
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-2 gap-16">
-                        <div class="flex flex-col gap-4">
-                            <p class="font-body text-nb-peach opacity-60 text-xs uppercase tracking-widest font-bold">
-                                Explore</p>
-                            <a onclick="showPage('artwork')"
-                                class="text-sm font-bold text-nb-bg hover:text-nb-peach transition cursor-pointer">Portfolio</a>
-                            <a onclick="showPage('games')"
-                                class="text-sm font-bold text-nb-bg hover:text-nb-peach transition cursor-pointer">Games</a>
-                        </div>
-                        <div class="flex flex-col gap-4">
-                            <p class="font-body text-nb-peach opacity-60 text-xs uppercase tracking-widest font-bold">
-                                Connect</p>
-                            <a href="mailto:contact@nurxen.com"
-                                class="text-sm font-bold text-nb-bg hover:text-nb-peach transition underline underline-offset-8">Email
-                                Me</a>
-                        </div>
+                    <div class="flex flex-col gap-4">
+                        <p class="font-body text-nb-peach opacity-60 text-xs uppercase tracking-widest font-black mb-2">Explore</p>
+                        <a href="index.html" class="text-sm font-bold hover:text-nb-peach transition-all duration-300">Home</a>
+                        <a href="pages/artwork.html" class="text-sm font-bold hover:text-nb-peach  transition-all duration-300">Artwork Gallery</a>
+                        <a href="pages/games.html" class="text-sm font-bold hover:text-nb-peach transition-all duration-300">Videogames</a>
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <p class="font-body text-nb-peach opacity-60 text-xs uppercase tracking-widest font-black mb-2">Get in Touch</p>
+                        <a href="pages/contact.html" class="text-sm font-bold hover:text-nb-peach transition-all duration-300">Contact Form</a>
+                        <a href="mailto:nurxen21@gmail.com" class="text-sm font-bold text-nb-bg hover:text-nb-peach transition underline underline-offset-8">Email Me</a>
+                        <p class="text-xs text-nb-bg/40 mt-4">Available for freelance.</p>
                     </div>
                 </div>
 
-                <div
-                    class="flex flex-col md:flex-row justify-between items-center gap-8 pt-12 border-t border-nb-bg/10">
-                    <p class="text-[10px] font-bold uppercase tracking-widest text-nb-bg/40">©2025 Nurxen. All Rights
-                        Reserved.</p>
-                    <div class="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-nb-bg/40">
-                        <span>Powered by Magic & Blender</span>
-                        <i class="fa-solid fa-heart text-nb-peach"></i>
+                <div class="pt-10 border-t border-nb-bg/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-nb-bg/40">
+                        ©2026 Nurxen. All Rights Reserved.
+                    </p>
+                    
+                    <div class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-nb-bg/40">
+                        <span>Made with cozy vibes & Blender</span>
+                        <i class="fa-solid fa-heart text-nb-peach animate-pulse"></i>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
 
-    <!-- SCRIPTS -->
+    <!-- Side Navigation -->
+    <div id="side-nav" class="fixed right-6 top-1/2 -translate-y-1/2 z-[100] hidden xl:flex flex-col gap-10 items-center transition-colors duration-500 text-nb-blue/40">
+        <div class="h-20 w-px bg-current opacity-20"></div>
+        <a href="#page-about" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">Intro</a>
+        <a href="#artwork-preview" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">Artwork</a>
+        <a href="#games-preview" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">Games</a>
+        <a href="#skills" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">Skills</a>
+        <a href="#awards" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">Awards</a>
+        <div class="h-20 w-px bg-current opacity-20"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-10 right-10 z-[60] w-14 h-14 bg-nb-brown text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:scale-110 hover:bg-nb-blue transform translate-y-10">
+        <i class="fa-solid fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
     <script src="js/main.js"></script>
     <script src="js/theme.js"></script>
-<div id="side-nav" class="fixed right-6 top-1/2 -translate-y-1/2 z-[100] hidden xl:flex flex-col gap-10 items-center transition-colors duration-500 text-nb-blue/40">
-    
-    <div class="h-20 w-px bg-current opacity-20"></div> <a href="#page-about" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">
-        Intro
-    </a>
-    
-    <a href="#skills" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">
-        Skills
-    </a>
-    
-    <a href="#awards" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">
-        Awards
-    </a>
 
-    <a href="#contact" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">
-        Contact
-    </a>
-    
-    <div class="h-20 w-px bg-current opacity-20"></div>
+    <script>
+        window.addEventListener('scroll', () => {
+            const sideNav = document.getElementById('side-nav');
+            const gamesSection = document.getElementById('games-preview');
 
-</div>
+            if (!sideNav || !gamesSection) return;
 
-<script>
-    window.addEventListener('scroll', () => {
-        const sideNav = document.getElementById('side-nav');
-        const gamesSection = document.getElementById('games-preview');
-        
-        if (!sideNav || !gamesSection) return;
+            const rect = gamesSection.getBoundingClientRect();
 
-        const rect = gamesSection.getBoundingClientRect();
-
-        // Si la sección de juegos (azul) está cruzando la mitad de la pantalla
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-            sideNav.classList.remove('text-nb-blue/40');
-            sideNav.classList.add('text-white/60'); // Un blanco un poco más fuerte para que se vea sobre el azul
-        } else {
-            sideNav.classList.remove('text-white/60');
-            sideNav.classList.add('text-nb-blue/40');
-        }
-    });
-</script>
+            // Si la sección de juegos (azul) está cruzando la mitad de la pantalla
+            if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                sideNav.classList.remove('text-nb-blue/40');
+                sideNav.classList.add('text-white/60'); // Un blanco un poco más fuerte para que se vea sobre el azul
+            } else {
+                sideNav.classList.remove('text-white/60');
+                sideNav.classList.add('text-nb-blue/40');
+            }
+        });
+    </script>
 </body>
 
 </html>

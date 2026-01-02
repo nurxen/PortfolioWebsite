@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurxen | Contact</title>
+
+    <!-- FONTS & ICONS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shrikhand&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- TAILWIND CONFIG -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'nb-blue': '#4F647D',
+                        'nb-brown': '#905757',
+                        'nb-white': '#FFFFFF',
+                        'nb-peach': '#F6D6CB',
+                        'nb-text-dark': '#3F3F3F',
+                        'nb-bg': '#FFF9F2',
+                        'nb-blue-dark': '#43647F',
+                        'nb-studio': '#121212',
+                    },
+                    fontFamily: {
+                        'display': ['"Shrikhand"', 'cursive'],
+                        'body': ['"Manrope"', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'cozy': '1.5rem',
+                        'super': '3.5rem',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-nb-bg selection:bg-nb-peach selection:text-nb-brown font-body overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="absolute top-0 left-0 right-0 z-50 px-8 py-10 bg-transparent" id="navbar">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center">
+            <a href="../index.html" class="font-display text-4xl md:text-5xl text-nb-blue hover:opacity-80 transition-colors">
+                nurxen<span class="text-nb-peach text-5xl">.</span>
+            </a>
+
+            <div class="flex flex-wrap justify-center items-center gap-10 mt-6 lg:mt-0">
+                <a href="../index.html" class="text-sm tracking-widest font-bold text-nb-blue hover:text-nb-brown transition-colors uppercase">
+                    About Me
+                </a>
+                <a href="artwork.html" class="text-sm tracking-widest font-bold text-nb-blue hover:text-nb-brown transition-colors uppercase">
+                    Artwork
+                </a>
+                <a href="games.html" class="text-sm tracking-widest font-bold text-nb-blue hover:text-nb-brown transition-colors uppercase">
+                    Videogames
+                </a>
+                <a href="contact.html" class="px-6 py-2 border-2 border-nb-blue text-nb-blue rounded-full text-xs font-black tracking-widest uppercase hover:bg-nb-blue-dark hover:text-nb-white transition-all">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+
+        <!-- HERO SECTION -->
+        <section id="hero-contact" class="pt-64 pb-20 px-8 text-center bg-nb-peach/20">
+            <div class="max-w-4xl mx-auto reveal-section">
+                <p class="text-[10px] font-black uppercase tracking-[0.5em] text-nb-brown mb-6">Available for
+                    opportunities</p>
+                <h1 class="text-6xl md:text-9xl font-display text-nb-blue mb-10 leading-tight">
+                    Let's create <br> <span class="italic font-serif text-nb-brown">together</span>
+                </h1>
+                <p
+                    class="text-lg md:text-xl text-nb-text-dark font-medium leading-relaxed max-w-2xl mx-auto opacity-80">
+                    Whether it's a 3D environment, a full game project, or just to say hi, I'd love to hear from you.
+                </p>
+            </div>
+        </section>
+
+        <!-- CONTACT FORM SECTION -->
+        <section id="form-section" class="max-w-7xl mx-auto px-8 py-32">
+            <div
+                class="bg-white rounded-[4rem] border-2 border-nb-peach/30 shadow-2xl shadow-nb-blue/5 overflow-hidden reveal-section">
+                <div class="grid lg:grid-cols-5 items-stretch">
+
+                    <div class="lg:col-span-2 bg-nb-blue p-12 md:p-20 text-white flex flex-col justify-between">
+                        <div>
+                            <h2 class="font-display text-4xl md:text-5xl mb-12">Contact <br> Info</h2>
+
+                            <div class="space-y-12">
+                                <div>
+                                    <p
+                                        class="text-[10px] font-black uppercase tracking-widest text-nb-peach mb-4 opacity-70">
+                                        Direct Email</p>
+                                    <a href="mailto:nurxen21@gmail.com"
+                                        class="text-xl md:text-2xl font-bold hover:text-nb-peach transition-colors">nurxen21@gmail.com</a>
+                                </div>
+
+                                <div>
+                                    <p
+                                        class="text-[10px] font-black uppercase tracking-widest text-nb-peach mb-4 opacity-70">
+                                        Based In</p>
+                                    <p class="text-xl md:text-2xl font-bold">Spain, Europe</p>
+                                    <p class="text-sm opacity-60">Remote work available worldwide</p>
+                                </div>
+
+                                <div>
+                                    <p
+                                        class="text-[10px] font-black uppercase tracking-widest text-nb-peach mb-4 opacity-70">
+                                        Current Status</p>
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                                        <p class="text-lg font-bold">Open to Freelance</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-8 items-center mt-20 opacity-70">
+
+                            <!-- Columna izquierda: Icono -->
+                            <div class="flex justify-center">
+                                <i class="fa-solid fa-mug-hot text-8xl"></i>
+                            </div>
+
+                            <!-- Columna derecha: Texto + link -->
+                            <div>
+                                <p class="text-[10px] font-black uppercase tracking-widest text-nb-peach mb-4 opacity-70">
+                                    Documentation
+                                </p>
+
+                                <a href="../files/CV_2025_English.pdf" target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center gap-4 group cursor-pointer">
+                                    <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white 
+                                                group-hover:bg-nb-peach group-hover:text-nb-brown transition-all">
+                                        <i class="fa-solid fa-file-pdf text-lg"></i>
+                                    </div>
+                                    <span class="text-sm font-semibold text-white group-hover:text-nb-peach transition-colors">
+                                        See CV
+                                    </span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="lg:col-span-3 p-12 md:p-20 bg-nb-bg/30">
+                        <h3 class="text-2xl font-display text-nb-blue mb-10">Send a Message</h3>
+
+                        <form class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="space-y-2">
+                                <label
+                                    class="text-[10px] font-black uppercase tracking-widest text-nb-blue/60 ml-2">Full
+                                    Name</label>
+                                <input type="text" placeholder="Name"
+                                    class="w-full bg-white border-2 border-nb-peach/20 rounded-2xl p-5 outline-none focus:border-nb-blue transition text-nb-blue font-medium shadow-sm">
+                            </div>
+
+                            <div class="space-y-2">
+                                <label
+                                    class="text-[10px] font-black uppercase tracking-widest text-nb-blue/60 ml-2">Email
+                                    Address</label>
+                                <input type="email" placeholder="hello@art.com"
+                                    class="w-full bg-white border-2 border-nb-peach/20 rounded-2xl p-5 outline-none focus:border-nb-blue transition text-nb-blue font-medium shadow-sm">
+                            </div>
+
+                            <div class="md:col-span-2 space-y-2">
+                                <label
+                                    class="text-[10px] font-black uppercase tracking-widest text-nb-blue/60 ml-2">Subject</label>
+                                <select
+                                    class="w-full bg-white border-2 border-nb-peach/20 rounded-2xl p-5 outline-none focus:border-nb-blue transition text-nb-blue font-medium shadow-sm appearance-none">
+                                    <option>General Inquiry</option>
+                                    <option>Project Commission (3D)</option>
+                                    <option>Game Development Inquiry</option>
+                                    <option>Just saying hi!</option>
+                                </select>
+                            </div>
+
+                            <div class="md:col-span-2 space-y-2">
+                                <label
+                                    class="text-[10px] font-black uppercase tracking-widest text-nb-blue/60 ml-2">Your
+                                    Message</label>
+                                <textarea rows="5" placeholder="Tell me about your magic project..."
+                                    class="w-full bg-white border-2 border-nb-peach/20 rounded-3xl p-6 outline-none focus:border-nb-blue transition resize-none text-nb-blue font-medium shadow-sm"></textarea>
+                            </div>
+
+                            <div class="md:col-span-2">
+                                <button type="submit"
+                                    class="w-full py-5 bg-nb-blue text-white rounded-full font-black uppercase tracking-[0.2em] hover:bg-nb-brown transition-all shadow-xl active:scale-95 text-xs">
+                                    Send Magic! <i class="fa-solid fa-paper-plane ml-2"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOCIAL GRID SECTION -->
+        <section id="social-grid" class="max-w-7xl mx-auto px-8 mb-40 reveal-section">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-display text-nb-blue">Find me online</h3>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="https://www.artstation.com/nurxen1" target="_blank"
+                    class="bg-white p-8 rounded-[2.5rem] border border-nb-peach/30 text-center hover:scale-105 transition-all group shadow-sm">
+                    <i class="fa-brands fa-artstation text-4xl text-nb-blue group-hover:text-nb-brown mb-4"></i>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-nb-blue/60">Portfolio</p>
+                    <p class="font-bold text-nb-blue">ArtStation</p>
+                </a>
+
+                <a href="https://www.instagram.com/nurxen_" target="_blank"
+                    class="bg-white p-8 rounded-[2.5rem] border border-nb-peach/30 text-center hover:scale-105 transition-all group shadow-sm">
+                    <i class="fa-brands fa-instagram text-4xl text-nb-blue group-hover:text-nb-brown mb-4"></i>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-nb-blue/60">Updates</p>
+                    <p class="font-bold text-nb-blue">Instagram</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank"
+                    class="bg-white p-8 rounded-[2.5rem] border border-nb-peach/30 text-center hover:scale-105 transition-all group shadow-sm">
+                    <i class="fa-brands fa-linkedin text-4xl text-nb-blue group-hover:text-nb-brown mb-4"></i>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-nb-blue/60">Professional</p>
+                    <p class="font-bold text-nb-blue">LinkedIn</p>
+                </a>
+
+                <a href="https://cara.app/nurxen" target="_blank"
+                    class="bg-white p-8 rounded-[2.5rem] border border-nb-peach/30 text-center hover:scale-105 transition-all group shadow-sm">
+                    <i class="fa-solid fa-palette text-4xl text-nb-blue group-hover:text-nb-brown mb-4"></i>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-nb-blue/60">Artist Community</p>
+                    <p class="font-bold text-nb-blue">Cara</p>
+                </a>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop"
+        class="fixed bottom-10 right-10 z-[60] w-14 h-14 bg-nb-brown text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:scale-110 hover:bg-nb-blue transform translate-y-10">
+        <i class="fa-solid fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- SIDE NAV -->
+    <div id="side-nav"
+        class="fixed right-6 top-1/2 -translate-y-1/2 z-[100] hidden xl:flex flex-col gap-10 items-center text-nb-blue/40">
+        <div class="h-20 w-px bg-current opacity-20"></div>
+        <a href="#hero-contact"
+            class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">Hero</a>
+        <a href="#form-section"
+            class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">Message</a>
+        <a href="#social-grid"
+            class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">Socials</a>
+        <div class="h-20 w-px bg-current opacity-20"></div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="w-full mt-20">
+        <svg class="footer-wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path class="fill-nb-blue" d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,139,576,170.7C672,203,768,245,864,240C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+
+        <footer class="bg-nb-blue py-16 px-10 relative z-10">
+            <div class="max-w-7xl mx-auto text-nb-bg">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16 text-left">
+                    
+                    <div class="lg:col-span-2">
+                        <a href="index.html" class="font-display text-6xl md:text-7xl text-nb-bg hover:text-nb-peach transition-colors block mb-4">
+                            nurxen<span class="text-nb-peach">.</span>
+                        </a>
+                        <p class="text-nb-bg/60 font-bold uppercase tracking-widest text-xs mb-8">
+                            3D Artist & Game Developer
+                        </p>
+                        
+                        <div class="flex gap-6">
+                            <a href="https://www.instagram.com/nurxen_" target="_blank" class="w-10 h-10 rounded-full border border-nb-bg/20 flex items-center justify-center hover:bg-nb-peach hover:text-nb-brown hover:border-nb-peach transition-all duration-300">
+                                <i class="fa-brands fa-instagram text-lg"></i>
+                            </a>
+                            <a href="https://www.artstation.com/nurxen1" target="_blank" class="w-10 h-10 rounded-full border border-nb-bg/20 flex items-center justify-center hover:bg-nb-peach hover:text-nb-brown hover:border-nb-peach transition-all duration-300">
+                                <i class="fa-brands fa-artstation text-lg"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank" class="w-10 h-10 rounded-full border border-nb-bg/20 flex items-center justify-center hover:bg-nb-peach hover:text-nb-brown hover:border-nb-peach transition-all duration-300">
+                                <i class="fa-brands fa-linkedin-in text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <p class="font-body text-nb-peach opacity-60 text-xs uppercase tracking-widest font-black mb-2">Explore</p>
+                        <a href="../index.html" class="text-sm font-bold hover:text-nb-peach transition-all duration-300">Home</a>
+                        <a href="artwork.html" class="text-sm font-bold hover:text-nb-peach  transition-all duration-300">Artwork Gallery</a>
+                        <a href="games.html" class="text-sm font-bold hover:text-nb-peach transition-all duration-300">Videogames</a>
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <p class="font-body text-nb-peach opacity-60 text-xs uppercase tracking-widest font-black mb-2">Get in Touch</p>
+                        <a href="contact.html" class="text-sm font-bold hover:text-nb-peach transition-all duration-300">Contact Form</a>
+                        <a href="mailto:nurxen21@gmail.com" class="text-sm font-bold text-nb-bg hover:text-nb-peach transition underline underline-offset-8">Email Me</a>
+                        <p class="text-xs text-nb-bg/40 mt-4">Available for freelance.</p>
+                    </div>
+                </div>
+
+                <div class="pt-10 border-t border-nb-bg/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-nb-bg/40">
+                        ©2026 Nurxen. All Rights Reserved.
+                    </p>
+                    
+                    <div class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-nb-bg/40">
+                        <span>Made with cozy vibes & Blender</span>
+                        <i class="fa-solid fa-heart text-nb-peach animate-pulse"></i>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- SCRIPTS -->
+    <script src="../js/main.js"></script>
+    <script src="../js/theme.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // GSAP Reveal Animations
+        document.querySelectorAll(".reveal-section").forEach((el, i) => {
+            gsap.fromTo(el, {
+                y: 30,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 90%"
+                }
+            });
+        });
+
+        // Sidebar color logic
+        window.addEventListener('scroll', () => {
+            const sideNav = document.getElementById('side-nav');
+            if (window.scrollY > 100) {
+                sideNav.classList.replace('text-nb-blue/40', 'text-nb-blue/60');
+            }
+        });
+    </script>
+</body>
+
+</html>
