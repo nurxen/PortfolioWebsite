@@ -2,9 +2,9 @@
    BASE STYLES
 ========================= */
 body {
+    font-family: "April", sans-serif;
     background-color: #fff9f2;
     color: #3f3f3f;
-    font-family: "Manrope", sans-serif;
     overflow-x: hidden;
     margin: 0;
 }
@@ -30,16 +30,17 @@ body {
    TYPOGRAPHY
 ========================= */
 /* Unified Headings */
+
 h1, h2, h3, h4, h5, h6, .font-display {
-    font-family: "Shrikhand", cursive;
+    font-family: "LeckerliOne-Regular", bold;
     letter-spacing: 0.02em;
     color: #4f647d;
 }
 
 /* Subtitles with Wave Underline */
 .subtitle {
-    font-family: "Manrope", sans-serif;
-    font-weight: 800;
+    font-family: "Font Awesome 6 Free", sans-serif;
+    font-weight: 900;
     color: #905757;
     font-size: 1.15rem;
     text-transform: uppercase;
@@ -61,8 +62,26 @@ h1, h2, h3, h4, h5, h6, .font-display {
     background-repeat: no-repeat;
     opacity: 0.8;
 }
+
+
 @media (min-width: 768px) {
     .subtitle { font-size: 1.3rem; }
+}
+
+@font-face {
+    font-family: "April";
+    src: url("../fonts/April.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "LeckerliOne-Regular"; /* nombre que vas a usar en CSS */
+    src: url("../fonts/LeckerliOne-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 /* =========================
