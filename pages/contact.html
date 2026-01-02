@@ -13,7 +13,8 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <link rel="stylesheet" href="../css/styles.css" />
+    
     <!-- TAILWIND CONFIG -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -31,20 +32,25 @@
                         'nb-studio': '#121212',
                     },
                     fontFamily: {
-                        'display': ['"Shrikhand"', 'cursive'],
-                        'body': ['"Manrope"', 'sans-serif'],
-                    },
+                        'display': ['"LeckerliOne-Regular"', 'cursive'],
+                        'sans': ['"April"', 'sans-serif'],
+                        },
                     borderRadius: {
                         'cozy': '1.5rem',
                         'super': '3.5rem',
                     },
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
+                        'marquee': 'marquee 40s linear infinite',
                     },
                     keyframes: {
                         float: {
                             '0%, 100%': { transform: 'translateY(0)' },
                             '50%': { transform: 'translateY(-15px)' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
                         }
                     }
                 }
