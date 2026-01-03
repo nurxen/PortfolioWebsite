@@ -6,6 +6,7 @@ body {
     background-color: #fff9f2;
     color: #3f3f3f;
     overflow-x: hidden;
+    font-weight: bold;
     margin: 0;
 }
 
@@ -112,13 +113,16 @@ h1, h2, h3, h4, h5, h6, .font-display {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.6rem;
-    font-weight: 800;
+    gap: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    border-radius: 99px;
+    border-radius: 9999px;
+    padding: 1.25rem 2.5rem;
     transition: all 0.3s ease;
     cursor: pointer;
+    font-family: "April", sans-serif;
 }
 
 .btn-standard {
@@ -193,7 +197,6 @@ h1, h2, h3, h4, h5, h6, .font-display {
     margin: 0 auto;
     overflow: hidden;
     border-radius: 50%;
-    border: 10px solid #fff;
     box-shadow: 0 15px 40px rgba(246, 214, 203, 0.4);
     cursor: ew-resize;
     user-select: none; 
@@ -225,7 +228,7 @@ h1, h2, h3, h4, h5, h6, .font-display {
     width: 50%;
     height: 100%;
     overflow: hidden;
-    border-right: 3px solid #fff; /* Línea divisoria */
+    border-right: 3px solid #905757; /* Línea divisoria */
     z-index: 10;
 }
 
@@ -237,14 +240,14 @@ h1, h2, h3, h4, h5, h6, .font-display {
     transform: translate(-50%, -50%);
     width: 50px;
     height: 50px;
-    background: #fff;
+    background: #905757;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     z-index: 20;
-    color: #4f647d;
+    color: #ffffff;
     cursor: ew-resize;
     pointer-events: none;
 }
