@@ -2,21 +2,20 @@
 <html lang="es" class="scroll-smooth">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Artist & Game Dev - Nurxen</title>
-    <link rel="icon" type="image/png" href="../assets/images/ui/Calabaza.png" />
-    
+    <link rel="icon" type="image/png" href="assets/images/ui/Calabaza.png" />
 
-    <!-- Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shrikhand&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/styles.css">
 
-    <!-- Tailwind CSS Configuration -->
+    <!-- Tailwind CSS CDN with custom configuration -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -51,7 +50,7 @@
                         },
                         marquee: {
                             '0%': { transform: 'translateX(0%)' },
-                            '100%': { transform: 'translateX(-100%)' },
+                            '100%': { transform: 'translateX(-50%)' },
                         }
                     }
                 }
@@ -60,7 +59,7 @@
     </script>
 </head>
 
-<body class="bg-nb-bg font-body text-nb-text-dark overflow-x-hidden">
+<body class="bg-nb-bg font-sans text-nb-text-dark overflow-x-hidden">
 
     <!-- Side Navigation -->
     <aside id="side-nav" class="fixed right-6 top-1/2 -translate-y-1/2 z-[100] hidden xl:flex flex-col gap-16 items-center">
@@ -240,8 +239,8 @@
                                     <span class="w-2 h-2 rounded-full bg-nb-peach animate-ping"></span>
                                     <span class="text-[9px] font-black uppercase tracking-widest text-nb-peach">Technical Artist</span>
                                 </div>
-                                <h2 class="text-5xl md:text-7xl font-display leading-[0.9] mb-6">
-                                    Pastel 2D<br />Sticker <span class="text-nb-peach">FX</span>
+                                <h2 class="text-5xl md:text-7xl font-display leading-[0.9] mb-6 bg">
+                                    <span class="text-nb-bg">Pastel 2D <br />Sticker</span> <span class="text-nb-peach">FX</span>
                                 </h2>
                                 <p class="text-white/70 text-lg font-medium leading-relaxed max-w-md">
                                     ¿Cómo convertir un modelo 3D en una ilustración 2D? He desarrollado un workflow que combina <span class="text-white font-bold">Grease Pencil</span> y <span class="text-white font-bold">Compositing</span> para lograr este look "hand-drawn".
@@ -550,86 +549,11 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <!-- GSAP & ScrollTrigger -->
+    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <script src="../js/main.js"></script>
-    <script src="../js/theme.js"></script>
-
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        /* REVEAL ANIMATIONS */
-        document.querySelectorAll(".reveal-section").forEach((el) => {
-            gsap.to(el, {
-                y: 0,
-                opacity: 1,
-                duration: 1.2,
-                ease: "power3.out",
-                scrollTrigger: { trigger: el, start: "top 90%" },
-            });
-        });
-
-        /* TABS LOGIC */
-        function switchTab(tabId, btn) {
-            document.querySelectorAll(".tab-content").forEach((tab) => tab.classList.remove("active"));
-            document.querySelectorAll(".tab-btn").forEach((b) => {
-                b.classList.remove("bg-nb-blue", "text-white", "active");
-                b.classList.add("text-nb-blue/50");
-            });
-
-            document.getElementById(tabId).classList.add("active");
-            btn.classList.add("bg-nb-blue", "text-white", "active");
-            btn.classList.remove("text-nb-blue/50");
-            ScrollTrigger.refresh();
-        }
-
-        /* GALLERY FILTER */
-        function filterGallery(category, btn) {
-            document.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"));
-            btn.classList.add("active");
-            const items = document.querySelectorAll(".gallery-item");
-            items.forEach((item) => {
-                if (category === "all" || item.classList.contains(category)) {
-                    item.style.display = "block";
-                    setTimeout(() => (item.style.opacity = "1"), 10);
-                } else {
-                    item.style.opacity = "0";
-                    setTimeout(() => (item.style.display = "none"), 500);
-                }
-            });
-            setTimeout(() => ScrollTrigger.refresh(), 600);
-        }
-
-        /* SCROLL LOGIC: SIDE NAV & BACK TO TOP */
-        window.addEventListener("scroll", () => {
-            const sections = ["featured", "props-section", "shaders", "motion-section", "gallery"];
-            const scrollPos = window.scrollY + 400;
-
-            sections.forEach((id) => {
-                const el = document.getElementById(id);
-                const link = document.querySelector(`#side-nav a[href="#${id}"]`);
-                if (el && link) {
-                    if (scrollPos >= el.offsetTop && scrollPos < el.offsetTop + el.offsetHeight) {
-                        link.classList.add("nav-link-active");
-                    } else {
-                        link.classList.remove("nav-link-active");
-                    }
-                }
-            });
-
-            const btt = document.getElementById("backToTop");
-            if (window.scrollY > 800) {
-                btt.classList.remove("opacity-0", "invisible");
-                btt.classList.add("opacity-100", "visible");
-            } else {
-                btt.classList.add("opacity-0", "invisible");
-            }
-        });
-
-        document.getElementById("backToTop").onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
-    </script>
+    <!-- TU JS -->
+    <script src="../js/artwork.js"></script>
 </body>
-
 </html>

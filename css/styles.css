@@ -346,3 +346,34 @@ h1, h2, h3, h4, h5, h6, .font-display {
 
 #shader-visual-container.show-nodes .final-img { opacity:0; }
 #shader-visual-container.show-nodes .nodes-img { opacity:1; }
+
+/* =========================
+   REVISED STYLES
+========================= */
+.reveal-section { opacity: 0; transform: translateY(30px); }
+.tab-content { display: none; }
+.tab-content.active { display: grid; animation: fadeIn 0.5s ease-out; }
+.gallery-item { transition: all 0.5s ease; break-inside: avoid; margin-bottom: 2rem; }
+.nav-link-active {
+    color: #905757 !important;
+    font-weight: 900;
+    transform: rotate(90deg) scale(1.2) !important;
+}
+.filter-btn.active {
+    background-color: #4F647D;
+    color: white;
+    border-color: #4F647D;
+}
+.footer-wave {
+    width: 100%;
+    height: 100px;
+    fill: #4F647D;
+    margin-bottom: -1px;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #FFF9F2; }
+::-webkit-scrollbar-thumb { background: #4F647D; border-radius: 10px; }
