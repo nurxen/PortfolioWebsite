@@ -38,9 +38,9 @@ h1, h2, h3, h4, h5, h6, .font-display {
     color: #4f647d;
 }
 
-/* Subtitles with Wave Underline */
+/* Subtitles peach */
 .subtitle {
-    font-family: "Font Awesome 6 Free", sans-serif;
+    font-family: "April", sans-serif;
     font-weight: 900;
     color: #905757;
     font-size: 1.15rem;
@@ -49,9 +49,10 @@ h1, h2, h3, h4, h5, h6, .font-display {
     line-height: 1.2;
     position: relative;
     display: inline-block;
-    margin-bottom: 0.5rem;
-}
-.subtitle::after {
+    margin-bottom: 0.9rem;
+
+    
+}.subtitle::after {
     content: "";
     position: absolute;
     left: 0;
