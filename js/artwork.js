@@ -36,22 +36,34 @@ function switchTab(tabId, btn) {
 
 // Filtro galería
 function filterGallery(category, btn) {
-    document.querySelectorAll(".filter-btn")
-        .forEach(b => b.classList.remove("active"));
-
+    // 1. Gestionar botones activos
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
 
-    document.querySelectorAll(".gallery-item").forEach(item => {
+    const items = document.querySelectorAll(".gallery-item");
+
+    // 2. Filtrar
+    items.forEach(item => {
+        // Si es "all" o el item tiene la clase de la categoría
         if (category === "all" || item.classList.contains(category)) {
-            item.style.display = "block";
-            setTimeout(() => item.style.opacity = "1", 10);
-        } else {
+            item.style.display = "block"; // Se muestra y ocupa espacio
+            
+            // Pequeña animación de entrada (opcional)
             item.style.opacity = "0";
-            setTimeout(() => item.style.display = "none", 500);
+            item.style.transform = "scale(0.9)";
+            setTimeout(() => {
+                item.style.transition = "all 0.4s ease";
+                item.style.opacity = "1";
+                item.style.transform = "scale(1)";
+            }, 50);
+
+        } else {
+            item.style.display = "none"; // Se quita del flujo (esto hace que el grid se reordene)
         }
     });
 
-    setTimeout(() => ScrollTrigger.refresh(), 600);
+    // 3. Refrescar ScrollTrigger por si la altura de la página cambió
+    setTimeout(() => ScrollTrigger.refresh(), 300);
 }
 
 // Scroll logic (side nav + back to top)

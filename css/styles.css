@@ -2,8 +2,17 @@
    BASE STYLES
 ========================= */
 body {
-    font-family: "April", sans-serif;
-    background-color: #fff9f2;
+    background-color: #FFF9F2;
+    min-height: 100vh; 
+    background-image: 
+        /* Mancha Peach (Arriba Izquierda) - Más opacidad y más grande (50%) */
+        radial-gradient(circle at 10% 20%, rgba(246, 214, 203, 0.8) 0%, transparent 50%),
+        
+        /* Mancha Blue (Abajo Derecha) - Más opacidad y más grande (50%) */
+        radial-gradient(circle at 90% 80%, rgba(79, 100, 125, 0.3) 0%, transparent 50%);
+        
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: #3f3f3f;
     overflow-x: hidden;
     font-weight: bold;
@@ -338,7 +347,12 @@ h1, h2, h3, h4, h5, h6, .font-display {
 @keyframes fadeInTab { from { opacity:0; transform: translateY(10px); } to { opacity:1; transform: translateY(0); } }
 
 .filter-btn.active { background-color: #4f647d; color: #fff; border-color: #4f647d; transform: scale(1.05); }
-.gallery-item { transition: all 0.5s cubic-bezier(0.4,0,0.2,1); }
+.gallery-item {
+    /* Esto evita saltos bruscos visuales dentro del bloque */
+    break-inside: avoid; 
+    /* Asegura que no se corte el contenido */
+    page-break-inside: avoid; 
+}
 
 /* Helpers */
 .media-scroll::-webkit-scrollbar { height:6px; }
