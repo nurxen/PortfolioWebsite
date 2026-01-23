@@ -222,6 +222,6 @@ document.addEventListener('DOMContentLoaded', () => {
             btnText.innerText = originalText;
         }
     });
-    
 
 });
+

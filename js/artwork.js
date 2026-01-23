@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// Animaciones de revelado
+// 1. Animaciones de revelado
 document.querySelectorAll(".reveal-section").forEach((el) => {
     gsap.to(el, {
         y: 0,
@@ -14,7 +14,7 @@ document.querySelectorAll(".reveal-section").forEach((el) => {
     });
 });
 
-// Tabs
+// 2. Tabs
 function switchTab(tabId, btn) {
     const container = btn.closest('section');
 
@@ -34,21 +34,16 @@ function switchTab(tabId, btn) {
     ScrollTrigger.refresh();
 }
 
-// Filtro galería
+// 3. Filtro galería
 function filterGallery(category, btn) {
-    // 1. Gestionar botones activos
     document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
 
     const items = document.querySelectorAll(".gallery-item");
 
-    // 2. Filtrar
     items.forEach(item => {
-        // Si es "all" o el item tiene la clase de la categoría
         if (category === "all" || item.classList.contains(category)) {
-            item.style.display = "block"; // Se muestra y ocupa espacio
-            
-            // Pequeña animación de entrada (opcional)
+            item.style.display = "block";
             item.style.opacity = "0";
             item.style.transform = "scale(0.9)";
             setTimeout(() => {
@@ -56,17 +51,60 @@ function filterGallery(category, btn) {
                 item.style.opacity = "1";
                 item.style.transform = "scale(1)";
             }, 50);
-
         } else {
-            item.style.display = "none"; // Se quita del flujo (esto hace que el grid se reordene)
+            item.style.display = "none";
         }
     });
-
-    // 3. Refrescar ScrollTrigger por si la altura de la página cambió
     setTimeout(() => ScrollTrigger.refresh(), 300);
 }
 
-// Scroll logic (side nav + back to top)
+// 4. Lógica del Slider (¡ESTO ES LO QUE FALTABA!)
+function initSlider(idContainer, idOverlay, idHandle) {
+    const container = document.getElementById(idContainer);
+    const overlay = document.getElementById(idOverlay);
+    const handle = document.getElementById(idHandle);
+    
+    if (!container || !overlay || !handle) return;
+
+    // --- CORRECCIÓN PIXEL-PERFECT ---
+    const overlayImg = overlay.querySelector('img');
+
+    const syncImageWidth = () => {
+        if (overlayImg) {
+            // CAMBIO IMPORTANTE: Usamos clientWidth en vez de offsetWidth
+            // clientWidth = Ancho real disponible para la imagen (sin bordes)
+            overlayImg.style.width = `${container.clientWidth}px`;
+        }
+    };
+
+    syncImageWidth();
+    window.addEventListener('resize', syncImageWidth);
+    setTimeout(syncImageWidth, 100); 
+    // ---------------------------------
+
+    let isDragging = false;
+
+    const update = (x) => {
+        const rect = container.getBoundingClientRect();
+        // Ajuste fino para coordenadas relativas al viewport
+        let position = ((x - rect.left) / rect.width) * 100;
+        position = Math.max(0, Math.min(position, 100));
+        
+        overlay.style.width = `${position}%`;
+        handle.style.left = `${position}%`;
+    };
+
+    container.addEventListener('mousedown', () => isDragging = true);
+    window.addEventListener('mouseup', () => isDragging = false);
+    window.addEventListener('mousemove', (e) => { if (isDragging) update(e.clientX); });
+
+    container.addEventListener('touchstart', () => isDragging = true);
+    window.addEventListener('touchend', () => isDragging = false);
+    window.addEventListener('touchmove', (e) => { if (isDragging) update(e.touches[0].clientX); });
+
+    container.addEventListener('click', (e) => update(e.clientX));
+}
+// 5. Scroll logic (side nav + back to top)
 window.addEventListener("scroll", () => {
     const sections = ["featured", "props-section", "shaders", "gallery"];
     const scrollPos = window.scrollY + 300;
@@ -85,14 +123,28 @@ window.addEventListener("scroll", () => {
     });
 
     const btt = document.getElementById("backToTop");
-    if (window.scrollY > 800) {
-        btt.classList.remove("opacity-0", "invisible");
-        btt.classList.add("opacity-100", "visible");
-    } else {
-        btt.classList.add("opacity-0", "invisible");
+    if (btt) { // Comprobación de seguridad
+        if (window.scrollY > 800) {
+            btt.classList.remove("opacity-0", "invisible");
+            btt.classList.add("opacity-100", "visible");
+        } else {
+            btt.classList.add("opacity-0", "invisible");
+        }
     }
 });
 
-document.getElementById("backToTop").onclick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-};
+const bttBtn = document.getElementById("backToTop");
+if(bttBtn) {
+    bttBtn.onclick = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+}
+
+// 6. Inicialización al cargar la página
+window.addEventListener('load', () => {
+    // Tu slider original del Hero (Redondo)
+    initSlider('compare-slider', 'compare-overlay', 'compare-handle');
+    
+    // Tu NUEVO slider rectangular (Shaders)
+    initSlider('shader-slider', 'shader-overlay', 'shader-handle');
+});
