@@ -4,6 +4,22 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- 1. HERO PARALLAX ---
+    // Seleccionamos la imagen de fondo del hero
+    const heroImage = document.querySelector('#page-about section:first-of-type img');
+    
+    if (heroImage) {
+        gsap.to(heroImage, {
+            yPercent: 20, // La imagen bajará un 20% de su altura mientras scrolleas
+            ease: "none",
+            scrollTrigger: {
+                trigger: "#page-about section:first-of-type",
+                start: "top top",
+                end: "bottom top",
+                scrub: true // Vincula la animación al movimiento de la barra de scroll
+            }
+        });
+    }
     // --- NAVIGATION ---
     function showPage(pageId) {
         document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
@@ -84,6 +100,27 @@ document.addEventListener('DOMContentLoaded', () => {
         initSlider('compare-slider', 'compare-overlay', 'compare-handle');
     });
 
+    // --- 4. TIMELINE DRAWING ---
+    const timelineLine = document.querySelector('.absolute.left-1\\/2.top-0.w-px.h-full'); // Selector específico para tu línea
+    
+    if (timelineLine) {
+        gsap.fromTo(timelineLine, 
+            { height: "0%" },
+            {
+                height: "100%",
+                ease: "none",
+                scrollTrigger: {
+                    trigger: "#awards",
+                    start: "top 60%",
+                    end: "bottom 80%",
+                    scrub: 1 // Dibuja suavemente al hacer scroll
+                }
+            }
+        );
+    }
+
+    
+
     // --- BACK TO TOP BUTTON ---
     const backToTopBtn = document.getElementById('backToTop');
     if (backToTopBtn) {
@@ -102,6 +139,89 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    gsap.registerPlugin(ScrollTrigger);
+
+        // Reveal Animations
+        document.querySelectorAll(".reveal-section").forEach((el) => {
+            gsap.fromTo(el, 
+                { y: 30, opacity: 0 }, 
+                { 
+                    y: 0, 
+                    opacity: 1, 
+                    duration: 1, 
+                    ease: "power2.out", 
+                    scrollTrigger: { trigger: el, start: "top 90%" } 
+                }
+            );
+        });
+
+        // Parallax suave para elementos flotantes
+        gsap.to(".animate-float", {
+            y: -20,
+            rotation: 5,
+            scrollTrigger: {
+                trigger: "#hero-contact",
+                start: "top top",
+                end: "bottom top",
+                scrub: 2
+            }
+        });
+
+        const form = document.getElementById("contact-form");
+    const btn = document.getElementById("submit-btn");
+    const status = document.getElementById("form-status");
+
+    form.addEventListener("submit", async function(event) {
+        event.preventDefault(); // Evita la recarga de página
+        
+        const data = new FormData(event.target);
+        const btnText = btn.querySelector("span");
+        const originalText = btnText.innerText;
+
+        // 1. Estado de carga
+        btn.disabled = true;
+        btnText.innerText = "Sending Magic...";
+        
+        try {
+            // 2. Enviar a Formspree
+            const response = await fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            // 3. Respuesta exitosa
+            if (response.ok) {
+                status.innerText = "✨ Message sent successfully! I'll be in touch.";
+                status.classList.remove("hidden", "text-red-500");
+                status.classList.add("text-nb-blue");
+                form.reset(); // Limpia el formulario
+                
+                // Efecto visual extra: Confeti o cambio de color (opcional)
+                btn.classList.add("bg-green-500");
+                setTimeout(() => {
+                     btn.classList.remove("bg-green-500");
+                     btnText.innerText = originalText;
+                     btn.disabled = false;
+                     // Ocultar mensaje tras 5 segundos
+                     setTimeout(() => status.classList.add("hidden"), 5000);
+                }, 3000);
+
+            } else {
+                // 4. Error del servidor
+                throw new Error("Server error");
+            }
+        } catch (error) {
+            // 5. Error de conexión
+            status.innerText = "Oops! There was a problem sending your message.";
+            status.classList.remove("hidden", "text-nb-blue");
+            status.classList.add("text-red-500");
+            btn.disabled = false;
+            btnText.innerText = originalText;
+        }
+    });
     
 
 });

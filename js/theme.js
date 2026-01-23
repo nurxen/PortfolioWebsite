@@ -35,3 +35,5 @@ function setTextColor(selector, colorName) {
     }
     elements.forEach(el => el.style.color = color);
 }
+
+
