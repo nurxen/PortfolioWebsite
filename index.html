@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< Updated upstream
     <title>Nurxen | 3D Artist & Game Developer</title>
+=======
+    <title>Nuria Serrano | 3D Environment & Technical Artist</title>
+    <link rel="icon" type="image/png" href="assets/images/ui/Calabaza.png" />
+>>>>>>> Stashed changes
 
-    <!-- Google Fonts & Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="css/styles.css">
 
+<<<<<<< Updated upstream
     <!-- Tailwind CSS CDN with custom configuration -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -56,10 +60,15 @@
             }
         }
     </script>
+=======
+    <meta name="description"
+        content="Portfolio of Nuria Serrano. 3D Environment Artist & Technical Artist specializing in modular workflows and Unity integration.">
+>>>>>>> Stashed changes
 </head>
 
-<body class="bg-nb-bg selection:bg-nb-peach selection:text-nb-brown font-body">
+<body>
 
+<<<<<<< Updated upstream
     <!-- Navbar -->
     <nav class="absolute top-0 left-0 right-0 z-50 px-8 py-10 bg-transparent" id="navbar">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center text-white">
@@ -80,10 +89,38 @@
                 <a href="pages/contact.html" class="px-6 py-2 border-2 border-nb-peach text-nb-peach rounded-full text-xs font-black tracking-widest uppercase hover:bg-nb-peach hover:text-nb-brown transition-all">
                     Contact
                 </a>
+=======
+    <!-- NAVBAR -->
+    <nav class="navbar-main">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                nurxen<span class="accent-peach">.</span>
+            </a>
+
+            <div class="navbar-links">
+                <a href="index.html" class="navlink">Home</a>
+
+                <!-- Portfolio Dropdown -->
+                <div class="navlink-dropdown">
+                    <button class="navlink dropdown-toggle">
+                        Work <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <div class="dropdown-panel">
+                        <div class="dropdown-card">
+                            <a href="#" class="dropdown-item">3D & Technical Art</a>
+                            <a href="#" class="dropdown-item">Games & Sims</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="pages/about.html" class="navlink">About me</a>
+                <a href="pages/resume.html" class="navlink">Resumé</a>
+                <a href="pages/contact.html" class="navlink navlink-button">Contact</a>
+>>>>>>> Stashed changes
             </div>
         </div>
     </nav>
 
+<<<<<<< Updated upstream
     <!-- Main Content -->
     <main id="page-about" class="page-view active pt-15 bg-nb-bg">
         
@@ -235,10 +272,142 @@
                     <div class="flex justify-start">
                         <a href="pages/artwork.html" class="btn-standard fa-solid fa-palette ml-2">
                             GALLERY
+=======
+    <main id="page-about" class="page-view active page-main">
+
+        <!-- HERO -->
+        <section class="hero-section">
+
+            <div class="hero-bg">
+                <img src="assets/images/artwork/3D/otoño mesa/render definitivo.png"
+                    alt="High-fidelity 3D Environment Render Background" width="1920" height="1080"
+                    class="hero-bg-img">
+                <div class="hero-bg-overlay"></div>
+            </div>
+
+            <div class="hero-grid reveal-section">
+
+                <!-- LEFT COLUMN -->
+                <div class="hero-info">
+                    <h1 class="hero-title">
+                        Nuria Serrano
+                    </h1>
+                    <p class="hero-subtitle">
+                        Technical Art & Environments
+                    </p>
+
+                    <div class="hero-tags">
+                        <span class="hero-tag">MODULAR WORKFLOWS</span>
+                        <span class="hero-tag">ENGINE INTEGRATION</span>
+                        <span class="hero-tag">SHADER GRAPH</span>
+                        <span class="hero-tag">UNITY PIPELINE</span>
+                    </div>
+
+                    <p class="hero-description">
+                        I am an Environment Artist with a solid technical background in Game Development. My focus is on
+                        creating high-quality assets that are fully optimized for real-time rendering and integrated
+                        smoothly into pipelines.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="pages/artwork.html" class="hero-btn-primary">
+                            View Portfolio <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
+                        <a href="pages/contact.html" class="hero-btn-secondary">
+                            Contact Me <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>  
+                </div>
+
+                <!-- RIGHT COLUMN: VIDEO -->
+                <div class="hero-video-wrap">
+                    <div class="hero-video-frame">
+                        <div class="hero-video-shade"></div>
+                        <iframe
+                            src="https://player.vimeo.com/video/1144502410?autoplay=1&loop=1&muted=1&background=1&share=0&keyboard=0"
+                            allow="autoplay; fullscreen" allowfullscreen loading="lazy"
+                            title="Nuria Serrano Art Showreel" class="hero-video-iframe">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SPECIALTIES + SELECTED WORK -->
+        <section id="specialties-showcase" class="specialties-section">
+            <div class="specialties-container">
+
+                <!-- SPECIALTIES ROW -->
+                <div>
+                    <div class="specialties-grid">
+
+                        <div class="specialty-card">
+                            <div class="specialty-icon">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div>
+                                <h3 class="specialty-title">
+                                    Shader Development
+                                </h3>
+                                <p class="specialty-desc">
+                                    Custom node-based shaders for unique stylistic/technical visuals.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="specialty-card">
+                            <div class="specialty-icon">
+                               <i class="fa-solid fa-gears"></i>
+                            </div>
+                            <div>
+                                <h3 class="specialty-title">
+                                    Pipeline Optimization
+                                </h3>
+                                <p class="specialty-desc">
+                                    Asset workflows designed for high performance in engine.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="specialty-card">
+                            <div class="specialty-icon">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h3 class="specialty-title">
+                                    Real-time Lighting
+                                </h3>
+                                <p class="specialty-desc">
+                                    Lighting setups tailored for narrative impact and efficiency.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="specialty-card">
+                            <div class="specialty-icon">
+                                <i class="fa-solid fa-cube"></i>
+                            </div>
+                            <div>
+                                <h3 class="specialty-title">
+                                    Technical 3D
+                                </h3>
+                                <p class="specialty-desc">
+                                    Modeling and rigging with an engine-first mindset.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="specialties-cta-row">
+                        <a href="pages/artwork.html" class="link-pill">
+                            See All Services <i class="fa-solid fa-arrow-right link-pill-icon"></i>
+>>>>>>> Stashed changes
                         </a>
                     </div>
                 </div>
 
+<<<<<<< Updated upstream
                 <div class="relative flex items-center justify-center lg:justify-end py-10">
                     <span class="absolute left-[-40px] lg:left-[-30px] top-1/2 -translate-y-1/2 bg-nb-brown px-4 py-2 rounded-full text-[10px] font-bold text-nb-white uppercase tracking-widest shadow-lg z-30 border border-nb-white/20 hidden md:block">
                         Antes
@@ -255,10 +424,140 @@
                     <span class="absolute right-[-40px] lg:right-[-40px] top-1/2 -translate-y-1/2 bg-nb-brown px-4 py-2 rounded-full text-[10px] font-bold text-nb-white uppercase tracking-widest shadow-lg z-30 border border-nb-white/20 hidden md:block">
                         Después
                     </span>
+=======
+                <!-- SELECTED WORK -->
+                <div class="selected-work-grid">
+
+                    <!-- TEXT COLUMN -->
+                    <div class="selected-work-text">
+                        <div>
+                            <span class="section-eyebrow">✦ CASE STUDIES</span>
+                            <h2 class="section-title">Selected Work</h2>
+                            <p class="section-paragraph">
+                                Each project includes a look behind the scenes: <strong class="text-strong">my exact role, the specific technical
+                                    challenges</strong> and the optimized pipeline decisions that shaped the final
+                                playable experience.
+                            </p>
+
+                            <p class="section-paragraph">
+                                I enjoy sharing both the beauty of the art and the technical
+                                structures behind it.
+                            </p>
+
+                            <div class="selected-work-cta">
+                                <a href="pages/artwork.html" class="link-pill">
+                                    View Portfolio <i class="fa-solid fa-arrow-right link-pill-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECTS GRID -->
+                    <div class="projects-col">
+                        <div class="projects-grid">
+
+                            <!-- 1. SIMULADOR MÉDICO (ECOE) -->
+                            <article class="project-card">
+                                <div class="project-image-wrap">
+                                    <img src="assets/images/sims/ecoe_placeholder.jpg" class="project-image" alt="Simulador Médico"
+                                         class="project-image">
+                                </div>
+
+                                <div class="project-info">
+                                    <span class="project-category">Medical Simulation</span>
+                                    <p class="project-desc">
+                                        Environment for medical training.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <!-- 2. UNCHAINED (GAME) -->
+                            <article class="project-card">
+                                <div class="project-image-wrap">
+                                    <img src="assets/images/games/UNCHAINED - STEAM/header.jpg" class="project-image"alt="Unchained"
+                                         class="project-image">
+                                </div>
+
+                                <div class="project-info">
+                                    <span class="project-category">Videogame</span>
+                                    <p class="project-desc">
+                                        Unchained - Environment, animation for Steam performance.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <!-- 3. PURE ART (AUTUMN TABLE) -->
+                            <article class="project-card">
+                                <div class="project-image-wrap">
+                                    <img src="assets/images/artwork/3D/otoño mesa/render definitivo.png" class="project-image" alt="Autumn Table"
+                                         class="project-image">
+                                </div>
+
+                                <div class="project-info">
+                                    <span class="project-category">Lighting & Compo</span>
+                                    <p class="project-desc">
+                                        Autumn Table
+                                    </p>
+                                </div>
+                            </article>
+
+                            <!-- 4. Kitchn (AUTUMN TABLE) -->
+                            <article class="project-card">
+                                <div class="project-image-wrap">
+                                    <img src="assets/images/artwork/3D/otoño mesa/render definitivo.png" class="project-image" alt="Autumn Table"
+                                         class="project-image">
+                                </div>
+
+                                <div class="project-info">
+                                    <span class="project-category">Environments & Props</span>
+                                    <p class="project-desc">
+                                        The kitchen set for the autumn table.
+                                    </p>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+>>>>>>> Stashed changes
                 </div>
+            </div>
+        </section>
+
+        <!-- MARQUEE -->
+        <div class="marquee-wrap">
+            <div class="marquee-track">
+
+                <div class="marquee-content" aria-hidden="true">
+                    <span class="marquee-text">3D Artist</span>
+                    <i class="fa-solid fa-star marquee-star"></i>
+                    <span class="marquee-text">Animation</span>
+                    <i class="fa-solid fa-star marquee-star"></i>
+                    <span class="marquee-text">Digital Art</span>
+                    <i class="fa-solid fa-star marquee-star"></i>
+                    <span class="marquee-text">Programmer</span>
+                    <i class="fa-solid fa-star marquee-star"></i>
+                    <span class="marquee-text">Game Developer</span>
+                    <i class="fa-solid fa-star marquee-star"></i>
+                </div>
+
+                <div class="marquee-content marquee-content-second" aria-hidden="true">
+                    <span class="marquee-text">3D Artist</span>
+                    <i class="fa-solid fa-star marquee-star"></i>
+                    <span class="marquee-text">Animation</span>
+                    <i class="fa-solid fa-star marquee-star"></i>
+                    <span class="marquee-text">Digital Art</span>
+                    <i class="fa-solid fa-star marquee-star"></i>
+                    <span class="marquee-text">Programmer</span>
+                    <i class="fa-solid fa-star marquee-star"></i>
+                    <span class="marquee-text">Game Developer</span>
+                    <i class="fa-solid fa-star marquee-star"></i>
+                </div>
+
             </div>
         </div>
 
+<<<<<<< Updated upstream
         <div id="artwork-preview" class="mb-0 reveal-section max-w-[1400px] mx-auto px-10"></div>
 
         <div class="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] -mt-1">
@@ -286,9 +585,16 @@
                         <span>Level Up</span>
                         <i class="fa-solid fa-ghost text-nb-peach animate-pulse"></i>
                     </div>
+=======
+        <!-- SKILLS -->
+        <section id="skills" class="skills-section">
+            <div class="skills-container">
+                <div class="skills-header">
+                    <h2 class="skills-title">Technical Stack</h2>
+>>>>>>> Stashed changes
                 </div>
-            </div>
 
+<<<<<<< Updated upstream
             <div class="max-w-7xl mx-auto text-center relative"> <img src="assets/images/ui/MandoConsola.png" 
                     class="absolute top-10 left-10 md:left-[15%] w-24 md:w-36 -rotate-12 animate-float z-10 pointer-events-none select-none opacity-80 mix-blend-overlay md:mix-blend-normal" 
                     alt="Game Controller">
@@ -305,10 +611,31 @@
                             <div class="flex flex-col text-left">
                                 <span class="text-4xl font-display text-white leading-none">8</span>
                                 <span class="text-[10px] text-nb-peach font-black uppercase tracking-[0.2em] mt-1">Released</span>
+=======
+                <div class="skills-grid">
+
+                    <!-- Engines & Tech Art -->
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <div class="skill-icon skill-icon-blue"><i class="fa-solid fa-gamepad"></i></div>
+                            <h2 class="skill-card-title">Engines & Tech Art</h2>
+                        </div>
+                        <div class="skill-card-body">
+                            <div class="skill-tags">
+                                <span class="skill-tag skill-tag-blue">Unity 6</span>
+                                <span class="skill-tag skill-tag-blue">Shader Graph</span>
+                                <span class="skill-tag skill-tag-blue">VFX Graph</span>
+                                <span class="skill-tag skill-tag-blue">Profiler</span>
+                                <span class="skill-tag skill-tag-blue">Light Probes</span>
+                            </div>
+                            <div class="skill-note">
+                                Materiales procedimentales, Channel Packing RGBA, MPB, Iluminación avanzada.
+>>>>>>> Stashed changes
                             </div>
                         </div>
                     </div>
 
+<<<<<<< Updated upstream
                     <div class="relative group">
                         <div class="absolute -inset-4 bg-white/5 rounded-full blur-xl opacity-0 transition-opacity duration-500"></div>
                         <div class="relative flex items-center gap-5 bg-white/10 backdrop-blur-md border border-white/20 p-3 pr-10 rounded-full shadow-2xl transition-all duration-500" style="animation-delay: 1s;">
@@ -394,6 +721,43 @@
                                     <span class="px-6 py-3 bg-nb-blue/10 text-nb-blue text-[13px] font-bold uppercase rounded-xl">Unity 3D</span>
                                 </div>
                             </div>
+=======
+                    <!-- 3D Pipeline -->
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <div class="skill-icon skill-icon-peach"><i class="fa-solid fa-cube"></i></div>
+                            <h2 class="skill-card-title">3D Pipeline & DCC</h2>
+                        </div>
+                        <div class="skill-card-body">
+                            <div class="skill-tags">
+                                <span class="skill-tag skill-tag-brown">Blender (Adv)</span>
+                                <span class="skill-tag skill-tag-brown">3ds Max</span>
+                                <span class="skill-tag skill-tag-brown">Substance</span>
+                                <span class="skill-tag skill-tag-brown">SketchUp</span>
+                            </div>
+                            <div class="skill-note">
+                                Pipeline completo: High/Low Poly, UV Unwrap, Baking (Normal, AO, ORM), Texture Atlasing.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Programming & Ops -->
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <div class="skill-icon skill-icon-slate"><i class="fa-solid fa-code"></i></div>
+                            <h2 class="skill-card-title">Programming & DevOps</h2>
+                        </div>
+                        <div class="skill-card-body">
+                            <div class="skill-tags">
+                                <span class="skill-tag skill-tag-slate">C#</span>
+                                <span class="skill-tag skill-tag-slate">Python</span>
+                                <span class="skill-tag skill-tag-slate">C++</span>
+                                <span class="skill-tag skill-tag-slate">Java</span>
+                            </div>
+                            <div class="skill-note">
+                                Git/GitHub Desktop, Jira, Notion. Metodologías Agile/Scrum.
+                            </div>
+>>>>>>> Stashed changes
                         </div>
 
                         <!-- CARD 2: 3D Softwares (Center - MAIN FOCUS) -->
@@ -446,11 +810,13 @@
                         </div>
 
                     </div>
+
                 </div>
             </div>
         </div>
     </section>
 
+<<<<<<< Updated upstream
         <!-- Awards Section -->
         <section id="awards" class="max-w-7xl mx-auto px-8 pt-32 mb-40 reveal-section relative">
     
@@ -538,14 +904,67 @@
                         <a href="files/CV_2025_English.pdf" target="_blank"
                             rel="noopener noreferrer" class="px-10 py-5 bg-white text-nb-blue border-2 border-nb-blue/10 rounded-full text-xs font-black tracking-widest uppercase transition-all hover:border-nb-peach hover:bg-nb-bg flex items-center gap-3 group">
                             <i class="fa-solid fa-file-arrow-down text-sm group-hover:text-nb-brown transition-colors"></i>
+=======
+
+        <!-- CONTACT CTA -->
+        <section id="contact-cv" class="contact-section reveal-section">
+
+            <div class="contact-card">
+
+                <img src="assets/images/ui/AvionPapel.png" width="224" height="224" loading="lazy"
+                    class="contact-decor contact-decor-plane"
+                    alt="Paper plane decoration">
+
+                <img src="assets/images/ui/Sobre_correo.png" width="176" height="176" loading="lazy"
+                    class="contact-decor contact-decor-envelope"
+                    alt="Envelope decoration">
+
+                <div class="contact-content">
+                    <p class="contact-eyebrow">Let's build a cozy world</p>
+                    <h2 class="contact-title">
+                        Let's stay <br> <span class="text-strong-brown">in touch</span>
+                    </h2>
+
+                    <p class="contact-description">
+                        I am available for freelance opportunities and full-time positions. If you like my style, let's
+                        create something together.
+                    </p>
+
+                    <div class="contact-actions">
+                        <a href="pages/contact.html" class="contact-btn-primary group">
+                            <i class="fa-solid fa-paper-plane contact-btn-icon" aria-hidden="true"></i>
+                            Go to Contact
+                        </a>
+
+                        <a href="files/CV_2025_English.pdf" target="_blank" rel="noopener noreferrer"
+                            class="contact-btn-secondary group">
+                            <i class="fa-solid fa-file-arrow-down contact-btn-icon" aria-hidden="true"></i>
+>>>>>>> Stashed changes
                             See CV
                         </a>
                     </div>
 
+<<<<<<< Updated upstream
                     <div class="mt-16 pt-10 border-t border-nb-bg flex flex-wrap justify-center gap-8 opacity-60">
                         <a href="https://www.artstation.com/nurxen1" target="_blank" class="text-[10px] font-black uppercase tracking-widest text-nb-blue hover:text-nb-brown transition-colors">ArtStation</a>
                         <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank" class="text-[10px] font-black uppercase tracking-widest text-nb-blue hover:text-nb-brown transition-colors">LinkedIn</a>
                         <a href="https://cara.app/nurxen" target="_blank" class="text-[10px] font-black uppercase tracking-widest text-nb-blue hover:text-nb-brown transition-colors">Cara</a>
+=======
+                    <div class="contact-social-row">
+                        <a href="https://www.artstation.com/nurxen1" target="_blank" rel="noopener noreferrer"
+                            class="contact-social-pill contact-social-pill--1">
+                            ArtStation
+                        </a>
+                        <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-social-pill contact-social-pill--2">
+                            LinkedIn
+                        </a>
+                        <a href="https://cara.app/nurxen" target="_blank" rel="noopener noreferrer"
+                            class="contact-social-pill contact-social-pill--3">
+                            Cara
+                        </a>
+>>>>>>> Stashed changes
                     </div>
                 </div>
             </div>
@@ -553,6 +972,7 @@
 
     </main>
 
+<<<<<<< Updated upstream
     <!-- Footer -->
     <div class="w-full mt-20">
         <svg class="footer-wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
@@ -567,10 +987,28 @@
                     <div class="lg:col-span-2">
                         <a href="index.html" class="font-display text-6xl md:text-7xl text-nb-bg hover:text-nb-peach transition-colors block mb-4">
                             nurxen<span class="text-nb-peach">.</span>
+=======
+    <div class="footer-wrap">
+        <svg class="footer-wave" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+            <path
+                d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,139,576,170.7C672,203,768,245,864,240C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+
+        <footer class="site-footer">
+            <div class="footer-container">
+
+                <div class="footer-grid">
+
+                    <div class="footer-brand-col">
+                        <a href="index.html" class="footer-brand">
+                            nurxen<span class="accent-peach">.</span>
+>>>>>>> Stashed changes
                         </a>
-                        <p class="text-nb-bg/60 font-bold uppercase tracking-widest text-xs mb-8">
+                        <p class="footer-tagline">
                             3D Artist & Game Developer
                         </p>
+<<<<<<< Updated upstream
                         
                         <div class="flex gap-6">
                             <a href="https://www.instagram.com/nurxen_" target="_blank" class="w-10 h-10 rounded-full border border-nb-bg/20 flex items-center justify-center hover:bg-nb-peach hover:text-nb-brown hover:border-nb-peach transition-all duration-300">
@@ -581,10 +1019,26 @@
                             </a>
                             <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank" class="w-10 h-10 rounded-full border border-nb-bg/20 flex items-center justify-center hover:bg-nb-peach hover:text-nb-brown hover:border-nb-peach transition-all duration-300">
                                 <i class="fa-brands fa-linkedin-in text-lg"></i>
+=======
+
+                        <div class="footer-social">
+                            <a href="https://www.instagram.com/nurxen_" target="_blank" rel="noopener noreferrer"
+                                aria-label="Nurxen on Instagram" class="footer-social-icon">
+                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.artstation.com/nurxen1" target="_blank" rel="noopener noreferrer"
+                                aria-label="Nurxen on ArtStation" class="footer-social-icon">
+                                <i class="fa-brands fa-artstation" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank"
+                                rel="noopener noreferrer" aria-label="Nurxen on LinkedIn" class="footer-social-icon">
+                                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+>>>>>>> Stashed changes
                             </a>
                         </div>
                     </div>
 
+<<<<<<< Updated upstream
                     <div class="flex flex-col gap-4">
                         <p class="font-body text-nb-peach opacity-60 text-xs uppercase tracking-widest font-black mb-2">Explore</p>
                         <a href="index.html" class="text-sm font-bold hover:text-nb-peach transition-all duration-300">Home</a>
@@ -606,14 +1060,38 @@
                     </p>
                     
                     <div class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-nb-bg/40">
+=======
+                    <div class="footer-col">
+                        <p class="footer-col-title">Explore</p>
+                        <a href="index.html" class="footer-link">Home</a>
+                        <a href="pages/artwork.html" class="footer-link">Artwork Gallery</a>
+                        <a href="pages/games.html" class="footer-link">Videogames</a>
+                    </div>
+
+                    <div class="footer-col">
+                        <p class="footer-col-title">Get in Touch</p>
+                        <a href="pages/contact.html" class="footer-link">Contact Form</a>
+                        <a href="mailto:nurxen21@gmail.com" class="footer-link footer-link-underline">Email Me</a>
+                        <p class="footer-note">Available for freelance.</p>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="footer-copy">
+                        ©2026 Nurxen. All Rights Reserved.
+                    </p>
+
+                    <div class="footer-credit">
+>>>>>>> Stashed changes
                         <span>Made with cozy vibes & Blender</span>
-                        <i class="fa-solid fa-heart text-nb-peach animate-pulse"></i>
+                        <i class="fa-solid fa-heart footer-heart" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
 
+<<<<<<< Updated upstream
     <!-- Side Navigation -->
     <div id="side-nav" class="fixed right-6 top-1/2 -translate-y-1/2 z-[100] hidden xl:flex flex-col gap-10 items-center transition-colors duration-500 text-nb-blue/40">
         <div class="h-20 w-px bg-current opacity-20"></div>
@@ -628,34 +1106,17 @@
     <!-- Back to Top Button -->
     <button id="backToTop" class="fixed bottom-10 right-10 z-[60] w-14 h-14 bg-nb-brown text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:scale-110 hover:bg-nb-blue transform translate-y-10">
         <i class="fa-solid fa-arrow-up text-xl"></i>
+=======
+    <button id="backToTop" aria-label="Back to top" class="back-to-top">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+>>>>>>> Stashed changes
     </button>
 
-    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <script src="js/main.js"></script>
     <script src="js/theme.js"></script>
-
-    <script>
-        window.addEventListener('scroll', () => {
-            const sideNav = document.getElementById('side-nav');
-            const gamesSection = document.getElementById('games-preview');
-
-            if (!sideNav || !gamesSection) return;
-
-            const rect = gamesSection.getBoundingClientRect();
-
-            // Si la sección de juegos (azul) está cruzando la mitad de la pantalla
-            if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-                sideNav.classList.remove('text-nb-blue/40');
-                sideNav.classList.add('text-white/60'); // Un blanco un poco más fuerte para que se vea sobre el azul
-            } else {
-                sideNav.classList.remove('text-white/60');
-                sideNav.classList.add('text-nb-blue/40');
-            }
-        });
-    </script>
 </body>
 
 </html>
