@@ -54,10 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
             },
         });
     }
-<<<<<<< Updated upstream
-    elements.forEach(el => el.style.color = color);
-}
-=======
 
     // =========================
     // 4. FLOATING ELEMENTS PARALLAX (contact hero)
@@ -311,4 +307,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 }); // end DOMContentLoaded
->>>>>>> Stashed changes

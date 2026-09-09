@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Nuria Serrano | 3D Environment & Technical Artist</title>
-    <link rel="icon" type="image/png" href="../assets/images/ui/Calabaza.png" />
+    <title>About Me - Nuria Serrano | 3D Environment & Technical Artist</title>
+    <!-- Favicon profesional limpio -->
+    <link rel="icon" type="image/png" href="../assets/images/ui/nurxen-logo.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-    <nav class="navbar-main">
+    <!-- NAVBAR UNIFICADO -->
+    <nav class="navbar-main" aria-label="Main navigation">
         <div class="navbar-container">
-            <a href="index.html" class="navbar-brand">
-                nurxen<span class="accent-peach">.</span>
+            <a href="../index.html" class="navbar-brand">
+                nurxen<span class="accent-blue">.</span>
             </a>
 
             <div class="navbar-links">
@@ -23,18 +24,18 @@
 
                 <!-- Portfolio Dropdown -->
                 <div class="navlink-dropdown">
-                    <button class="dropdown-toggle">
-                        Work <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    <button class="dropdown-toggle" aria-expanded="false">
+                        Work <i class="fa-solid fa-chevron-down dropdown-icon" aria-hidden="true"></i>
                     </button>
-                    <!-- Menú Desplegable -->
                     <div class="dropdown-panel">
                         <div class="dropdown-card">
-                            <a href="#" class="dropdown-item">3D & Technical Art</a>
-                            <a href="#" class="dropdown-item">Games & Sims</a>
+                            <a href="artwork.html" class="dropdown-item">3D & Technical Art</a>
+                            <a href="games.html" class="dropdown-item">Games & Sims</a>
                         </div>
                     </div>
                 </div>
-                <a href="#about-me" class="navlink">About me</a>
+
+                <a href="about.html" class="navlink" aria-current="page">About me</a>
                 <a href="resume.html" class="navlink">Resumé</a>
                 <a href="contact.html" class="navlink navlink-button">Contact</a>
             </div>
@@ -44,111 +45,67 @@
     <!-- MAIN CONTAINER -->
     <main class="about-main">
 
+        <!-- SIDEBAR PERSONAL -->
         <aside class="about-sidebar">
             <div class="about-profile">
                 <h1 class="about-name">Hello there! I'm <br> Nuria Serrano</h1>
                 <img src="../assets/images/artwork/3D/personjes/pink-cycles.jpg" class="about-photo" alt="Nuria Serrano">
                 <p class="about-tagline">
-                    3D Environment & Technical Artist focused on <strong>Modeling, Texturing, LookDev and Lighting</strong>.
+                    3D Environment & Technical Artist focused on building bridges between <strong>artistic vision and real-time engine performance</strong>.
                 </p>
             </div>
 
             <div class="about-info-card">
                 <div class="about-info-section">
-                    <h2 class="about-info-title">Contact <hr class="about-info-line"></h2>
+                    <h2 class="about-info-title">Quick Facts <hr class="about-info-line"></h2>
                     <div class="about-contact-list">
-                        <p>Email: <a href="mailto:nurxen21@gmail.com" class="about-contact-link">nurxen21@gmail.com</a></p>
+                        <p><strong>Based in:</strong> Madrid, Spain</p>
+                        <p><strong>Background:</strong> Game Development Degree (URJC) & Erasmus (Haaga-Helia, Helsinki)</p>
+                        <p><strong>Specialty:</strong> Modular Workflows, Shaders & Lighting</p>
                     </div>
                 </div>
 
                 <div class="about-info-section">
-                    <h2 class="about-info-title">Social <hr class="about-info-line"></h2>
+                    <h2 class="about-info-title">Connect <hr class="about-info-line"></h2>
                     <div class="about-social-row">
-                        <a href="#" class="about-social-icon"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#" class="about-social-icon"><i class="fa-brands fa-artstation"></i></a>
-                        <a href="#" class="about-social-icon"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
-
-                <div class="about-info-section">
-                    <h2 class="about-info-title">Education <hr class="about-info-line"></h2>
-                    <div class="about-list">
-                        <div>
-                            <p class="about-item-title">Game Development Degree</p>
-                            <p class="about-item-sub">URJC, Madrid</p>
-                        </div>
-                        <div>
-                            <p class="about-item-title">Erasmus</p>
-                            <p class="about-item-sub">Haaga-Helia, Helsinki</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about-info-section">
-                    <h2 class="about-info-title">Awards <hr class="about-info-line"></h2>
-                    <div class="about-list">
-                        <div>
-                            <p class="about-item-title">1st Place — Game Scholars Jam</p>
-                            <p class="about-item-sub">Barcelona & Madrid</p>
-                        </div>
-                        <div>
-                            <p class="about-item-title">Finalist — National Devuego Award</p>
-                        </div>
-                        <div>
-                            <p class="about-item-title">3rd Place — Virtual Core Jam</p>
-                        </div>
+                        <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="about-social-icon"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="https://www.artstation.com/nurxen1" target="_blank" rel="noopener noreferrer" aria-label="ArtStation" class="about-social-icon"><i class="fa-brands fa-artstation" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/nurxen_" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="about-social-icon"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
         </aside>
 
-        <!-- COLUMNA DERECHA: Contenido Principal -->
+        <!-- CONTENIDO PRINCIPAL: TRAYECTORIA Y FILOSOFÍA -->
         <section class="about-content">
             <div>
-                <h2 class="about-heading">About Me</h2>
+                <h2 class="about-heading">My Story & Passion</h2>
                 <p class="about-paragraph">
-                    I've always been fascinated by the intersection of storytelling and interactive media. My journey into 3D art is driven by a passion for building immersive worlds—from the initial creative concept to the complex systems that bring them to life.
+                    I've always been fascinated by the intersection of storytelling and interactive media. My journey into 3D art is driven by a deep passion for building immersive worlds—from the initial creative concept and lookdev to the complex technical systems that bring them to life seamlessly on screen.
                 </p>
                 <p class="about-paragraph">
-                    With a hybrid background in Game Development and Technical Art, I bridge the gap between artistic vision and engineering performance. I manage the full 3D pipeline, specializing in PBR modeling, shaders, and lighting, while constantly exploring AI-driven workflows to boost production efficiency without sacrificing quality.
+                    Having a hybrid background in Game Development and Technical Art allows me to speak both languages fluently. I understand how an artist wants a scene to feel, but I also know how the engine calculates draw calls, memory limits, and shader instructions. This balance ensures that beauty never compromises performance.
                 </p>
                 <p class="about-paragraph">
-                    I thrive in agile, collaborative environments where clear communication is key. My goal is to push the boundaries of real-time environments and contribute my technical and creative expertise to high-standard, impactful projects.
+                    Whether I am assembling modular environment architectures, configuring dynamic lighting setups, or optimizing channel-packed textures, my goal is always to empower the rest of the team with clean, reliable assets.
                 </p>
-
-                <div class="about-actions">
-                    <a href="artwork.html" class="about-btn-primary">Take a look at my Portfolio</a>
-                    <a href="../files/CV.pdf" class="about-btn-secondary">Download my Resume</a>
-                </div>
             </div>
 
             <hr class="about-divider">
 
             <div class="about-block">
-                <h2 class="about-heading">How I work</h2>
+                <h2 class="about-heading">How I Work & Collaborate</h2>
+                <p class="about-paragraph">
+                    I thrive in structured, highly collaborative studio environments. I believe that great games and simulations are built on clear communication, proactive problem-solving, and continuous feedback loops. 
+                </p>
                 <p class="about-paragraph" style="margin-bottom: 0;">
-                    I'm organized, reliable, and comfortable receiving feedback throughout the process. I believe in understanding the goals behind a project, asking questions when needed, and ensuring the final result reflects the team's vision as closely as possible.
+                    I am organized, reliable, and comfortable adapting to pipeline constraints. I don't just deliver models; I investigate solutions, anticipate engine limitations, and make sure every asset fits its purpose within the broader scope of the project.
                 </p>
             </div>
 
-            <div class="about-block">
-                <h2 class="about-experience-title">Experience</h2>
-                <div class="about-experience-list">
-                    <div>
-                        <h3 class="about-experience-role">Tech & Art Lead | Simulation & XR</h3>
-                        <p class="about-experience-desc">Industrial pipeline optimization and real-time environment assembly.</p>
-                    </div>
-                    <hr class="about-experience-divider">
-                    <div>
-                        <h3 class="about-experience-role">Disney | Cultural Representative</h3>
-                        <p class="about-experience-desc">High-volume operations, professional communication, and international standard quality.</p>
-                    </div>
-                    <hr class="about-experience-divider">
-                    <div>
-                        <h3 class="about-experience-role">TFG | ECOE Medical Simulator</h3>
-                        <p class="about-experience-desc">Full 3D pipeline: modular environments, channel packing, and shader optimization.</p>
-                    </div>
-                </div>
+            <div class="about-actions">
+                <a href="artwork.html" class="about-btn-primary">Explore My Portfolio <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="resume.html" class="about-btn-secondary">View Technical Resumé</a>
             </div>
         </section>
 

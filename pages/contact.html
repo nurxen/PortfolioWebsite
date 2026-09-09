@@ -1,681 +1,302 @@
 <!DOCTYPE html>
-<!-- CORRECCIÓN: lang="en" porque el contenido está en inglés -->
 <html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< Updated upstream
-    <title>Nurxen | Contact</title>
-=======
-    <title>Contact - Nurxen | 3D Artist & Game Developer</title>
-    <link rel="icon" type="image/png" href="../assets/images/ui/Calabaza.png" />
->>>>>>> Stashed changes
+    <title>Contact - Nurxen | 3D Environment & Technical Artist</title>
+    <link rel="icon" type="image/png" href="../assets/images/ui/nurxen-logo.png" />
 
-    <!-- FONTS & ICONS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shrikhand&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<<<<<<< Updated upstream
-    <!-- TAILWIND CONFIG -->
-=======
+    
     <link rel="stylesheet" href="../css/styles.css">
-
->>>>>>> Stashed changes
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'nb-blue': '#4F647D',
-                        'nb-brown': '#905757',
-                        'nb-white': '#FFFFFF',
-                        'nb-peach': '#F6D6CB',
-                        'nb-text-dark': '#3F3F3F',
-                        'nb-bg': '#FFF9F2',
-                        'nb-blue-dark': '#43647F',
-                        'nb-studio': '#121212',
-                    },
-                    fontFamily: {
-                        'display': ['"Shrikhand"', 'cursive'],
-                        'body': ['"Manrope"', 'sans-serif'],
-                    },
-                    borderRadius: {
-                        'cozy': '1.5rem',
-                        'super': '3.5rem',
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-15px)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 
-<body class="bg-nb-bg selection:bg-nb-peach selection:text-nb-brown font-body overflow-x-hidden">
+<body>
 
-<<<<<<< Updated upstream
-    <!-- Navbar -->
-    <nav class="absolute top-0 left-0 right-0 z-50 px-8 py-10 bg-transparent" id="navbar">
-=======
-    <!-- CORRECCIÓN: aria-label en navbar -->
-    <nav class="absolute top-0 left-0 right-0 z-50 px-8 py-10 bg-transparent" id="navbar" aria-label="Main navigation">
->>>>>>> Stashed changes
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center">
-            <a href="../index.html" class="font-display text-4xl md:text-5xl text-nb-blue hover:opacity-80 transition-colors">
-                nurxen<span class="text-nb-peach text-5xl">.</span>
-            </a>
+<nav class="navbar-main" aria-label="Main navigation">
+    <div class="navbar-container">
+        <!-- Logo -->
+        <a href="../index.html" class="navbar-brand">
+            nurxen<span class="accent-blue">.</span>
+        </a>
 
-            <div class="flex flex-wrap justify-center items-center gap-10 mt-6 lg:mt-0">
-                <a href="../index.html" class="text-sm tracking-widest font-bold text-nb-blue hover:text-nb-brown transition-colors uppercase">
-                    About Me
-                </a>
-                <a href="artwork.html" class="text-sm tracking-widest font-bold text-nb-blue hover:text-nb-brown transition-colors uppercase">
-                    Artwork
-                </a>
-                <a href="games.html" class="text-sm tracking-widest font-bold text-nb-blue hover:text-nb-brown transition-colors uppercase">
-                    Videogames
-                </a>
-<<<<<<< Updated upstream
-                <a href="contact.html" class="px-6 py-2 border-2 border-nb-blue text-nb-blue rounded-full text-xs font-black tracking-widest uppercase hover:bg-nb-blue-dark hover:text-nb-white transition-all">
-=======
-                <!-- CORRECCIÓN: aria-current="page" en el link activo -->
-                <a href="contact.html"
-                    class="px-6 py-2 border-2 border-nb-peach bg-nb-peach text-nb-brown rounded-full text-xs font-black tracking-widest uppercase hover:bg-nb-white hover:text-nb-blue transition-all shadow-md transform scale-105"
-                    aria-current="page">
->>>>>>> Stashed changes
-                    Contact
-                </a>
+        <!-- Enlaces principales -->
+        <div class="navbar-links">
+            <a href="../index.html" class="navlink">Home</a>
+
+            <!-- Dropdown de Trabajos -->
+            <div class="navlink-dropdown">
+                <button class="dropdown-toggle" aria-expanded="false">
+                    Work <i class="fa-solid fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+                </button>
+                <div class="dropdown-panel">
+                    <div class="dropdown-card">
+                        <a href="artwork.html" class="dropdown-item">3D & Technical Art</a>
+                        <a href="games.html" class="dropdown-item">Games & Sims</a>
+                    </div>
+                </div>
             </div>
+
+            <a href="about.html" class="navlink">About me</a>
+            <a href="resume.html" class="navlink">Resumé</a>
+            <a href="contact.html" class="navlink navlink-button">Contact</a>
         </div>
-    </nav>
+    </div>
+</nav>
     
-    <main>
+    <main class="page-main">
 
-<<<<<<< Updated upstream
-        <!-- HERO SECTION -->
-        <section id="hero-contact" class="pt-64 pb-20 px-8 text-center bg-nb-peach/20">
-            <div class="max-w-4xl mx-auto reveal-section">
-                <p class="text-[10px] font-black uppercase tracking-[0.5em] text-nb-brown mb-6">Available for
-                    opportunities</p>
-                <h1 class="text-6xl md:text-9xl font-display text-nb-blue mb-10 leading-tight">
-                    Let's create <br> <span class="italic font-serif text-nb-brown">together</span>
-                </h1>
-                <p
-                    class="text-lg md:text-xl text-nb-text-dark font-medium leading-relaxed max-w-2xl mx-auto opacity-80">
-                    Whether it's a 3D environment, a full game project, or just to say hi, I'd love to hear from you.
-=======
-        <!-- Hero -->
-        <section id="hero-contact" class="relative pt-48 pb-20 px-8 text-center" aria-labelledby="hero-title">
+        <section class="contact-hero-section" aria-labelledby="hero-title">
+            <img src="../assets/images/ui/AvionPapel.png" width="160" height="160" loading="lazy"
+                class="contact-floating-img contact-img-left" alt="">
+            <img src="../assets/images/ui/Sobre_correo.png" width="192" height="192" loading="lazy"
+                class="contact-floating-img contact-img-right" alt="">
 
-            <!-- CORRECCIÓN: imágenes decorativas con alt="" + width/height -->
-            <img src="../assets/images/ui/AvionPapel.png"
-                width="160" height="160"
-                loading="lazy"
-                class="absolute top-32 left-[10%] w-24 md:w-40 animate-float opacity-80 pointer-events-none hidden md:block rotate-12"
-                alt="">
-
-            <img src="../assets/images/ui/Sobre_correo.png"
-                width="192" height="192"
-                loading="lazy"
-                class="absolute bottom-0 right-[15%] w-32 md:w-48 animate-float-delayed pointer-events-none hidden md:block -rotate-12 drop-shadow-xl"
-                alt="">
-
-            <div class="max-w-4xl mx-auto reveal-section relative z-10">
-                <div
-                    class="inline-block px-4 py-2 bg-white/50 border border-nb-peach rounded-full mb-6 backdrop-blur-sm">
-                    <p class="text-[10px] font-black uppercase tracking-[0.3em] text-nb-brown">
-                        <span class="w-2 h-2 bg-green-400 rounded-full inline-block mr-2 animate-pulse" aria-hidden="true"></span>
-                        Available for work
-                    </p>
+            <div class="contact-hero-container reveal-section">
+                <div class="contact-status-pill">
+                    <span class="contact-status-dot" aria-hidden="true"></span>
+                    Available for work
                 </div>
 
-                <h1 id="hero-title" class="text-6xl md:text-8xl font-display text-nb-blue mb-8 leading-tight drop-shadow-sm">
-                    Let's create <br> <span class="text-nb-brown relative">
+                <h1 id="hero-title" class="contact-hero-title">
+                    Let's create <br> 
+                    <span class="contact-title-accent">
                         Magic
-                        <!-- CORRECCIÓN: aria-hidden en SVG decorativo -->
-                        <svg class="absolute -bottom-2 left-0 w-full" height="12" viewBox="0 0 200 9" fill="none"
-                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M2.00025 7.00002C51.867 2.05374 145.385 -3.37761 197.999 4.00002" stroke="#F6D6CB"
-                                stroke-width="3" stroke-linecap="round" />
+                        <svg class="contact-underline-svg" height="12" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M2.00025 7.00002C51.867 2.05374 145.385 -3.37761 197.999 4.00002" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
                         </svg>
-                    </span> together
+                    </span> 
+                    together
                 </h1>
 
-                <p class="text-lg md:text-xl text-nb-text-dark/80 font-medium leading-relaxed max-w-2xl mx-auto">
+                <p class="contact-hero-desc">
                     Do you have a game idea, a 3D world to build, or just want to say hi?
                     I'm always open to discussing new projects and creative collaborations.
->>>>>>> Stashed changes
                 </p>
             </div>
         </section>
 
-<<<<<<< Updated upstream
-        <!-- CONTACT FORM SECTION -->
-        <section id="form-section" class="max-w-7xl mx-auto px-8 py-32">
-=======
-        <!-- Contact Form + Info -->
-        <section id="form-section" class="max-w-7xl mx-auto px-4 md:px-8 pb-32 relative z-20" aria-labelledby="form-section-title">
+        <section class="contact-form-section" aria-labelledby="form-section-title">
+            <div class="contact-box-wrapper reveal-section">
+                <div class="contact-grid-layout">
 
->>>>>>> Stashed changes
-            <div
-                class="bg-white rounded-[4rem] border-2 border-nb-peach/30 shadow-2xl shadow-nb-blue/5 overflow-hidden reveal-section">
-                <div class="grid lg:grid-cols-5 items-stretch">
-
-                    <div class="lg:col-span-2 bg-nb-blue p-12 md:p-20 text-white flex flex-col justify-between">
-                        <div>
-                            <h2 class="font-display text-4xl md:text-5xl mb-12">Contact <br> Info</h2>
-
-<<<<<<< Updated upstream
-                            <div class="space-y-12">
-                                <div>
-                                    <p
-                                        class="text-[10px] font-black uppercase tracking-widest text-nb-peach mb-4 opacity-70">
-                                        Direct Email</p>
-=======
-                    <!-- Left panel: contact info -->
-                    <div
-                        class="lg:col-span-2 bg-nb-blue p-10 md:p-14 text-white flex flex-col justify-between relative overflow-hidden">
-
-                        <div
-                            class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-2xl" aria-hidden="true">
-                        </div>
-                        <div
-                            class="absolute bottom-0 right-0 w-64 h-64 bg-nb-peach/10 rounded-full translate-x-1/3 translate-y-1/3 blur-xl" aria-hidden="true">
-                        </div>
+                    <div class="contact-info-panel">
+                        <div class="contact-panel-glow-1" aria-hidden="true"></div>
+                        <div class="contact-panel-glow-2" aria-hidden="true"></div>
 
                         <div class="relative z-10">
-                            <h2 id="form-section-title" class="font-display text-4xl text-nb-bg md:text-5xl mb-2">Contact Info</h2>
-                            <p class="text-nb-peach/60 text-sm font-bold uppercase tracking-widest mb-12">Let's keep in
-                                touch</p>
+                            <h2 id="form-section-title" class="contact-panel-title">Contact Info</h2>
+                            <p class="contact-panel-subtitle">Let's keep in touch</p>
 
-                            <div class="space-y-10">
-                                <div class="group">
-                                    <div
-                                        class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-nb-peach mb-4 group-hover:bg-nb-peach group-hover:text-nb-brown transition-all duration-300" aria-hidden="true">
-                                        <i class="fa-solid fa-envelope text-xl"></i>
+                            <div class="contact-info-stack">
+                                <div class="contact-info-item">
+                                    <div class="contact-info-icon" aria-hidden="true">
+                                        <i class="fa-solid fa-envelope"></i>
                                     </div>
-                                    <p class="text-[10px] font-black uppercase tracking-widest text-white/50 mb-1">Email
-                                        Me</p>
->>>>>>> Stashed changes
-                                    <a href="mailto:nurxen21@gmail.com"
-                                        class="text-xl md:text-2xl font-bold hover:text-nb-peach transition-colors">nurxen21@gmail.com</a>
+                                    <p class="contact-info-label">Email Me</p>
+                                    <a href="mailto:nurxen21@gmail.com" class="contact-info-value">nurxen21@gmail.com</a>
                                 </div>
 
-<<<<<<< Updated upstream
-                                <div>
-                                    <p
-                                        class="text-[10px] font-black uppercase tracking-widest text-nb-peach mb-4 opacity-70">
-                                        Based In</p>
-                                    <p class="text-xl md:text-2xl font-bold">Spain, Europe</p>
-=======
-                                <div class="group">
-                                    <div
-                                        class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-nb-peach mb-4 group-hover:bg-nb-peach group-hover:text-nb-brown transition-all duration-300" aria-hidden="true">
-                                        <i class="fa-solid fa-location-dot text-xl"></i>
+                                <div class="contact-info-item">
+                                    <div class="contact-info-icon" aria-hidden="true">
+                                        <i class="fa-solid fa-location-dot"></i>
                                     </div>
-                                    <p class="text-[10px] font-black uppercase tracking-widest text-white/50 mb-1">
-                                        Location</p>
-                                    <p class="text-xl font-bold">Spain, Europe</p>
->>>>>>> Stashed changes
-                                    <p class="text-sm opacity-60">Remote work available worldwide</p>
+                                    <p class="contact-info-label">Location</p>
+                                    <p class="contact-info-value">Spain, Europe</p>
+                                    <p class="contact-info-sub">Remote work available worldwide</p>
                                 </div>
 
                                 <div>
-                                    <p
-                                        class="text-[10px] font-black uppercase tracking-widest text-nb-peach mb-4 opacity-70">
-                                        Current Status</p>
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                                        <p class="text-lg font-bold">Open to Freelance</p>
+                                    <p class="contact-info-label mb-2">Current Status</p>
+                                    <div class="contact-status-row">
+                                        <div class="contact-status-dot-green"></div>
+                                        <p class="text-base font-bold">Open to Freelance</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-<<<<<<< Updated upstream
-                        <div class="grid grid-cols-2 gap-8 items-center mt-20 opacity-70">
-
-                            <!-- Columna izquierda: Icono -->
-                            <div class="flex justify-center">
-                                <i class="fa-solid fa-mug-hot text-8xl"></i>
-                            </div>
-
-                            <!-- Columna derecha: Texto + link -->
-                            <div>
-                                <p class="text-[10px] font-black uppercase tracking-widest text-nb-peach mb-4 opacity-70">
-                                    Documentation
-                                </p>
-
-                                <a href="../files/CV_2025_English.pdf" target="_blank"
-                                rel="noopener noreferrer"
-                                class="flex items-center gap-4 group cursor-pointer">
-                                    <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white 
-                                                group-hover:bg-nb-peach group-hover:text-nb-brown transition-all">
-                                        <i class="fa-solid fa-file-pdf text-lg"></i>
-=======
-                        <div class="mt-16 relative z-10">
-                            <!-- CORRECCIÓN: rel="noopener noreferrer" en link externo con target="_blank" -->
-                            <a href="../files/CV_2025_English.pdf" target="_blank" rel="noopener noreferrer"
-                                class="block bg-nb-bg/10 backdrop-blur-md border border-white/10 p-5 rounded-3xl hover:bg-nb-peach hover:border-nb-peach group transition-all duration-300">
-                                <div class="flex items-center gap-4">
-                                    <div
-                                        class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-nb-blue shadow-lg" aria-hidden="true">
-                                        <i class="fa-solid fa-download"></i>
->>>>>>> Stashed changes
-                                    </div>
-                                    <span class="text-sm font-semibold text-white group-hover:text-nb-peach transition-colors">
-                                        See CV
-                                    </span>
-                                </a>
-                            </div>
-
+                        <div class="contact-cv-wrap relative z-10">
+                            <a href="../files/CV_2025_English.pdf" target="_blank" rel="noopener noreferrer" class="contact-cv-card">
+                                <div class="contact-cv-icon" aria-hidden="true">
+                                    <i class="fa-solid fa-download"></i>
+                                </div>
+                                <span class="contact-cv-text">See CV</span>
+                            </a>
                         </div>
-
                     </div>
 
-<<<<<<< Updated upstream
-                    <div class="lg:col-span-3 p-12 md:p-20 bg-nb-bg/30">
-                        <h3 class="text-2xl font-display text-nb-blue mb-10">Send a Message</h3>
-=======
-                    <!-- Right panel: form -->
-                    <div class="lg:col-span-3 p-10 md:p-14 bg-nb-bg/40">
-                        <!-- CORRECCIÓN: aria-labelledby apuntando al h2 del panel izquierdo -->
-                        <form action="https://formspree.io/f/mlgjbrnj" method="POST" id="contact-form"
-                            aria-label="Contact form"
-                            class="grid grid-cols-1 md:grid-cols-2 gap-6 h-full content-center">
->>>>>>> Stashed changes
-
-                        <form class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div class="space-y-2">
-<<<<<<< Updated upstream
-                                <label
-                                    class="text-[10px] font-black uppercase tracking-widest text-nb-blue/60 ml-2">Full
-                                    Name</label>
-                                <input type="text" placeholder="Name"
-                                    class="w-full bg-white border-2 border-nb-peach/20 rounded-2xl p-5 outline-none focus:border-nb-blue transition text-nb-blue font-medium shadow-sm">
+                    <div class="contact-form-panel">
+                        <form action="https://formspree.io/f/mlgjbrnj" method="POST" id="contact-form" aria-label="Contact form" class="contact-form-grid">
+                            
+                            <div class="contact-input-group">
+                                <label for="input-name" class="contact-label">Your Name</label>
+                                <input type="text" id="input-name" name="name" placeholder="Name" required autocomplete="name" class="contact-text-input">
                             </div>
 
-                            <div class="space-y-2">
-                                <label
-                                    class="text-[10px] font-black uppercase tracking-widest text-nb-blue/60 ml-2">Email
-                                    Address</label>
-                                <input type="email" placeholder="hello@art.com"
-                                    class="w-full bg-white border-2 border-nb-peach/20 rounded-2xl p-5 outline-none focus:border-nb-blue transition text-nb-blue font-medium shadow-sm">
+                            <div class="contact-input-group">
+                                <label for="input-email" class="contact-label">Email Address</label>
+                                <input type="email" id="input-email" name="email" placeholder="hello@example.com" required autocomplete="email" class="contact-text-input">
                             </div>
 
-                            <div class="md:col-span-2 space-y-2">
-                                <label
-                                    class="text-[10px] font-black uppercase tracking-widest text-nb-blue/60 ml-2">Subject</label>
-                                <select
-                                    class="w-full bg-white border-2 border-nb-peach/20 rounded-2xl p-5 outline-none focus:border-nb-blue transition text-nb-blue font-medium shadow-sm appearance-none">
-                                    <option>General Inquiry</option>
-                                    <option>Project Commission (3D)</option>
-                                    <option>Game Development Inquiry</option>
-                                    <option>Just saying hi!</option>
-                                </select>
-                            </div>
-
-                            <div class="md:col-span-2 space-y-2">
-                                <label
-                                    class="text-[10px] font-black uppercase tracking-widest text-nb-blue/60 ml-2">Your
-                                    Message</label>
-                                <textarea rows="5" placeholder="Tell me about your magic project..."
-                                    class="w-full bg-white border-2 border-nb-peach/20 rounded-3xl p-6 outline-none focus:border-nb-blue transition resize-none text-nb-blue font-medium shadow-sm"></textarea>
-                            </div>
-
-                            <div class="md:col-span-2">
-                                <button type="submit"
-                                    class="w-full py-5 bg-nb-blue text-white rounded-full font-black uppercase tracking-[0.2em] hover:bg-nb-brown transition-all shadow-xl active:scale-95 text-xs">
-                                    Send Magic! <i class="fa-solid fa-paper-plane ml-2"></i>
-                                </button>
-=======
-                                <!-- CORRECCIÓN: for en label vinculado al input con id correspondiente -->
-                                <label for="input-name"
-                                    class="text-[11px] font-black uppercase tracking-widest text-nb-blue/50 ml-3">Your
-                                    Name</label>
-                                <input type="text" id="input-name" name="name" placeholder="Name" required
-                                    autocomplete="name"
-                                    class="w-full bg-white border-2 border-transparent focus:border-nb-peach rounded-2xl px-6 py-4 outline-none text-nb-blue font-bold placeholder-nb-blue/20 transition-all shadow-sm hover:shadow-md">
-                            </div>
-
-                            <div class="space-y-2">
-                                <label for="input-email"
-                                    class="text-[11px] font-black uppercase tracking-widest text-nb-blue/50 ml-3">Email
-                                    Address</label>
-                                <input type="email" id="input-email" name="email" placeholder="hello@example.com" required
-                                    autocomplete="email"
-                                    class="w-full bg-white border-2 border-transparent focus:border-nb-peach rounded-2xl px-6 py-4 outline-none text-nb-blue font-bold placeholder-nb-blue/20 transition-all shadow-sm hover:shadow-md">
-                            </div>
-
-                            <div class="md:col-span-2 space-y-2">
-                                <!-- CORRECCIÓN: id en el label del grupo de radios + role="radiogroup" -->
-                                <p id="subject-label" class="text-[11px] font-black uppercase tracking-widest text-nb-blue/50 ml-3">I'm
-                                    interested in...</p>
-                                <div class="grid grid-cols-2 md:grid-cols-4 gap-3" role="radiogroup" aria-labelledby="subject-label">
-
-                                    <label class="cursor-pointer">
-                                        <input type="radio" name="_subject" value="Game Dev Inquiry"
-                                            class="peer sr-only">
-                                        <span
-                                            class="block text-center py-3 px-2 rounded-xl bg-white border-2 border-transparent text-nb-blue/60 text-xs font-bold uppercase tracking-wider peer-checked:bg-nb-blue peer-checked:text-white peer-checked:shadow-lg transition-all hover:bg-white/80">
-                                            Game Dev
-                                        </span>
+                            <div class="contact-input-group full-width">
+                                <p id="subject-label" class="contact-label">I'm interested in...</p>
+                                <div class="contact-radio-grid" role="radiogroup" aria-labelledby="subject-label">
+                                    <label class="contact-radio-label">
+                                        <input type="radio" name="_subject" value="Game Dev Inquiry" class="contact-radio-input">
+                                        <span class="contact-radio-pill">Game Dev</span>
                                     </label>
-
-                                    <label class="cursor-pointer">
-                                        <input type="radio" name="_subject" value="3D Art Commission"
-                                            class="peer sr-only">
-                                        <span
-                                            class="block text-center py-3 px-2 rounded-xl bg-white border-2 border-transparent text-nb-blue/60 text-xs font-bold uppercase tracking-wider peer-checked:bg-nb-blue peer-checked:text-white peer-checked:shadow-lg transition-all hover:bg-white/80">
-                                            3D Art
-                                        </span>
+                                    <label class="contact-radio-label">
+                                        <input type="radio" name="_subject" value="3D Art Commission" class="contact-radio-input">
+                                        <span class="contact-radio-pill">3D Art</span>
                                     </label>
-
-                                    <label class="cursor-pointer">
-                                        <input type="radio" name="_subject" value="Freelance Opportunity"
-                                            class="peer sr-only">
-                                        <span
-                                            class="block text-center py-3 px-2 rounded-xl bg-white border-2 border-transparent text-nb-blue/60 text-xs font-bold uppercase tracking-wider peer-checked:bg-nb-blue peer-checked:text-white peer-checked:shadow-lg transition-all hover:bg-white/80">
-                                            Freelance
-                                        </span>
+                                    <label class="contact-radio-label">
+                                        <input type="radio" name="_subject" value="Freelance Opportunity" class="contact-radio-input">
+                                        <span class="contact-radio-pill">Freelance</span>
                                     </label>
-
-                                    <label class="cursor-pointer">
-                                        <input type="radio" name="_subject" value="Just saying Hi!" class="peer sr-only"
-                                            checked>
-                                        <span
-                                            class="block text-center py-3 px-2 rounded-xl bg-white border-2 border-transparent text-nb-blue/60 text-xs font-bold uppercase tracking-wider peer-checked:bg-nb-blue peer-checked:text-white peer-checked:shadow-lg transition-all hover:bg-white/80">
-                                            Just Hi!
-                                        </span>
+                                    <label class="contact-radio-label">
+                                        <input type="radio" name="_subject" value="Just saying Hi!" class="contact-radio-input" checked>
+                                        <span class="contact-radio-pill">Just Hi!</span>
                                     </label>
                                 </div>
                             </div>
 
-                            <div class="md:col-span-2 space-y-2">
-                                <label for="input-message"
-                                    class="text-[11px] font-black uppercase tracking-widest text-nb-blue/50 ml-3">Your
-                                    Message</label>
-                                <textarea id="input-message" rows="4" name="message" placeholder="Tell me a bit about your project..."
-                                    required
-                                    class="w-full bg-white border-2 border-transparent focus:border-nb-peach rounded-3xl px-6 py-5 outline-none text-nb-blue font-medium placeholder-nb-blue/20 transition-all shadow-sm hover:shadow-md resize-none"></textarea>
+                            <div class="contact-input-group full-width">
+                                <label for="input-message" class="contact-label">Your Message</label>
+                                <textarea id="input-message" rows="4" name="message" placeholder="Tell me a bit about your project..." required class="contact-textarea"></textarea>
                             </div>
 
-                            <div class="md:col-span-2 mt-4 relative">
-                                <button type="submit" id="submit-btn"
-                                    class="w-full py-5 bg-nb-brown text-white rounded-2xl font-black uppercase tracking-[0.2em] hover:bg-nb-blue transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 active:scale-95 text-xs flex items-center justify-center gap-3 group disabled:opacity-50 disabled:cursor-not-allowed">
+                            <div class="contact-input-group full-width relative mt-2">
+                                <button type="submit" id="submit-btn" class="contact-submit-btn">
                                     <span>Send Message</span>
-                                    <i
-                                        class="fa-solid fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-paper-plane contact-submit-icon" aria-hidden="true"></i>
                                 </button>
-
-                                <!-- CORRECCIÓN: role="status" + aria-live para que lectores de pantalla anuncien el mensaje -->
-                                <p id="form-status" role="status" aria-live="polite"
-                                    class="absolute top-full left-0 w-full text-center mt-4 text-sm font-bold text-nb-blue hidden">
+                                <p id="form-status" role="status" aria-live="polite" class="contact-form-status">
                                     ✨ Message sent! I'll get back to you soon.
                                 </p>
->>>>>>> Stashed changes
                             </div>
                         </form>
                     </div>
+
                 </div>
             </div>
         </section>
 
-<<<<<<< Updated upstream
-        <!-- SOCIAL GRID SECTION -->
-        <section id="social-grid" class="max-w-7xl mx-auto px-8 mb-40 reveal-section">
-            <div class="text-center mb-16">
-                <h3 class="text-3xl font-display text-nb-blue">Find me online</h3>
+        <section id="social-grid" class="contact-social-section reveal-section" aria-labelledby="social-title">
+            <div class="contact-social-header">
+                <img src="../assets/images/ui/Planta.png" width="96" height="96" loading="lazy" class="contact-plant-img" alt="">
+                <h2 id="social-title" class="contact-social-heading">Or find me online</h2>
+                <p class="contact-social-sub">I usually hang out here</p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <a href="https://www.artstation.com/nurxen1" target="_blank"
-                    class="bg-white p-8 rounded-[2.5rem] border border-nb-peach/30 text-center hover:scale-105 transition-all group shadow-sm">
-                    <i class="fa-brands fa-artstation text-4xl text-nb-blue group-hover:text-nb-brown mb-4"></i>
-                    <p class="text-[10px] font-black uppercase tracking-widest text-nb-blue/60">Portfolio</p>
-                    <p class="font-bold text-nb-blue">ArtStation</p>
-                </a>
-
-                <a href="https://www.instagram.com/nurxen_" target="_blank"
-                    class="bg-white p-8 rounded-[2.5rem] border border-nb-peach/30 text-center hover:scale-105 transition-all group shadow-sm">
-                    <i class="fa-brands fa-instagram text-4xl text-nb-blue group-hover:text-nb-brown mb-4"></i>
-                    <p class="text-[10px] font-black uppercase tracking-widest text-nb-blue/60">Updates</p>
-                    <p class="font-bold text-nb-blue">Instagram</p>
-                </a>
-
-                <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank"
-                    class="bg-white p-8 rounded-[2.5rem] border border-nb-peach/30 text-center hover:scale-105 transition-all group shadow-sm">
-                    <i class="fa-brands fa-linkedin text-4xl text-nb-blue group-hover:text-nb-brown mb-4"></i>
-                    <p class="text-[10px] font-black uppercase tracking-widest text-nb-blue/60">Professional</p>
-                    <p class="font-bold text-nb-blue">LinkedIn</p>
-                </a>
-
-                <a href="https://cara.app/nurxen" target="_blank"
-                    class="bg-white p-8 rounded-[2.5rem] border border-nb-peach/30 text-center hover:scale-105 transition-all group shadow-sm">
-                    <i class="fa-solid fa-palette text-4xl text-nb-blue group-hover:text-nb-brown mb-4"></i>
-                    <p class="text-[10px] font-black uppercase tracking-widest text-nb-blue/60">Artist Community</p>
-                    <p class="font-bold text-nb-blue">Cara</p>
-=======
-        <!-- Social Grid -->
-        <section id="social-grid" class="max-w-6xl mx-auto px-8 mb-40 reveal-section" aria-labelledby="social-title">
-            <div class="text-center mb-16 relative">
-                <!-- CORRECCIÓN: alt="" en imagen decorativa -->
-                <img src="../assets/images/ui/Planta.png"
-                    width="96" height="96"
-                    loading="lazy"
-                    class="absolute -top-10 left-1/4 w-24 opacity-30 rotate-[-15deg] hidden md:block" alt="">
-                <h2 id="social-title" class="text-3xl md:text-4xl font-display text-nb-blue">Or find me online</h2>
-                <p class="text-nb-text-dark/50 font-medium mt-2">I usually hang out here</p>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <!-- CORRECCIÓN: rel="noopener noreferrer" en todos los links externos -->
-                <a href="https://www.artstation.com/nurxen1" target="_blank" rel="noopener noreferrer"
-                    class="bg-white p-8 rounded-[2rem] border-b-4 border-transparent hover:border-nb-peach hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl group flex flex-col items-center justify-center gap-4">
-                    <i
-                        class="fa-brands fa-artstation text-4xl text-nb-blue group-hover:text-nb-brown transition-colors" aria-hidden="true"></i>
+            <div class="contact-social-grid">
+                <a href="https://www.artstation.com/nurxen1" target="_blank" rel="noopener noreferrer" class="contact-social-card">
+                    <i class="fa-brands fa-artstation contact-social-card-icon" aria-hidden="true"></i>
                     <div class="text-center">
-                        <p class="font-bold text-nb-blue">ArtStation</p>
-                        <p class="text-[9px] font-black uppercase tracking-widest text-nb-blue/40">Portfolio</p>
+                        <p class="font-bold">ArtStation</p>
+                        <p class="contact-social-card-sub">Portfolio</p>
                     </div>
                 </a>
 
-                <a href="https://www.instagram.com/nurxen_" target="_blank" rel="noopener noreferrer"
-                    class="bg-white p-8 rounded-[2rem] border-b-4 border-transparent hover:border-nb-peach hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl group flex flex-col items-center justify-center gap-4">
-                    <i
-                        class="fa-brands fa-instagram text-4xl text-nb-blue group-hover:text-nb-brown transition-colors" aria-hidden="true"></i>
+                <a href="https://www.instagram.com/nurxen_" target="_blank" rel="noopener noreferrer" class="contact-social-card">
+                    <i class="fa-brands fa-instagram contact-social-card-icon" aria-hidden="true"></i>
                     <div class="text-center">
-                        <p class="font-bold text-nb-blue">Instagram</p>
-                        <p class="text-[9px] font-black uppercase tracking-widest text-nb-blue/40">Daily Updates</p>
+                        <p class="font-bold">Instagram</p>
+                        <p class="contact-social-card-sub">Daily Updates</p>
                     </div>
                 </a>
 
-                <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank" rel="noopener noreferrer"
-                    class="bg-white p-8 rounded-[2rem] border-b-4 border-transparent hover:border-nb-peach hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl group flex flex-col items-center justify-center gap-4">
-                    <i
-                        class="fa-brands fa-linkedin text-4xl text-nb-blue group-hover:text-nb-brown transition-colors" aria-hidden="true"></i>
+                <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank" rel="noopener noreferrer" class="contact-social-card">
+                    <i class="fa-brands fa-linkedin contact-social-card-icon" aria-hidden="true"></i>
                     <div class="text-center">
-                        <p class="font-bold text-nb-blue">LinkedIn</p>
-                        <p class="text-[9px] font-black uppercase tracking-widest text-nb-blue/40">Professional</p>
+                        <p class="font-bold">LinkedIn</p>
+                        <p class="contact-social-card-sub">Professional</p>
                     </div>
                 </a>
 
-                <a href="https://cara.app/nurxen" target="_blank" rel="noopener noreferrer"
-                    class="bg-white p-8 rounded-[2rem] border-b-4 border-transparent hover:border-nb-peach hover:-translate-y-2 transition-all shadow-sm hover:shadow-xl group flex flex-col items-center justify-center gap-4">
-                    <i
-                        class="fa-solid fa-palette text-4xl text-nb-blue group-hover:text-nb-brown transition-colors" aria-hidden="true"></i>
+                <a href="https://cara.app/nurxen" target="_blank" rel="noopener noreferrer" class="contact-social-card">
+                    <i class="fa-solid fa-palette contact-social-card-icon" aria-hidden="true"></i>
                     <div class="text-center">
-                        <p class="font-bold text-nb-blue">Cara</p>
-                        <p class="text-[9px] font-black uppercase tracking-widest text-nb-blue/40">WIP &amp; Art</p>
+                        <p class="font-bold">Cara</p>
+                        <p class="contact-social-card-sub">WIP &amp; Art</p>
                     </div>
->>>>>>> Stashed changes
                 </a>
             </div>
         </section>
 
-
-
     </main>
 
-<<<<<<< Updated upstream
-    <!-- BACK TO TOP BUTTON -->
-    <button id="backToTop"
-        class="fixed bottom-10 right-10 z-[60] w-14 h-14 bg-nb-brown text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:scale-110 hover:bg-nb-blue transform translate-y-10">
-        <i class="fa-solid fa-arrow-up text-xl"></i>
-    </button>
-
-    <!-- SIDE NAV -->
-    <div id="side-nav"
-        class="fixed right-6 top-1/2 -translate-y-1/2 z-[100] hidden xl:flex flex-col gap-10 items-center text-nb-blue/40">
-        <div class="h-20 w-px bg-current opacity-20"></div>
-        <a href="#hero-contact"
-            class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">Hero</a>
-        <a href="#form-section"
-            class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">Message</a>
-        <a href="#social-grid"
-            class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-brown transition-colors">Socials</a>
-        <div class="h-20 w-px bg-current opacity-20"></div>
-    </div>
-
-    <!-- FOOTER -->
-    <div class="w-full mt-20">
-        <svg class="footer-wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
-            <path class="fill-nb-blue" d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,139,576,170.7C672,203,768,245,864,240C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-=======
-    <!-- Footer -->
-    <div class="w-full">
-        <svg class="footer-wave block w-full h-[150px]" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
-            <path class="fill-nb-blue"
-                d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,139,576,170.7C672,203,768,245,864,240C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+    <div class="footer-wrap">
+        <svg class="footer-wave" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,139,576,170.7C672,203,768,245,864,240C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
             </path>
->>>>>>> Stashed changes
         </svg>
 
-        <footer class="bg-nb-blue py-16 px-10 relative z-10">
-            <div class="max-w-7xl mx-auto text-nb-bg">
-                
-                <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16 text-left">
-                    
-                    <div class="lg:col-span-2">
-<<<<<<< Updated upstream
-                        <a href="index.html" class="font-display text-6xl md:text-7xl text-nb-bg hover:text-nb-peach transition-colors block mb-4">
-=======
-                        <!-- CORRECCIÓN: href="index.html" → "../index.html" (esta página está en /pages/) -->
-                        <a href="../index.html"
-                            class="font-display text-6xl md:text-7xl text-nb-bg hover:text-nb-peach transition-colors block mb-4">
->>>>>>> Stashed changes
-                            nurxen<span class="text-nb-peach">.</span>
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-brand-col">
+                        <a href="../index.html" class="footer-brand">
+                            nurxen<span class="accent-blue">.</span>
                         </a>
-                        <p class="text-nb-bg/60 font-bold uppercase tracking-widest text-xs mb-8">
-                            3D Artist & Game Developer
-                        </p>
+                        <p class="footer-tagline">3D Environment & Technical Artist</p>
                         
-                        <div class="flex gap-6">
-<<<<<<< Updated upstream
-                            <a href="https://www.instagram.com/nurxen_" target="_blank" class="w-10 h-10 rounded-full border border-nb-bg/20 flex items-center justify-center hover:bg-nb-peach hover:text-nb-brown hover:border-nb-peach transition-all duration-300">
-                                <i class="fa-brands fa-instagram text-lg"></i>
+                        <div class="footer-social">
+                            <a href="https://www.instagram.com/nurxen_" target="_blank" rel="noopener noreferrer" aria-label="Nurxen on Instagram" class="footer-social-icon">
+                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.artstation.com/nurxen1" target="_blank" class="w-10 h-10 rounded-full border border-nb-bg/20 flex items-center justify-center hover:bg-nb-peach hover:text-nb-brown hover:border-nb-peach transition-all duration-300">
-                                <i class="fa-brands fa-artstation text-lg"></i>
+                            <a href="https://www.artstation.com/nurxen1" target="_blank" rel="noopener noreferrer" aria-label="Nurxen on ArtStation" class="footer-social-icon">
+                                <i class="fa-brands fa-artstation" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank" class="w-10 h-10 rounded-full border border-nb-bg/20 flex items-center justify-center hover:bg-nb-peach hover:text-nb-brown hover:border-nb-peach transition-all duration-300">
-                                <i class="fa-brands fa-linkedin-in text-lg"></i>
-=======
-                            <!-- CORRECCIÓN: rel="noopener noreferrer" + aria-label en iconos del footer -->
-                            <a href="https://www.instagram.com/nurxen_" target="_blank" rel="noopener noreferrer"
-                                aria-label="Nurxen on Instagram"
-                                class="w-10 h-10 rounded-full border border-nb-bg/20 flex items-center justify-center hover:bg-nb-peach hover:text-nb-brown hover:border-nb-peach transition-all duration-300">
-                                <i class="fa-brands fa-instagram text-lg" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://www.artstation.com/nurxen1" target="_blank" rel="noopener noreferrer"
-                                aria-label="Nurxen on ArtStation"
-                                class="w-10 h-10 rounded-full border border-nb-bg/20 flex items-center justify-center hover:bg-nb-peach hover:text-nb-brown hover:border-nb-peach transition-all duration-300">
-                                <i class="fa-brands fa-artstation text-lg" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank" rel="noopener noreferrer"
-                                aria-label="Nurxen on LinkedIn"
-                                class="w-10 h-10 rounded-full border border-nb-bg/20 flex items-center justify-center hover:bg-nb-peach hover:text-nb-brown hover:border-nb-peach transition-all duration-300">
-                                <i class="fa-brands fa-linkedin-in text-lg" aria-hidden="true"></i>
->>>>>>> Stashed changes
+                            <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank" rel="noopener noreferrer" aria-label="Nurxen on LinkedIn" class="footer-social-icon">
+                                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
 
-                    <div class="flex flex-col gap-4">
-<<<<<<< Updated upstream
-                        <p class="font-body text-nb-peach opacity-60 text-xs uppercase tracking-widest font-black mb-2">Explore</p>
-                        <a href="../index.html" class="text-sm font-bold hover:text-nb-peach transition-all duration-300">Home</a>
-                        <a href="artwork.html" class="text-sm font-bold hover:text-nb-peach  transition-all duration-300">Artwork Gallery</a>
-                        <a href="games.html" class="text-sm font-bold hover:text-nb-peach transition-all duration-300">Videogames</a>
-=======
-                        <p class="font-body text-nb-peach opacity-60 text-xs uppercase tracking-widest font-black mb-2">
-                            Explore</p>
-                        <a href="../index.html"
-                            class="text-sm font-bold hover:text-nb-peach transition-all duration-300">Home</a>
-                        <a href="artwork.html"
-                            class="text-sm font-bold hover:text-nb-peach transition-all duration-300">Artwork Gallery</a>
-                        <a href="games.html"
-                            class="text-sm font-bold hover:text-nb-peach transition-all duration-300">Videogames</a>
->>>>>>> Stashed changes
+                    <div class="footer-col">
+                        <p class="footer-col-title">Explore</p>
+                        <a href="../index.html" class="footer-link">Home</a>
+                        <a href="artwork.html" class="footer-link">Artwork Gallery</a>
+                        <a href="games.html" class="footer-link">Videogames</a>
                     </div>
 
-                    <div class="flex flex-col gap-4">
-                        <p class="font-body text-nb-peach opacity-60 text-xs uppercase tracking-widest font-black mb-2">Get in Touch</p>
-                        <a href="contact.html" class="text-sm font-bold hover:text-nb-peach transition-all duration-300">Contact Form</a>
-                        <a href="mailto:nurxen21@gmail.com" class="text-sm font-bold text-nb-bg hover:text-nb-peach transition underline underline-offset-8">Email Me</a>
-                        <p class="text-xs text-nb-bg/40 mt-4">Available for freelance.</p>
+                    <div class="footer-col">
+                        <p class="footer-col-title">Get in Touch</p>
+                        <a href="contact.html" class="footer-link">Contact Form</a>
+                        <a href="mailto:nurxen21@gmail.com" class="footer-link footer-link-underline">Email Me</a>
+                        <p class="footer-note">Available for freelance.</p>
                     </div>
                 </div>
 
-                <div class="pt-10 border-t border-nb-bg/10 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p class="text-[10px] font-bold uppercase tracking-widest text-nb-bg/40">
-                        ©2026 Nurxen. All Rights Reserved.
-                    </p>
-                    
-                    <div class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-nb-bg/40">
-                        <span>Made with cozy vibes & Blender</span>
-                        <i class="fa-solid fa-heart text-nb-peach animate-pulse" aria-hidden="true"></i>
+                <div class="footer-bottom">
+                    <p class="footer-copy">©2026 Nurxen. All Rights Reserved.</p>
+                    <div class="footer-credit">
+                        <span>Made with technical precision &amp; Blender</span>
+                        <i class="fa-solid fa-heart footer-heart animate-pulse" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
 
-<<<<<<< Updated upstream
-    <!-- GSAP -->
-=======
-    <!-- CORRECCIÓN: aria-label en botón sin texto visible -->
-    <button id="backToTop" aria-label="Back to top"
-        class="fixed bottom-10 right-10 z-[60] w-14 h-14 bg-nb-brown text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:scale-110 hover:bg-nb-blue transform translate-y-10">
-        <i class="fa-solid fa-arrow-up text-xl" aria-hidden="true"></i>
+    <button id="backToTop" aria-label="Back to top" class="back-to-top">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
     </button>
 
->>>>>>> Stashed changes
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-    <!-- SCRIPTS -->
     <script src="../js/main.js"></script>
     <script src="../js/theme.js"></script>
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        // GSAP Reveal Animations
-        document.querySelectorAll(".reveal-section").forEach((el, i) => {
+        document.querySelectorAll(".reveal-section").forEach((el) => {
             gsap.fromTo(el, {
                 y: 30,
                 opacity: 0
@@ -689,14 +310,6 @@
                     start: "top 90%"
                 }
             });
-        });
-
-        // Sidebar color logic
-        window.addEventListener('scroll', () => {
-            const sideNav = document.getElementById('side-nav');
-            if (window.scrollY > 100) {
-                sideNav.classList.replace('text-nb-blue/40', 'text-nb-blue/60');
-            }
         });
     </script>
 </body>

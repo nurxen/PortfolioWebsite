@@ -1,1201 +1,474 @@
 <!DOCTYPE html>
-<!-- CORRECCIÓN: lang="en" porque el contenido principal está en inglés -->
 <html lang="en" class="scroll-smooth">
 
 <head>
-<<<<<<< Updated upstream
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nurxen | Videogames</title>
-
-    <!-- Favicon -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shrikhand&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-=======
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videogames - Nurxen | 3D Artist & Game Developer</title>
+    <title>Videogames - Nurxen | 3D Environment & Technical Artist</title>
+    <!-- Favicon profesional limpio -->
     <link rel="icon" type="image/png" href="../assets/images/ui/Calabaza.png" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shrikhand&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
->>>>>>> Stashed changes
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
+    <!-- Hojas de estilos unificadas -->
     <link rel="stylesheet" href="../css/styles.css" />
-
-<<<<<<< Updated upstream
-    <!-- Tailwind CSS Configuration -->
-=======
->>>>>>> Stashed changes
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        "nb-blue": "#4F647D",
-                        "nb-brown": "#905757",
-                        "nb-white": "#FFFFFF",
-                        "nb-peach": "#F6D6CB",
-                        "nb-text-dark": "#3F3F3F",
-                        "nb-bg": "#FFF9F2",
-                        "nb-blue-dark": "#43647F",
-                        "nb-studio": "#121212",
-                    },
-                    fontFamily: {
-                        display: ['"Shrikhand"', "cursive"],
-                        body: ['"Manrope"', "sans-serif"],
-                    },
-                    borderRadius: {
-                        cozy: "1.5rem",
-                        super: "3.5rem",
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'marquee': 'marquee 40s linear infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-15px)' },
-                        },
-                        marquee: {
-                            '0%': { transform: 'translateX(0%)' },
-                            '100%': { transform: 'translateX(-100%)' },
-                        }
-                    }
-                },
-            },
-        };
-    </script>
+    <link rel="stylesheet" href="../css/games.css" />
 </head>
 
-<body class="bg-nb-blue selection:bg-nb-peach selection:text-nb-brown font-body">
+<body>
 
-<<<<<<< Updated upstream
-    <!-- Navbar -->
-    <nav class="absolute top-0 left-0 right-0 z-50 px-8 py-10 bg-transparent" id="navbar">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center text-white">
-            <a href="../index.html" class="font-display text-4xl md:text-5xl text-white hover:text-white/80 transition-colors">
-=======
-    <!-- CORRECCIÓN: aria-label en navbar principal -->
-    <nav class="absolute top-0 left-0 right-0 z-50 px-6 md:px-12 py-10 bg-transparent" id="navbar" aria-label="Main navigation">
-        <div class="max-w-[90rem] mx-auto flex flex-col lg:flex-row justify-between items-center text-white">
-            <a href="../index.html"
-                class="font-display text-4xl md:text-5xl text-white hover:text-white/80 transition-colors">
->>>>>>> Stashed changes
-                nurxen<span class="text-nb-peach text-5xl">.</span>
+    <!-- SIDEBAR DE NAVEGACIÓN LATERAL -->
+    <nav id="side-nav" aria-label="Jump to game" class="games-side-nav">
+        <div class="games-side-line" aria-hidden="true"></div>
+        <a href="#unchained" class="games-side-link">Unchained</a>
+        <a href="#crosspaws" class="games-side-link">Crosspaws</a>
+        <a href="#ant-estres" class="games-side-link">Ant&amp;Estres</a>
+        <a href="#obat" class="games-side-link">O.B.A.T</a>
+        <a href="#jam-version" class="games-side-link">Jam Origin</a>
+        <div class="games-side-line" aria-hidden="true"></div>
+    </nav>
+
+    <!-- NAVBAR UNIFICADO -->
+    <nav class="navbar-main" aria-label="Main navigation">
+        <div class="navbar-container">
+            <a href="../index.html" class="navbar-brand">
+                nurxen<span class="accent-blue">.</span>
             </a>
 
-            <div class="flex flex-wrap justify-center items-center gap-10 mt-6 lg:mt-0">
-                <a href="../index.html" class="text-sm tracking-widest font-bold hover:text-nb-peach transition-colors uppercase">
-                    About Me
-                </a>
-                <a href="artwork.html" class="text-sm tracking-widest font-bold hover:text-nb-peach transition-colors uppercase">
-                    Artwork
-                </a>
-<<<<<<< Updated upstream
-                <a href="games.html" class="text-sm tracking-widest font-bold text-nb-white transition-colors uppercase border-b-2 border-nb-peach pb-1">
-=======
-                <!-- CORRECCIÓN: aria-current="page" en el link activo -->
-                <a href="games.html"
-                    class="text-sm tracking-widest font-bold text-nb-white transition-colors uppercase border-b-2 border-nb-peach pb-1"
-                    aria-current="page">
->>>>>>> Stashed changes
-                    Videogames
-                </a>
-                <a href="contact.html" class="px-6 py-2 border-2 border-nb-peach text-nb-peach rounded-full text-xs font-black tracking-widest uppercase hover:bg-nb-peach hover:text-nb-brown transition-all">
-                    Contact
-                </a>
+            <div class="navbar-links">
+                <a href="../index.html" class="navlink">Home</a>
+
+                <!-- Portfolio Dropdown -->
+                <div class="navlink-dropdown">
+                    <button class="dropdown-toggle" aria-expanded="false">
+                        Work <i class="fa-solid fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown-panel">
+                        <div class="dropdown-card">
+                            <a href="artwork.html" class="dropdown-item">3D & Technical Art</a>
+                            <a href="games.html" class="dropdown-item" aria-current="page">Games & Sims</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="about.html" class="navlink">About me</a>
+                <a href="resume.html" class="navlink">Resumé</a>
+                <a href="contact.html" class="navlink navlink-button">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-<<<<<<< Updated upstream
-    <section class="relative w-screen h-[110vh] min-h-[500px] flex items-center justify-center overflow-hidden mb-24">
-=======
-    <section class="relative w-screen h-[90vh] min-h-[500px] flex items-center justify-center overflow-hidden mb-24" aria-labelledby="hero-title">
->>>>>>> Stashed changes
-        <div class="absolute inset-0 z-0">
-            <!-- CORRECCIÓN: aria-label + fallback text en video del hero -->
-            <video autoplay muted loop playsinline
-                class="w-full h-full object-cover"
-                aria-label="Trailer of games developed by Nuria">
-                <source src="../assets/videos/TRAILERS/trailer videojuegos.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="absolute inset-0 bg-black/60" aria-hidden="true"></div>
-        </div>
-
-        <div class="relative z-10 text-center reveal-section">
-<<<<<<< Updated upstream
+    <!-- Main Content -->
+    <main class="games-main-content">
+        <div class="games-container">
             
-            <img src="../assets/images/ui/MandoConsola.png" 
-                class="absolute -top-10 -right-10 md:-right-32 w-32 md:w-48 rotate-12 animate-float opacity-90 pointer-events-none select-none hidden md:block" 
-                alt="Controller">
-
-            <img src="../assets/images/ui/Cerezas.png" 
-                class="absolute bottom-0 -left-10 md:-left-24 w-20 md:w-28 -rotate-12 animate-float z-20 pointer-events-none select-none" 
-                style="animation-delay: 2s;"
-                alt="Cherries">
-=======
-            <!-- CORRECCIÓN: width, height y loading="lazy" en imágenes decorativas -->
-            <img src="../assets/images/ui/MandoConsola.png"
-                width="192" height="192"
-                loading="lazy"
-                class="absolute -top-10 -right-10 md:-right-32 w-32 md:w-48 rotate-12 animate-float opacity-90 pointer-events-none select-none hidden md:block"
-                alt="">
-
-            <img src="../assets/images/ui/Cerezas.png"
-                width="112" height="112"
-                loading="lazy"
-                class="absolute bottom-0 -left-10 md:-left-24 w-20 md:w-28 -rotate-12 animate-float z-20 pointer-events-none select-none"
-                style="animation-delay: 2s;" alt="">
->>>>>>> Stashed changes
-
-            <div class="inline-block px-4 py-1.5 mb-8 border border-nb-peach rounded-full">
-                <p class="text-nb-white font-black text-[10px] uppercase tracking-[0.3em]">Portfolio 2026</p>
-            </div>
-<<<<<<< Updated upstream
-            <h1 class="text-6xl md:text-9xl mb-12 font-display text-white drop-shadow-2xl">My Videogames</h1>
-            
-            <div class="flex justify-center gap-6 text-nb-blue font-extrabold text-[15px] uppercase tracking-widest">
-                <div class="bg-nb-peach px-9 py-4 rounded-full shadow-lg text-center">
-                    <span class="text-3xl font-display text-nb-blue block">8</span>
-                    <span class="text-[9px] opacity-60">Total Projects</span>
-=======
-            <!-- CORRECCIÓN: este es el único h1 de la página -->
-            <h1 id="hero-title" class="text-6xl md:text-9xl mb-12 font-display text-white drop-shadow-2xl">My Videogames</h1>
-
-            <div class="flex justify-center gap-6 text-nb-blue font-extrabold text-[15px] uppercase tracking-widest">
-                <div class="bg-nb-peach px-9 py-4 rounded-full shadow-lg text-center">
-                    <span class="text-3xl font-display text-nb-blue block">9</span>
-                    <span class="text-[9px] opacity-60">Released Games</span>
->>>>>>> Stashed changes
+            <!-- Hero Header -->
+            <header class="games-header reveal-section">
+                <div class="games-badge">
+                    <p class="games-badge-text">Portfolio 2026</p>
                 </div>
-                <div class="bg-white px-9 py-4 rounded-full shadow-lg text-center">
-                    <span class="text-3xl font-display text-nb-blue block">1</span>
-                    <span class="text-[9px] opacity-60">On Going</span>
+                <h1 class="games-main-title">
+                    Interactive<br /><span>Videogames</span>
+                </h1>
+                <p class="games-main-subtitle" lang="es">
+                    Desarrollo de experiencias jugables, desde terror psicológico comercial hasta puzles isométricos premiados en Game Jams internacionales.
+                </p>
+
+                <div class="games-stats-row">
+                    <div class="games-stat-card">
+                        <span class="games-stat-num">9</span>
+                        <span class="games-stat-label">Released Games</span>
+                    </div>
+                    <div class="games-stat-card">
+                        <span class="games-stat-num">1</span>
+                        <span class="games-stat-label">On Going</span>
+                    </div>
                 </div>
-            </div>
-        </div>
-<<<<<<< Updated upstream
-    </section>
+            </header>
 
-    <!-- Games Section -->
-    <section class="max-w-4xl mx-auto px-8 text-center mb-32 reveal-section">
-        <p class="text-2xl text-white/90 leading-relaxed font-medium italic">
-            "Here you will find cozy and detailed art with warm color palettes, cartoon style assets, and animations showing my creative process."
-        </p>
-    </section>
-
-    <section class="max-w-6xl mx-auto px-8 pb-32 space-y-32">
-
-        <!-- UNCHAINED -->
-        <article class="reveal-section" id="unchained">
-            <div class="relative bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border border-white/20 shadow-2xl">
-                
-                <img src="../assets/images/ui/Carpeta.png" 
-                    class="absolute -top-12 -right-8 w-32 md:w-40 rotate-[15deg] animate-float z-20 pointer-events-none select-none drop-shadow-xl" 
-                    alt="Secret Folder">
-
-                <img src="../assets/images/ui/Documento.png" 
-                    class="absolute -bottom-8 -left-8 w-24 md:w-32 -rotate-[10deg] opacity-60 z-0 pointer-events-none select-none" 
-                    alt="Document">
-
-                <div class="grid lg:grid-cols-2 gap-12 items-center mb-12 relative z-10">
-                    <div class="aspect-video overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/10">
-                        <img src="../assets/images/games/UNCHAINED - STEAM/header.jpg" class="w-full h-full object-cover" />
+            <!-- Trailer Showcase / Workflow Box -->
+            <section class="games-section reveal-section" aria-label="Technical workflow">
+                <div class="games-workflow-box">
+                    <div class="games-workflow-icon" aria-hidden="true">
+                        <i class="fa-solid fa-code-branch"></i>
                     </div>
                     <div>
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="bg-white text-nb-blue text-[10px] px-4 py-1 rounded-full font-bold">STEAM</span>
-                            <span class="bg-nb-peach text-nb-brown text-[10px] px-4 py-1 rounded-full font-bold">PSYCHOLOGICAL HORROR</span>
-                        </div>
-                        <h3 class="text-5xl mb-6 font-display text-white uppercase">UNCHAINED</h3>
-                        <p class="text-white/80 leading-relaxed mb-8">
-                            Explore an abandoned virtual desktop that hides a terrible secret. The deeper you dive into this 2D and 3D experience, the more secrets you’ll uncover about the previous owner.
+                        <h2 class="games-workflow-title">My Technical Workflow in Unity</h2>
+                        <p class="games-workflow-text">
+                            No solo modelo assets; los integro. Utilizo <strong>GitHub Desktop</strong> para control de ramas, estructuro prefabs <i>Game-Ready</i> y configuro árboles de animación avanzados (Animators & State Machines) para que todo funcione de manera fluida y optimizada para el equipo de programación.
                         </p>
-                        <a href="https://store.steampowered.com/app/3234310/UNCHAINED/" target="_blank" class="inline-block px-8 py-4 bg-nb-peach text-nb-blue rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white transition shadow-lg">
-                            Play on Steam <i class="fa-brands fa-steam ml-2"></i>
-                        </a>
                     </div>
                 </div>
-                
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="md:col-span-2 aspect-video rounded-3xl overflow-hidden bg-black border border-white/10 shadow-inner">
-                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
-                            <source src="../assets/videos/TRAILERS/trailer unchained 3.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <img src="../assets/images/games/UNCHAINED - STEAM/gameplay1.jpg" class="rounded-2xl h-full w-full object-cover border border-white/10 hover:scale-105 transition duration-500 shadow-md">
-                        <img src="../assets/images/games/UNCHAINED - STEAM/imagekjb.png" class="rounded-2xl h-full w-full object-cover border border-white/10 hover:scale-105 transition duration-500 shadow-md">
-                    </div>
-                </div>
-            </div>
-        </article>
+            </section>
 
-        <!-- O.B.A.T -->
-        <article class="reveal-section" id="obat">
-            <div class="relative bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border border-white/20 shadow-2xl">
-            <img src="../assets/images/ui/BotonCoser.png" 
-                class="absolute -top-10 -left-10 w-28 md:w-40 -rotate-12 animate-float z-20 pointer-events-none select-none drop-shadow-2xl" 
-                style="animation-delay: 1s;"
-                alt="Sewing Button">
-                
-            <div class="grid lg:grid-cols-2 gap-12 items-center mb-12 relative z-10">
-                    <div class="lg:order-2 aspect-video overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/10">
-                        <img src="../assets/images/games/OBAT/Hgd5yj.png" class="w-full h-full object-cover" />
-                    </div>
-                    <div class="lg:order-1">
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="bg-nb-brown text-white text-[10px] px-4 py-1 rounded-full font-bold">ITCH.IO</span>
-                            <span class="bg-nb-peach text-nb-brown text-[10px] px-4 py-1 rounded-full font-bold">PUZZLE</span>
-                        </div>
-                        <h3 class="text-5xl mb-6 font-display text-white uppercase">Once Button a Time</h3>
-                        <p class="text-white/80 leading-relaxed mb-8">
-                            Carioca the rag doll lost her button eyes. Use colorful buttons to see the world in new ways and reach the master tailor George.
-                        </p>
-                        <a href="https://origamingcreations.itch.io/once-button-a-time" target="_blank" class="inline-block px-8 py-4 bg-white text-nb-blue rounded-full font-bold text-xs uppercase tracking-widest hover:bg-nb-peach transition shadow-lg">
-                            Play on Itch.io <i class="fa-brands fa-itch-io ml-2"></i>
-=======
+            <!-- Games List Container -->
+            <div class="games-list-wrapper">
 
-        <div class="absolute bottom-10 right-10 z-10">
-            <p class="text-[10px] text-white/60 tracking-[0.2em] uppercase font-bold">
-                Trailer of games developed by Nuria
-            </p>
-        </div>
-    </section>
-
-    <!-- Intro / Workflow -->
-    <section class="max-w-6xl mx-auto px-6 md:px-12 text-center mb-24 reveal-section" aria-label="Technical workflow">
-        <p class="text-2xl text-white/90 leading-relaxed font-medium italic mb-12">
-            "Here you will find some of the games I have developed throughout my career, featuring everything from cozy,
-            detailed art to low-poly horror-style assets."
-        </p>
-
-        <div
-            class="bg-nb-blue-dark/50 backdrop-blur-md border border-nb-peach/30 p-8 rounded-[2rem] shadow-xl relative overflow-hidden group hover:border-nb-peach/60 transition-colors">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-nb-peach/10 rounded-full -mr-16 -mt-16 blur-xl" aria-hidden="true"></div>
-
-            <div class="flex flex-col md:flex-row items-center gap-6">
-                <div
-                    class="w-16 h-16 bg-nb-peach rounded-2xl flex items-center justify-center text-nb-brown text-3xl shrink-0 shadow-lg" aria-hidden="true">
-                    <i class="fa-solid fa-code-branch"></i>
-                </div>
-                <div class="text-left">
-                    <!-- CORRECCIÓN: h2 en lugar de h3 (es el título principal de esta sección) -->
-                    <h2 class="text-white font-display text-xl mb-2">My Technical Workflow</h2>
-                    <p class="text-white/80 text-sm leading-relaxed">
-                        I don't just create assets; I implement them. I use <strong>GitHub Desktop</strong> to manage my
-                        own branches, integrating <strong>Game-Ready Prefabs</strong> directly into Unity. I set up my
-                        own <strong>Animators and State Machines</strong>, ensuring assets are plug-and-play for the
-                        programming team.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Games List -->
-    <section class="max-w-[85rem] mx-auto px-6 md:px-12 pb-32 space-y-32" aria-label="Games portfolio">
-
-        <!-- UNCHAINED -->
-        <article class="reveal-section" id="unchained" aria-labelledby="unchained-title">
-            <div
-                class="relative bg-nb-bg/10 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border border-white/20 shadow-2xl">
-
-                <img src="../assets/images/ui/Carpeta.png"
-                    width="160" height="160"
-                    loading="lazy"
-                    class="absolute -top-12 -right-8 w-32 md:w-40 rotate-[15deg] animate-float z-20 pointer-events-none select-none drop-shadow-xl"
-                    alt="">
-
-                <img src="../assets/images/ui/Radio.png"
-                    width="128" height="128"
-                    loading="lazy"
-                    class="absolute -bottom-8 -left-8 w-24 md:w-32 -rotate-[10deg] opacity-60 z-0 pointer-events-none select-none"
-                    alt="">
-
-                <div class="grid lg:grid-cols-2 gap-12 items-center mb-12 relative z-10">
-                    <div class="aspect-video overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/10">
-                        <!-- CORRECCIÓN: alt descriptivo + width/height + loading lazy -->
-                        <img src="../assets/images/games/UNCHAINED - STEAM/header.jpg"
-                            alt="Unchained — Steam header"
-                            width="460" height="215"
-                            loading="lazy"
-                            class="w-full h-full object-cover">
-                    </div>
-                    <div>
-                        <div class="flex flex-wrap items-center gap-3 mb-4">
-                            <span class="bg-nb-bg text-nb-blue text-[10px] px-4 py-1 rounded-full font-bold">STEAM (DEMO)</span>
-                            <span class="bg-nb-peach text-nb-brown text-[10px] px-4 py-1 rounded-full font-bold">PSYCHOLOGICAL HORROR</span>
-                            <span class="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-[10px] px-4 py-1 rounded-full font-bold uppercase shadow-lg border border-white/20">
-                                <i class="fa-solid fa-rocket mr-1" aria-hidden="true"></i> Commercial Release
-                            </span>
-                        </div>
-                        <h2 id="unchained-title" class="text-5xl mb-4 font-display text-white uppercase">UNCHAINED</h2>
-                        <p class="text-white/80 leading-relaxed mb-6">
-                            Evolved from our award-winning Game Jam prototype. Explore an abandoned virtual desktop that hides a terrible secret. The deeper you dive into this 2D and 3D experience, the more secrets you'll uncover. <strong>Demo now available on Steam.</strong>
-                        </p>
-
-                        <div class="bg-black/20 rounded-2xl p-5 border border-white/10 mb-8 grid grid-cols-2 gap-4">
-                            <div>
-                                <h3 class="text-nb-peach text-[9px] font-black uppercase tracking-widest mb-2">
-                                    <i class="fa-solid fa-user-pen mr-1" aria-hidden="true"></i> My Responsibilities
-                                </h3>
-                                <ul class="text-white/90 text-xs font-bold space-y-1">
-                                    <li>• All 3D Models</li>
-                                    <li>• All Animations</li>
-                                    <li>• Unity Prefab Integration</li>
-                                    <li>• Animator/State Setup</li>
-                                </ul>
+                <!-- 1. UNCHAINED (STEAM) -->
+                <article id="unchained" class="games-article reveal-section" aria-labelledby="unchained-title">
+                    <div class="games-article-inner">
+                        <div class="games-info-grid">
+                            <div class="games-media-box">
+                                <img src="../assets/images/games/UNCHAINED - STEAM/header.jpg"
+                                    alt="Unchained — Steam header"
+                                    width="460" height="215" loading="lazy"
+                                    class="games-main-img">
                             </div>
                             <div>
-                                <h3 class="text-white/40 text-[9px] font-black uppercase tracking-widest mb-2">
-                                    <i class="fa-solid fa-link mr-1" aria-hidden="true"></i> Resources
-                                </h3>
-                                <p class="text-white/60 text-xs italic">
-                                    Textures were created by my teammates.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- CORRECCIÓN: rel="noopener noreferrer" en todos los target="_blank" -->
-                        <a href="https://store.steampowered.com/app/3234310/UNCHAINED/" target="_blank" rel="noopener noreferrer"
-                            class="inline-block px-8 py-4 bg-nb-peach text-nb-blue rounded-full font-bold text-xs uppercase tracking-widest hover:bg-nb-bg transition shadow-lg">
-                            Play Demo on Steam <i class="fa-brands fa-steam ml-2" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-6 mb-16">
-                    <div
-                        class="md:col-span-2 aspect-video rounded-3xl overflow-hidden bg-black border border-white/10 shadow-inner">
-                        <video autoplay muted loop playsinline class="w-full h-full object-cover"
-                            aria-label="Unchained gameplay trailer">
-                            <source src="../assets/videos/TRAILERS/THE REAL TRAILER UNCHAINED 2.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <img src="../assets/images/games/UNCHAINED - STEAM/foto4.jpg"
-                            alt="Unchained gameplay screenshot 1"
-                            width="400" height="225"
-                            loading="lazy"
-                            class="rounded-2xl h-full w-full object-cover border border-white/10 hover:scale-105 transition duration-500 shadow-md">
-                        <img src="../assets/images/games/UNCHAINED - STEAM/foto3.jpg"
-                            alt="Unchained gameplay screenshot 2"
-                            width="400" height="225"
-                            loading="lazy"
-                            class="rounded-2xl h-full w-full object-cover border border-white/10 hover:scale-105 transition duration-500 shadow-md">
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-4 mb-8">
-                    <h3 class="text-3xl font-display text-nb-peach uppercase">Press &amp; Community</h3>
-                    <div class="h-px bg-white/20 flex-grow" aria-hidden="true"></div>
-                </div>
-
-                <div
-                    class="bg-nb-blue-dark/40 rounded-3xl p-8 border border-white/10 mb-12 hover:bg-nb-blue-dark/60 transition-colors">
-                    <div class="flex flex-col md:flex-row gap-8 items-start">
-                        <div class="flex-1">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="text-nb-peach text-xs font-black tracking-widest uppercase">
-                                    <i class="fa-solid fa-trophy mr-2" aria-hidden="true"></i>3rd Place
-                                </span>
-                                <span class="text-white/40 text-xs font-bold uppercase">Campanadas DeVuego 2025</span>
-                            </div>
-                            <h4 class="text-2xl font-display text-white mb-4">"UNCHAINED - AI Unleashed"</h4>
-                            <p class="text-white/70 text-sm italic mb-6">
-                                "UNCHAINED is a psychological horror experience blending virtual desktop interaction
-                                with fourth-wall breaking. It has all the ingredients of a successful product. For my
-                                part, count me in as a buyer."
-                            </p>
-                            <a href="https://www.devuego.es/blog/2025/12/31/unchained-la-ia-desatada/" target="_blank" rel="noopener noreferrer"
-                                class="text-nb-peach text-xs font-bold uppercase tracking-widest hover:text-white transition-colors border-b border-nb-peach hover:border-white pb-1">
-                                Read Full Article on DeVuego
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-6 mb-12">
-                    <div class="bg-black/20 p-6 rounded-3xl border border-white/5">
-                        <div class="flex justify-between items-start mb-4">
-                            <span class="text-nb-peach font-display">Retro Horror Games</span>
-                            <i class="fa-solid fa-thumbs-up text-nb-peach/60" aria-hidden="true"></i>
-                        </div>
-                        <p class="text-white/70 text-xs leading-relaxed">
-                            "Honestly, Unchained stands as one of my favourite mini-sized retro indie lo-fi analogue
-                            horror game experiences of recent times. [...] Unchained's procedural frights definitely
-                            left me with a number of skin-rubbing chills."
-                        </p>
-                    </div>
-
-                    <div class="bg-black/20 p-6 rounded-3xl border border-white/5">
-                        <div class="flex justify-between items-start mb-4">
-                            <span class="text-nb-peach font-display">SnowyBlizzard</span>
-                            <i class="fa-solid fa-thumbs-up text-nb-peach/60" aria-hidden="true"></i>
-                        </div>
-                        <p class="text-white/70 text-xs leading-relaxed">
-                            "This is literally PEAK for a free game, it was so good and definitely not what I was
-                            expecting, the scary bits were very well paced and had me screaming every single time!"
-                        </p>
-                    </div>
-
-                    <div class="bg-black/20 p-6 rounded-3xl border border-white/5">
-                        <div class="flex justify-between items-start mb-4">
-                            <span class="text-nb-peach font-display">Javi</span>
-                            <i class="fa-solid fa-thumbs-up text-nb-peach/60" aria-hidden="true"></i>
-                        </div>
-                        <p class="text-white/70 text-xs leading-relaxed">
-                            "Horror: 10/10. Visually it mixes 2D and 3D, which is great until a 3D model appears where
-                            it shouldn't... like INSIDE YOUR SCREEN. I literally got so scared I apologized to my
-                            monitor."
-                        </p>
-                    </div>
-                </div>
-
-                <div class="space-y-6">
-                    <p class="text-white/60 text-xs font-bold uppercase tracking-widest text-center">Featured Gameplay</p>
-                    <div class="grid md:grid-cols-3 gap-6">
-                        <div class="aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-lg">
-                            <!-- CORRECCIÓN: title descriptivo en todos los iframes + loading="lazy" -->
-                            <iframe class="w-full h-full"
-                                src="https://www.youtube.com/embed/eZuSMslaifw"
-                                title="Unchained — Featured Gameplay Video 1"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen
-                                loading="lazy"></iframe>
-                        </div>
-                        <div class="aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-lg">
-                            <iframe class="w-full h-full"
-                                src="https://www.youtube.com/embed/zcWs9cYkU8s"
-                                title="Unchained — Featured Gameplay Video 2"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen
-                                loading="lazy"></iframe>
-                        </div>
-                        <div class="aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-lg">
-                            <iframe class="w-full h-full"
-                                src="https://www.youtube.com/embed/E8NxZlQTXc8"
-                                title="Unchained — Featured Gameplay Video 3"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen
-                                loading="lazy"></iframe>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </article>
-
-        <!-- CROSSPAWS -->
-        <article class="reveal-section" id="crosspaws" aria-labelledby="crosspaws-title">
-            <div class="relative bg-nb-bg/10 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border border-white/20 shadow-2xl">
-
-                <img src="../assets/images/ui/Calabaza.png"
-                    width="128" height="128"
-                    loading="lazy"
-                    class="absolute -top-12 -right-8 w-24 md:w-32 rotate-[15deg] animate-float z-20 pointer-events-none select-none drop-shadow-xl"
-                    alt="">
-
-                <div class="grid lg:grid-cols-2 gap-12 items-center mb-12 relative z-10">
-                    <div class="aspect-video overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/10">
-                        <img src="../assets/images/games/CROSSPAWS/Portada.png"
-                            alt="Crosspaws game cover"
-                            width="460" height="215"
-                            loading="lazy"
-                            class="w-full h-full object-cover">
-                    </div>
-                    <div>
-                        <div class="flex flex-wrap items-center gap-3 mb-4">
-                            <span class="bg-nb-brown text-white text-[10px] px-4 py-1 rounded-full font-bold">ITCH.IO</span>
-                            <span class="bg-nb-peach text-nb-brown text-[10px] px-4 py-1 rounded-full font-bold">PUZZLE</span>
-                            <span class="bg-[#FCD34D] text-[#78350F] text-[10px] px-4 py-1 rounded-full font-bold uppercase">
-                                <i class="fa-solid fa-trophy mr-1" aria-hidden="true"></i> 3rd Place
-                            </span>
-                        </div>
-                        <h2 id="crosspaws-title" class="text-5xl mb-4 font-display text-white uppercase">Crosspaws</h2>
-                        <p class="text-white/80 leading-relaxed mb-6">
-                            You don't change the animals — you change the world around them. In this isometric puzzle adventure, guide a group of unique animals across tiny worlds by shifting the terrain to fit their needs.
-                        </p>
-
-                        <div class="bg-black/20 rounded-2xl p-5 border border-white/10 mb-8 grid grid-cols-2 gap-4">
-                            <div>
-                                <h3 class="text-nb-peach text-[9px] font-black uppercase tracking-widest mb-2">
-                                    <i class="fa-solid fa-user-pen mr-1" aria-hidden="true"></i> My Responsibilities
-                                </h3>
-                                <ul class="text-white/90 text-xs font-bold space-y-1">
-                                    <li>• All 3D Character Models</li>
-                                    <li>• Environment &amp; Props 3D</li>
-                                    <li>• All Character Animations</li>
-                                    <li>• Unity Prefab Integration</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h3 class="text-white/40 text-[9px] font-black uppercase tracking-widest mb-2">
-                                    <i class="fa-solid fa-link mr-1" aria-hidden="true"></i> Resources
-                                </h3>
-                                <p class="text-white/60 text-xs italic">
-                                    Textures were created by my teammate. I was responsible for bringing the entire 3D world and characters to life.
-                                </p>
-                            </div>
-                        </div>
-
-                        <a href="https://nuriia.itch.io/crosspaws" target="_blank" rel="noopener noreferrer"
-                            class="inline-block px-8 py-4 bg-nb-peach text-nb-blue rounded-full font-bold text-xs uppercase tracking-widest hover:bg-nb-bg transition shadow-lg">
-                            Play on Itch.io <i class="fa-brands fa-itch-io ml-2" aria-hidden="true"></i>
->>>>>>> Stashed changes
-                        </a>
-                    </div>
-                </div>
-
-<<<<<<< Updated upstream
-                <div class="grid md:grid-cols-4 gap-4">
-                    <div class="md:col-span-2 aspect-video rounded-3xl overflow-hidden bg-black border border-white/10">
-                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
-                            <source src="../assets/videos/TRAILERS/OBAT trailer .mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <img src="../assets/images/games/OBAT/gameplay/2.png" class="rounded-2xl aspect-video w-full object-cover border border-white/10 hover:scale-105 transition shadow-md">
-                    <img src="../assets/images/games/OBAT/gameplay/3.png" class="rounded-2xl aspect-video w-full object-cover border border-white/10 hover:scale-105 transition shadow-md">
-=======
-                <div class="flex items-center gap-4 mb-8">
-                    <h3 class="text-3xl font-display text-nb-peach uppercase">Awards &amp; Community</h3>
-                    <div class="h-px bg-white/20 flex-grow" aria-hidden="true"></div>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-6 mb-12">
-                    <div class="bg-nb-blue-dark/40 rounded-3xl p-6 border border-white/10 hover:bg-nb-blue-dark/60 transition-colors">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="text-nb-peach text-xs font-black tracking-widest uppercase">
-                                <i class="fa-solid fa-medal mr-2" aria-hidden="true"></i>3rd Place Overall
-                            </span>
-                            <span class="text-white/40 text-xs font-bold uppercase">International COTEDI GameJam 2026</span>
-                        </div>
-                        <p class="text-white/70 text-sm italic">
-                            Created during a cross-border collaboration jam featuring talent from Spain, Switzerland, Germany, and England. The game stood out for its empathy-driven puzzle mechanics and systems thinking approach.
-                        </p>
-                    </div>
-
-                    <div class="bg-black/20 p-6 rounded-3xl border border-white/5 flex flex-col justify-center">
-                        <div class="flex justify-between items-start mb-4">
-                            <span class="text-nb-peach font-display">sicave (Player)</span>
-                            <i class="fa-solid fa-star text-nb-peach/60" aria-hidden="true"></i>
-                        </div>
-                        <p class="text-white/70 text-sm leading-relaxed">
-                            "Decent, basic puzzle game that's surprisingly polished in a jam time."
-                        </p>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="md:col-span-2 aspect-video rounded-3xl overflow-hidden bg-black border border-white/10 shadow-inner">
-                        <video autoplay muted loop playsinline class="w-full h-full object-cover"
-                            aria-label="Crosspaws gameplay trailer">
-                            <source src="../assets/videos/TRAILERS/crosspaws_trailer.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <img src="../assets/images/games/CROSSPAWS/menuprincipal.png"
-                            alt="Crosspaws main menu screenshot"
-                            width="400" height="225"
-                            loading="lazy"
-                            class="rounded-2xl h-full w-full object-cover border border-white/10 hover:scale-105 transition duration-500 shadow-md">
-                        <img src="../assets/images/games/CROSSPAWS/nivel2.png"
-                            alt="Crosspaws level 2 gameplay screenshot"
-                            width="400" height="225"
-                            loading="lazy"
-                            class="rounded-2xl h-full w-full object-cover border border-white/10 hover:scale-105 transition duration-500 shadow-md">
-                    </div>
->>>>>>> Stashed changes
-                </div>
-            </div>
-        </article>
-
-        <!-- ANT&ESTRES -->
-<<<<<<< Updated upstream
-        <article class="reveal-section" id="ant-estres">
-            <div class="relative bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border border-white/20 shadow-2xl">
-                
-                <img src="../assets/images/ui/Hormiga.png" 
-                    class="absolute top-1/2 -right-8 md:-right-12 w-16 md:w-24 -translate-y-1/2 -rotate-90 md:rotate-12 z-20 pointer-events-none select-none drop-shadow-lg opacity-90" 
-                    alt="Crazy Ant">
-
-                <img src="../assets/images/ui/Hormiga.png" 
-                    class="absolute -bottom-4 left-20 w-10 md:w-14 rotate-45 z-20 pointer-events-none select-none drop-shadow-md opacity-70" 
-                    alt="Small Ant">
-
-                <div class="grid lg:grid-cols-2 gap-12 items-center mb-12 relative z-10">
-                    <div class="aspect-video overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/10 bg-nb-blue-dark/30">
-                        <img src="../assets/images/games/ANT/cover.jpg" class="w-full h-full object-cover" />
-                    </div>
-                    <div>
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="bg-nb-brown text-white text-[10px] px-4 py-1 rounded-full font-bold">ITCH.IO</span>
-                            <span class="bg-nb-peach text-nb-brown text-[10px] px-4 py-1 rounded-full font-bold">CLICKER</span>
-                        </div>
-                        <h3 class="text-5xl mb-6 font-display text-white uppercase">ANT&ESTRES</h3>
-                        <p class="text-white/80 leading-relaxed mb-8">
-                            Smash the Mammoth Nut! Recruit a crazy army of ants and click mercilessly until you reach the center of the candy.
-                        </p>
-                        <a href="https://tokpary.itch.io/antyestres" target="_blank" class="inline-block px-8 py-4 bg-nb-peach text-nb-blue rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white transition shadow-lg">
-                            Smas the Nut <i class="fa-solid fa-bug ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="flex gap-4 overflow-x-auto pb-4 media-scroll">
-                    <video autoplay muted loop playsinline class="h-48 rounded-2xl border border-white/10 shadow-lg">
-                        <source src="../assets/videos/TRAILERS/TRAILER ANTIESTRES 2.mp4" type="video/mp4">
-                    </video>
-                    <img src="../assets/images/games/atiestres/Fk0PCd.png" class="h-48 rounded-2xl border border-white/10 shadow-lg">
-=======
-        <article class="reveal-section" id="ant-estres" aria-labelledby="antestres-title">
-            <div
-                class="relative bg-nb-bg/10 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border border-white/20 shadow-2xl">
-
-                <img src="../assets/images/ui/Hormiga.png"
-                    width="96" height="96"
-                    loading="lazy"
-                    class="absolute top-1/2 -right-8 md:-right-12 w-16 md:w-24 -translate-y-1/2 -rotate-90 md:rotate-12 z-20 pointer-events-none select-none drop-shadow-lg opacity-90"
-                    alt="">
-
-                <img src="../assets/images/ui/Hormiga.png"
-                    width="56" height="56"
-                    loading="lazy"
-                    class="absolute -bottom-4 left-20 w-10 md:w-14 rotate-45 z-20 pointer-events-none select-none drop-shadow-md opacity-70"
-                    alt="">
-
-                <div class="grid lg:grid-cols-2 gap-12 items-center mb-12 relative z-10">
-                    <div
-                        class="aspect-video overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/10 bg-nb-blue-dark/30">
-                        <img src="../assets/images/games/atiestres/potada.png"
-                            alt="Ant&amp;Estres game cover"
-                            width="460" height="215"
-                            loading="lazy"
-                            class="w-full h-full object-cover">
-                    </div>
-                    <div>
-                        <div class="flex flex-wrap items-center gap-3 mb-4">
-                            <span class="bg-nb-brown text-white text-[10px] px-4 py-1 rounded-full font-bold">ITCH.IO</span>
-                            <span class="bg-nb-peach text-nb-brown text-[10px] px-4 py-1 rounded-full font-bold">CLICKER</span>
-                            <span class="bg-[#C0C0C0] text-black text-[10px] px-4 py-1 rounded-full font-bold uppercase">
-                                <i class="fa-solid fa-medal mr-1" aria-hidden="true"></i> 2nd Place Jam
-                            </span>
-                        </div>
-
-                        <h2 id="antestres-title" class="text-5xl mb-4 font-display text-white uppercase">ANT&amp;ESTRES</h2>
-                        <p class="text-white/80 leading-relaxed mb-6">
-                            Smash the Mammoth Nut! Recruit a crazy army of ants and click mercilessly until you
-                            reach the center of the candy. Developed for the <strong>6ª Edición Game Jam Game Scholars (2nd Place Winner)</strong> under the theme "Extremely Hard".
-                        </p>
-
-                        <div class="bg-black/20 rounded-2xl p-5 border border-white/10 mb-8">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div>
-                                    <h3 class="text-nb-peach text-[9px] font-black uppercase tracking-widest mb-2">
-                                        <i class="fa-solid fa-bug mr-1" aria-hidden="true"></i> Character Specialist
-                                    </h3>
-                                    <ul class="text-white/90 text-xs font-bold space-y-1">
-                                        <li>• Ant Characters Modeling</li>
-                                        <li>• Rigging &amp; Animations</li>
-                                        <li>• Character Shaders/Materials</li>
-                                    </ul>
+                                <div class="games-tags-row">
+                                    <span class="games-tag-primary">Steam (Demo)</span>
+                                    <span class="games-tag-secondary">Psychological Horror</span>
+                                    <span class="games-tag-highlight"><i class="fa-solid fa-rocket" aria-hidden="true"></i> Commercial Release</span>
                                 </div>
-                                <div class="border-l border-white/10 pl-4 flex flex-col justify-center">
-                                    <p class="text-white/60 text-[10px] italic leading-relaxed">
-                                        <span class="text-nb-peach font-bold uppercase">Note:</span> Environment art
-                                        and UI were created by my teammates. I focused solely on the characters to
-                                        ensure fluid animation and personality.
-                                    </p>
+                                <h2 id="unchained-title" class="games-article-title">UNCHAINED</h2>
+                                <p class="games-article-desc">
+                                    Evolucionado desde nuestro prototipo galardonado. Explora un escritorio virtual abandonado que oculta un secreto terrible. Cuanto más profundizas, más peligroso se vuelve. <strong>Demo disponible en Steam.</strong>
+                                </p>
+
+                                <div class="games-meta-box">
+                                    <div>
+                                        <h3 class="games-meta-title"><i class="fa-solid fa-user-pen" aria-hidden="true"></i> My Responsibilities</h3>
+                                        <ul class="games-meta-list">
+                                            <li>• All 3D Models & Animations</li>
+                                            <li>• Unity Prefab Integration</li>
+                                            <li>• Animator & State Setup</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="games-meta-title text-opacity-50"><i class="fa-solid fa-link" aria-hidden="true"></i> Resources</h3>
+                                        <p class="games-meta-note">Textures created by teammates.</p>
+                                    </div>
+                                </div>
+
+                                <a href="https://store.steampowered.com/app/3234310/UNCHAINED/" target="_blank" rel="noopener noreferrer" class="games-action-btn">
+                                    Play Demo on Steam <i class="fa-brands fa-steam" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Gameplay media grid -->
+                        <div class="games-media-subgrid">
+                            <div class="games-video-cell">
+                                <video autoplay muted loop playsinline class="games-video-elem" aria-label="Unchained gameplay trailer">
+                                    <source src="../assets/videos/TRAILERS/THE REAL TRAILER UNCHAINED 2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="games-img-col">
+                                <img src="../assets/images/games/UNCHAINED - STEAM/header.jpg" alt="Unchained screenshot 1" width="400" height="225" loading="lazy" class="games-sub-img">
+                                <img src="../assets/images/games/UNCHAINED - STEAM/imagekjb.png" alt="Unchained screenshot 2" width="400" height="225" loading="lazy" class="games-sub-img">
+                            </div>
+                        </div>
+
+                        <!-- Press & Reviews -->
+                        <div class="games-press-section">
+                            <h3 class="games-press-heading">Press &amp; Community Feedback</h3>
+                            <div class="games-press-card">
+                                <div class="games-press-header">
+                                    <span class="games-award-badge"><i class="fa-solid fa-trophy" aria-hidden="true"></i> 3rd Place</span>
+                                    <span class="games-press-subtitle">Campanadas DeVuego 2025</span>
+                                </div>
+                                <h4 class="font-display text-lg mb-2" style="color: var(--ganache);">"UNCHAINED - AI Unleashed"</h4>
+                                <p class="text-sm italic mb-3" style="color: rgba(35,26,23,0.75);">
+                                    "A psychological horror experience blending virtual desktop interaction with fourth-wall breaking. Count me in as a buyer."
+                                </p>
+                                <a href="https://www.devuego.es/blog/2025/12/31/unchained-la-ia-desatada/" target="_blank" rel="noopener noreferrer" class="games-link-inline">
+                                    Read Full Article on DeVuego &rarr;
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="games-youtube-grid">
+                            <div class="games-iframe-box"><iframe src="https://www.youtube.com/embed/eZuSMslaifw" title="Unchained Gameplay 1" allowfullscreen loading="lazy"></iframe></div>
+                            <div class="games-iframe-box"><iframe src="https://www.youtube.com/embed/zcWs9cYkU8s" title="Unchained Gameplay 2" allowfullscreen loading="lazy"></iframe></div>
+                            <div class="games-iframe-box"><iframe src="https://www.youtube.com/embed/E8NxZlQTXc8" title="Unchained Gameplay 3" allowfullscreen loading="lazy"></iframe></div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. CROSSPAWS -->
+                <article id="crosspaws" class="games-article reveal-section" aria-labelledby="crosspaws-title">
+                    <div class="games-article-inner">
+                        <div class="games-info-grid">
+                            <div class="games-media-box">
+                                <img src="../assets/images/games/CROSSPAWS/Portada.png" alt="Crosspaws cover" width="460" height="215" loading="lazy" class="games-main-img">
+                            </div>
+                            <div>
+                                <div class="games-tags-row">
+                                    <span class="games-tag-primary">Itch.io</span>
+                                    <span class="games-tag-secondary">Puzzle</span>
+                                    <span class="games-tag-highlight"><i class="fa-solid fa-trophy" aria-hidden="true"></i> 3rd Place COTEDI Jam</span>
+                                </div>
+                                <h2 id="crosspaws-title" class="games-article-title">Crosspaws</h2>
+                                <p class="games-article-desc">
+                                    No cambias a los animales, cambias el mundo que les rodea. En este puzle isométrico, guía a un grupo de animales adaptando el terreno a sus necesidades.
+                                </p>
+
+                                <div class="games-meta-box">
+                                    <div>
+                                        <h3 class="games-meta-title"><i class="fa-solid fa-user-pen" aria-hidden="true"></i> My Responsibilities</h3>
+                                        <ul class="games-meta-list">
+                                            <li>• 3D Characters & Environment</li>
+                                            <li>• Character Animations</li>
+                                            <li>• Unity Integration</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="games-meta-title text-opacity-50"><i class="fa-solid fa-link" aria-hidden="true"></i> Resources</h3>
+                                        <p class="games-meta-note">Textures by teammate.</p>
+                                    </div>
+                                </div>
+
+                                <a href="https://nuriia.itch.io/crosspaws" target="_blank" rel="noopener noreferrer" class="games-action-btn">
+                                    Play on Itch.io <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="games-media-subgrid">
+                            <div class="games-video-cell">
+                                <video autoplay muted loop playsinline class="games-video-elem" aria-label="Crosspaws gameplay trailer">
+                                    <source src="../assets/videos/TRAILERS/crosspaws_trailer.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="games-img-col">
+                                <img src="../assets/images/games/CROSSPAWS/menuprincipal.png" alt="Crosspaws Menu" width="400" height="225" loading="lazy" class="games-sub-img">
+                                <img src="../assets/images/games/CROSSPAWS/nivel2.png" alt="Crosspaws Level" width="400" height="225" loading="lazy" class="games-sub-img">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. ANT&ESTRES -->
+                <article id="ant-estres" class="games-article reveal-section" aria-labelledby="antestres-title">
+                    <div class="games-article-inner">
+                        <div class="games-info-grid">
+                            <div class="games-media-box">
+                                <img src="../assets/images/games/atiestres/Fk0PCd.png" alt="Ant&Estres cover" width="460" height="215" loading="lazy" class="games-main-img">
+                            </div>
+                            <div>
+                                <div class="games-tags-row">
+                                    <span class="games-tag-primary">Itch.io</span>
+                                    <span class="games-tag-secondary">Clicker</span>
+                                    <span class="games-tag-highlight"><i class="fa-solid fa-medal" aria-hidden="true"></i> 2nd Place Jam</span>
+                                </div>
+                                <h2 id="antestres-title" class="games-article-title">ANT&amp;ESTRES</h2>
+                                <p class="games-article-desc">
+                                    ¡Golpea la nuez gigante! Recluta un ejército de hormigas y haz clic sin parar hasta llegar al centro del caramelo. <strong>2º Premio en la 6ª Edición Game Jam Game Scholars.</strong>
+                                </p>
+
+                                <div class="games-meta-box">
+                                    <div>
+                                        <h3 class="games-meta-title"><i class="fa-solid fa-bug" aria-hidden="true"></i> Character Specialist</h3>
+                                        <ul class="games-meta-list">
+                                            <li>• Ant Modeling & Rigging</li>
+                                            <li>• Custom Animations</li>
+                                            <li>• Character Shaders</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <a href="https://tokpary.itch.io/antyestres" target="_blank" rel="noopener noreferrer" class="games-action-btn">
+                                    Smash the Nut <i class="fa-solid fa-bug" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="games-media-subgrid">
+                            <div class="games-video-cell">
+                                <video autoplay muted loop playsinline class="games-video-elem" aria-label="Ant&Estres gameplay">
+                                    <source src="../assets/images/games/atiestres/Fk0PCd.png" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="games-img-col">
+                                <img src="../assets/images/games/atiestres/Fk0PCd.png" alt="Ant screenshot 1" width="400" height="225" loading="lazy" class="games-sub-img">
+                                <img src="../assets/images/games/atiestres/6CCkqv.png" alt="Ant screenshot 2" width="400" height="225" loading="lazy" class="games-sub-img">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. ONCE BUTTON A TIME -->
+                <article id="obat" class="games-article reveal-section" aria-labelledby="obat-title">
+                    <div class="games-article-inner">
+                        <div class="games-info-grid">
+                            <div class="games-media-box lg:order-2">
+                                <img src="../assets/images/games/OBAT/Hgd5yj.png" alt="OBAT cover" width="460" height="215" loading="lazy" class="games-main-img">
+                            </div>
+                            <div class="lg:order-1">
+                                <div class="games-tags-row">
+                                    <span class="games-tag-primary">Itch.io</span>
+                                    <span class="games-tag-secondary">Puzzle</span>
+                                    <span class="games-tag-highlight"><i class="fa-solid fa-trophy" aria-hidden="true"></i> 3rd Place Virtual Core Jam</span>
+                                </div>
+                                <h2 id="obat-title" class="games-article-title">Once Button a Time</h2>
+                                <p class="games-article-desc">
+                                    Carioca perdió sus ojos de botón. Usa botones de colores para ver el mundo de formas nuevas y llegar hasta el sastre George.
+                                </p>
+
+                                <div class="games-meta-box">
+                                    <div>
+                                        <h3 class="games-meta-title"><i class="fa-solid fa-cube" aria-hidden="true"></i> My Responsibilities</h3>
+                                        <ul class="games-meta-list">
+                                            <li>• Environment & Props Modeling</li>
+                                            <li>• Asset Assembly in Unity</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <a href="https://origamingcreations.itch.io/once-button-a-time" target="_blank" rel="noopener noreferrer" class="games-action-btn">
+                                    Play on Itch.io <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="games-media-subgrid">
+                            <div class="games-video-cell">
+                                <video autoplay muted loop playsinline class="games-video-elem" aria-label="OBAT trailer">
+                                    <source src="../assets/videos/TRAILERS/OBAT trailer .mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="games-img-col">
+                                <img src="../assets/images/games/OBAT/gameplay/2.png" alt="OBAT gameplay 1" width="400" height="225" loading="lazy" class="games-sub-img">
+                                <img src="../assets/images/games/OBAT/gameplay/3.png" alt="OBAT gameplay 2" width="400" height="225" loading="lazy" class="games-sub-img">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. UNCHAINED JAM ORIGIN -->
+                <article id="jam-version" class="games-article reveal-section" aria-labelledby="jam-title">
+                    <div class="games-article-inner">
+                        <div class="games-info-grid">
+                            <div class="games-media-box lg:order-2">
+                                <img src="../assets/images/games/UNCHAINED - JAM/ggUOZs.png" alt="Jam Version cover" width="460" height="215" loading="lazy" class="games-main-img">
+                            </div>
+                            <div class="lg:order-1">
+                                <div class="games-tags-row">
+                                    <span class="games-tag-primary">Itch.io</span>
+                                    <span class="games-badge-winner"><i class="fa-solid fa-crown" aria-hidden="true"></i> 1st Place Overall</span>
+                                </div>
+                                <h2 id="jam-title" class="games-article-title">UNCHAINED (Jam Origin)</h2>
+                                <p class="games-article-desc">
+                                    La versión original creada para la GameJam Game Scholars 4ª Edición. Ganó el <strong>1er Puesto</strong>, llevándome a exhibirlo en el <em>Indie Dev Day</em> y dando vida al proyecto comercial actual en Steam.
+                                </p>
+
+                                <div class="games-meta-box">
+                                    <div>
+                                        <h3 class="games-meta-title"><i class="fa-solid fa-user-pen" aria-hidden="true"></i> My Responsibilities</h3>
+                                        <ul class="games-meta-list">
+                                            <li>• All 3D Assets (Jam Scope)</li>
+                                            <li>• Fast Animation & GitHub Collab</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="games-action-row">
+                                    <a href="https://reibax.itch.io/unchained" target="_blank" rel="noopener noreferrer" class="games-action-btn">
+                                        Play Jam Version <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
+                                    </a>
+                                    <span class="games-exhibit-ticket">
+                                        <i class="fa-solid fa-ticket mr-1 text-accent"></i> Exhibited at Indie Dev Day
+                                    </span>
                                 </div>
                             </div>
                         </div>
 
-                        <a href="https://tokpary.itch.io/antyestres" target="_blank" rel="noopener noreferrer"
-                            class="inline-block px-8 py-4 bg-nb-peach text-nb-blue rounded-full font-bold text-xs uppercase tracking-widest hover:bg-nb-bg transition shadow-lg">
-                            Smash the Nut <i class="fa-solid fa-bug ml-2" aria-hidden="true"></i>
-                        </a>
+                        <div class="games-media-subgrid">
+                            <div class="games-video-cell">
+                                <video autoplay muted loop playsinline class="games-video-elem" aria-label="Jam version trailer">
+                                    <source src="../assets/videos/TRAILERS/trailer unchained 3.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="games-img-col">
+                                <img src="../assets/images/games/UNCHAINED - JAM/Captura de pantalla 2025-09-30 202701.png" alt="Jam screenshot 1" width="400" height="225" loading="lazy" class="games-sub-img">
+                                <img src="../assets/images/games/UNCHAINED - JAM/Captura de pantalla 2025-09-30 201708.png" alt="Jam screenshot 2" width="400" height="225" loading="lazy" class="games-sub-img">
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div
-                        class="md:col-span-2 aspect-video rounded-3xl overflow-hidden bg-black border border-white/10 shadow-inner">
-                        <video autoplay muted loop playsinline class="w-full h-full object-cover"
-                            aria-label="Ant&amp;Estres gameplay trailer">
-                            <source src="../assets/videos/TRAILERS/TRAILER ANTIESTRES 2.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <img src="../assets/images/games/atiestres/Fk0PCd.png"
-                            alt="Ant&amp;Estres gameplay screenshot 1"
-                            width="400" height="225"
-                            loading="lazy"
-                            class="rounded-2xl h-full w-full object-cover border border-white/10 hover:scale-105 transition duration-500 shadow-md">
-                        <img src="../assets/images/games/atiestres/6CCkqv.png"
-                            alt="Ant&amp;Estres gameplay screenshot 2"
-                            width="400" height="225"
-                            loading="lazy"
-                            class="rounded-2xl h-full w-full object-cover border border-white/10 hover:scale-105 transition duration-500 shadow-md">
-                    </div>
->>>>>>> Stashed changes
-                </div>
+                </article>
+
             </div>
-        </article>
 
-<<<<<<< Updated upstream
-        <!-- UNCHAINED JAM VERSION -->
-        <article class="reveal-section" id="jam-version">
-            <div class="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border border-white/20 shadow-2xl">
-                <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
-                    <div class="aspect-video overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/10 bg-nb-blue-dark/30">
-                        <img src="../assets/images/games/ANT/cover.jpg" class="w-full h-full object-cover" />
-                    </div>
-                    <div>
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="bg-nb-brown text-white text-[10px] px-4 py-1 rounded-full font-bold">ITCH.IO</span>
-                            <span class="bg-nb-peach text-nb-brown text-[10px] px-4 py-1 rounded-full font-bold">CLICKER</span>
-                        </div>
-                        <h3 class="text-5xl mb-6 font-display text-white uppercase">UNCHAINED JAM</h3>
-                        <p class="text-white/80 leading-relaxed mb-8">
-                            Smash the Mammoth Nut! Recruit a crazy army of ants and click mercilessly until you reach the center of the candy.
-                        </p>
-                        <a href="https://reibax.itch.io/unchained" target="_blank" class="inline-block px-8 py-4 bg-nb-peach text-nb-blue rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white transition shadow-lg">
-                            Smas the Nut <i class="fa-solid fa-bug ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="flex gap-4 overflow-x-auto pb-4 media-scroll">
-                    <video autoplay muted loop playsinline class="h-48 rounded-2xl border border-white/10 shadow-lg">
-                        <source src="../assets/videos/TRAILERS/ant_trailer.mp4" type="video/mp4">
-                    </video>
-                    <img src="../assets/images/games/ANT/gameplay1.jpg" class="h-48 rounded-2xl border border-white/10 shadow-lg">
-                    <img src="../assets/images/games/ANT/gameplay2.jpg" class="h-48 rounded-2xl border border-white/10 shadow-lg">
-                    <img src="../assets/images/games/ANT/gameplay3.jpg" class="h-48 rounded-2xl border border-white/10 shadow-lg">
-=======
-        <!-- ONCE BUTTON A TIME -->
-        <article class="reveal-section" id="obat" aria-labelledby="obat-title">
-            <div
-                class="relative bg-nb-bg/10 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border border-white/20 shadow-2xl">
-                <img src="../assets/images/ui/BotonCoser.png"
-                    width="176" height="176"
-                    loading="lazy"
-                    class="absolute -top-16 -right-12 w-32 md:w-44 rotate-[45deg] animate-float z-20 pointer-events-none select-none opacity-80"
-                    alt="">
-
-                <div class="grid lg:grid-cols-2 gap-12 items-center mb-12 relative z-10">
-                    <div
-                        class="lg:order-2 aspect-video overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/10">
-                        <img src="../assets/images/games/OBAT/Hgd5yj.png"
-                            alt="Once Button a Time game cover"
-                            width="460" height="215"
-                            loading="lazy"
-                            class="w-full h-full object-cover">
-                    </div>
-                    <div class="lg:order-1">
-                        <div class="flex flex-wrap items-center gap-3 mb-4">
-                            <span class="bg-nb-brown text-white text-[10px] px-4 py-1 rounded-full font-bold">ITCH.IO</span>
-                            <span class="bg-nb-peach text-nb-brown text-[10px] px-4 py-1 rounded-full font-bold">PUZZLE</span>
-                            <span class="bg-[#FCD34D] text-[#78350F] text-[10px] px-4 py-1 rounded-full font-bold uppercase">
-                                <i class="fa-solid fa-trophy mr-1" aria-hidden="true"></i> 3rd Place Jam
-                            </span>
-                        </div>
-                        <h2 id="obat-title" class="text-5xl mb-4 font-display text-white uppercase">Once Button a Time</h2>
-                        <p class="text-white/80 leading-relaxed mb-6">
-                            Carioca the rag doll lost her button eyes. Use colorful buttons to see the world in new ways
-                            and reach the master tailor George. Developed for the <strong>Virtual Core Game Jam (3rd Place Winner)</strong> under the theme "One Button".
-                        </p>
-
-                        <div class="bg-black/20 rounded-2xl p-5 border border-white/10 mb-8 grid grid-cols-2 gap-4">
-                            <div>
-                                <h3 class="text-nb-peach text-[9px] font-black uppercase tracking-widest mb-2">
-                                    <i class="fa-solid fa-cube mr-1" aria-hidden="true"></i> My Responsibilities
-                                </h3>
-                                <ul class="text-white/90 text-xs font-bold space-y-1">
-                                    <li>• All Environment Models</li>
-                                    <li>• Puzzle Props Modeling</li>
-                                    <li>• Assets Assembly in Unity</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h3 class="text-white/40 text-[9px] font-black uppercase tracking-widest mb-2">
-                                    <i class="fa-solid fa-link mr-1" aria-hidden="true"></i> Resources
-                                </h3>
-                                <p class="text-white/60 text-xs italic">
-                                    Textures were created by my teammates.
-                                </p>
-                            </div>
-                        </div>
-
-                        <a href="https://origamingcreations.itch.io/once-button-a-time" target="_blank" rel="noopener noreferrer"
-                            class="inline-block px-8 py-4 bg-nb-bg text-nb-blue rounded-full font-bold text-xs uppercase tracking-widest hover:bg-nb-peach transition shadow-lg">
-                            Play on Itch.io <i class="fa-brands fa-itch-io ml-2" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div
-                        class="md:col-span-2 aspect-video rounded-3xl overflow-hidden bg-black border border-white/10 shadow-inner">
-                        <video autoplay muted loop playsinline class="w-full h-full object-cover"
-                            aria-label="Once Button a Time gameplay trailer">
-                            <source src="../assets/videos/TRAILERS/OBAT trailer .mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <img src="../assets/images/games/OBAT/gameplay/2.png"
-                            alt="Once Button a Time gameplay screenshot 1"
-                            width="400" height="225"
-                            loading="lazy"
-                            class="rounded-2xl h-full w-full object-cover border border-white/10 hover:scale-105 transition duration-500 shadow-md">
-                        <img src="../assets/images/games/OBAT/gameplay/3.png"
-                            alt="Once Button a Time gameplay screenshot 2"
-                            width="400" height="225"
-                            loading="lazy"
-                            class="rounded-2xl h-full w-full object-cover border border-white/10 hover:scale-105 transition duration-500 shadow-md">
-                    </div>
-                </div>
-            </div>
-        </article>
-
-        <!-- UNCHAINED JAM ORIGIN -->
-        <article class="reveal-section" id="jam-version" aria-labelledby="jam-title">
-            <div class="bg-nb-bg/10 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border border-white/20 shadow-2xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-[#FCD34D]/20 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
-
-                <img src="../assets/images/ui/MonitorOrdenador.png"
-                    width="112" height="112"
-                    loading="lazy"
-                    class="absolute -top-10 -right-5 w-20 md:w-28 rotate-12 animate-float z-20 pointer-events-none select-none drop-shadow-xl"
-                    alt="">
-
-                <!-- CORRECCIÓN: alt corregido — decía "Pumpkin" pero era un documento -->
-                <img src="../assets/images/ui/Documento.png"
-                    width="96" height="96"
-                    loading="lazy"
-                    class="absolute -bottom-8 -left-8 w-20 md:w-24 -rotate-12 opacity-60 z-0 pointer-events-none select-none"
-                    alt="">
-
-                <div class="grid lg:grid-cols-2 gap-12 items-center mb-12 relative z-10">
-                    <div
-                        class="lg:order-2 aspect-video overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/10 bg-nb-blue-dark/30">
-                        <img src="../assets/images/games/UNCHAINED - JAM/ggUOZs.png"
-                            alt="Unchained Jam version screenshot"
-                            width="460" height="215"
-                            loading="lazy"
-                            class="w-full h-full object-cover">
-                    </div>
-
-                    <div class="lg:order-1">
-                        <div class="flex flex-wrap items-center gap-3 mb-4">
-                            <span class="bg-nb-brown text-white text-[10px] px-4 py-1 rounded-full font-bold">ITCH.IO</span>
-                            <span class="bg-[#FCD34D] text-[#78350F] text-[10px] px-4 py-1 rounded-full font-bold uppercase shadow-lg border border-[#FCD34D]/50">
-                                <i class="fa-solid fa-crown mr-1" aria-hidden="true"></i> 1st Place Overall
-                            </span>
-                        </div>
-                        <h2 id="jam-title" class="text-5xl mb-4 font-display text-white uppercase">UNCHAINED (Jam Origin)</h2>
-                        <p class="text-white/80 leading-relaxed mb-6">
-                            The original version created for the <strong>GameJam Game Scholars 4º Edición</strong> under the theme "A matter of time". This prototype won <strong>1st Place</strong>, catapulting the project to be showcased at the <strong>Guerrilla Game Festival</strong> and <strong>Indie Dev Day</strong>, eventually leading to our commercial Steam release.
-                        </p>
-
-                        <div class="bg-black/20 rounded-2xl p-5 border border-white/10 mb-8 grid grid-cols-2 gap-4">
-                            <div>
-                                <h3 class="text-nb-peach text-[9px] font-black uppercase tracking-widest mb-2">
-                                    <i class="fa-solid fa-user-pen mr-1" aria-hidden="true"></i> My Responsibilities
-                                </h3>
-                                <ul class="text-white/90 text-xs font-bold space-y-1">
-                                    <li>• All 3D Assets (Jam Scope)</li>
-                                    <li>• Fast-paced Animation</li>
-                                    <li>• GitHub Collaboration</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h3 class="text-white/40 text-[9px] font-black uppercase tracking-widest mb-2">
-                                    <i class="fa-solid fa-link mr-1" aria-hidden="true"></i> Resources
-                                </h3>
-                                <p class="text-white/60 text-xs italic">
-                                    Textures were created by my teammates.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-wrap gap-4">
-                            <a href="https://reibax.itch.io/unchained" target="_blank" rel="noopener noreferrer"
-                                class="inline-block px-8 py-4 bg-nb-peach text-nb-blue rounded-full font-bold text-xs uppercase tracking-widest hover:bg-nb-bg transition shadow-lg">
-                                Play Jam Version <i class="fa-brands fa-itch-io ml-2" aria-hidden="true"></i>
-                            </a>
-                            <div class="flex items-center gap-2 text-[#FCD34D] text-[10px] font-bold uppercase tracking-widest border border-[#FCD34D]/30 px-4 py-2 rounded-full bg-black/20">
-                                <i class="fa-solid fa-ticket" aria-hidden="true"></i> Exhibited at Indie Dev Day
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div
-                        class="md:col-span-2 aspect-video rounded-3xl overflow-hidden bg-black border border-white/10 shadow-inner">
-                        <video autoplay muted loop playsinline class="w-full h-full object-cover"
-                            aria-label="Unchained Jam version trailer">
-                            <source src="../assets/videos/TRAILERS/trailer unchained 3.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <img src="../assets/images/games/UNCHAINED - JAM/Captura de pantalla 2025-09-30 202701.png"
-                            alt="Unchained Jam version screenshot 1"
-                            width="400" height="225"
-                            loading="lazy"
-                            class="rounded-2xl h-full w-full object-cover border border-white/10 hover:scale-105 transition duration-500 shadow-md">
-                        <img src="../assets/images/games/UNCHAINED - JAM/Captura de pantalla 2025-09-30 201708.png"
-                            alt="Unchained Jam version screenshot 2"
-                            width="400" height="225"
-                            loading="lazy"
-                            class="rounded-2xl h-full w-full object-cover border border-white/10 hover:scale-105 transition duration-500 shadow-md">
-                    </div>
->>>>>>> Stashed changes
-                </div>
-            </div>
-        </article>
-    </section>
-
-    <!-- Explore More -->
-    <section class="text-center pb-32 reveal-section" aria-label="More games on Itch.io">
-        <h2 class="text-white font-display text-5xl mb-10">Explore more games</h2>
-<<<<<<< Updated upstream
-        <a href="https://nuriia.itch.io/" target="_blank" class="inline-flex items-center gap-4 px-12 py-6 bg-white text-nb-blue rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-2xl">
-            Click here! <i class="fa-solid fa-arrow-right"></i>
-        </a>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="max-w-4xl mx-auto px-8 pb-20 text-center reveal-section relative"> 
-        
-        <img src="../assets/images/ui/AvionPapel.png" 
-         class="absolute top-0 right-10 md:right-32 w-24 md:w-32 rotate-[15deg] animate-float opacity-80 pointer-events-none select-none" 
-         style="animation-duration: 5s;"
-         alt="Paper Plane">
-
-        <div class="border-t border-white/10 pt-10 relative z-10">
-            <p class="text-white/60 mb-6 font-medium">¿Buscas un desarrollador para tu próximo juego?</p>
-=======
-        <a href="https://nuriia.itch.io/" target="_blank" rel="noopener noreferrer"
-            class="inline-flex items-center gap-4 px-12 py-6 bg-nb-bg text-nb-blue rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-2xl">
-            Click here! <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-        </a>
-    </section>
-
-    <!-- Contact CTA -->
-    <section class="max-w-4xl mx-auto px-8 pb-20 text-center reveal-section relative" aria-label="Contact call to action">
-
-        <img src="../assets/images/ui/AvionPapel.png"
-            width="128" height="128"
-            loading="lazy"
-            class="absolute top-0 right-10 md:right-32 w-24 md:w-32 rotate-[15deg] animate-float opacity-80 pointer-events-none select-none"
-            style="animation-duration: 5s;" alt="">
-
-        <div class="border-t border-white/10 pt-10 relative z-10">
-            <!-- CORRECCIÓN: lang="es" en texto en español -->
-            <p class="text-white/60 mb-6 font-medium" lang="es">¿Looking for a developer for your next game?</p>
->>>>>>> Stashed changes
-            <div class="flex justify-center gap-6">
-                 <a href="contact.html" class="text-nb-peach font-black uppercase text-xs tracking-widest hover:text-white transition-colors border-b-2 border-transparent hover:border-nb-peach pb-1">
-                    Contactame
+            <!-- Explore More Itch.io -->
+            <section class="games-explore-section reveal-section">
+                <h2 class="games-explore-title">Explore more games</h2>
+                <a href="https://nuriia.itch.io/" target="_blank" rel="noopener noreferrer" class="games-action-btn-secondary">
+                    Click here on Itch.io <i class="fa-solid fa-arrow-right ml-2" aria-hidden="true"></i>
                 </a>
-<<<<<<< Updated upstream
-                <span class="text-white/20">•</span>
-                <a href="../files/CV_2025_English.pdf" target="_blank"
-                    rel="noopener noreferrer" class="text-nb-peach font-black uppercase text-xs tracking-widest hover:text-white transition-colors border-b-2 border-transparent hover:border-nb-peach pb-1">
-=======
-                <span class="text-white/20" aria-hidden="true">•</span>
-                <a href="../files/CV_2025_English.pdf" target="_blank" rel="noopener noreferrer"
-                    class="text-nb-peach font-black uppercase text-xs tracking-widest hover:text-white transition-colors border-b-2 border-transparent hover:border-nb-peach pb-1">
->>>>>>> Stashed changes
-                    See CV
-                </a>
-            </div>
+            </section>
+
         </div>
-    </section>
+    </main>
 
-    <!-- Footer Wave -->
-    <div class="w-full mt-20">
-<<<<<<< Updated upstream
-        <svg class="footer-wave w-full h-[150px]" viewBox="0 0 1440 320" preserveAspectRatio="none">
-            <path class="fill-nb-bg" d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,139,576,170.7C672,203,768,245,864,240C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-=======
-        <svg class="footer-wave w-full h-[150px]" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
-            <path class="fill-nb-bg"
-                d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,139,576,170.7C672,203,768,245,864,240C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+    <!-- Footer Unificado -->
+    <div class="footer-wrap">
+        <svg class="footer-wave" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,139,576,170.7C672,203,768,245,864,240C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
             </path>
->>>>>>> Stashed changes
         </svg>
 
-        <footer class="bg-nb-bg py-16 px-10 relative z-10">
-            <div class="max-w-7xl mx-auto text-nb-blue">
-                
-                <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16 text-left">
-                    
-                    <div class="lg:col-span-2">
-                        <a href="../index.html" class="font-display text-6xl md:text-7xl text-nb-blue hover:text-nb-brown transition-colors block mb-4">
-                            nurxen<span class="text-nb-brown">.</span>
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-brand-col">
+                        <a href="../index.html" class="footer-brand">
+                            nurxen<span class="accent-blue">.</span>
                         </a>
-                        <p class="text-nb-blue/60 font-bold uppercase tracking-widest text-xs mb-8">
-                            3D Artist & Game Developer
-                        </p>
+                        <p class="footer-tagline">3D Environment & Technical Artist</p>
                         
-                        <div class="flex gap-6">
-<<<<<<< Updated upstream
-                            <a href="https://www.instagram.com/nurxen_" target="_blank" class="w-10 h-10 rounded-full border border-nb-blue/20 flex items-center justify-center hover:bg-nb-blue hover:text-white hover:border-nb-blue transition-all duration-300">
-                                <i class="fa-brands fa-instagram text-lg"></i>
+                        <div class="footer-social">
+                            <a href="https://www.instagram.com/nurxen_" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer-social-icon">
+                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.artstation.com/nurxen1" target="_blank" class="w-10 h-10 rounded-full border border-nb-blue/20 flex items-center justify-center hover:bg-nb-blue hover:text-white hover:border-nb-blue transition-all duration-300">
-                                <i class="fa-brands fa-artstation text-lg"></i>
+                            <a href="https://www.artstation.com/nurxen1" target="_blank" rel="noopener noreferrer" aria-label="ArtStation" class="footer-social-icon">
+                                <i class="fa-brands fa-artstation" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank" class="w-10 h-10 rounded-full border border-nb-blue/20 flex items-center justify-center hover:bg-nb-blue hover:text-white hover:border-nb-blue transition-all duration-300">
-                                <i class="fa-brands fa-linkedin-in text-lg"></i>
-=======
-                            <!-- CORRECCIÓN: rel="noopener noreferrer" + aria-label en iconos del footer -->
-                            <a href="https://www.instagram.com/nurxen_" target="_blank" rel="noopener noreferrer"
-                                aria-label="Nurxen on Instagram"
-                                class="w-10 h-10 rounded-full border border-nb-blue/20 flex items-center justify-center hover:bg-nb-blue hover:text-white hover:border-nb-blue transition-all duration-300">
-                                <i class="fa-brands fa-instagram text-lg" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://www.artstation.com/nurxen1" target="_blank" rel="noopener noreferrer"
-                                aria-label="Nurxen on ArtStation"
-                                class="w-10 h-10 rounded-full border border-nb-blue/20 flex items-center justify-center hover:bg-nb-blue hover:text-white hover:border-nb-blue transition-all duration-300">
-                                <i class="fa-brands fa-artstation text-lg" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank" rel="noopener noreferrer"
-                                aria-label="Nurxen on LinkedIn"
-                                class="w-10 h-10 rounded-full border border-nb-blue/20 flex items-center justify-center hover:bg-nb-blue hover:text-white hover:border-nb-blue transition-all duration-300">
-                                <i class="fa-brands fa-linkedin-in text-lg" aria-hidden="true"></i>
->>>>>>> Stashed changes
+                            <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer-social-icon">
+                                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
 
-                    <div class="flex flex-col gap-4">
-<<<<<<< Updated upstream
-                        <p class="font-body text-nb-brown opacity-60 text-xs uppercase tracking-widest font-black mb-2">Explore</p>
-                        <a href="../index.html" class="text-sm font-bold hover:text-nb-brown transition-all duration-300">Home</a>
-                        <a href="artwork.html" class="text-sm font-bold hover:text-nb-brown transition-all duration-300">Artwork Gallery</a>
-                        <a href="games.html" class="text-sm font-bold hover:text-nb-brown transition-all duration-300">Videogames</a>
-=======
-                        <p class="font-body text-nb-brown opacity-60 text-xs uppercase tracking-widest font-black mb-2">
-                            Explore</p>
-                        <a href="../index.html"
-                            class="text-sm font-bold hover:text-nb-brown transition-all duration-300">Home</a>
-                        <a href="artwork.html"
-                            class="text-sm font-bold hover:text-nb-brown transition-all duration-300">Artwork Gallery</a>
-                        <a href="games.html"
-                            class="text-sm font-bold hover:text-nb-brown transition-all duration-300">Videogames</a>
->>>>>>> Stashed changes
+                    <div class="footer-col">
+                        <p class="footer-col-title">Explore</p>
+                        <a href="../index.html" class="footer-link">Home</a>
+                        <a href="artwork.html" class="footer-link">Artwork Gallery</a>
+                        <a href="games.html" class="footer-link">Games & Sims</a>
                     </div>
 
-                    <div class="flex flex-col gap-4">
-                        <p class="font-body text-nb-brown opacity-60 text-xs uppercase tracking-widest font-black mb-2">Get in Touch</p>
-                        <a href="contact.html" class="text-sm font-bold hover:text-nb-brown transition-all duration-300">Contact Form</a>
-                        <a href="mailto:nurxen21@gmail.com" class="text-sm font-bold hover:text-nb-brown transition underline underline-offset-8">Email Me</a>
-                        <p class="text-xs text-nb-blue/60 mt-4">Available for freelance.</p>
+                    <div class="footer-col">
+                        <p class="footer-col-title">Get in Touch</p>
+                        <a href="contact.html" class="footer-link">Contact Form</a>
+                        <a href="mailto:nurxen21@gmail.com" class="footer-link footer-link-underline">Email Me</a>
+                        <p class="footer-note">Available for freelance.</p>
                     </div>
                 </div>
 
-                <div class="pt-10 border-t border-nb-blue/10 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p class="text-[10px] font-bold uppercase tracking-widest text-nb-blue/40">
-                        ©2026 Nurxen. All Rights Reserved.
-                    </p>
-                    
-                    <div class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-nb-blue/40">
-                        <span>Made with cozy vibes & Blender</span>
-                        <i class="fa-solid fa-heart text-nb-brown animate-pulse" aria-hidden="true"></i>
+                <div class="footer-bottom">
+                    <p class="footer-copy">©2026 Nurxen. All Rights Reserved.</p>
+                    <div class="footer-credit">
+                        <span>Made with cozy vibes &amp; Blender</span>
+                        <i class="fa-solid fa-heart footer-heart animate-pulse" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
 
-<<<<<<< Updated upstream
-    <!-- Side Navigation -->
-    <div class="fixed right-6 top-1/2 -translate-y-1/2 z-[100] hidden xl:flex flex-col gap-14 items-center text-white/40">
-        <div class="h-20 w-px bg-white/20"></div>
-        <a href="#unchained" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">Unchained</a>
-        <a href="#obat" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">O.B.A.T</a>
-        <a href="#ant-estres" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">Ant&Estres</a>
-        <a href="#jam-version" class="rotate-90 text-[9px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">Jam</a>
-        <div class="h-20 w-px bg-white/20"></div>
-    </div>
-
     <!-- Back to Top Button -->
-    <button id="backToTop" class="fixed bottom-10 right-10 z-[60] w-14 h-14 bg-nb-brown text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:scale-110 hover:bg-nb-blue transform translate-y-10">
-        <i class="fa-solid fa-arrow-up text-xl"></i>
-=======
-    <!-- Side Nav (games) -->
-    <!-- CORRECCIÓN: <nav> con aria-label en lugar de <div> anónimo -->
-    <nav aria-label="Jump to game"
-        class="fixed right-6 top-1/2 -translate-y-1/2 z-[100] hidden xl:flex flex-col gap-14 items-center text-white/40">
-        <div class="h-20 w-px bg-nb-bg/20" aria-hidden="true"></div>
-        <a href="#unchained"
-            class="rotate-90 text-[7px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">Unchained</a>
-        <a href="#crosspaws"
-            class="rotate-90 text-[7px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">Crosspaws</a>
-        <a href="#ant-estres"
-            class="rotate-90 text-[7px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">Ant&amp;Estres</a>
-        <a href="#obat"
-            class="rotate-90 text-[7px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">O.B.A.T</a>
-        <a href="#jam-version"
-            class="rotate-90 text-[7px] font-black uppercase tracking-widest hover:text-nb-peach transition-colors">Jam Origin</a>
-        <div class="h-20 w-px bg-nb-bg/20" aria-hidden="true"></div>
-    </nav>
-
-    <!-- Back to Top -->
-    <!-- CORRECCIÓN: aria-label en botón sin texto visible -->
-    <button id="backToTop" aria-label="Back to top"
-        class="fixed bottom-10 right-10 z-[60] w-14 h-14 bg-nb-brown text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:scale-110 hover:bg-nb-blue transform translate-y-10">
-        <i class="fa-solid fa-arrow-up text-xl" aria-hidden="true"></i>
->>>>>>> Stashed changes
+    <button id="backToTop" aria-label="Back to top" class="back-to-top">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
     </button>
 
+    <!-- SCRIPTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
     <script src="../js/main.js"></script>
-    <script src="../js/theme.js"></script>
-
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-        document.querySelectorAll(".reveal-section").forEach((el, i) => {
-            gsap.fromTo(el, {
-                y: 30,
-                opacity: 0
-            }, {
-                y: 0,
-                opacity: 1,
-                duration: 0.8,
-                delay: i * 0.1,
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top 90%"
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
