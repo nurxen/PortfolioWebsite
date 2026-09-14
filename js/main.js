@@ -245,3 +245,4 @@ window.addEventListener("load", () => {
     initSlider("compare-slider", "compare-overlay", "compare-handle");
     initSlider("shader-slider", "shader-overlay", "shader-handle");
 });
+

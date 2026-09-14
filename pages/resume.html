@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumé - Nuria Serrano | Technical Artist</title>
-    <!-- Favicon profesional limpio -->
-    <link rel="icon" type="image/png" href="../assets/images/ui/nurxen-logo.png" />
+    <title>Resumé - Nuria Serrano | 3D Technical Artist</title>
+    <link rel="icon" type="image/png" href="../assets/images/ui/nurxen-logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/resume.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR UNIFICADO -->
     <nav class="navbar-main" aria-label="Main navigation">
         <div class="navbar-container">
             <a href="../index.html" class="navbar-brand">
@@ -22,7 +21,6 @@
             <div class="navbar-links">
                 <a href="../index.html" class="navlink">Home</a>
 
-                <!-- Portfolio Dropdown -->
                 <div class="navlink-dropdown">
                     <button class="dropdown-toggle" aria-expanded="false">
                         Work <i class="fa-solid fa-chevron-down dropdown-icon" aria-hidden="true"></i>
@@ -42,121 +40,103 @@
         </div>
     </nav>
 
-    <!-- MAIN CONTAINER - RESUMÉ -->
+    <!-- RESUMÉ CONTENEDOR CON LA ESTÉTICA DE TARJETA DE CONTACT -->
     <main class="resume-main">
+        <div class="resume-wrapper-card">
+            <div class="resume-container-inner">
 
-        <!-- CABECERA DEL RESUMÉ CON BOTÓN DE DESCARGA -->
-        <div class="resume-header-box">
-            <div>
-                <span class="section-eyebrow">✦ CURRICULUM VITAE</span>
-                <h1 class="resume-title">Nuria Serrano</h1>
-                <p class="resume-subtitle">3D Environment & Technical Artist</p>
+                <!-- HEADER CON TOQUE ELEGANTE -->
+                <header class="resume-header">
+                    <div class="resume-header-info">
+                        <span class="resume-eyebrow">✦ CURRICULUM VITAE</span>
+                        <h1 class="resume-name">Nuria Serrano</h1>
+                        <p class="resume-title">3D Technical Artist <span class="resume-title-accent">|</span> Real-Time Simulation & Game Development</p>
+                        <p class="resume-location">Madrid, Spain &nbsp;•&nbsp; nuriaserrano04@gmail.com &nbsp;•&nbsp; +34 688 919 229</p>
+                    </div>
+                    <div class="resume-header-actions">
+                        <a href="../files/CV_2025_English.pdf" target="_blank" rel="noopener noreferrer" class="resume-download-btn group">
+                            <i class="fa-solid fa-file-arrow-down resume-btn-icon" aria-hidden="true"></i> Download CV
+                        </a>
+                    </div>
+                </header>
+
+                <!-- CUADRICULA COMPACTA DE 3 COLUMNAS -->
+                <div class="resume-grid-compact">
+
+                    <!-- COLUMNA 1: Resumen y Habilidades -->
+                    <div class="resume-column">
+                        <section class="resume-block">
+                            <h2><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Summary</h2>
+                            <p class="resume-summary-text">
+                                Technical Artist specialized in simulation pipelines and game development. Expertise in modular architecture, real-time optimization, and Shader Graph. Experience ranging from clinical training simulators (Steam-published ECOE) to commercial games (UNCHAINED).
+                            </p>
+                        </section>
+
+                        <section class="resume-block">
+                            <h2><i class="fa-solid fa-star" aria-hidden="true"></i> Core Skills</h2>
+                            <div class="resume-tags-inline">
+                                <span>Unity 6</span> <span>Shader Graph</span> <span>C#</span> 
+                                <span>Blender (Adv)</span> <span>Substance Painter</span> <span>Channel Packing</span>
+                                <span>Pipeline Optimization</span> <span>Git</span> <span>Linux</span>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- COLUMNA 2: Experiencia Clave -->
+                    <div class="resume-column">
+                        <section class="resume-block">
+                            <h2><i class="fa-solid fa-computer" aria-hidden="true"></i> Key Experience</h2>
+                            
+                            <div class="resume-item-compact">
+                                <div class="item-title-row">
+                                    <h3>ECOE Medical Simulator (Steam)</h3>
+                                    <span class="item-date">2025</span>
+                                </div>
+                                <p class="item-role">Lead Environment Artist & Pipeline Specialist</p>
+                                <p class="item-desc">Modular architecture, optimization (ORM, Atlasing), custom shaders, and Baked GI setup for a clinical training simulator.</p>
+                            </div>
+
+                            <div class="resume-item-compact">
+                                <div class="item-title-row">
+                                    <h3>UNCHAINED (Commercial Game)</h3>
+                                    <span class="item-date">2023 - Pres.</span>
+                                </div>
+                                <p class="item-role">Tech & Environment Artist</p>
+                                <p class="item-desc">Asset modeling, rigging, and Unity integration. Winner of Game Scholars Jam 4th Edition, released on Steam.</p>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- COLUMNA 3: Educación y Enlaces -->
+                    <div class="resume-column">
+                        <section class="resume-block">
+                            <h2><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education</h2>
+                            <div class="resume-item-compact">
+                                <h3>B.S. in Game Development</h3>
+                                <p class="item-role">Universidad Rey Juan Carlos (2022 - 2026)</p>
+                                <p class="item-desc">Specialized track in 3D Graphics & Real-Time Systems. Erasmus at Haaga-Helia (Helsinki).</p>
+                            </div>
+                        </section>
+
+                        <section class="resume-block">
+                            <h2><i class="fa-solid fa-trophy" aria-hidden="true"></i> Recognition & Links</h2>
+                            <p class="resume-recognition-text">
+                                <strong>Awards:</strong> 1st Place Game Scholars Jam, National Devuego Finalist, 3x Jam Podium.<br>
+                                <strong>Languages:</strong> Spanish (Native), English (C1).
+                            </p>
+                            <div class="resume-quick-links">
+                                <a href="https://nurxen.github.io/PortfolioWebsite/" target="_blank">Portfolio</a>
+                                <a href="https://www.linkedin.com/in/nuria-serrano-martin-3d/" target="_blank">LinkedIn</a>
+                                <a href="https://www.artstation.com/nurxen1" target="_blank">ArtStation</a>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+
             </div>
-            <div>
-                <a href="../files/CV_2025_English.pdf" target="_blank" rel="noopener noreferrer" class="resume-download-btn">
-                    <i class="fa-solid fa-download"></i> Download PDF Resumé
-                </a>
-            </div>
-        </div>
-
-        <!-- GRID DE EXPERIENCIA Y HABILIDADES TÉCNICAS -->
-        <div class="resume-grid">
-
-            <!-- COLUMNA IZQUIERDA: EXPERIENCIA LABORAL -->
-            <div class="resume-col-main">
-                <section class="resume-section-card">
-                    <h2 class="resume-section-heading"><i class="fa-solid fa-briefcase"></i> Professional Experience</h2>
-                    
-                    <div class="resume-item">
-                        <div class="resume-item-header">
-                            <h3 class="resume-role">Tech & Art Lead</h3>
-                            <span class="resume-date">Simulation & XR</span>
-                        </div>
-                        <p class="resume-company">Industrial Pipeline & Real-Time Environments</p>
-                        <p class="resume-desc">
-                            Led modular asset pipelines, optimized real-time assemblies, and supervised engine integration workflows to guarantee maximum performance without visual degradation.
-                        </p>
-                    </div>
-
-                    <div class="resume-divider"></div>
-
-                    <div class="resume-item">
-                        <div class="resume-item-header">
-                            <h3 class="resume-role">TFG Lead Environment Artist</h3>
-                            <span class="resume-date">ECOE Medical Simulator</span>
-                        </div>
-                        <p class="resume-company">Academic Final Project (URJC)</p>
-                        <p class="resume-desc">
-                            Engineered a complete 3D pipeline for a medical simulation environment. Specialized in modular architecture design, channel-packed texture optimization, and custom node-based shaders.
-                        </p>
-                    </div>
-
-                    <div class="resume-divider"></div>
-
-                    <div class="resume-item">
-                        <div class="resume-item-header">
-                            <h3 class="resume-role">Cultural Representative</h3>
-                            <span class="resume-date">The Walt Disney Company</span>
-                        </div>
-                        <p class="resume-company">International Program</p>
-                        <p class="resume-desc">
-                            Focused on high-volume operations, precise cross-cultural communication, and strict adherence to international quality standards under pressure.
-                        </p>
-                    </div>
-                </section>
-
-                <section class="resume-section-card">
-                    <h2 class="resume-section-heading"><i class="fa-solid fa-award"></i> Honors & Awards</h2>
-                    <ul class="resume-awards-list">
-                        <li><strong>1st Place</strong> — Game Scholars Jam (Barcelona & Madrid)</li>
-                        <li><strong>Finalist</strong> — National Devuego Awards</li>
-                        <li><strong>3rd Place</strong> — Virtual Core Jam</li>
-                    </ul>
-                </section>
-            </div>
-
-            <!-- COLUMNA DERECHA: HABILIDADES Y SOFTWARE -->
-            <div class="resume-col-sidebar">
-                <section class="resume-section-card">
-                    <h2 class="resume-section-heading"><i class="fa-solid fa-laptop-code"></i> Software & Tools</h2>
-                    <div class="resume-tags-wrap">
-                        <span class="resume-tag">Unity Engine</span>
-                        <span class="resume-tag">Blender</span>
-                        <span class="resume-tag">Substance 3D Painter</span>
-                        <span class="resume-tag">Shader Graph</span>
-                        <span class="resume-tag">Photoshop</span>
-                        <span class="resume-tag">Git / Version Control</span>
-                    </div>
-                </section>
-
-                <section class="resume-section-card">
-                    <h2 class="resume-section-heading"><i class="fa-solid fa-gears"></i> Technical Focus</h2>
-                    <ul class="resume-bullets">
-                        <li>Modular Environment Design</li>
-                        <li>PBR Texturing & LookDev</li>
-                        <li>Real-time Lighting & Optimization</li>
-                        <li>Shader Node Development</li>
-                        <li>Asset Pipeline Integration</li>
-                    </ul>
-                </section>
-
-                <section class="resume-section-card">
-                    <h2 class="resume-section-heading"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
-                    <div class="resume-item" style="margin-bottom: 0;">
-                        <h3 class="resume-role" style="font-size: 0.95rem;">Game Development Degree</h3>
-                        <p class="resume-company">URJC, Madrid</p>
-                        <p class="resume-desc" style="margin-top: 0.25rem;">Specialized in Graphics Programming & 3D Art Pipelines.</p>
-                    </div>
-                    <div class="resume-divider" style="margin: 1rem 0;"></div>
-                    <div class="resume-item" style="margin-bottom: 0;">
-                        <h3 class="resume-role" style="font-size: 0.95rem;">Erasmus Exchange Program</h3>
-                        <p class="resume-company">Haaga-Helia, Helsinki</p>
-                        <p class="resume-desc" style="margin-top: 0.25rem;">International studies focusing on digital media and design.</p>
-                    </div>
-                </section>
-            </div>
-
         </div>
     </main>
+
 </body>
 </html>

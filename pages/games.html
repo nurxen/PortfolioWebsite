@@ -5,16 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Videogames - Nurxen | 3D Environment & Technical Artist</title>
-    <!-- Favicon profesional limpio -->
     <link rel="icon" type="image/png" href="../assets/images/ui/Calabaza.png" />
 
-    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-    <!-- Hojas de estilos unificadas -->
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/games.css" />
 </head>
@@ -42,7 +39,6 @@
             <div class="navbar-links">
                 <a href="../index.html" class="navlink">Home</a>
 
-                <!-- Portfolio Dropdown -->
                 <div class="navlink-dropdown">
                     <button class="dropdown-toggle" aria-expanded="false">
                         Work <i class="fa-solid fa-chevron-down dropdown-icon" aria-hidden="true"></i>
@@ -74,7 +70,7 @@
                 <h1 class="games-main-title">
                     Interactive<br /><span>Videogames</span>
                 </h1>
-                <p class="games-main-subtitle" lang="es">
+                <p class="games-main-subtitle">
                     Desarrollo de experiencias jugables, desde terror psicológico comercial hasta puzles isométricos premiados en Game Jams internacionales.
                 </p>
 
@@ -90,7 +86,7 @@
                 </div>
             </header>
 
-            <!-- Trailer Showcase / Workflow Box -->
+            <!-- Workflow Box -->
             <section class="games-section reveal-section" aria-label="Technical workflow">
                 <div class="games-workflow-box">
                     <div class="games-workflow-icon" aria-hidden="true">
@@ -105,7 +101,7 @@
                 </div>
             </section>
 
-            <!-- Games List Container -->
+            <!-- Games List Container (COMPACTO) -->
             <div class="games-list-wrapper">
 
                 <!-- 1. UNCHAINED (STEAM) -->
@@ -122,26 +118,36 @@
                                 <div class="games-tags-row">
                                     <span class="games-tag-primary">Steam (Demo)</span>
                                     <span class="games-tag-secondary">Psychological Horror</span>
-                                    <span class="games-tag-highlight"><i class="fa-solid fa-rocket" aria-hidden="true"></i> Commercial Release</span>
+                                    <span class="games-tag-highlight"><i class="fa-solid fa-rocket" aria-hidden="true"></i> Commercial</span>
                                 </div>
                                 <h2 id="unchained-title" class="games-article-title">UNCHAINED</h2>
                                 <p class="games-article-desc">
                                     Evolucionado desde nuestro prototipo galardonado. Explora un escritorio virtual abandonado que oculta un secreto terrible. Cuanto más profundizas, más peligroso se vuelve. <strong>Demo disponible en Steam.</strong>
                                 </p>
 
-                                <div class="games-meta-box">
-                                    <div>
-                                        <h3 class="games-meta-title"><i class="fa-solid fa-user-pen" aria-hidden="true"></i> My Responsibilities</h3>
-                                        <ul class="games-meta-list">
-                                            <li>• All 3D Models & Animations</li>
-                                            <li>• Unity Prefab Integration</li>
-                                            <li>• Animator & State Setup</li>
-                                        </ul>
+                                <!-- Responsabilidades Compactas (Badges) -->
+                                <div class="games-meta-compact">
+                                    <h3 class="games-meta-title"><i class="fa-solid fa-user-pen" aria-hidden="true"></i> My Responsibilities</h3>
+                                    <div class="games-responsibilities-badges">
+                                        <span class="games-badge-resp">3D Models & Animations</span>
+                                        <span class="games-badge-resp">Prefab Integration</span>
+                                        <span class="games-badge-resp">Animator & State Setup</span>
                                     </div>
-                                    <div>
-                                        <h3 class="games-meta-title text-opacity-50"><i class="fa-solid fa-link" aria-hidden="true"></i> Resources</h3>
-                                        <p class="games-meta-note">Textures created by teammates.</p>
+                                </div>
+
+                                <!-- Awards Destacados -->
+                                <div class="games-awards-compact">
+                                    <h3 class="games-award-title"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Awards</h3>
+                                    <div class="games-award-item">
+                                        <span class="games-award-badge">🏅 3rd Place</span>
+                                        <span class="games-award-text">Campanadas DeVuego 2025</span>
                                     </div>
+                                    <p class="games-award-quote">
+                                        "A psychological horror experience blending virtual desktop interaction with fourth-wall breaking."
+                                    </p>
+                                    <a href="https://www.devuego.es/blog/2025/12/31/unchained-la-ia-desatada/" target="_blank" rel="noopener noreferrer" class="games-link-inline">
+                                        Read Full Article →
+                                    </a>
                                 </div>
 
                                 <a href="https://store.steampowered.com/app/3234310/UNCHAINED/" target="_blank" rel="noopener noreferrer" class="games-action-btn">
@@ -150,42 +156,12 @@
                             </div>
                         </div>
 
-                        <!-- Gameplay media grid -->
-                        <div class="games-media-subgrid">
-                            <div class="games-video-cell">
-                                <video autoplay muted loop playsinline class="games-video-elem" aria-label="Unchained gameplay trailer">
-                                    <source src="../assets/videos/TRAILERS/THE REAL TRAILER UNCHAINED 2.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div class="games-img-col">
-                                <img src="../assets/images/games/UNCHAINED - STEAM/header.jpg" alt="Unchained screenshot 1" width="400" height="225" loading="lazy" class="games-sub-img">
-                                <img src="../assets/images/games/UNCHAINED - STEAM/imagekjb.png" alt="Unchained screenshot 2" width="400" height="225" loading="lazy" class="games-sub-img">
-                            </div>
-                        </div>
-
-                        <!-- Press & Reviews -->
-                        <div class="games-press-section">
-                            <h3 class="games-press-heading">Press &amp; Community Feedback</h3>
-                            <div class="games-press-card">
-                                <div class="games-press-header">
-                                    <span class="games-award-badge"><i class="fa-solid fa-trophy" aria-hidden="true"></i> 3rd Place</span>
-                                    <span class="games-press-subtitle">Campanadas DeVuego 2025</span>
-                                </div>
-                                <h4 class="font-display text-lg mb-2" style="color: var(--ganache);">"UNCHAINED - AI Unleashed"</h4>
-                                <p class="text-sm italic mb-3" style="color: rgba(35,26,23,0.75);">
-                                    "A psychological horror experience blending virtual desktop interaction with fourth-wall breaking. Count me in as a buyer."
-                                </p>
-                                <a href="https://www.devuego.es/blog/2025/12/31/unchained-la-ia-desatada/" target="_blank" rel="noopener noreferrer" class="games-link-inline">
-                                    Read Full Article on DeVuego &rarr;
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="games-youtube-grid">
-                            <div class="games-iframe-box"><iframe src="https://www.youtube.com/embed/eZuSMslaifw" title="Unchained Gameplay 1" allowfullscreen loading="lazy"></iframe></div>
-                            <div class="games-iframe-box"><iframe src="https://www.youtube.com/embed/zcWs9cYkU8s" title="Unchained Gameplay 2" allowfullscreen loading="lazy"></iframe></div>
-                            <div class="games-iframe-box"><iframe src="https://www.youtube.com/embed/E8NxZlQTXc8" title="Unchained Gameplay 3" allowfullscreen loading="lazy"></iframe></div>
+                        <!-- Video Trailer ÚNICO -->
+                        <div class="games-media-single">
+                            <video autoplay muted loop playsinline class="games-video-elem" aria-label="Unchained gameplay trailer">
+                                <source src="../assets/videos/TRAILERS/THE REAL TRAILER UNCHAINED 2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
                 </article>
@@ -201,25 +177,19 @@
                                 <div class="games-tags-row">
                                     <span class="games-tag-primary">Itch.io</span>
                                     <span class="games-tag-secondary">Puzzle</span>
-                                    <span class="games-tag-highlight"><i class="fa-solid fa-trophy" aria-hidden="true"></i> 3rd Place COTEDI Jam</span>
+                                    <span class="games-tag-highlight"><i class="fa-solid fa-trophy" aria-hidden="true"></i> 3rd Place COTEDI</span>
                                 </div>
                                 <h2 id="crosspaws-title" class="games-article-title">Crosspaws</h2>
                                 <p class="games-article-desc">
                                     No cambias a los animales, cambias el mundo que les rodea. En este puzle isométrico, guía a un grupo de animales adaptando el terreno a sus necesidades.
                                 </p>
 
-                                <div class="games-meta-box">
-                                    <div>
-                                        <h3 class="games-meta-title"><i class="fa-solid fa-user-pen" aria-hidden="true"></i> My Responsibilities</h3>
-                                        <ul class="games-meta-list">
-                                            <li>• 3D Characters & Environment</li>
-                                            <li>• Character Animations</li>
-                                            <li>• Unity Integration</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h3 class="games-meta-title text-opacity-50"><i class="fa-solid fa-link" aria-hidden="true"></i> Resources</h3>
-                                        <p class="games-meta-note">Textures by teammate.</p>
+                                <div class="games-meta-compact">
+                                    <h3 class="games-meta-title"><i class="fa-solid fa-user-pen" aria-hidden="true"></i> My Responsibilities</h3>
+                                    <div class="games-responsibilities-badges">
+                                        <span class="games-badge-resp">3D Characters & Environment</span>
+                                        <span class="games-badge-resp">Character Animations</span>
+                                        <span class="games-badge-resp">Unity Integration</span>
                                     </div>
                                 </div>
 
@@ -229,16 +199,10 @@
                             </div>
                         </div>
 
-                        <div class="games-media-subgrid">
-                            <div class="games-video-cell">
-                                <video autoplay muted loop playsinline class="games-video-elem" aria-label="Crosspaws gameplay trailer">
-                                    <source src="../assets/videos/TRAILERS/crosspaws_trailer.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="games-img-col">
-                                <img src="../assets/images/games/CROSSPAWS/menuprincipal.png" alt="Crosspaws Menu" width="400" height="225" loading="lazy" class="games-sub-img">
-                                <img src="../assets/images/games/CROSSPAWS/nivel2.png" alt="Crosspaws Level" width="400" height="225" loading="lazy" class="games-sub-img">
-                            </div>
+                        <div class="games-media-single">
+                            <video autoplay muted loop playsinline class="games-video-elem" aria-label="Crosspaws gameplay trailer">
+                                <source src="../assets/videos/TRAILERS/crosspaws_trailer.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                 </article>
@@ -254,21 +218,19 @@
                                 <div class="games-tags-row">
                                     <span class="games-tag-primary">Itch.io</span>
                                     <span class="games-tag-secondary">Clicker</span>
-                                    <span class="games-tag-highlight"><i class="fa-solid fa-medal" aria-hidden="true"></i> 2nd Place Jam</span>
+                                    <span class="games-tag-highlight"><i class="fa-solid fa-medal" aria-hidden="true"></i> 2nd Place</span>
                                 </div>
                                 <h2 id="antestres-title" class="games-article-title">ANT&amp;ESTRES</h2>
                                 <p class="games-article-desc">
                                     ¡Golpea la nuez gigante! Recluta un ejército de hormigas y haz clic sin parar hasta llegar al centro del caramelo. <strong>2º Premio en la 6ª Edición Game Jam Game Scholars.</strong>
                                 </p>
 
-                                <div class="games-meta-box">
-                                    <div>
-                                        <h3 class="games-meta-title"><i class="fa-solid fa-bug" aria-hidden="true"></i> Character Specialist</h3>
-                                        <ul class="games-meta-list">
-                                            <li>• Ant Modeling & Rigging</li>
-                                            <li>• Custom Animations</li>
-                                            <li>• Character Shaders</li>
-                                        </ul>
+                                <div class="games-meta-compact">
+                                    <h3 class="games-meta-title"><i class="fa-solid fa-bug" aria-hidden="true"></i> Character Specialist</h3>
+                                    <div class="games-responsibilities-badges">
+                                        <span class="games-badge-resp">Ant Modeling & Rigging</span>
+                                        <span class="games-badge-resp">Custom Animations</span>
+                                        <span class="games-badge-resp">Character Shaders</span>
                                     </div>
                                 </div>
 
@@ -278,16 +240,8 @@
                             </div>
                         </div>
 
-                        <div class="games-media-subgrid">
-                            <div class="games-video-cell">
-                                <video autoplay muted loop playsinline class="games-video-elem" aria-label="Ant&Estres gameplay">
-                                    <source src="../assets/images/games/atiestres/Fk0PCd.png" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="games-img-col">
-                                <img src="../assets/images/games/atiestres/Fk0PCd.png" alt="Ant screenshot 1" width="400" height="225" loading="lazy" class="games-sub-img">
-                                <img src="../assets/images/games/atiestres/6CCkqv.png" alt="Ant screenshot 2" width="400" height="225" loading="lazy" class="games-sub-img">
-                            </div>
+                        <div class="games-media-single">
+                            <img src="../assets/images/games/atiestres/Fk0PCd.png" alt="Ant&Estres screenshot" width="800" height="450" loading="lazy" class="games-static-img">
                         </div>
                     </div>
                 </article>
@@ -303,20 +257,18 @@
                                 <div class="games-tags-row">
                                     <span class="games-tag-primary">Itch.io</span>
                                     <span class="games-tag-secondary">Puzzle</span>
-                                    <span class="games-tag-highlight"><i class="fa-solid fa-trophy" aria-hidden="true"></i> 3rd Place Virtual Core Jam</span>
+                                    <span class="games-tag-highlight"><i class="fa-solid fa-trophy" aria-hidden="true"></i> 3rd Place Virtual Core</span>
                                 </div>
                                 <h2 id="obat-title" class="games-article-title">Once Button a Time</h2>
                                 <p class="games-article-desc">
                                     Carioca perdió sus ojos de botón. Usa botones de colores para ver el mundo de formas nuevas y llegar hasta el sastre George.
                                 </p>
 
-                                <div class="games-meta-box">
-                                    <div>
-                                        <h3 class="games-meta-title"><i class="fa-solid fa-cube" aria-hidden="true"></i> My Responsibilities</h3>
-                                        <ul class="games-meta-list">
-                                            <li>• Environment & Props Modeling</li>
-                                            <li>• Asset Assembly in Unity</li>
-                                        </ul>
+                                <div class="games-meta-compact">
+                                    <h3 class="games-meta-title"><i class="fa-solid fa-cube" aria-hidden="true"></i> My Responsibilities</h3>
+                                    <div class="games-responsibilities-badges">
+                                        <span class="games-badge-resp">Environment & Props Modeling</span>
+                                        <span class="games-badge-resp">Asset Assembly in Unity</span>
                                     </div>
                                 </div>
 
@@ -326,16 +278,10 @@
                             </div>
                         </div>
 
-                        <div class="games-media-subgrid">
-                            <div class="games-video-cell">
-                                <video autoplay muted loop playsinline class="games-video-elem" aria-label="OBAT trailer">
-                                    <source src="../assets/videos/TRAILERS/OBAT trailer .mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="games-img-col">
-                                <img src="../assets/images/games/OBAT/gameplay/2.png" alt="OBAT gameplay 1" width="400" height="225" loading="lazy" class="games-sub-img">
-                                <img src="../assets/images/games/OBAT/gameplay/3.png" alt="OBAT gameplay 2" width="400" height="225" loading="lazy" class="games-sub-img">
-                            </div>
+                        <div class="games-media-single">
+                            <video autoplay muted loop playsinline class="games-video-elem" aria-label="OBAT trailer">
+                                <source src="../assets/videos/TRAILERS/OBAT trailer .mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                 </article>
@@ -357,13 +303,11 @@
                                     La versión original creada para la GameJam Game Scholars 4ª Edición. Ganó el <strong>1er Puesto</strong>, llevándome a exhibirlo en el <em>Indie Dev Day</em> y dando vida al proyecto comercial actual en Steam.
                                 </p>
 
-                                <div class="games-meta-box">
-                                    <div>
-                                        <h3 class="games-meta-title"><i class="fa-solid fa-user-pen" aria-hidden="true"></i> My Responsibilities</h3>
-                                        <ul class="games-meta-list">
-                                            <li>• All 3D Assets (Jam Scope)</li>
-                                            <li>• Fast Animation & GitHub Collab</li>
-                                        </ul>
+                                <div class="games-meta-compact">
+                                    <h3 class="games-meta-title"><i class="fa-solid fa-user-pen" aria-hidden="true"></i> My Responsibilities</h3>
+                                    <div class="games-responsibilities-badges">
+                                        <span class="games-badge-resp">All 3D Assets (Jam Scope)</span>
+                                        <span class="games-badge-resp">Fast Animation & GitHub Collab</span>
                                     </div>
                                 </div>
 
@@ -372,22 +316,16 @@
                                         Play Jam Version <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
                                     </a>
                                     <span class="games-exhibit-ticket">
-                                        <i class="fa-solid fa-ticket mr-1 text-accent"></i> Exhibited at Indie Dev Day
+                                        <i class="fa-solid fa-ticket" aria-hidden="true"></i> Indie Dev Day
                                     </span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="games-media-subgrid">
-                            <div class="games-video-cell">
-                                <video autoplay muted loop playsinline class="games-video-elem" aria-label="Jam version trailer">
-                                    <source src="../assets/videos/TRAILERS/trailer unchained 3.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="games-img-col">
-                                <img src="../assets/images/games/UNCHAINED - JAM/Captura de pantalla 2025-09-30 202701.png" alt="Jam screenshot 1" width="400" height="225" loading="lazy" class="games-sub-img">
-                                <img src="../assets/images/games/UNCHAINED - JAM/Captura de pantalla 2025-09-30 201708.png" alt="Jam screenshot 2" width="400" height="225" loading="lazy" class="games-sub-img">
-                            </div>
+                        <div class="games-media-single">
+                            <video autoplay muted loop playsinline class="games-video-elem" aria-label="Jam version trailer">
+                                <source src="../assets/videos/TRAILERS/trailer unchained 3.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                 </article>
@@ -398,7 +336,7 @@
             <section class="games-explore-section reveal-section">
                 <h2 class="games-explore-title">Explore more games</h2>
                 <a href="https://nuriia.itch.io/" target="_blank" rel="noopener noreferrer" class="games-action-btn-secondary">
-                    Click here on Itch.io <i class="fa-solid fa-arrow-right ml-2" aria-hidden="true"></i>
+                    Visit Itch.io <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 </a>
             </section>
 
@@ -453,7 +391,7 @@
                     <p class="footer-copy">©2026 Nurxen. All Rights Reserved.</p>
                     <div class="footer-credit">
                         <span>Made with cozy vibes &amp; Blender</span>
-                        <i class="fa-solid fa-heart footer-heart animate-pulse" aria-hidden="true"></i>
+                        <i class="fa-solid fa-heart footer-heart" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>

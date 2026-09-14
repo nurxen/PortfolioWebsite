@@ -1,0 +1,276 @@
+/* ==========================================================
+   RESUME PAGE STYLES - HEREDANDO LA ELEGANCIA DE CONTACT
+   ========================================================== */
+.resume-main {
+    background-color: var(--vanilla);
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+}
+
+/* Tarjeta principal contenedora inspirada en la clase contact-card */
+.resume-wrapper-card {
+    max-width: 90rem;
+    width: 100%;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 3rem 3.5rem;
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 20px 50px rgba(35, 26, 23, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .resume-wrapper-card {
+        padding: 3.5rem 4rem;
+    }
+}
+
+.resume-container-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ==========================================================
+   HEADER CON ESTILO DISTINTIVO (Eyebrow & Tipografía)
+   ========================================================== */
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(35, 26, 23, 0.08);
+}
+
+.resume-eyebrow {
+    color: var(--brand-accent);
+    font-weight: 700;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.4rem;
+    display: block;
+}
+
+.resume-name {
+    font-family: "Lora", serif;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    color: var(--ganache);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.3rem;
+}
+
+.resume-title {
+    font-size: 0.78rem;
+    color: var(--ganache);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.35rem;
+}
+
+.resume-title-accent {
+    color: var(--brand-accent);
+}
+
+.resume-location {
+    font-size: 0.8rem;
+    color: rgba(35, 26, 23, 0.7);
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Botón de descarga con idéntica animación y estilo que contact-btn-primary */
+.resume-download-btn {
+    padding: 0.9rem 2.2rem;
+    background-color: var(--ganache);
+    color: var(--vanilla);
+    border-radius: 6px !important;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(35, 26, 23, 0.15);
+    transition: all 0.3s ease;
+}
+
+.resume-download-btn:hover {
+    background-color: var(--brand-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 107, 88, 0.25);
+}
+
+.resume-btn-icon {
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+}
+
+.resume-download-btn:hover .resume-btn-icon {
+    transform: translate(2px, -2px);
+}
+
+/* ==========================================================
+   CUADRICULA DE 3 COLUMNAS (Estructura compacta original)
+   ========================================================== */
+.resume-grid-compact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.resume-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.resume-block h2 {
+    font-family: "Lora", serif;
+    font-size: 1.1rem;
+    color: var(--ganache);
+    margin-bottom: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    border-bottom: 2px solid var(--brand-accent);
+    padding-bottom: 0.35rem;
+}
+
+.resume-block h2 i {
+    font-size: 0.9rem;
+    color: var(--brand-accent);
+}
+
+.resume-summary-text,
+.resume-recognition-text {
+    font-size: 0.82rem;
+    color: rgba(35, 26, 23, 0.8);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Píldoras de habilidades idénticas en diseño a las de contact */
+.resume-tags-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.resume-tags-inline span {
+    background-color: var(--surface-light);
+    border: 1px solid var(--border-subtle);
+    color: var(--ganache);
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+}
+
+.resume-tags-inline span:hover {
+    border-color: var(--brand-accent);
+    background-color: rgba(99, 107, 88, 0.08);
+}
+
+/* Items compactos de experiencia */
+.resume-item-compact {
+    margin-bottom: 1.1rem;
+}
+
+.resume-item-compact:last-child {
+    margin-bottom: 0;
+}
+
+.item-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.resume-item-compact h3 {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--ganache);
+    margin: 0;
+}
+
+.item-date {
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: var(--brand-accent);
+    text-transform: uppercase;
+}
+
+.item-role {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--brand-accent);
+    margin: 0.15rem 0;
+}
+
+.item-desc {
+    font-size: 0.78rem;
+    color: rgba(35, 26, 23, 0.75);
+    line-height: 1.45;
+    margin: 0;
+}
+
+/* Enlaces rápidos */
+.resume-quick-links {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 0.75rem;
+}
+
+.resume-quick-links a {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--brand-accent);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: color 0.2s ease;
+}
+
+.resume-quick-links a:hover {
+    color: var(--ganache);
+    text-decoration: underline;
+}
+
+/* ==========================================================
+   RESPONSIVO
+   ========================================================== */
+@media (max-width: 1024px) {
+    .resume-main {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+    
+    .resume-wrapper-card {
+        padding: 2rem;
+    }
+
+    .resume-grid-compact {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .resume-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+}

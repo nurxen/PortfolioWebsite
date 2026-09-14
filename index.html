@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuria Serrano | 3D Environment & Technical Artist</title>
-    <link rel="icon" type="image/png" href="assets/images/ui/nurxen-logo.png" />
+    <link rel="icon" type="image/png" href="assets/images/ui/nurxen-logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
 
     <meta name="description"
         content="Portfolio of Nuria Serrano. 3D Environment Artist & Technical Artist specializing in modular workflows and Unity integration.">
@@ -47,19 +50,17 @@
         </div>
     </nav>
 
-    <main id="page-about" class="page-view active page-main">
+    <main class="page-view active page-main">
 
+        <!-- 1. HERO SECTION -->
         <section class="hero-section">
-
             <div class="hero-bg">
-                <img src="assets/images/artwork/3D/otoño mesa/render definitivo.png"
-                    alt="High-fidelity 3D Environment Render Background" width="1920" height="1080"
-                    class="hero-bg-img">
+                <img src="assets/images/artwork/3D/otono-mesa/render definitivo.png"
+                    alt="High-fidelity 3D Environment Render Background" width="1920" height="1080" class="hero-bg-img">
                 <div class="hero-bg-overlay"></div>
             </div>
 
             <div class="hero-grid reveal-section">
-
                 <div class="hero-info">
                     <h1 class="hero-title">
                         Nuria Serrano
@@ -85,162 +86,195 @@
                         <a href="pages/artwork.html" class="hero-btn-primary">
                             View Portfolio <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <a href="pages/contact.html" class="hero-btn-secondary">
-                            Contact Me <i class="fa-solid fa-envelope"></i>
+                        <a href="files/CV_2025_English.pdf" target="_blank" rel="noopener noreferrer" class="hero-btn-secondary">
+                            See CV <i class="fa-solid fa-file-arrow-down"></i>
                         </a>
-                    </div>  
+                    </div>
                 </div>
 
                 <div class="hero-video-wrap">
                     <div class="hero-video-frame">
                         <div class="hero-video-shade"></div>
-                        <video autoplay muted loop playsinline class="hero-video-iframe" aria-label="Nuria Serrano Art Showreel">
-                            <source src="/assets/videos/Showreel_NuriaSerrano (2).mp4" type="video/mp4">
+                        <video autoplay muted loop playsinline class="hero-video-iframe"
+                            aria-label="Nuria Serrano Art Showreel">
+                            <source src="assets/videos/showreel/Showreel_NuriaSerrano.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. SELECTED WORK -->
+        <section class="selected-work-section">
+            <div class="selected-work-container">
+                
+                <div class="selected-work-header">
+                    <span class="section-eyebrow">✦ CASE STUDIES</span>
+                    <h2 class="section-title">Selected Work</h2>
+                    <p class="section-paragraph">
+                        Each project includes a look behind the scenes: <strong class="text-strong">my exact role, the specific technical challenges</strong> and the optimized pipeline decisions that shaped the final playable experience.
+                    </p>
+                    <p class="section-paragraph">
+                        I enjoy sharing both the beauty of the environment art and the technical engineering behind it.
+                    </p>
+                    <div class="selected-work-cta">
+                        <a href="pages/artwork.html" class="link-pill">
+                            View Portfolio <i class="fa-solid fa-arrow-right link-pill-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="projects-grid-3">
+                    <!-- 1. Videojuego -->
+                    <article class="project-card">
+                        <div class="project-image-wrap">
+                            <img src="assets/images/games/unchained-steam/header.jpg" alt="Unchained" class="project-image">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Videogame</span>
+                            <p class="project-desc">
+                                Unchained - Environment art and character rigging for Steam performance.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 2. Técnico / Simulación -->
+                    <article class="project-card">
+                        <div class="project-image-wrap">
+                            <img src="assets/images/artwork/3D/ecoe/renders/Diseño del Entorno 3D/consulta_estacion_diagnostico.png" alt="Medical Simulation ECOE" class="project-image">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Medical Simulation</span>
+                            <p class="project-desc">
+                                ECOE 3D environment, modular architecture, and technical optimizations.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 3. Bonito / Artístico -->
+                    <article class="project-card">
+                        <div class="project-image-wrap">
+                            <img src="assets/images/artwork/3D/otono-mesa/render definitivo.png" alt="Autumn Table" class="project-image">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Lighting & Compo</span>
+                            <p class="project-desc">
+                                Autumn Table - Atmospheric lookdev and cozy interior lighting study.
+                            </p>
+                        </div>
+                    </article>
                 </div>
 
             </div>
         </section>
 
-<section id="specialties-showcase" class="specialties-section">
-        <div class="specialties-container">
+        <!-- 3. CORE STRENGTHS / SPECIALTIES -->
+        <section id="specialties-showcase" class="specialties-section">
+            <div class="specialties-container">
+                <div class="specialties-header-minimal">
+                    <span class="section-eyebrow">✦ CORE PILLARS</span>
+                    <h2 class="specialties-section-title">What I Bring to a Team</h2>
+                </div>
 
-            <div>
-                <div class="specialties-grid">
-
-                    <div class="specialty-card">
-                        <div class="specialty-icon">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-                        <div>
-                            <h3 class="specialty-title">Shader Development</h3>
-                            <p class="specialty-desc">
-                                Custom node-based shaders for unique stylistic and technical visuals in Unity.
-                            </p>
+                <div class="specialties-row-grid">
+                    
+                    <div class="specialty-pill-card">
+                        <div class="specialty-pill-icon"><i class="fa-solid fa-code"></i></div>
+                        <div class="specialty-pill-content">
+                            <h4>Shader Development</h4>
+                            <p>Custom node-based systems for unique stylized visuals.</p>
                         </div>
                     </div>
 
-                    <div class="specialty-card">
-                        <div class="specialty-icon">
-                            <i class="fa-solid fa-gears"></i>
-                        </div>
-                        <div>
-                            <h3 class="specialty-title">Pipeline Optimization</h3>
-                            <p class="specialty-desc">
-                                Asset workflows, texture atlasing, and channel packing designed for peak engine performance.
-                            </p>
+                    <div class="specialty-pill-card">
+                        <div class="specialty-pill-icon"><i class="fa-solid fa-gears"></i></div>
+                        <div class="specialty-pill-content">
+                            <h4>Pipeline Optimization</h4>
+                            <p>Asset workflows and texture atlasing for peak performance.</p>
                         </div>
                     </div>
 
-                    <div class="specialty-card">
-                        <div class="specialty-icon">
-                            <i class="fa-solid fa-lightbulb"></i>
-                        </div>
-                        <div>
-                            <h3 class="specialty-title">Real-time Lighting</h3>
-                            <p class="specialty-desc">
-                                Baked GI setups and reflection probes tailored for narrative impact and efficiency.
-                            </p>
+                    <div class="specialty-pill-card">
+                        <div class="specialty-pill-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                        <div class="specialty-pill-content">
+                            <h4>Real-time Lighting</h4>
+                            <p>Baked GI and probes tailored for atmosphere and efficiency.</p>
                         </div>
                     </div>
 
-                    <div class="specialty-card">
-                        <div class="specialty-icon">
-                            <i class="fa-solid fa-cube"></i>
-                        </div>
-                        <div>
-                            <h3 class="specialty-title">Technical 3D</h3>
-                            <p class="specialty-desc">
-                                Modular environment modeling and rigging with an engine-first structural mindset.
-                            </p>
+                    <div class="specialty-pill-card">
+                        <div class="specialty-pill-icon"><i class="fa-solid fa-cube"></i></div>
+                        <div class="specialty-pill-content">
+                            <h4>Technical 3D</h4>
+                            <p>Modular environment structures with an engine-first mindset.</p>
                         </div>
                     </div>
 
                 </div>
             </div>
+        </section>
 
-            <div class="selected-work-grid">
+        <!-- 4. TECHNICAL STACK / SKILLS (COMPACTO - Nuevas clases) -->
+        <section id="skills" class="skills-section-compact">
+            <div class="skills-container-compact">
+                <div class="skills-header-compact">
+                    <span class="section-eyebrow">✦ TECHNICAL EXPERTISE</span>
+                    <h2 class="skills-title-compact">Technical Stack</h2>
+                </div>
 
-                <div class="selected-work-text">
-                    <div>
-                        <span class="section-eyebrow">✦ CASE STUDIES</span>
-                        <h2 class="section-title">Selected Work</h2>
-                        <p class="section-paragraph">
-                            Each project includes a look behind the scenes: <strong class="text-strong">my exact role, the specific technical challenges</strong> and the optimized pipeline decisions that shaped the final playable experience.
-                        </p>
-                        <p class="section-paragraph">
-                            I enjoy sharing both the beauty of the environment art and the technical engineering behind it.
-                        </p>
-
-                        <div class="selected-work-cta">
-                            <a href="pages/artwork.html" class="link-pill">
-                                View Portfolio <i class="fa-solid fa-arrow-right link-pill-icon"></i>
-                            </a>
+                <div class="skills-categories-grid">
+                    
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon"><i class="fa-solid fa-gamepad"></i></div>
+                            <h3 class="skill-category-title">Engines & Tech Art</h3>
                         </div>
+                        <div class="skill-category-tags">
+                            <span class="skill-tag-compact">Unity 6</span>
+                            <span class="skill-tag-compact">Shader Graph</span>
+                            <span class="skill-tag-compact">VFX Graph</span>
+                            <span class="skill-tag-compact">Profiler</span>
+                            <span class="skill-tag-compact">Light Probes</span>
+                        </div>
+                        <p class="skill-category-note">Materiales procedimentales, Channel Packing RGBA, MPB, Iluminación avanzada.</p>
                     </div>
-                </div>
 
-                <div class="projects-col">
-                    <div class="projects-grid">
-
-                        <article class="project-card">
-                            <div class="project-image-wrap">
-                                <img src="assets/images/sims/ecoe_placeholder.jpg" alt="Medical Simulation ECOE" class="project-image">
-                            </div>
-                            <div class="project-info">
-                                <span class="project-category">Medical Simulation</span>
-                                <p class="project-desc">
-                                    ECOE 3D environment, modular architecture, and technical optimizations.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="project-card">
-                            <div class="project-image-wrap">
-                                <img src="assets/images/games/UNCHAINED - STEAM/header.jpg" alt="Unchained" class="project-image">
-                            </div>
-                            <div class="project-info">
-                                <span class="project-category">Videogame</span>
-                                <p class="project-desc">
-                                    Unchained - Environment art and character rigging for Steam performance.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="project-card">
-                            <div class="project-image-wrap">
-                                <img src="assets/images/artwork/3D/otoño mesa/render definitivo.png" alt="Autumn Table" class="project-image">
-                            </div>
-                            <div class="project-info">
-                                <span class="project-category">Lighting & Compo</span>
-                                <p class="project-desc">
-                                    Autumn Table - Atmospheric lookdev and cozy interior lighting study.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="project-card">
-                            <div class="project-image-wrap">
-                                <img src="assets/images/artwork/3D/otoño mesa/render definitivo.png" alt="Kitchen Assets" class="project-image">
-                            </div>
-                            <div class="project-info">
-                                <span class="project-category">Environments & Props</span>
-                                <p class="project-desc">
-                                    Prop modeling and texturing workflow breakdown for game props.
-                                </p>
-                            </div>
-                        </article>
-
+                    <div class="skill-category skill-category-featured">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon"><i class="fa-solid fa-cube"></i></div>
+                            <h3 class="skill-category-title">3D Pipeline & DCC</h3>
+                            <span class="skill-badge-small">Main Focus</span>
+                        </div>
+                        <div class="skill-category-tags">
+                            <span class="skill-tag-compact">Blender (Adv)</span>
+                            <span class="skill-tag-compact">Substance Painter</span>
+                            <span class="skill-tag-compact">3ds Max</span>
+                            <span class="skill-tag-compact">SketchUp</span>
+                        </div>
+                        <p class="skill-category-note">Pipeline completo: High/Low Poly, UV Unwrap, Baking (Normal, AO, ORM), Texture Atlasing.</p>
                     </div>
-                </div>
 
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon"><i class="fa-solid fa-code"></i></div>
+                            <h3 class="skill-category-title">Programming & DevOps</h3>
+                        </div>
+                        <div class="skill-category-tags">
+                            <span class="skill-tag-compact">C#</span>
+                            <span class="skill-tag-compact">Python</span>
+                            <span class="skill-tag-compact">C++</span>
+                            <span class="skill-tag-compact">Java</span>
+                        </div>
+                        <p class="skill-category-note">Git/GitHub Desktop, Jira, Notion. Metodologías Agile/Scrum aplicadas a desarrollo.</p>
+                    </div>
+
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-<div class="marquee-wrap">
+        <!-- 5. MARQUEE (Ahora después de Skills, antes de Contact) -->
+        <div class="marquee-wrap">
             <div class="marquee-track">
                 <div class="marquee-content" aria-hidden="true">
                     <span class="marquee-text">Technical Artist</span>
@@ -269,86 +303,20 @@
             </div>
         </div>
 
-<section id="skills" class="skills-section">
-            <div class="skills-container">
-                <div class="skills-header">
-                    <span class="section-eyebrow">✦ TECHNICAL EXPERTISE</span>
-                    <h2 class="skills-title">Technical Stack</h2>
-                </div>
-
-                <div class="skills-grid">
-
-                    <div class="skill-card">
-                        <div class="skill-card-header">
-                            <div class="skill-icon skill-icon-blue"><i class="fa-solid fa-gamepad"></i></div>
-                            <h3 class="skill-card-title">Engines & Tech Art</h3>
-                        </div>
-                        <div class="skill-card-body">
-                            <div class="skill-tags">
-                                <span class="skill-tag skill-tag-blue">Unity 6</span>
-                                <span class="skill-tag skill-tag-blue">Shader Graph</span>
-                                <span class="skill-tag skill-tag-blue">VFX Graph</span>
-                                <span class="skill-tag skill-tag-blue">Profiler</span>
-                                <span class="skill-tag skill-tag-blue">Light Probes</span>
-                            </div>
-                            <div class="skill-note">
-                                Materiales procedimentales, Channel Packing RGBA, MPB, Iluminación avanzada.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-card skill-card-featured">
-                        <div class="skill-badge-main">Main Focus</div>
-                        <div class="skill-card-header">
-                            <div class="skill-icon skill-icon-red"><i class="fa-solid fa-cube"></i></div>
-                            <h3 class="skill-card-title">3D Pipeline & DCC</h3>
-                        </div>
-                        <div class="skill-card-body">
-                            <div class="skill-tags">
-                                <span class="skill-tag skill-tag-red">Blender (Adv)</span>
-                                <span class="skill-tag skill-tag-red">Substance Painter</span>
-                                <span class="skill-tag skill-tag-red">3ds Max</span>
-                                <span class="skill-tag skill-tag-red">SketchUp</span>
-                            </div>
-                            <div class="skill-note">
-                                Pipeline completo: High/Low Poly, UV Unwrap, Baking (Normal, AO, ORM), Texture Atlasing.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-card-header">
-                            <div class="skill-icon skill-icon-slate"><i class="fa-solid fa-code"></i></div>
-                            <h3 class="skill-card-title">Programming & DevOps</h3>
-                        </div>
-                        <div class="skill-card-body">
-                            <div class="skill-tags">
-                                <span class="skill-tag skill-tag-slate">C#</span>
-                                <span class="skill-tag skill-tag-slate">Python</span>
-                                <span class="skill-tag skill-tag-slate">C++</span>
-                                <span class="skill-tag skill-tag-slate">Java</span>
-                            </div>
-                            <div class="skill-note">
-                                Git/GitHub Desktop, Jira, Notion. Metodologías Agile/Scrum aplicadas a desarrollo.
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-<section id="contact-cv" class="contact-section reveal-section">
+        <!-- 6. CONTACT & CV CONVERSION BLOCK -->
+        <section id="contact-cv" class="contact-section reveal-section">
             <div class="contact-card">
                 <div class="contact-content">
                     <span class="contact-eyebrow">✦ Let's build something meaningful</span>
-                    
+
                     <h2 class="contact-title">
-                        Let's stay <br> 
+                        Let's stay <br>
                         <span class="text-strong-red">connected</span>
                     </h2>
 
                     <p class="contact-description">
-                        I am available for freelance opportunities and full-time positions. If you like my workflow and standard, let's create something together.
+                        I am available for freelance opportunities and full-time positions. If you like my workflow and
+                        standard, let's create something together.
                     </p>
 
                     <div class="contact-actions">
@@ -384,7 +352,7 @@
 
     </main>
 
-<div class="footer-wrap">
+    <div class="footer-wrap">
         <svg class="footer-wave" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
             <path
                 d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,139,576,170.7C672,203,768,245,864,240C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
@@ -393,9 +361,7 @@
 
         <footer class="site-footer">
             <div class="footer-container">
-
                 <div class="footer-grid">
-
                     <div class="footer-brand-col">
                         <a href="index.html" class="footer-brand">
                             nurxen<span class="accent-red">.</span>
