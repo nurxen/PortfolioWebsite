@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artwork Gallery - Nurxen | 3D Environment & Technical Artist</title>
-    <link rel="icon" type="image/png" href="../assets/images/ui/nurxen-logo.png" />
+    <title>Artwork Gallery - Nuria Serrano | 3D Environment & Technical Artist</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234A3B32'/><text x='50%' y='52%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='42' fill='%23EFE9DF'>NS</text></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/artwork.css" />
+    <script src="https://gtranslate.net/zh/autoload.js" defer></script>
 </head>
 
 <body>
@@ -21,9 +22,9 @@
     <nav id="side-nav" aria-label="Page sections" class="artwork-side-nav">
         <div class="artwork-side-line" aria-hidden="true"></div>
         <a href="#featured" class="artwork-side-link">Featured</a>
-        <a href="#props-section" class="artwork-side-link">Assets</a>
-        <a href="#shaders" class="artwork-side-link">Technical</a>
-        <a href="#motion-section" class="artwork-side-link">Motion</a>
+        <a href="#optimization" class="artwork-side-link">Technical</a>
+        <a href="#materials" class="artwork-side-link">Materials</a>
+        <a href="#lighting" class="artwork-side-link">Lighting</a>
         <a href="#gallery" class="artwork-side-link">Gallery</a>
         <div class="artwork-side-line" aria-hidden="true"></div>
     </nav>
@@ -60,67 +61,453 @@
         <div class="artwork-container">
             
             <header class="artwork-header reveal-section">
-                <span class="section-eyebrow">✦ PORTFOLIO 2026</span>
+                <span class="section-eyebrow">✦ TECHNICAL ART PORTFOLIO</span>
                 <h1 class="artwork-main-title">
-                    Stylized<br /><span>Artistry</span>
+                    3D Environment<br /><span>Optimization</span>
                 </h1>
                 <p class="artwork-main-subtitle">
-                    Blending traditional art with 3D technology to create unique visual experiences optimized for real-time rendering.
+                    Real-time rendering, technical pipeline optimization, and shader development for professional simulation and interactive experiences.
                 </p>
             </header>
 
-            <!-- 1. Featured Project Section -->
+            <!-- 1. FEATURED PROJECT: ECOE SIMULATOR -->
             <section id="featured" class="artwork-section reveal-section" aria-labelledby="featured-title">
                 <div class="artwork-featured-box">
                     <div class="artwork-featured-glow" aria-hidden="true"></div>
 
-                    <div class="artwork-featured-grid">
+                    <div class="artwork-section-header-row">
                         <div>
-                            <span class="artwork-category-tag">Environment Art</span>
+                            <span class="artwork-category-tag">Full Pipeline Project</span>
                             <h2 id="featured-title" class="artwork-section-title">
-                                The Cozy Studio
+                                ECOE 3D Simulator
                             </h2>
                             <p class="artwork-section-desc">
-                                A detailed study on "cozy" lighting and asset optimization. This project demonstrates my ability to manage the complete pipeline: from concept to final engine render.
+                                Complete technical direction for a clinical simulation platform. 5+ months developing modular PBR assets, implementing shader graph solutions, optimizing render pipeline, and compositing post-processing effects for real-time performance.
                             </p>
-                            <div class="artwork-tech-tags">
-                                <span class="artwork-tech-tag">Blender</span>
-                                <span class="artwork-tech-tag">Substance Painter</span>
-                                <span class="artwork-tech-tag">Unity Engine</span>
-                            </div>
-                        </div>
-                        <div class="artwork-featured">
-                            <div class="bg-featured-img" role="img" aria-label="The Cozy Studio — Main Render"></div>
                         </div>
                     </div>
 
-                    <div class="artwork-subgrid">
+                    <!-- ASYMMETRIC GRID -->
+                    <div class="asymmetric-grid-1">
+                        <div>
+                            <p style="font-size: 0.8rem; color: var(--brand-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">Render View</p>
+                            <div class="bg-featured-img" role="img" aria-label="ECOE 3D Environment — Final Render"></div>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.8rem; color: var(--brand-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">Technical Breakdown</p>
+                            <div style="background: var(--vanilla); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1.5rem; gap: 1rem;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.8rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--border-subtle);">
+                                    <span style="font-size: 0.75rem; font-weight: 700; color: rgba(35, 26, 23, 0.6); text-transform: uppercase;">Triangles</span>
+                                    <span style="font-size: 0.9rem; font-weight: 700; color: var(--brand-accent);">45K</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.8rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--border-subtle);">
+                                    <span style="font-size: 0.75rem; font-weight: 700; color: rgba(35, 26, 23, 0.6); text-transform: uppercase;">Draw Calls</span>
+                                    <span style="font-size: 0.9rem; font-weight: 700; color: var(--brand-accent);">12</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.8rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--border-subtle);">
+                                    <span style="font-size: 0.75rem; font-weight: 700; color: rgba(35, 26, 23, 0.6); text-transform: uppercase;">Atlased Textures</span>
+                                    <span style="font-size: 0.9rem; font-weight: 700; color: var(--brand-accent);">2K PBR</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span style="font-size: 0.75rem; font-weight: 700; color: rgba(35, 26, 23, 0.6); text-transform: uppercase;">Lighting</span>
+                                    <span style="font-size: 0.9rem; font-weight: 700; color: var(--brand-accent);">Hybrid</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TECH SPECS -->
+                    <div class="tech-stats-grid" style="margin-top: 3rem;">
+                        <div class="tech-stat-card">
+                            <div class="tech-stat-value">3</div>
+                            <div class="tech-stat-label">Material Variants</div>
+                        </div>
+                        <div class="tech-stat-card">
+                            <div class="tech-stat-value">4</div>
+                            <div class="tech-stat-label">Texture Maps</div>
+                        </div>
+                        <div class="tech-stat-card">
+                            <div class="tech-stat-value">Unity URP</div>
+                            <div class="tech-stat-label">Pipeline</div>
+                        </div>
+                        <div class="tech-stat-card">
+                            <div class="tech-stat-value">60 FPS</div>
+                            <div class="tech-stat-label">Target Performance</div>
+                        </div>
+                    </div>
+
+                    <!-- 3 SUBCARDS WITH DETAILS -->
+                    <div class="artwork-subgrid" style="margin-top: 3rem;">
                         <div class="artwork-subcard">
-                            <div class="bg-sub-1-img" role="img" aria-label="Topology Example"></div>
-                            <h3 class="artwork-subcard-title">Topology & Optimization</h3>
-                            <p class="artwork-subcard-text">Clean quad-based topology optimized for deformation and game engine performance.</p>
+                            <div class="bg-sub-1-img" role="img" aria-label="Wireframe"></div>
+                            <h3 class="artwork-subcard-title">Topology & Wireframe</h3>
+                            <p class="artwork-subcard-text">Clean quad-based topology. Optimized edge flow for deformation, supporting modular assembly across scenes.</p>
                         </div>
                         <div class="artwork-subcard">
-                            <div class="bg-sub-2-img" role="img" aria-label="UV Layout Example"></div>
-                            <h3 class="artwork-subcard-title">Efficient UVs</h3>
-                            <p class="artwork-subcard-text">Maximized UV space usage with proper texel density consistency across the scene.</p>
+                            <div class="bg-sub-2-img" role="img" aria-label="UV Layout"></div>
+                            <h3 class="artwork-subcard-title">Efficient UVs & Atlasing</h3>
+                            <p class="artwork-subcard-text">Channel-packed RGBA maps. Consistent texel density (512px/m). Multiple materials sharing single atlas.</p>
                         </div>
                         <div class="artwork-subcard">
-                            <div class="bg-sub-3-img" role="img" aria-label="Lighting Example"></div>
-                            <h3 class="artwork-subcard-title">Lighting & Mood</h3>
-                            <p class="artwork-subcard-text">Combination of Baked Lightmaps and Real-time lights to achieve a cozy, warm atmosphere.</p>
+                            <div class="bg-sub-3-img" role="img" aria-label="Lighting Setup"></div>
+                            <h3 class="artwork-subcard-title">Hybrid Lighting Approach</h3>
+                            <p class="artwork-subcard-text">Baked GI + Light Probes + Real-time lights. Compositing passes for post-pro mood and ambient occlusion.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 2. 3D Props Section -->
+            <!-- 2. OPTIMIZATION & PIPELINE SECTION -->
+            <section id="optimization" class="artwork-section reveal-section" aria-labelledby="optimization-title">
+                <div class="artwork-section-header-row">
+                    <div>
+                        <p class="artwork-category-tag" style="margin-bottom: 0.5rem;">Performance Metrics & Pipeline</p>
+                        <h2 id="optimization-title" class="artwork-section-title">Technical Optimization</h2>
+                        <p class="artwork-section-desc">ECOE Simulator: From 2,000 draw calls to 200. Real-time profiling data from Unity Profiler.</p>
+                    </div>
+                </div>
+
+<!-- OPTIMIZATION COMPARISON BEFORE/AFTER -->
+                <div style="margin-bottom: 3rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                        <div>
+                            <p style="font-size: 0.8rem; color: var(--brand-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">Before Optimization (Raw Import)</p>
+                            <img src="../assets/images/artwork/3D/ecoe/renders/ProfilerRenderingBeforeAtlasMedicaments.png" alt="Profiler metrics before optimization" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-subtle);" />
+                        </div>
+                        <div>
+                            <p style="font-size: 0.8rem; color: var(--brand-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">After Optimization (Best Practices)</p>
+                            <img src="../assets/images/artwork/3D/ecoe/Textures/ProfilerRenderingBuildDevelopement.png" alt="Profiler metrics after optimization" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-subtle);" />
+                        </div>
+                    </div>
+
+                    <!-- METRICS TABLE -->
+                    <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+                        <h3 style="font-family: 'Lora', serif; font-size: 1rem; font-weight: 700; color: var(--ganache); margin-bottom: 1.5rem;">Performance Comparison</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1rem; font-size: 0.85rem;">
+                            <div style="padding: 1rem; background: rgba(99, 107, 88, 0.08); border-radius: 6px;">
+                                <div style="font-weight: 700; color: var(--ganache); margin-bottom: 0.3rem;">SetPass Calls</div>
+                                <div style="color: rgba(35, 26, 23, 0.6); font-size: 0.75rem;">2.5k → 31</div>
+                                <div style="color: var(--brand-accent); font-weight: 700; margin-top: 0.5rem;">-98.8%</div>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(99, 107, 88, 0.08); border-radius: 6px;">
+                                <div style="font-weight: 700; color: var(--ganache); margin-bottom: 0.3rem;">Draw Calls</div>
+                                <div style="color: rgba(35, 26, 23, 0.6); font-size: 0.75rem;">~2.7k → 54</div>
+                                <div style="color: var(--brand-accent); font-weight: 700; margin-top: 0.5rem;">-98.0%</div>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(99, 107, 88, 0.08); border-radius: 6px;">
+                                <div style="font-weight: 700; color: var(--ganache); margin-bottom: 0.3rem;">Triangles</div>
+                                <div style="color: rgba(35, 26, 23, 0.6); font-size: 0.75rem;">765k → 85k</div>
+                                <div style="color: var(--brand-accent); font-weight: 700; margin-top: 0.5rem;">-88.9%</div>
+                            </div>
+                            <div style="padding: 1rem; background: rgba(99, 107, 88, 0.08); border-radius: 6px;">
+                                <div style="font-weight: 700; color: var(--ganache); margin-bottom: 0.3rem;">Frame Rate</div>
+                                <div style="color: rgba(35, 26, 23, 0.6); font-size: 0.75rem;">&lt;30 FPS → 120 FPS</div>
+                                <div style="color: var(--brand-accent); font-weight: 700; margin-top: 0.5rem;">+300%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ASYMMETRIC GRID 2 -->
+                <div class="asymmetric-grid-2">
+                    <div>
+                        <h3 style="font-family: 'Lora', serif; font-size: 1.1rem; font-weight: 700; color: var(--ganache); margin-bottom: 1.5rem;">Optimization Techniques</h3>
+                        <div class="optimization-section">
+                            <div class="breakdown-list">
+                                <div class="breakdown-item">
+                                    <span class="breakdown-icon"><i class="fa-solid fa-cube"></i></span>
+                                    <div class="breakdown-content">
+                                        <div class="breakdown-title">Static Batching</div>
+                                        <div class="breakdown-desc">Grouped meshes sharing materials. Allowed the GPU to render in combined batches rather than thousands of individual calls.</div>
+                                    </div>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-icon"><i class="fa-solid fa-image"></i></span>
+                                    <div class="breakdown-content">
+                                        <div class="breakdown-title">Texture Atlasing</div>
+                                        <div class="breakdown-desc">Combined multiple object textures into unified atlases, drastically dropping state changes and SetPass overhead (2.5k → 31).</div>
+                                    </div>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-icon"><i class="fa-solid fa-wind"></i></span>
+                                    <div class="breakdown-content">
+                                        <div class="breakdown-title">Mesh Collider Removal</div>
+                                        <div class="breakdown-desc">Replaced overly complex mesh colliders with simplified primitive Box Colliders to minimize physics overhead.</div>
+                                    </div>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-icon"><i class="fa-solid fa-lightbulb"></i></span>
+                                    <div class="breakdown-content">
+                                        <div class="breakdown-title">Baked Lighting</div>
+                                        <div class="breakdown-desc">Pre-calculated illumination and utilized Light Probes for dynamic elements, eliminating real-time per-frame calculations.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 style="font-family: 'Lora', serif; font-size: 1.1rem; font-weight: 700; color: var(--ganache); margin-bottom: 1.5rem;">Target Specifications</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;">
+                            <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1.5rem; text-align: center;">
+                                <div style="font-family: 'Lora', serif; font-size: 2.2rem; font-weight: 700; color: var(--brand-accent); margin-bottom: 0.3rem;">120</div>
+                                <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);">FPS (Achieved)</div>
+                            </div>
+                            <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1.5rem; text-align: center;">
+                                <div style="font-family: 'Lora', serif; font-size: 2.2rem; font-weight: 700; color: var(--brand-accent); margin-bottom: 0.3rem;">54</div>
+                                <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);">Draw Calls</div>
+                            </div>
+                            <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1.5rem; text-align: center;">
+                                <div style="font-family: 'Lora', serif; font-size: 2.2rem; font-weight: 700; color: var(--brand-accent); margin-bottom: 0.3rem;">85K</div>
+                                <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);">Triangles</div>
+                            </div>
+                            <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1.5rem; text-align: center;">
+                                <div style="font-family: 'Lora', serif; font-size: 2.2rem; font-weight: 700; color: var(--brand-accent); margin-bottom: 0.3rem;">31</div>
+                                <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);">SetPass Calls</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. CHANNEL PACKING VISUALIZER -->
+            <section id="materials" class="artwork-section reveal-section" aria-labelledby="materials-title">
+                <div class="artwork-section-header-row">
+                    <div>
+                        <p class="artwork-category-tag" style="margin-bottom: 0.5rem;">PBR & Texture Optimization</p>
+                        <h2 id="materials-title" class="artwork-section-title">Channel Packing</h2>
+                        <p class="artwork-section-desc">60% memory reduction using RGBA channel optimization. One atlas replaces 5 separate textures.</p>
+                    </div>
+                </div>
+
+                <!-- CHANNEL PACKING VISUALIZER -->
+                <div class="channel-demo" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                    <div style="text-align: center;">
+                        <img src="../assets/images/artwork/3D/ecoe/Textures/Atlas_Modular_Metallic.png" alt="Red Channel - Metallic" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-subtle); margin-bottom: 0.8rem;" />
+                        <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);">R Channel</div>
+                        <div style="font-size: 0.85rem; font-weight: 700; color: var(--ganache);">Metallic</div>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <img src="../assets/images/artwork/3D/ecoe/Textures/Atlas_Modular_AO.png" alt="Green Channel - Ambient Occlusion" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-subtle); margin-bottom: 0.8rem;" />
+                        <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);">G Channel</div>
+                        <div style="font-size: 0.85rem; font-weight: 700; color: var(--ganache);">Ambient Occlusion</div>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <img src="../assets/images/artwork/3D/ecoe/Textures/Atlas_Modular_Roughness.png" alt="Blue Channel - Roughness" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-subtle); margin-bottom: 0.8rem;" />
+                        <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);">B Channel</div>
+                        <div style="font-size: 0.85rem; font-weight: 700; color: var(--ganache);">Roughness</div>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <img src="../assets/images/artwork/3D/ecoe/Textures/Atlas_Modular_TintMask.png" alt="Alpha Channel - Detail Mask" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-subtle); margin-bottom: 0.8rem;" />
+                        <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);">A Channel</div>
+                        <div style="font-size: 0.85rem; font-weight: 700; color: var(--ganache);">Mask / Detail</div>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <img src="../assets/images/artwork/3D/ecoe/Textures/Atlas_Modular_Mask.png" alt="Combined ORM Texture" style="width: 100%; border-radius: 8px; border: 2px solid var(--brand-accent); margin-bottom: 0.8rem;" />
+                        <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--brand-accent);">RGBA Combined</div>
+                        <div style="font-size: 0.85rem; font-weight: 700; color: var(--brand-accent);">Final ORM Atlas</div>
+                    </div>
+                </div>
+
+                <div class="optimization-section" style="margin-top: 3rem;">
+                    <h3 style="font-family: 'Lora', serif; font-size: 1rem; font-weight: 700; color: var(--ganache); margin-bottom: 1.5rem;">Channel Packing Benefits</h3>
+                    <div class="breakdown-list">
+                        <div class="breakdown-item">
+                            <span class="breakdown-icon"><i class="fa-solid fa-compress"></i></span>
+                            <div class="breakdown-content">
+                                <div class="breakdown-title">60% Texture Memory Reduction</div>
+                                <div class="breakdown-desc">Combines Metallic (R), Ambient Occlusion (G), Roughness (B) in single RGBA texture. Bandwidth savings verified with Unity Profiler.</div>
+                            </div>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="breakdown-icon"><i class="fa-solid fa-bolt"></i></span>
+                            <div class="breakdown-content">
+                                <div class="breakdown-title">Single Texture Sample</div>
+                                <div class="breakdown-desc">GPU reads one file instead of three. Reduces fragment shader instructions. Improves cache locality.</div>
+                            </div>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="breakdown-icon"><i class="fa-solid fa-gauge-high"></i></span>
+                            <div class="breakdown-content">
+                                <div class="breakdown-title">Scalable Asset Pipeline</div>
+                                <div class="breakdown-desc">New objects integrate into existing atlas without increasing draw calls or SetPass calls. Future-proof architecture.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. SHADERS & TECHNICAL ART -->
+            <!-- 3. Shaders / Technical Section -->
+            <section id="shaders" class="artwork-section reveal-section" aria-labelledby="shaders-title">
+                <div class="artwork-shaders-box">
+                    <div class="artwork-shaders-glow-1" aria-hidden="true"></div>
+                    <div class="artwork-shaders-glow-2" aria-hidden="true"></div>
+
+                    <div class="artwork-shaders-grid">
+                        <div>
+                            <p class="artwork-category-tag artwork-category-tag-dark" style="margin-bottom: 0.5rem;">Technical Art & Shaders</p>
+
+                            <h2 id="shaders-title" class="artwork-shaders-title">
+                                Pastel 2D <br />
+                                <span style="color: var(--vanilla);">Sticker</span> <span style="color: #D3C5B4;">FX</span>
+                            </h2>
+
+                            <p class="artwork-shaders-desc">
+                                How to convert a 3D model into a 2D illustration? I developed a workflow combining <strong style="color: var(--vanilla);">Grease Pencil</strong> and <strong style="color: var(--vanilla);">Compositing</strong> to achieve this "hand-drawn" look.
+                            </p>
+
+                            <div class="artwork-steps-list">
+                                <div class="artwork-step-item">
+                                    <span class="artwork-step-num" aria-hidden="true">01</span>
+                                    <p style="font-size: 0.8rem; margin: 0; font-weight:700; text-transform:uppercase;">Clean Outlines with Grease Pencil</p>
+                                </div>
+                                <div class="artwork-step-item">
+                                    <span class="artwork-step-num" aria-hidden="true">02</span>
+                                    <p style="font-size: 0.8rem; margin: 0; font-weight:700; text-transform:uppercase;">Compositing: Dilate/Erode Sticker Border</p>
+                                </div>
+                                <div class="artwork-step-item">
+                                    <span class="artwork-step-num" aria-hidden="true">03</span>
+                                    <p style="font-size: 0.8rem; margin: 0; font-weight:700; text-transform:uppercase;">Anime Style Sparkles &amp; Highlights</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="https://www.youtube.com/watch?v=cj9i-RE6-0g" target="_blank" rel="noopener noreferrer" class="artwork-tutorial-btn">
+                                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                                    Full Tutorial
+                                </a>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+                            <div class="artwork-video-wrapper" style="aspect-ratio: 16/9;">
+                                <iframe class="artwork-iframe"
+                                    src="https://www.youtube.com/embed/cj9i-RE6-0g?controls=1&modestbranding=1"
+                                    title="Pastel 2D Sticker FX — Full Tutorial"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                    loading="lazy"></iframe>
+                            </div>
+
+                            <div class="artwork-video-wrapper" id="shader-slider" style="position: relative; user-select: none; overflow: hidden; border-radius: 8px;">
+                                <span style="position: absolute; top: 1rem; left: 1rem; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 99px; background: rgba(0,0,0,0.6); color: var(--vanilla); z-index: 30; pointer-events: none;" aria-hidden="true">
+                                    Raw Render
+                                </span>
+                                <span style="position: absolute; top: 1rem; right: 1rem; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 99px; background: var(--card-bg); color: var(--ganache); z-index: 30; pointer-events: none;" aria-hidden="true">
+                                    Final Shader
+                                </span>
+
+                                <!-- Imagen de Fondo (Antes / Raw) -->
+                                <div class="bg-shader-before" style="width: 100%; height: 100%; position: absolute; top:0; left:0;" role="img" aria-label="Raw Render"></div>
+
+                                <!-- Contenedor Superpuesto (Después / Shader Final) recortado al 50% por defecto -->
+                                <div id="shader-overlay" style="position: absolute; top: 0; left: 0; width: 50%; height: 100%; overflow: hidden; border-right: 2px solid var(--vanilla); z-index: 20;">
+                                    <div class="bg-shader-after" style="width: 100%; height: 100%; position: absolute; top:0; left:0; width: var(--slider-container-width, 100%);" role="img" aria-label="Final Shader"></div>
+                                </div>
+
+                                <!-- Manilla de arrastre -->
+                                <div id="shader-handle"
+                                    aria-label="Drag to compare before and after"
+                                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 2.5rem; height: 2.5rem; border-radius: 50%; background-color: var(--card-bg); color: var(--ganache); display: flex; align-items: center; justify-content: center; z-index: 40; box-shadow: 0 4px 15px rgba(0,0,0,0.3); cursor: ew-resize;">
+                                    <i class="fa-solid fa-arrows-left-right text-xs" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. LIGHTING & POST-PROCESSING (ECOE ONLY) -->
+            <section id="lighting" class="artwork-section reveal-section" aria-labelledby="lighting-title">
+                <div class="artwork-section-header-row">
+                    <div>
+                        <p class="artwork-category-tag" style="margin-bottom: 0.5rem;">ECOE Simulator</p>
+                        <h2 id="lighting-title" class="artwork-section-title">Lighting & Optimization</h2>
+                        <p class="artwork-section-desc">Baked GI strategy for clinical environment. 20 Point/Spot lights + Reflection Probes. Real-time free.</p>
+                    </div>
+                </div>
+
+                <div class="artwork-motion-grid">
+                    <div class="artwork-motion-main-col">
+                        <div class="artwork-video-card group" style="background:#120f0d;">
+                            <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; position:absolute;">
+                                <source src="../assets/videos/artwork/Proyecto de vídeo 5.mp4" type="video/mp4">
+                            </video>
+                            <div class="artwork-video-caption">
+                                <h3 class="font-display text-xl text-white mb-1">Baked Global Illumination</h3>
+                                <p class="text-[9px] font-bold uppercase tracking-widest" style="color: var(--vanilla);">Lightmaps 512px + Light Probes Grid</p>
+                            </div>
+                        </div>
+
+                        <img src="../assets/images/artwork/3D/navidad/0749.png" alt="ECOE Lightmap visualization" style="width:100%; border-radius: 8px; border: 1px solid var(--border-subtle); aspect-ratio: 16/9; object-fit: cover;" />
+                    </div>
+
+                    <div class="artwork-motion-side-col">
+                        <img src="../assets/images/artwork/3D/navidad/0749.png" alt="ECOE Lighting rig and setup" style="width:100%; border-radius: 8px; border: 1px solid var(--border-subtle); aspect-ratio: 1; object-fit: cover; margin-bottom: 1.5rem;" />
+
+                        <div class="optimization-section">
+                            <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1.2rem;">Lighting Configuration</h3>
+                            <div class="breakdown-list">
+                                <div class="breakdown-item">
+                                    <span class="breakdown-icon"><i class="fa-solid fa-circle-half-stroke"></i></span>
+                                    <div class="breakdown-content">
+                                        <div class="breakdown-title">Baked GI</div>
+                                        <div class="breakdown-desc">Lightmaps 512px. Indirect bounces precalculated. Zero real-time cost.</div>
+                                    </div>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-icon"><i class="fa-solid fa-lightbulb"></i></span>
+                                    <div class="breakdown-content">
+                                        <div class="breakdown-title">20 Point/Spot Lights</div>
+                                        <div class="breakdown-desc">Simulate fluorescents (5500K). Baked only. Dynamic objects use Light Probes.</div>
+                                    </div>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-icon"><i class="fa-solid fa-cube"></i></span>
+                                    <div class="breakdown-content">
+                                        <div class="breakdown-title">Reflection Probes</div>
+                                        <div class="breakdown-desc">Cubemap captures. Enable realistic reflections on materials without real-time cost.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="artwork-specs-bar">
+                    <div class="artwork-spec-item">
+                        <span class="artwork-spec-icon" aria-hidden="true">
+                            <i class="fa-solid fa-map"></i>
+                        </span>
+                        <div>
+                            <p class="artwork-spec-label">Lightmap Resolution</p>
+                            <p class="artwork-spec-value">512 pixels</p>
+                        </div>
+                    </div>
+                    <div class="artwork-spec-item">
+                        <span class="artwork-spec-icon" aria-hidden="true">
+                            <i class="fa-solid fa-cube"></i>
+                        </span>
+                        <div>
+                            <p class="artwork-spec-label">Light Probe Spacing</p>
+                            <p class="artwork-spec-value">1.5 meters</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. 3D ASSETS & MODULAR PIECES -->
             <section id="props-section" class="artwork-section reveal-section" aria-labelledby="props-title">
                 <div class="artwork-section-header-row">
                     <div>
-                        <p class="artwork-category-tag" style="margin-bottom: 0.5rem;">Optimization & Workflow</p>
-                        <h2 id="props-title" class="artwork-section-title">3D Assets</h2>
-                        <p class="artwork-hint-text">Game-ready models with optimization focus.</p>
+                        <p class="artwork-category-tag" style="margin-bottom: 0.5rem;">Asset Pipeline</p>
+                        <h2 id="props-title" class="artwork-section-title">Modular Assets</h2>
+                        <p class="artwork-hint-text">Game-ready 3D models with optimization focus</p>
                     </div>
 
                     <div class="artwork-tabs-container" role="tablist" aria-label="Asset type filter">
@@ -199,157 +586,162 @@
                 </div>
             </section>
 
-            <!-- 3. Shaders / Technical Section -->
-            <section id="shaders" class="artwork-section reveal-section" aria-labelledby="shaders-title">
-                <div class="artwork-shaders-box">
-                    <div class="artwork-shaders-glow-1" aria-hidden="true"></div>
-                    <div class="artwork-shaders-glow-2" aria-hidden="true"></div>
+<!-- 5.5 RENDERING SETTINGS TOGGLE -->
+<section id="rendering-settings" class="artwork-section reveal-section" aria-labelledby="rendering-title">
+    <div class="artwork-section-header-row">
+        <div>
+            <p class="artwork-category-tag" style="margin-bottom: 0.5rem;">Educational Tool</p>
+            <h2 id="rendering-title" class="artwork-section-title">Rendering Settings</h2>
+            <p class="artwork-section-desc">Interactive toggles to visualize optimization impact. Inspect how each technique affects frame rate and quality.</p>
+        </div>
+    </div>
 
-                    <div class="artwork-shaders-grid">
-                        <div>
-                            <p class="artwork-category-tag artwork-category-tag-dark" style="margin-bottom: 0.5rem;">Technical Art & Shaders</p>
-
-                            <h2 id="shaders-title" class="artwork-shaders-title">
-                                Pastel 2D <br />
-                                <span style="color: var(--vanilla);">Sticker</span> <span style="color: #D3C5B4;">FX</span>
-                            </h2>
-
-                            <p class="artwork-shaders-desc">
-                                How to convert a 3D model into a 2D illustration? I developed a workflow combining <strong style="color: var(--vanilla);">Grease Pencil</strong> and <strong style="color: var(--vanilla);">Compositing</strong> to achieve this "hand-drawn" look.
-                            </p>
-
-                            <div class="artwork-steps-list">
-                                <div class="artwork-step-item">
-                                    <span class="artwork-step-num" aria-hidden="true">01</span>
-                                    <p style="font-size: 0.8rem; margin: 0; font-weight:700; text-transform:uppercase;">Clean Outlines with Grease Pencil</p>
-                                </div>
-                                <div class="artwork-step-item">
-                                    <span class="artwork-step-num" aria-hidden="true">02</span>
-                                    <p style="font-size: 0.8rem; margin: 0; font-weight:700; text-transform:uppercase;">Compositing: Dilate/Erode Sticker Border</p>
-                                </div>
-                                <div class="artwork-step-item">
-                                    <span class="artwork-step-num" aria-hidden="true">03</span>
-                                    <p style="font-size: 0.8rem; margin: 0; font-weight:700; text-transform:uppercase;">Anime Style Sparkles &amp; Highlights</p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <a href="https://www.youtube.com/watch?v=cj9i-RE6-0g" target="_blank" rel="noopener noreferrer" class="artwork-tutorial-btn">
-                                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-                                    Full Tutorial
-                                </a>
-                            </div>
-                        </div>
-
-                        <div style="display: flex; flex-direction: column; gap: 2.5rem;">
-                            <div class="artwork-video-wrapper" style="aspect-ratio: 16/9;">
-                                <iframe class="artwork-iframe"
-                                    src="https://www.youtube.com/embed/cj9i-RE6-0g?controls=1&modestbranding=1"
-                                    title="Pastel 2D Sticker FX — Full Tutorial"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen
-                                    loading="lazy"></iframe>
-                            </div>
-
-                            <div class="artwork-video-wrapper" id="shader-slider" style="position: relative; user-select: none;">
-                                <span style="position: absolute; top: 1rem; left: 1rem; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 99px; background: rgba(0,0,0,0.6); color: var(--vanilla); z-index: 30; pointer-events: none;" aria-hidden="true">
-                                    Raw Render
-                                </span>
-                                <span style="position: absolute; top: 1rem; right: 1rem; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 99px; background: var(--card-bg); color: var(--ganache); z-index: 30; pointer-events: none;" aria-hidden="true">
-                                    Final Shader
-                                </span>
-
-                                <div class="bg-shader-img" style="width: 100%; height: 100%; position: absolute; top:0; left:0;" role="img" aria-label="Raw Render"></div>
-
-                                <div id="shader-overlay">
-                                    <div class="bg-shader-img" style="width: 100%; height: 100%; position: absolute; top:0; left:0;" role="img" aria-label="Final Shader"></div>
-                                </div>
-
-                                <div id="shader-handle"
-                                    aria-label="Drag to compare before and after"
-                                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 2.5rem; height: 2.5rem; border-radius: 50%; background-color: var(--card-bg); color: var(--ganache); display: flex; align-items: center; justify-content: center; z-index: 40; box-shadow: 0 4px 15px rgba(0,0,0,0.3); cursor: ew-resize;">
-                                    <i class="fa-solid fa-arrows-left-right text-xs" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 2.5rem;">
+        
+        <!-- Settings Grid -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2.5rem;">
+            
+            <!-- Baked Lighting -->
+            <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(99, 107, 88, 0.04); border-radius: 8px; border: 1px solid var(--border-subtle);">
+                <input type="checkbox" id="baked-lighting" checked style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--brand-accent);" />
+                <div style="flex: 1;">
+                    <label for="baked-lighting" style="cursor: pointer; display: block; font-weight: 700; color: var(--ganache); font-size: 0.9rem;">Baked Lighting</label>
+                    <span style="font-size: 0.75rem; color: rgba(35, 26, 23, 0.6);">GPU-free · +0 draw calls</span>
                 </div>
-            </section>
+            </div>
 
-            <!-- 4. Motion & Lighting Section (Con videos integrados) -->
-            <section id="motion-section" class="artwork-section reveal-section" aria-labelledby="motion-title">
-                <div class="artwork-section-header-row" style="margin-bottom: 3.5rem;">
+            <!-- Post-Processing -->
+            <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(99, 107, 88, 0.04); border-radius: 8px; border: 1px solid var(--border-subtle);">
+                <input type="checkbox" id="post-processing" checked style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--brand-accent);" />
+                <div style="flex: 1;">
+                    <label for="post-processing" style="cursor: pointer; display: block; font-weight: 700; color: var(--ganache); font-size: 0.9rem;">Post-Processing</label>
+                    <span style="font-size: 0.75rem; color: rgba(35, 26, 23, 0.6);">AO · Bloom · Color Grading</span>
+                </div>
+            </div>
+
+            <!-- Shadow Quality -->
+            <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(99, 107, 88, 0.04); border-radius: 8px; border: 1px solid var(--border-subtle);">
+                <select id="shadow-quality" style="background: var(--vanilla); color: var(--ganache); border: 1px solid var(--border-subtle); padding: 0.6rem 0.8rem; border-radius: 4px; font-weight: 700; cursor: pointer; font-family: 'Manrope', sans-serif;">
+                    <option value="high">High Resolution</option>
+                    <option value="medium">Medium Resolution</option>
+                    <option value="low">Low / Disabled</option>
+                </select>
+                <div style="flex: 1;">
+                    <label style="display: block; font-weight: 700; color: var(--ganache); font-size: 0.9rem;">Shadow Quality</label>
+                    <span style="font-size: 0.75rem; color: rgba(35, 26, 23, 0.6);">Quality/Performance tradeoff</span>
+                </div>
+            </div>
+
+            <!-- Particles -->
+            <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(99, 107, 88, 0.04); border-radius: 8px; border: 1px solid var(--border-subtle);">
+                <input type="checkbox" id="particles" style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--brand-accent);" />
+                <div style="flex: 1;">
+                    <label for="particles" style="cursor: pointer; display: block; font-weight: 700; color: var(--ganache); font-size: 0.9rem;">Particle Effects</label>
+                    <span style="font-size: 0.75rem; color: rgba(35, 26, 23, 0.6);">Dust & atmospheric elements</span>
+                </div>
+            </div>
+
+            <!-- Real-time Reflections -->
+            <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(99, 107, 88, 0.04); border-radius: 8px; border: 1px solid var(--border-subtle);">
+                <input type="checkbox" id="realtime-reflections" style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--brand-accent);" />
+                <div style="flex: 1;">
+                    <label for="realtime-reflections" style="cursor: pointer; display: block; font-weight: 700; color: var(--ganache); font-size: 0.9rem;">Real-time Reflections</label>
+                    <span style="font-size: 0.75rem; color: rgba(35, 26, 23, 0.6);">SSR disabled · Uses probes</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- FPS Display -->
+        <div style="background: rgba(99, 107, 88, 0.08); border: 1px solid var(--brand-accent); border-radius: 8px; padding: 1.5rem; text-align: center;">
+            <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6); margin-bottom: 0.5rem;">Estimated Performance</div>
+            <div id="fps-display-line" style="font-family: 'Lora', serif; font-size: 2rem; font-weight: 700; color: var(--brand-accent);">120 FPS</div>
+            <div style="font-size: 0.7rem; color: rgba(35, 26, 23, 0.6); margin-top: 0.5rem;">RTX 3070 · 1080p</div>
+        </div>
+
+    </div>
+
+    <p style="font-size: 0.85rem; color: rgba(35, 26, 23, 0.7); margin-top: 1.5rem; font-style: italic; text-align: center;">
+        This is an educational visualization. The simulator achieves 120+ FPS with all quality settings enabled. Toggle options to understand the performance cost of each optimization technique.
+    </p>
+</section>
+            <!-- 5.6 TECHNICAL STACK -->
+            <section id="tech-stack" class="artwork-section reveal-section" aria-labelledby="stack-title">
+                <div class="artwork-section-header-row">
                     <div>
-                        <p class="artwork-category-tag" style="margin-bottom: 0.5rem;">Motion & Lighting</p>
-                        <h2 id="motion-title" class="artwork-section-title">Cinematic Spotlight</h2>
+                        <p class="artwork-category-tag" style="margin-bottom: 0.5rem;">Tools & Technologies</p>
+                        <h2 id="stack-title" class="artwork-section-title">Technical Stack</h2>
+                        <p class="artwork-section-desc">Production software and engine configuration used for ECOE Simulator development.</p>
                     </div>
                 </div>
 
-                <div class="artwork-motion-grid">
-                    <div class="artwork-motion-main-col">
-                        <div class="artwork-video-card group" style="background:#120f0d;">
-                            <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; position:absolute;">
-                                <source src="../assets/videos/artwork/Proyecto de vídeo 5.mp4" type="video/mp4">
-                            </video>
-                            <div class="artwork-video-caption">
-                                <h3 class="font-display text-xl text-white mb-1">Full Scene Render</h3>
-                                <p class="text-[9px] font-bold uppercase tracking-widest" style="color: var(--vanilla);">Real-time Lighting Showcase</p>
-                            </div>
-                        </div>
-
-                        <div class="artwork-mini-video-card group" style="background:#120f0d; aspect-ratio:16/9;">
-                            <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; position:absolute; border-radius:8px;">
-                                <source src="../assets/videos/artwork/f4cb94467a42b49240889f040d69981b.mp4" type="video/mp4">
-                            </video>
-                        </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+                    <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 1.5rem;">
+                        <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1rem; border-bottom: 2px solid var(--brand-accent); padding-bottom: 0.5rem;">3D Modeling</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; line-height: 1.6; color: rgba(35, 26, 23, 0.8);">
+                            <li><strong>Blender</strong> (advanced)</li>
+                            <li>3ds Max (rigging)</li>
+                            <li>SketchUp (blockout)</li>
+                        </ul>
                     </div>
 
-                    <div class="artwork-motion-side-col">
-                        <div class="artwork-side-video-box group" style="background:#120f0d;">
-                            <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; position:absolute; border-radius:8px;">
-                                <source src="../assets/videos/artwork/cuadrado.mp4" type="video/mp4">
-                            </video>
-                        </div>
-
-                        <div class="artwork-side-video-box group" style="background:#120f0d;">
-                            <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; position:absolute; border-radius:8px;">
-                                <source src="../assets/videos/artwork/Proyecto de vídeo 5.mp4" type="video/mp4">
-                            </video>
-                        </div>
+                    <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 1.5rem;">
+                        <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1rem; border-bottom: 2px solid var(--brand-accent); padding-bottom: 0.5rem;">Rendering & Shaders</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; line-height: 1.6; color: rgba(35, 26, 23, 0.8);">
+                            <li><strong>Unity URP</strong> 6000.0.39f1</li>
+                            <li>Shader Graph</li>
+                            <li>HLSL basics</li>
+                        </ul>
                     </div>
-                </div>
 
-                <div class="artwork-specs-bar">
-                    <div class="artwork-spec-item">
-                        <span class="artwork-spec-icon" aria-hidden="true">
-                            <i class="fa-solid fa-clapperboard"></i>
-                        </span>
-                        <div>
-                            <p class="artwork-spec-label">Format</p>
-                            <p class="artwork-spec-value">4K 60fps Renders</p>
-                        </div>
+                    <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 1.5rem;">
+                        <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1rem; border-bottom: 2px solid var(--brand-accent); padding-bottom: 0.5rem;">Optimization</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; line-height: 1.6; color: rgba(35, 26, 23, 0.8);">
+                            <li>Unity Profiler</li>
+                            <li>Frame Debugger basics</li>
+                            <li>Static Batching</li>
+                            <li>Occlusion Culling</li>
+                        </ul>
                     </div>
-                    <div class="artwork-spec-item">
-                        <span class="artwork-spec-icon" aria-hidden="true">
-                            <i class="fa-solid fa-camera-retro"></i>
-                        </span>
-                        <div>
-                            <p class="artwork-spec-label">Focus</p>
-                            <p class="artwork-spec-value">Composition &amp; Mood</p>
-                        </div>
+
+                    <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 1.5rem;">
+                        <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1rem; border-bottom: 2px solid var(--brand-accent); padding-bottom: 0.5rem;">Texturing</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; line-height: 1.6; color: rgba(35, 26, 23, 0.8);">
+                            <li>Substance Painter</li>
+                            <li>Blender Compositor</li>
+                            <li>Channel Packing (ORM)</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 1.5rem;">
+                        <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1rem; border-bottom: 2px solid var(--brand-accent); padding-bottom: 0.5rem;">Pipeline</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; line-height: 1.6; color: rgba(35, 26, 23, 0.8);">
+                            <li>UV Unwrap (Advanced)</li>
+                            <li>Texture Baking</li>
+                            <li>Normal Maps</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 1.5rem;">
+                        <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1rem; border-bottom: 2px solid var(--brand-accent); padding-bottom: 0.5rem;">Version Control</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; line-height: 1.6; color: rgba(35, 26, 23, 0.8);">
+                            <li>Git / GitHub</li>
+                            <li>GitHub Desktop</li>
+                            <li>Agile/Scrum</li>
+                            <li>Jira (tracking)</li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- 5. Art Gallery Section -->
+            <!-- 7. ART GALLERY -->
             <section id="gallery" class="artwork-section reveal-section" aria-labelledby="gallery-title">
                 <div class="text-center mb-16 space-y-6">
-                    <h2 id="gallery-title" class="artwork-section-title">Art Gallery</h2>
+                    <h2 id="gallery-title" class="artwork-section-title">Technical Gallery</h2>
                     
                     <div class="artwork-filter-buttons" role="group" aria-label="Filter gallery by category">
                         <button class="artwork-filter-btn active" onclick="filterGallery('all', this)" aria-pressed="true">All Works</button>
                         <button class="artwork-filter-btn" onclick="filterGallery('artwork', this)" aria-pressed="false">3D Artwork</button>
-                        <button class="artwork-filter-btn" onclick="filterGallery('concept', this)" aria-pressed="false">2D Concept</button>
+                        <button class="artwork-filter-btn" onclick="filterGallery('concept', this)" aria-pressed="false">Concepts</button>
                         <button class="artwork-filter-btn" onclick="filterGallery('sculpt', this)" aria-pressed="false">Sculpting</button>
                         <button class="artwork-filter-btn" onclick="filterGallery('materials', this)" aria-pressed="false">Materials</button>
                     </div>
@@ -371,20 +763,20 @@
                 </div>
             </section>
 
-            <!-- CTA Final -->
+            <!-- CTA FINAL -->
             <section class="artwork-section reveal-section text-center" aria-label="Contact call to action" style="margin-bottom: 2rem;">
                 <div class="artwork-cta-box">
                     <div class="artwork-cta-icon-wrap" aria-hidden="true">
                         <i class="fa-solid fa-comments"></i>
                     </div>
                     <div class="text-left">
-                        <h2 class="font-display text-xl md:text-2xl" style="color: var(--ganache);">Do you like my style?</h2>
-                        <p class="text-[0.68rem] font-bold uppercase tracking-widest mt-1" style="color: rgba(35, 26, 23, 0.5);">Let's create something unique</p>
+                        <h2 class="font-display text-xl md:text-2xl" style="color: var(--ganache);">Let's build something optimized</h2>
+                        <p class="text-[0.68rem] font-bold uppercase tracking-widest mt-1" style="color: rgba(35, 26, 23, 0.5);">Technical art for real-time performance</p>
                     </div>
                     <div class="artwork-cta-divider" aria-hidden="true"></div>
                     <div class="flex gap-4">
                         <a href="contact.html" class="hero-btn-primary">Contact</a>
-                        <a href="../files/CV_2025_English.pdf" target="_blank" rel="noopener noreferrer" class="hero-btn-secondary">CV</a>
+                        <a href="../assets/files/CV_Nuria_Serrano_Espanol.pdf" target="_blank" rel="noopener noreferrer" class="hero-btn-secondary">CV</a>
                     </div>
                 </div>
             </section>
@@ -405,7 +797,7 @@
                         <a href="../index.html" class="footer-brand">
                             nurxen<span class="accent-blue">.</span>
                         </a>
-                        <p class="footer-tagline">3D Environment & Technical Artist</p>
+                        <p class="footer-tagline">3D Technical Artist | Real-time Optimization</p>
                         
                         <div class="footer-social">
                             <a href="https://www.instagram.com/nurxen_" target="_blank" rel="noopener noreferrer" aria-label="Nurxen on Instagram" class="footer-social-icon">
@@ -423,22 +815,22 @@
                     <div class="footer-col">
                         <p class="footer-col-title">Explore</p>
                         <a href="../index.html" class="footer-link">Home</a>
-                        <a href="artwork.html" class="footer-link">Artwork Gallery</a>
-                        <a href="games.html" class="footer-link">Videogames</a>
+                        <a href="artwork.html" class="footer-link">Technical Art</a>
+                        <a href="games.html" class="footer-link">Games & Sims</a>
                     </div>
 
                     <div class="footer-col">
                         <p class="footer-col-title">Get in Touch</p>
                         <a href="contact.html" class="footer-link">Contact Form</a>
                         <a href="mailto:nurxen21@gmail.com" class="footer-link footer-link-underline">Email Me</a>
-                        <p class="footer-note">Available for freelance.</p>
+                        <p class="footer-note">Available for freelance & collaboration.</p>
                     </div>
                 </div>
 
                 <div class="footer-bottom">
                     <p class="footer-copy">©2026 Nurxen. All Rights Reserved.</p>
                     <div class="footer-credit">
-                        <span>Made with technical precision &amp; Blender</span>
+                        <span>Built with technical precision &amp; Blender</span>
                         <i class="fa-solid fa-heart footer-heart animate-pulse" aria-hidden="true"></i>
                     </div>
                 </div>

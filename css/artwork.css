@@ -2,51 +2,35 @@
    VARIABLES Y CONFIGURACIÓN GLOBAL DE ASSETS Y VIDEOS
    ========================================================== */
 :root {
-    /* 1. Featured Section */
-    --asset-featured: url('../assets/images/artwork/3D/TEMPLO/Render1700.jpg');
-    --asset-sub-1: url('../assets/images/artwork/3D/TEMPLO/Render1701.jpg');
-    --asset-sub-2: url('../assets/images/artwork/3D/TEMPLO/Render1702.jpg');
-    --asset-sub-3: url('../assets/images/artwork/3D/TEMPLO/Render1703.jpg');
-
-    /* 2. 3D Assets / Props Section */
+    --asset-featured: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/consulta_menu_principal.png');
+    --asset-sub-1: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/consulta_menu_principal.png');
+    --asset-sub-2: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/consulta_menu_principal.png');
+    --asset-sub-3: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/consulta_menu_principal.png');
     --asset-asset-1: url('../assets/images/games/OBAT/ASSETS/wireframe_1.png');
     --asset-asset-2: url('../assets/images/games/unchained-steam/imagekjb.png');
     --asset-sculpt: url('../assets/images/artwork/3D/navidad/0749.png');
-
-    /* 3. Shaders & Technical Section */
-    --asset-shader: url('../assets/images/artwork/3D/otono-mesa/render_definitivo.png');
-
-    /* 4. Motion & Lighting Section (Videos y Renders principales) */
+    --asset-shader-before: url('../assets/images/artwork/3D/cartoon-shader/shader-graph/libro_vieport.png');
+    --asset-shader-after: url('../assets/images/artwork/3D/cartoon-shader/shader-graph/libro_color.png');
     --asset-motion-main: url('../assets/images/artwork/3D/otono-mesa/render_definitivo.png');
     --asset-motion-mini: url('../assets/videos/artwork/Proyecto\ de\ vídeo\ 5.mp4');
     --asset-motion-side-1: url('../assets/videos/artwork/f4cb94467a42b49240889f040d69981b.mp4');
     --asset-motion-side-2: url('../assets/videos/artwork/cuadrado.mp4');
-
-    /* 5. Art Gallery Masonry Items (Categorizadas: Artwork, Concept, Sculpt, Materials) */
     --asset-gallery-artwork-1: url('../assets/images/artwork/3D/TEMPLO/Render1700.jpg');
     --asset-gallery-artwork-2: url('../assets/images/artwork/3D/otono-mesa/render_definitivo.png');
     --asset-gallery-artwork-3: url('../assets/images/artwork/3D/3D_assets/props/prop1.png');
     --asset-gallery-artwork-4: url('../assets/images/artwork/3D/3D_assets/props/prop2.png');
-    
     --asset-gallery-concept-1: url('../assets/images/artwork/2D/concept/concept1.jpg');
     --asset-gallery-concept-2: url('../assets/images/artwork/2D/concept/concept2.jpg');
     --asset-gallery-concept-3: url('../assets/images/artwork/2D/concept/concept3.jpg');
     --asset-gallery-concept-4: url('../assets/images/artwork/2D/concept/concept4.jpg');
-    
     --asset-gallery-sculpt-1: url('../assets/images/artwork/3D/navidad/0749.png');
     --asset-gallery-sculpt-2: url('../assets/images/artwork/3D/personajes/blue-cycles.jpg');
     --asset-gallery-sculpt-3: url('../assets/images/artwork/3D/sculpts/sculpt3.png');
-    
     --asset-gallery-materials-1: url('../assets/images/artwork/3D/materials/shader_preview.png');
 }
 
 /* ==========================================================
-   ARTWORK PAGE STYLES
-   Homogeneizado con la estética de HOME
-   ========================================================== */
-
-/* ==========================================================
-   LAYOUT BASE
+   ARTWORK PAGE STYLES - DYNAMIC & TECHNICAL
    ========================================================== */
 .artwork-main-content {
     position: relative;
@@ -58,9 +42,6 @@
     padding: 0 2.5rem;
 }
 
-/* ==========================================================
-   SIDE NAVIGATION
-   ========================================================== */
 .artwork-side-nav {
     position: fixed;
     left: 2.5rem;
@@ -74,9 +55,7 @@
 }
 
 @media (max-width: 1024px) {
-    .artwork-side-nav {
-        display: none;
-    }
+    .artwork-side-nav { display: none; }
 }
 
 .artwork-side-line {
@@ -102,9 +81,6 @@
     opacity: 1;
 }
 
-/* ==========================================================
-   HEADER
-   ========================================================== */
 .artwork-header {
     padding: 6rem 0 4rem 0;
     text-align: center;
@@ -131,9 +107,6 @@
     margin: 0 auto;
 }
 
-/* ==========================================================
-   SECTION STRUCTURE
-   ========================================================== */
 .artwork-section {
     padding: 5rem 0;
     position: relative;
@@ -196,9 +169,316 @@
     text-transform: uppercase;
 }
 
-/* ==========================================================
-   FEATURED BOX
-   ========================================================== */
+/* COMPARISON SLIDER */
+.comparison-img-wrapper {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #120f0d;
+    margin-bottom: 2rem;
+}
+
+.comparison-img-base {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.comparison-img-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.comparison-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--card-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: ew-resize;
+    z-index: 40;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.comparison-label {
+    position: absolute;
+    top: 1rem;
+    font-size: 0.62rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border-radius: 99px;
+    z-index: 30;
+    pointer-events: none;
+}
+
+.comparison-label-before {
+    left: 1rem;
+    background: rgba(0,0,0,0.6);
+    color: var(--vanilla);
+}
+
+.comparison-label-after {
+    right: 1rem;
+    background: var(--card-bg);
+    color: var(--ganache);
+}
+
+/* TECHNICAL STATS */
+.tech-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.tech-stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.tech-stat-card:hover {
+    border-color: var(--brand-accent);
+    box-shadow: 0 4px 15px rgba(99, 107, 88, 0.1);
+}
+
+.tech-stat-value {
+    font-family: "Lora", serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--brand-accent);
+    margin-bottom: 0.5rem;
+}
+
+.tech-stat-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(35, 26, 23, 0.6);
+}
+
+/* CHANNEL BREAKDOWN */
+.channel-breakdown-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.channel-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.channel-card:hover {
+    box-shadow: 0 8px 20px rgba(35, 26, 23, 0.12);
+    transform: translateY(-4px);
+}
+
+.channel-preview {
+    width: 100%;
+    aspect-ratio: 1;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.channel-label {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: rgba(0,0,0,0.7);
+    color: var(--vanilla);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.channel-info {
+    padding: 1.5rem;
+}
+
+.channel-name {
+    font-family: "Lora", serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ganache);
+    margin-bottom: 0.5rem;
+}
+
+.channel-desc {
+    font-size: 0.75rem;
+    color: rgba(35, 26, 23, 0.7);
+    line-height: 1.5;
+}
+
+/* ASYMMETRIC GRIDS */
+.asymmetric-grid-1 {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .asymmetric-grid-1 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.asymmetric-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .asymmetric-grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.asymmetric-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .asymmetric-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .asymmetric-grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* VIEW TOGGLE */
+.view-toggle {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.toggle-btn {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ganache);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+    background: var(--brand-accent);
+    color: var(--vanilla);
+    border-color: var(--brand-accent);
+}
+
+.toggle-btn:hover {
+    border-color: var(--brand-accent);
+    color: var(--brand-accent);
+}
+
+.view-content {
+    display: none;
+}
+
+.view-content.active {
+    display: block;
+}
+
+/* OPTIMIZATION BREAKDOWN */
+.optimization-section {
+    background: rgba(99, 107, 88, 0.04);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 2.5rem;
+    margin-top: 2rem;
+}
+
+.breakdown-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.breakdown-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1rem;
+    background: var(--card-bg);
+    border-radius: 6px;
+    border: 1px solid var(--border-subtle);
+}
+
+.breakdown-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(99, 107, 88, 0.12);
+    border-radius: 6px;
+    color: var(--brand-accent);
+    font-size: 0.9rem;
+}
+
+.breakdown-content {
+    flex: 1;
+}
+
+.breakdown-title {
+    font-weight: 700;
+    color: var(--ganache);
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+}
+
+.breakdown-desc {
+    font-size: 0.75rem;
+    color: rgba(35, 26, 23, 0.7);
+    line-height: 1.5;
+}
+
+/* FEATURED BOX */
 .artwork-featured-box {
     background: var(--card-bg);
     border: 1px solid var(--border-subtle);
@@ -310,7 +590,7 @@
 
 .artwork-subgrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     position: relative;
     z-index: 2;
@@ -331,6 +611,7 @@
     flex-direction: column;
     gap: 0.8rem;
     transition: all 0.3s ease;
+    min-width: 0;
 }
 
 .artwork-subcard:hover {
@@ -351,9 +632,7 @@
     line-height: 1.5;
 }
 
-/* ==========================================================
-   TABS SYSTEM
-   ========================================================== */
+/* TABS */
 .artwork-tabs-container {
     display: flex;
     gap: 0.8rem;
@@ -392,9 +671,7 @@
     display: grid;
 }
 
-/* ==========================================================
-   ASSETS GRID
-   ========================================================== */
+/* ASSETS GRID */
 .artwork-assets-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
@@ -514,9 +791,7 @@
     color: var(--ganache);
 }
 
-/* ==========================================================
-   SHADERS SECTION
-   ========================================================== */
+/* SHADERS */
 .artwork-shaders-box {
     position: relative;
     background-color: var(--ganache);
@@ -527,10 +802,34 @@
     box-shadow: 0 20px 50px rgba(35, 26, 23, 0.08);
 }
 
+@media (min-width: 768px) {
+    .artwork-shaders-box {
+        padding: 5rem;
+    }
+}
+
 .bg-shader-img {
     width: 100%;
     height: 100%;
     background-image: var(--asset-shader);
+    background-size: cover;
+    background-position: center;
+    display: block;
+}
+
+.bg-shader-before {
+    width: 100%;
+    height: 100%;
+    background-image: var(--asset-shader-before);
+    background-size: cover;
+    background-position: center;
+    display: block;
+}
+
+.bg-shader-after {
+    width: 100%;
+    height: 100%;
+    background-image: var(--asset-shader-after);
     background-size: cover;
     background-position: center;
     display: block;
@@ -703,9 +1002,7 @@
     border: none;
 }
 
-/* ==========================================================
-   MOTION SECTION
-   ========================================================== */
+/* MOTION */
 .artwork-motion-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -728,49 +1025,6 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-}
-
-.bg-motion-main-img {
-    width: 100%;
-    height: 100%;
-    background-image: var(--asset-motion-main);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    display: block;
-}
-
-.bg-motion-mini-img {
-    width: 100%;
-    height: 100%;
-    background-image: var(--asset-motion-main);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    border-radius: 8px;
-    display: block;
-}
-
-.bg-motion-side-1-img {
-    width: 100%;
-    height: 100%;
-    background-image: var(--asset-motion-main);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    border-radius: 8px;
-    display: block;
-}
-
-.bg-motion-side-2-img {
-    width: 100%;
-    height: 100%;
-    background-image: var(--asset-motion-main);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    border-radius: 8px;
-    display: block;
 }
 
 .artwork-video-card {
@@ -871,9 +1125,7 @@
     color: var(--ganache);
 }
 
-/* ==========================================================
-   GALLERY MASONRY (Asignación limpia de variables)
-   ========================================================== */
+/* GALLERY */
 .artwork-filter-buttons {
     display: flex;
     gap: 0.8rem;
@@ -928,7 +1180,6 @@
     display: none;
 }
 
-/* Vínculos individuales con las variables definidas arriba */
 .gallery-artwork-1 { background-image: var(--asset-gallery-artwork-1); }
 .gallery-artwork-2 { background-image: var(--asset-gallery-artwork-2); }
 .gallery-artwork-3 { background-image: var(--asset-gallery-artwork-3); }
@@ -961,9 +1212,7 @@
     box-shadow: 0 10px 30px rgba(35, 26, 23, 0.15);
 }
 
-/* ==========================================================
-   CTA BOX
-   ========================================================== */
+/* CTA */
 .artwork-cta-box {
     background: var(--card-bg);
     border: 1px solid var(--border-subtle);

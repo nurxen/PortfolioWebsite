@@ -325,6 +325,58 @@ section {
 }
 
 /* ==========================================================
+   GTRANSLATE CUSTOM NAVBAR STYLING
+   ========================================================== */
+.gtranslate_wrapper {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Forzar que el selector nativo adopte la tipografía y colores de tu web */
+.gtranslate_wrapper select, 
+.gt_switcher {
+    font-family: "Manrope", sans-serif !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.12em !important;
+    color: var(--ganache) !important;
+    background-color: rgba(99, 107, 88, 0.08) !important;
+    border: 1px solid var(--border-subtle) !important;
+    padding: 0.4rem 0.8rem !important;
+    border-radius: 6px !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.gtranslate_wrapper select:hover, 
+.gt_switcher:hover {
+    background-color: rgba(99, 107, 88, 0.15) !important;
+    border-color: var(--brand-accent) !important;
+    color: var(--brand-accent) !important;
+}
+
+.gt_float_switcher {
+    display: none !important;
+}
+
+.lang-btn {
+    font-weight: 700 !important;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    background-color: rgba(99, 107, 88, 0.08);
+    border: 1px solid var(--border-subtle);
+    color: var(--ganache) !important;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background-color: rgba(99, 107, 88, 0.2);
+    color: var(--brand-accent) !important;
+}
+
+/* ==========================================================
    FOOTER (GLOBAL / UNIFICADO)
    ========================================================== */
 .footer-wrap {

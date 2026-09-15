@@ -21,7 +21,107 @@ document.querySelectorAll(".reveal-section").forEach((el) => {
 });
 
 // =========================
-// 2. TABS (Assets / Workflow Switcher)
+// 2. RENDERING SETTINGS TOGGLE (ECOE TFG DATA)
+// =========================
+function initRenderingSettings() {
+    const bakedLighting = document.getElementById("baked-lighting");
+    const postProcessing = document.getElementById("post-processing");
+    const shadowQuality = document.getElementById("shadow-quality");
+    const particles = document.getElementById("particles");
+    const realtimeReflections = document.getElementById("realtime-reflections");
+    const fpsLine = document.getElementById("fps-display-line");
+
+    if (!bakedLighting || !fpsLine) return;
+
+    // Baseline: RTX 3070, 1080p, all optimizations enabled
+    const baselineFPS = 120;
+
+    // TFG ECOE Real Data - Performance impact per technique
+    const costData = {
+        bakedLighting: { fps: 0, description: "+0 draw calls | GPU-free (Baked)" },
+        postProcessing: { fps: -8, description: "-8 FPS | AO + Bloom + Color Grading" },
+        shadowQuality: {
+            high: { fps: -5, description: "-5 FPS | Full resolution shadows" },
+            medium: { fps: -2, description: "-2 FPS | Half resolution" },
+            low: { fps: 0, description: "+0 FPS | No shadows" }
+        },
+        particles: { fps: -3, description: "-3 FPS | Dust system" },
+        realtimeReflections: { fps: -4, description: "-4 FPS | SSR (disabled, uses probes)" }
+    };
+
+    const updateFPS = () => {
+        let totalFPSCost = 0;
+        
+        // Baked Lighting cost (disabling costs ~40 FPS for real-time GI)
+        if (!bakedLighting.checked) {
+            totalFPSCost += 40;
+        }
+        
+        // Post Processing cost
+        if (postProcessing.checked) {
+            totalFPSCost += costData.postProcessing.fps;
+        }
+        
+        // Shadow Quality cost (Corregido para leer 'low' o 'off')
+        if (shadowQuality) {
+            const quality = shadowQuality.value;
+            if (quality === "high") {
+                totalFPSCost += costData.shadowQuality.high.fps;
+            } else if (quality === "medium") {
+                totalFPSCost += costData.shadowQuality.medium.fps;
+            } else if (quality === "low" || quality === "off") {
+                totalFPSCost += costData.shadowQuality.low.fps;
+            }
+        }
+        
+        // Particles cost
+        if (particles && particles.checked) {
+            totalFPSCost += costData.particles.fps;
+        }
+        
+        // Real-time Reflections cost
+        if (realtimeReflections && realtimeReflections.checked) {
+            totalFPSCost += costData.realtimeReflections.fps;
+        }
+
+        const estimatedFPS = Math.max(30, baselineFPS + totalFPSCost);
+        
+        // Extraer número actual de forma segura para GSAP
+        const match = fpsLine.textContent.match(/\d+/);
+        const currentFPS = match ? parseInt(match[0]) : 120;
+
+        // Animate FPS number change
+        gsap.to({ fps: currentFPS }, {
+            fps: Math.round(estimatedFPS),
+            duration: 0.3,
+            onUpdate: function() {
+                fpsLine.textContent = `FPS: ${Math.round(this.targets()[0].fps)}`;
+            }
+        });
+
+// Visual feedback: color change based on your brand palette
+        if (estimatedFPS >= 100) {
+            fpsLine.style.color = "#636B58"; // Brand Accent (Verde oliva) - Excellent
+        } else if (estimatedFPS >= 60) {
+            fpsLine.style.color = "#EFE9DF"; // Vanilla (Claro / Legible sobre fondo oscuro) - Good
+        } else {
+            fpsLine.style.color = "#C97F7F"; // Soft Red / Muted Warning (Tono acorde a tus badges de premios) - Poor
+        }
+    };
+
+    // Event listeners for all controls
+    if (bakedLighting) bakedLighting.addEventListener("change", updateFPS);
+    if (postProcessing) postProcessing.addEventListener("change", updateFPS);
+    if (shadowQuality) shadowQuality.addEventListener("change", updateFPS);
+    if (particles) particles.addEventListener("change", updateFPS);
+    if (realtimeReflections) realtimeReflections.addEventListener("change", updateFPS);
+
+    // Initial calculation
+    updateFPS();
+}
+
+// =========================
+// 3. TABS (Assets / Workflow Switcher)
 // =========================
 function switchTab(tabId, btn) {
     const container = btn.closest("section");
@@ -55,7 +155,7 @@ function switchTab(tabId, btn) {
 }
 
 // =========================
-// GALLERY FILTER (Corregido)
+// 4. GALLERY FILTER (Corregido)
 // =========================
 function filterGallery(category, btn) {
     // 1. Quitar la clase active y el aria-pressed de TODOS los botones de filtro
@@ -96,7 +196,7 @@ function filterGallery(category, btn) {
 }
 
 // =========================
-// 4. COMPARISON SLIDER (Shaders / Renders)
+// 5. COMPARISON SLIDER (Shaders / Renders)
 // =========================
 function initSlider(idContainer, idOverlay, idHandle) {
     const container = document.getElementById(idContainer);
@@ -105,8 +205,9 @@ function initSlider(idContainer, idOverlay, idHandle) {
 
     if (!container || !overlay || !handle) return;
 
-const overlayImg = overlay.querySelector(".bg-shader-img") || overlay.querySelector("img");
-    const baseImg = container.querySelector(".bg-shader-img") || container.querySelector(":scope > img");
+    // Actualizado para buscar las nuevas clases específicas del shader
+    const overlayImg = overlay.querySelector(".bg-shader-after") || overlay.querySelector(".bg-shader-img") || overlay.querySelector("img");
+    const baseImg = container.querySelector(".bg-shader-before") || container.querySelector(".bg-shader-img") || container.querySelector(":scope > img");
 
     const syncImageWidth = () => {
         const containerWidth = container.clientWidth;
@@ -191,7 +292,7 @@ const overlayImg = overlay.querySelector(".bg-shader-img") || overlay.querySelec
 }
 
 // =========================
-// 5. SIDE NAV HIGHLIGHT + BACK TO TOP
+// 6. SIDE NAV HIGHLIGHT + BACK TO TOP
 // =========================
 const backToTopBtn = document.getElementById("backToTop");
 let ticking = false;
@@ -208,7 +309,7 @@ window.addEventListener("scroll", () => {
 
 function handleScroll() {
     // Sincronizar enlaces laterales activos
-    const sections = ["featured", "props-section", "shaders", "motion-section", "materials-library", "gallery"];
+    const sections = ["featured", "optimization", "materials", "lighting", "gallery"];
     const scrollPos = window.scrollY + window.innerHeight / 2;
 
     sections.forEach((id) => {
@@ -238,11 +339,13 @@ if (backToTopBtn) {
 }
 
 // =========================
-// 6. INITIALIZATION ON LOAD
+// 7. INITIALIZATION ON LOAD
 // =========================
 window.addEventListener("load", () => {
+    // Inicializar rendering settings toggle
+    initRenderingSettings();
+    
     // Inicializar sliders de comparación si existen en la vista actual
     initSlider("compare-slider", "compare-overlay", "compare-handle");
     initSlider("shader-slider", "shader-overlay", "shader-handle");
 });
-
