@@ -105,8 +105,8 @@ function initSlider(idContainer, idOverlay, idHandle) {
 
     if (!container || !overlay || !handle) return;
 
-    const overlayImg = overlay.querySelector("img");
-    const baseImg = container.querySelector(":scope > img");
+const overlayImg = overlay.querySelector(".bg-shader-img") || overlay.querySelector("img");
+    const baseImg = container.querySelector(".bg-shader-img") || container.querySelector(":scope > img");
 
     const syncImageWidth = () => {
         const containerWidth = container.clientWidth;

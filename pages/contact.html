@@ -20,16 +20,13 @@
 
 <nav class="navbar-main" aria-label="Main navigation">
     <div class="navbar-container">
-        <!-- Logo -->
         <a href="../index.html" class="navbar-brand">
             nurxen<span class="accent-blue">.</span>
         </a>
 
-        <!-- Enlaces principales -->
         <div class="navbar-links">
             <a href="../index.html" class="navlink">Home</a>
 
-            <!-- Dropdown de Trabajos -->
             <div class="navlink-dropdown">
                 <button class="dropdown-toggle" aria-expanded="false">
                     Work <i class="fa-solid fa-chevron-down dropdown-icon" aria-hidden="true"></i>
@@ -52,10 +49,6 @@
     <main class="page-main">
 
         <section class="contact-hero-section" aria-labelledby="hero-title">
-            <img src="../assets/images/ui/AvionPapel.png" width="160" height="160" loading="lazy"
-                class="contact-floating-img contact-img-left" alt="">
-            <img src="../assets/images/ui/Sobre_correo.png" width="192" height="192" loading="lazy"
-                class="contact-floating-img contact-img-right" alt="">
 
             <div class="contact-hero-container reveal-section">
                 <div class="contact-status-pill">
@@ -189,7 +182,6 @@
 
         <section id="social-grid" class="contact-social-section reveal-section" aria-labelledby="social-title">
             <div class="contact-social-header">
-                <img src="../assets/images/ui/Planta.png" width="96" height="96" loading="lazy" class="contact-plant-img" alt="">
                 <h2 id="social-title" class="contact-social-heading">Or find me online</h2>
                 <p class="contact-social-sub">I usually hang out here</p>
             </div>
@@ -293,26 +285,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/theme.js"></script>
-
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        document.querySelectorAll(".reveal-section").forEach((el) => {
-            gsap.fromTo(el, {
-                y: 30,
-                opacity: 0
-            }, {
-                y: 0,
-                opacity: 1,
-                duration: 1,
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top 90%"
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>

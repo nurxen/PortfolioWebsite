@@ -1,12 +1,83 @@
 /* ==========================================================
-   VIDEOGAMES PAGE STYLES - OPCIÓN A COMPACTO
-   (Versión optimizada: -36% altura, info completa)
+   VARIABLES Y CONFIGURACIÓN GLOBAL DE ASSETS Y VIDEOS (GAMES)
+   ========================================================== */
+:root {
+    /* 1. Unchained (Steam) */
+    --asset-unchained-box: url('../assets/images/games/unchained-steam/header.jpg');
+    --asset-unchained-video: url('../assets/videos/games/games-trailer.mp4'); /* O usar etiqueta video */
+
+    /* 2. Crosspaws */
+    --asset-crosspaws-box: url('../assets/images/games/crosspaws/Portada.png');
+    --asset-crosspaws-video: url('../assets/videos/games/games-trailer.mp4');
+
+    /* 3. Ant & Estres */
+    --asset-antestres-box: url('../assets/images/games/atiestres/6CCkqv.png');
+    --asset-antestres-video: url('../assets/videos/games/antiestres-trailer.mp4');
+
+    /* 4. Once Button a Time (O.B.A.T) */
+    --asset-obat-box: url('../assets/images/games/OBAT/Hgd5yj.png');
+    --asset-obat-video: url('../assets/videos/games/obat-trailer.mp4');
+
+    /* 5. Unchained Jam Origin */
+    --asset-jam-box: url('../assets/images/games/unchained-jam/ggUOZs.png');
+    --asset-jam-video: url('../assets/videos/games/unchained-jam-trailer.mp4');
+}
+
+/* ==========================================================
+   GAMES PAGE STYLES
+   Homogeneizado con la estética de HOME
    ========================================================== */
 
+/* ==========================================================
+   SIDE NAVIGATION
+   ========================================================== */
+.games-side-nav {
+    position: fixed;
+    left: 2.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    z-index: 40;
+    writing-mode: horizontal-tb;
+}
+
+@media (max-width: 1024px) {
+    .games-side-nav {
+        display: none;
+    }
+}
+
+.games-side-line {
+    width: 1px;
+    height: 2rem;
+    background: var(--border-subtle);
+}
+
+.games-side-link {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ganache);
+    transition: color 0.3s ease;
+    opacity: 0.6;
+}
+
+.games-side-link:hover {
+    color: var(--brand-accent);
+    opacity: 1;
+}
+
+/* ==========================================================
+   LAYOUT BASE
+   ========================================================== */
 .games-main-content {
-    padding-top: 5rem;
-    padding-bottom: 8rem;
-    background-color: var(--vanilla);
+    position: relative;
 }
 
 .games-container {
@@ -16,81 +87,19 @@
 }
 
 /* ==========================================================
-   SIDE NAVIGATION LATERAL
-   ========================================================== */
-.games-side-nav {
-    position: fixed;
-    right: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 100;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 4rem;
-}
-
-@media (min-width: 1280px) {
-    .games-side-nav {
-        display: flex;
-    }
-}
-
-.games-side-line {
-    height: 3rem;
-    width: 1px;
-    background-color: var(--border-subtle);
-}
-
-.games-side-link {
-    writing-mode: vertical-rl;
-    font-size: 0.55rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
-    color: rgba(35, 26, 23, 0.4);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.games-side-link:hover,
-.games-side-link.nav-link-active {
-    color: var(--ganache);
-}
-
-/* ==========================================================
-   HEADER DE LA PÁGINA
+   HEADER
    ========================================================== */
 .games-header {
-    text-align: center;
-    margin-bottom: 5rem;
-}
-
-.games-badge {
-    display: inline-block;
-    padding: 0.4rem 1rem;
-    margin-bottom: 2rem;
-    border: 1px solid var(--border-subtle);
-    border-radius: 99px;
-    background-color: var(--card-bg);
-}
-
-.games-badge-text {
-    color: var(--ganache);
-    font-weight: 800;
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
+    padding: 6rem 0 3rem 0;
 }
 
 .games-main-title {
     font-family: "Lora", serif;
-    font-size: clamp(3.2rem, 7vw, 6.5rem);
+    font-size: clamp(2.5rem, 5vw, 4rem);
     color: var(--ganache);
-    line-height: 0.95;
-    margin-bottom: 1.5rem;
     font-weight: 700;
-    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
 }
 
 .games-main-title span {
@@ -98,524 +107,516 @@
 }
 
 .games-main-subtitle {
-    font-size: 1rem;
-    color: rgba(35, 26, 23, 0.7);
-    max-width: 38rem;
-    margin: 0 auto 2.5rem auto;
-    font-style: italic;
-    line-height: 1.6;
+    font-size: 1.05rem;
+    color: rgba(35, 26, 23, 0.8);
+    line-height: 1.8;
+    max-width: 700px;
+    margin-bottom: 3rem;
 }
 
 .games-stats-row {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 2rem;
 }
 
 .games-stat-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-subtle);
-    padding: 1.25rem 2.5rem;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(35, 26, 23, 0.03);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .games-stat-num {
     font-family: "Lora", serif;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--ganache);
-    display: block;
-    line-height: 1;
-    margin-bottom: 0.25rem;
 }
 
 .games-stat-label {
-    font-size: 0.6rem;
-    font-weight: 800;
+    font-size: 0.75rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: rgba(35, 26, 23, 0.5);
+    letter-spacing: 0.12em;
+    color: var(--brand-accent);
 }
 
 /* ==========================================================
    WORKFLOW BOX
    ========================================================== */
 .games-workflow-box {
-    background-color: var(--card-bg);
+    background: var(--card-bg);
     border: 1px solid var(--border-subtle);
-    padding: 2rem 2.5rem;
     border-radius: 10px;
-    box-shadow: 0 15px 40px rgba(35, 26, 23, 0.04);
+    padding: 2.5rem;
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.8rem;
     align-items: flex-start;
     margin-bottom: 5rem;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .games-workflow-box {
-        flex-direction: row;
-        align-items: center;
-        gap: 2.5rem;
+        flex-direction: column;
+        padding: 2rem;
     }
 }
 
 .games-workflow-icon {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 8px;
-    background-color: var(--vanilla);
-    border: 1px solid var(--border-subtle);
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--ganache);
+    background: rgba(99, 107, 88, 0.1);
+    border-radius: 8px;
     font-size: 1.5rem;
+    color: var(--brand-accent);
     flex-shrink: 0;
 }
 
 .games-workflow-title {
     font-family: "Lora", serif;
-    font-size: 1.4rem;
-    color: var(--ganache);
+    font-size: 1.2rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    color: var(--ganache);
+    margin-bottom: 0.6rem;
 }
 
 .games-workflow-text {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: rgba(35, 26, 23, 0.8);
-    line-height: 1.6;
-}
-
-.games-workflow-text strong {
-    color: var(--ganache);
-    font-weight: 700;
+    line-height: 1.7;
 }
 
 /* ==========================================================
-   LISTADO DE JUEGOS - ESTRUCTURA COMPACTA
+   GAMES LIST
    ========================================================== */
 .games-list-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 4.5rem;
+    gap: 5rem;
 }
 
 .games-article {
-    scroll-margin-top: 8rem;
+    padding: 3.5rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.games-article:last-child {
+    border-bottom: none;
 }
 
 .games-article-inner {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-subtle);
-    border-radius: 10px;
-    padding: 2.5rem;
-    box-shadow: 0 20px 50px rgba(35, 26, 23, 0.04);
-    position: relative;
-    overflow: hidden;
-}
-
-@media (min-width: 768px) {
-    .games-article-inner {
-        padding: 3rem;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 .games-info-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    align-items: flex-start;
-    margin-bottom: 2.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 768px) {
     .games-info-grid {
-        grid-template-columns: 1fr 1.2fr;
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
 
 .games-media-box {
-    border-radius: 8px;
+    aspect-ratio: 16 / 10;
+    border-radius: 10px;
     overflow: hidden;
-    border: 1px solid var(--border-subtle);
-    background-color: var(--vanilla);
-    aspect-ratio: 16 / 9;
-    box-shadow: 0 10px 30px rgba(35, 26, 23, 0.06);
+    box-shadow: 0 10px 30px rgba(35, 26, 23, 0.1);
 }
 
-.games-main-img {
+/* Clases de vinculación de imágenes para las cajas principales */
+.bg-unchained-box {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background-image: var(--asset-unchained-box);
+    background-size: cover;
+    background-position: center;
     display: block;
 }
 
-/* ==========================================================
-   TAGS Y ETIQUETAS
-   ========================================================== */
+.bg-crosspaws-box {
+    width: 100%;
+    height: 100%;
+    background-image: var(--asset-crosspaws-box);
+    background-size: cover;
+    background-position: center;
+    display: block;
+}
+
+.bg-antestres-box {
+    width: 100%;
+    height: 100%;
+    background-image: var(--asset-antestres-box);
+    background-size: cover;
+    background-position: center;
+    display: block;
+}
+
+.bg-obat-box {
+    width: 100%;
+    height: 100%;
+    background-image: var(--asset-obat-box);
+    background-size: cover;
+    background-position: center;
+    display: block;
+}
+
+.bg-jam-box {
+    width: 100%;
+    height: 100%;
+    background-image: var(--asset-jam-box);
+    background-size: cover;
+    background-position: center;
+    display: block;
+}
+
 .games-tags-row {
     display: flex;
+    gap: 0.8rem;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .games-tag-primary {
-    background-color: var(--ganache);
-    color: var(--vanilla);
-    padding: 0.3rem 0.8rem;
-    border-radius: 4px;
-    font-size: 0.62rem;
-    font-weight: 800;
+    font-size: 0.65rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
+    color: var(--vanilla);
+    background: var(--ganache);
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
 }
 
 .games-tag-secondary {
-    background-color: var(--vanilla);
-    color: var(--ganache);
-    border: 1px solid var(--border-subtle);
-    padding: 0.3rem 0.8rem;
-    border-radius: 4px;
-    font-size: 0.62rem;
-    font-weight: 800;
+    font-size: 0.65rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
+    color: var(--ganache);
+    background: rgba(99, 107, 88, 0.08);
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    border: 1px solid rgba(99, 107, 88, 0.2);
 }
 
 .games-tag-highlight {
-    background-color: rgba(99, 107, 88, 0.12);
-    color: var(--ganache);
-    border: 1px solid var(--border-subtle);
-    padding: 0.3rem 0.8rem;
-    border-radius: 4px;
-    font-size: 0.62rem;
-    font-weight: 800;
+    font-size: 0.65rem;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--vanilla);
+    background: var(--brand-accent);
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
-/* ==========================================================
-   TÍTULOS Y DESCRIPCIONES
-   ========================================================== */
+.games-badge-winner {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--vanilla);
+    background: #C97F7F;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
 .games-article-title {
     font-family: "Lora", serif;
-    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
     color: var(--ganache);
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 1rem;
-    letter-spacing: -0.02em;
 }
 
 .games-article-desc {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: rgba(35, 26, 23, 0.8);
-    line-height: 1.6;
+    line-height: 1.8;
     margin-bottom: 1.5rem;
-}
-
-.games-article-desc strong {
-    color: var(--ganache);
-    font-weight: 700;
 }
 
 /* ==========================================================
-   RESPONSABILIDADES COMPACTAS (Badges)
+   META COMPACT
    ========================================================== */
 .games-meta-compact {
-    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(99, 107, 88, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(99, 107, 88, 0.1);
 }
 
 .games-meta-title {
-    font-size: 0.7rem;
-    font-weight: 800;
+    font-size: 0.75rem;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: var(--brand-accent);
-    margin-bottom: 0.6rem;
+    color: var(--ganache);
+    margin-bottom: 0.8rem;
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.5rem;
 }
 
 .games-responsibilities-badges {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.6rem;
 }
 
 .games-badge-resp {
-    background-color: rgba(99, 107, 88, 0.08);
-    color: var(--ganache);
-    border: 1px solid rgba(99, 107, 88, 0.2);
-    padding: 0.35rem 0.75rem;
-    border-radius: 4px;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    display: inline-block;
-    transition: all 0.2s ease;
-}
-
-.games-badge-resp:hover {
-    background-color: rgba(99, 107, 88, 0.15);
-    border-color: var(--brand-accent);
+    letter-spacing: 0.1em;
+    color: var(--vanilla);
+    background: var(--ganache);
+    padding: 0.35rem 0.8rem;
+    border-radius: 4px;
 }
 
 /* ==========================================================
-   AWARDS / PRENSA COMPACTA
+   AWARDS
    ========================================================== */
 .games-awards-compact {
-    background-color: var(--surface-light);
-    border: 1px solid var(--border-subtle);
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(201, 127, 127, 0.08);
     border-radius: 8px;
-    padding: 1.25rem;
-    margin-bottom: 1.5rem;
+    border: 1px solid rgba(201, 127, 127, 0.2);
 }
 
 .games-award-title {
-    font-size: 0.7rem;
-    font-weight: 800;
+    font-size: 0.75rem;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: var(--brand-accent);
-    margin-bottom: 0.75rem;
+    color: var(--ganache);
+    margin-bottom: 0.8rem;
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.5rem;
 }
 
 .games-award-item {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.6rem;
 }
 
 .games-award-badge {
-    background-color: #fde047;
-    color: #451a03;
-    font-weight: 900;
-    padding: 0.25rem 0.65rem;
-    border-radius: 4px;
-    font-size: 0.58rem;
+    font-size: 0.7rem;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--vanilla);
+    background: #C97F7F;
+    padding: 0.35rem 0.7rem;
+    border-radius: 3px;
     white-space: nowrap;
 }
 
 .games-award-text {
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: rgba(35, 26, 23, 0.6);
+    font-size: 0.85rem;
+    color: var(--ganache);
+    font-weight: 600;
 }
 
 .games-award-quote {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    color: rgba(35, 26, 23, 0.75);
+    line-height: 1.6;
+    margin-top: 0.8rem;
     font-style: italic;
-    color: rgba(35, 26, 23, 0.7);
-    line-height: 1.5;
-    margin-bottom: 0.75rem;
-}
-
-.games-link-inline {
-    font-size: 0.7rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--ganache);
-    text-decoration: none;
-    border-bottom: 1px solid var(--ganache);
-    padding-bottom: 2px;
-    transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.games-link-inline:hover {
-    color: var(--brand-accent);
-    border-color: var(--brand-accent);
 }
 
 /* ==========================================================
-   BOTONES UNIFICADOS
+   ACTION BUTTONS
    ========================================================== */
-.games-action-btn,
-.games-action-btn-secondary {
+.hero-btn-primary {
     display: inline-flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.8rem 1.8rem;
-    background-color: var(--ganache);
-    color: var(--vanilla);
-    border-radius: 6px !important;
-    font-size: 0.68rem;
+    gap: 0.6rem;
+    padding: 0.85rem 1.8rem;
     font-weight: 700;
-    text-transform: uppercase;
+    font-size: 0.72rem;
     letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 6px;
+    background-color: var(--vanilla);
+    color: var(--charcoal);
+    border: 1px solid var(--vanilla);
+    cursor: pointer;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(35, 26, 23, 0.15);
-    border: 1px solid transparent;
-    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-top: 1.5rem;
 }
 
-.games-action-btn:hover,
-.games-action-btn-secondary:hover {
+.hero-btn-primary:hover {
     background-color: var(--brand-accent);
     color: var(--vanilla);
+    border-color: var(--brand-accent);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(99, 107, 88, 0.25);
+    box-shadow: 0 6px 20px rgba(99, 107, 88, 0.3);
 }
 
-.games-action-btn-secondary {
-    padding: 1rem 2.5rem;
-    box-shadow: 0 10px 30px rgba(35, 26, 23, 0.15);
-}
-
-/* ==========================================================
-   MEDIA ÚNICA (Solo Video o Imagen)
-   ========================================================== */
-.games-media-single {
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid var(--border-subtle);
-    background-color: var(--charcoal);
-    aspect-ratio: 16 / 9;
-    display: flex;
-    margin-bottom: 1.5rem;
-}
-
-.games-video-elem {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.games-static-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* ==========================================================
-   OCULTAR YOUTUBE GRID (No se usa en Opción A)
-   ========================================================== */
-.games-youtube-grid {
-    display: none !important;
-}
-
-.games-media-subgrid {
-    display: none !important;
-}
-
-/* ==========================================================
-   ACTION ROW (Para Jam Version con badge)
-   ========================================================== */
 .games-action-row {
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
     align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
 }
 
 .games-exhibit-ticket {
-    font-size: 0.68rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 0.6rem 1rem;
-    border-radius: 6px;
-    border: 1px solid var(--border-subtle);
-    background-color: var(--vanilla);
-    color: var(--ganache);
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
+    padding: 0.65rem 1.2rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ganache);
+    background: rgba(99, 107, 88, 0.08);
+    border: 1px solid rgba(99, 107, 88, 0.2);
+    border-radius: 4px;
 }
 
 /* ==========================================================
-   SECCIÓN EXPLORE MORE
+   MEDIA SECTION (VIDEOS)
+   ========================================================== */
+.games-media-single {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(35, 26, 23, 0.1);
+    background: #120f0d;
+    position: relative;
+}
+
+/* Estilos para insertar vídeo fluidamente en las cajas */
+.games-video-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.games-video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==========================================================
+   EXPLORE SECTION
    ========================================================== */
 .games-explore-section {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 5rem 0 3rem 0;
-    margin-top: 3rem;
-    border-top: 1px solid var(--border-subtle);
+    text-align: center;
 }
 
 .games-explore-title {
     font-family: "Lora", serif;
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
     color: var(--ganache);
-    margin-bottom: 1.5rem;
     font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 2rem;
 }
 
 /* ==========================================================
-   SECCIÓN (Estilo del Workflow)
-   ========================================================== */
-.games-section {
-    margin-bottom: 4rem;
-}
-
-/* ==========================================================
-   RESPONSIVE IMPROVEMENTS
+   RESPONSIVE
    ========================================================== */
 @media (max-width: 768px) {
-    .games-article-inner {
-        padding: 1.8rem;
+    .games-container {
+        padding: 0 1.5rem;
     }
 
-    .games-info-grid {
-        gap: 1.5rem;
-        margin-bottom: 1.5rem;
+    .games-header {
+        padding: 3rem 0 2rem 0;
+    }
+
+    .games-stats-row {
+        gap: 2rem;
+    }
+
+    .games-article {
+        padding: 2.5rem 0;
+    }
+
+    .games-media-box {
+        aspect-ratio: 16 / 10;
+    }
+
+    .games-action-row {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .hero-btn-primary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .games-main-title {
+        font-size: 1.8rem;
     }
 
     .games-main-subtitle {
         font-size: 0.95rem;
     }
 
-    .games-meta-compact {
-        margin-bottom: 1rem;
-    }
-
-    .games-award-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-@media (max-width: 480px) {
-    .games-tags-row {
-        flex-direction: column;
-    }
-
-    .games-tag-primary,
-    .games-tag-secondary,
-    .games-tag-highlight {
-        width: 100%;
-        text-align: center;
+    .games-stat-num {
+        font-size: 2rem;
     }
 
     .games-article-title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
-    .games-action-btn {
-        width: 100%;
-        justify-content: center;
+    .games-article-desc {
+        font-size: 0.95rem;
+    }
+
+    .games-workflow-box {
+        padding: 1.5rem;
+    }
+
+    .games-meta-compact {
+        padding: 1rem;
+    }
+
+    .games-awards-compact {
+        padding: 1rem;
+    }
+
+    .hero-btn-primary {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.65rem;
     }
 }

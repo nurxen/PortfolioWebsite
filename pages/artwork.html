@@ -5,23 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artwork Gallery - Nurxen | 3D Environment & Technical Artist</title>
-    <!-- Favicon profesional limpio -->
     <link rel="icon" type="image/png" href="../assets/images/ui/nurxen-logo.png" />
 
-    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-    <!-- Hojas de estilos -->
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/artwork.css" />
 </head>
 
 <body>
 
-    <!-- SIDEBAR DE NAVEGACIÓN LATERAL -->
     <nav id="side-nav" aria-label="Page sections" class="artwork-side-nav">
         <div class="artwork-side-line" aria-hidden="true"></div>
         <a href="#featured" class="artwork-side-link">Featured</a>
@@ -32,7 +28,6 @@
         <div class="artwork-side-line" aria-hidden="true"></div>
     </nav>
 
-    <!-- NAVBAR UNIFICADO -->
     <nav class="navbar-main" aria-label="Main navigation">
         <div class="navbar-container">
             <a href="../index.html" class="navbar-brand">
@@ -42,7 +37,6 @@
             <div class="navbar-links">
                 <a href="../index.html" class="navlink">Home</a>
 
-                <!-- Portfolio Dropdown -->
                 <div class="navlink-dropdown">
                     <button class="dropdown-toggle" aria-expanded="false">
                         Work <i class="fa-solid fa-chevron-down dropdown-icon" aria-hidden="true"></i>
@@ -62,20 +56,16 @@
         </div>
     </nav>
 
-    <!-- Main Content Unificado -->
     <main class="artwork-main-content">
         <div class="artwork-container">
             
-            <!-- Header de la Galería -->
             <header class="artwork-header reveal-section">
-                <div class="artwork-badge">
-                    <p class="artwork-badge-text">Portfolio 2026</p>
-                </div>
+                <span class="section-eyebrow">✦ PORTFOLIO 2026</span>
                 <h1 class="artwork-main-title">
                     Stylized<br /><span>Artistry</span>
                 </h1>
-                <p class="artwork-main-subtitle" lang="es">
-                    Fusionando arte tradicional con tecnología 3D para crear experiencias visuales únicas y optimizadas para tiempo real.
+                <p class="artwork-main-subtitle">
+                    Blending traditional art with 3D technology to create unique visual experiences optimized for real-time rendering.
                 </p>
             </header>
 
@@ -91,7 +81,7 @@
                                 The Cozy Studio
                             </h2>
                             <p class="artwork-section-desc">
-                                Un estudio detallado sobre la iluminación "cozy" y la optimización de assets. Este proyecto demuestra mi capacidad para manejar todo el pipeline: desde el concept hasta el render final en motor.
+                                A detailed study on "cozy" lighting and asset optimization. This project demonstrates my ability to manage the complete pipeline: from concept to final engine render.
                             </p>
                             <div class="artwork-tech-tags">
                                 <span class="artwork-tech-tag">Blender</span>
@@ -99,27 +89,24 @@
                                 <span class="artwork-tech-tag">Unity Engine</span>
                             </div>
                         </div>
-                        <div>
-                            <img src="../assets/images/artwork/3D/COCINA/1.png"
-                                alt="Cozy Studio 3D environment render"
-                                width="800" height="600"
-                                class="artwork-featured-img">
+                        <div class="artwork-featured">
+                            <div class="bg-featured-img" role="img" aria-label="The Cozy Studio — Main Render"></div>
                         </div>
                     </div>
 
                     <div class="artwork-subgrid">
                         <div class="artwork-subcard">
-                            <img src="../assets/images/artwork/3D/COCINA/1.png" alt="Wireframe topology view" width="600" height="400" loading="lazy" class="artwork-subcard-img">
+                            <div class="bg-sub-1-img" role="img" aria-label="Topology Example"></div>
                             <h3 class="artwork-subcard-title">Topology & Optimization</h3>
                             <p class="artwork-subcard-text">Clean quad-based topology optimized for deformation and game engine performance.</p>
                         </div>
                         <div class="artwork-subcard">
-                            <img src="../assets/images/artwork/3D/COCINA/1.png" alt="UV map layout" width="600" height="400" loading="lazy" class="artwork-subcard-img">
+                            <div class="bg-sub-2-img" role="img" aria-label="UV Layout Example"></div>
                             <h3 class="artwork-subcard-title">Efficient UVs</h3>
                             <p class="artwork-subcard-text">Maximized UV space usage with proper texel density consistency across the scene.</p>
                         </div>
                         <div class="artwork-subcard">
-                            <img src="../assets/images/artwork/3D/COCINA/1.png" alt="Lighting and mood setup" width="600" height="400" loading="lazy" class="artwork-subcard-img">
+                            <div class="bg-sub-3-img" role="img" aria-label="Lighting Example"></div>
                             <h3 class="artwork-subcard-title">Lighting & Mood</h3>
                             <p class="artwork-subcard-text">Combination of Baked Lightmaps and Real-time lights to achieve a cozy, warm atmosphere.</p>
                         </div>
@@ -127,28 +114,25 @@
                 </div>
             </section>
 
-            <!-- 2. 3D Props Section (Optimization & Workflow) -->
+            <!-- 2. 3D Props Section -->
             <section id="props-section" class="artwork-section reveal-section" aria-labelledby="props-title">
                 <div class="artwork-section-header-row">
                     <div>
                         <p class="artwork-category-tag" style="margin-bottom: 0.5rem;">Optimization & Workflow</p>
                         <h2 id="props-title" class="artwork-section-title">3D Assets</h2>
-                        <p class="artwork-hint-text" lang="es">Pasa el ratón sobre los modelos para ver la topología (Wireframe).</p>
+                        <p class="artwork-hint-text">Game-ready models with optimization focus.</p>
                     </div>
 
-                    <!-- Pestañas de Filtrado de Assets -->
                     <div class="artwork-tabs-container" role="tablist" aria-label="Asset type filter">
                         <button onclick="switchTab('props-vg', this)" role="tab" aria-selected="true" aria-controls="props-vg" class="artwork-tab-btn active">Game Ready</button>
                         <button onclick="switchTab('props-nvg', this)" role="tab" aria-selected="false" aria-controls="props-nvg" class="artwork-tab-btn">High Poly</button>
                     </div>
                 </div>
 
-                <!-- Contenido de Pestaña: Game Ready -->
                 <div id="props-vg" role="tabpanel" class="artwork-tab-content active artwork-assets-grid">
                     <div class="artwork-asset-card group">
                         <div class="artwork-asset-media">
-                            <img src="../assets/images/artwork/3D/COCINA/1.png" alt="Modular Town Wall 3D asset" width="1200" height="750" loading="lazy" class="artwork-asset-front">
-                            <img src="../assets/images/artwork/3D/COCINA/1.png" alt="Modular Town Wall wireframe topology" width="1200" height="800" loading="lazy" class="artwork-asset-back">
+                            <div class="bg-asset-1-img" role="img" aria-label="Modular Town Wall"></div>
                             <span class="artwork-asset-pill">Optimized</span>
                         </div>
                         <div class="artwork-asset-info">
@@ -171,8 +155,8 @@
 
                     <div class="artwork-asset-card group">
                         <div class="artwork-asset-media">
-                            <img src="../assets/images/artwork/3D/COCINA/1.png" alt="Ancient Magic Chest 3D asset" width="1200" height="750" loading="lazy" class="artwork-asset-front">
-                            <img src="../assets/images/artwork/3D/COCINA/1.png" alt="Ancient Magic Chest wireframe topology" width="1200" height="800" loading="lazy" class="artwork-asset-back">
+                            <div class="bg-asset-2-img" role="img" aria-label="Ancient Magic Chest"></div>
+                            <span class="artwork-asset-pill">Hero Prop</span>
                         </div>
                         <div class="artwork-asset-info">
                             <div>
@@ -193,11 +177,10 @@
                     </div>
                 </div>
 
-                <!-- Contenido de Pestaña: High Poly -->
                 <div id="props-nvg" role="tabpanel" class="artwork-tab-content artwork-assets-grid" style="display: none;" hidden>
                     <div class="artwork-asset-card group">
                         <div class="artwork-asset-media">
-                            <img src="../assets/images/artwork/3D/COCINA/1.png" alt="High Poly Sculpt Asset" width="1200" height="750" loading="lazy" class="artwork-asset-front">
+                            <div class="bg-sculpt-img" role="img" aria-label="High Poly Sculpt"></div>
                             <span class="artwork-asset-pill">High Poly</span>
                         </div>
                         <div class="artwork-asset-info">
@@ -223,12 +206,8 @@
                     <div class="artwork-shaders-glow-2" aria-hidden="true"></div>
 
                     <div class="artwork-shaders-grid">
-                        
                         <div>
-                            <div class="artwork-badge-dark">
-                                <span class="artwork-dot" aria-hidden="true"></span>
-                                <span class="text-[9px] font-bold uppercase tracking-widest" style="color: var(--vanilla);">Technical Artist</span>
-                            </div>
+                            <p class="artwork-category-tag artwork-category-tag-dark" style="margin-bottom: 0.5rem;">Technical Art & Shaders</p>
 
                             <h2 id="shaders-title" class="artwork-shaders-title">
                                 Pastel 2D <br />
@@ -236,35 +215,34 @@
                             </h2>
 
                             <p class="artwork-shaders-desc">
-                                ¿Cómo convertir un modelo 3D en una ilustración 2D? He desarrollado un workflow que combina <strong style="color: var(--vanilla);">Grease Pencil</strong> y <strong style="color: var(--vanilla);">Compositing</strong> para lograr este look "hand-drawn".
+                                How to convert a 3D model into a 2D illustration? I developed a workflow combining <strong style="color: var(--vanilla);">Grease Pencil</strong> and <strong style="color: var(--vanilla);">Compositing</strong> to achieve this "hand-drawn" look.
                             </p>
 
                             <div class="artwork-steps-list">
                                 <div class="artwork-step-item">
                                     <span class="artwork-step-num" aria-hidden="true">01</span>
-                                    <p class="text-xs font-bold uppercase tracking-wider" lang="es">Clean Outlines con Grease Pencil</p>
+                                    <p style="font-size: 0.8rem; margin: 0; font-weight:700; text-transform:uppercase;">Clean Outlines with Grease Pencil</p>
                                 </div>
                                 <div class="artwork-step-item">
                                     <span class="artwork-step-num" aria-hidden="true">02</span>
-                                    <p class="text-xs font-bold uppercase tracking-wider" lang="es">Compositing: Dilate/Erode Sticker Border</p>
+                                    <p style="font-size: 0.8rem; margin: 0; font-weight:700; text-transform:uppercase;">Compositing: Dilate/Erode Sticker Border</p>
                                 </div>
                                 <div class="artwork-step-item">
                                     <span class="artwork-step-num" aria-hidden="true">03</span>
-                                    <p class="text-xs font-bold uppercase tracking-wider">Anime Style Sparkles &amp; Highlights</p>
+                                    <p style="font-size: 0.8rem; margin: 0; font-weight:700; text-transform:uppercase;">Anime Style Sparkles &amp; Highlights</p>
                                 </div>
                             </div>
 
                             <div>
                                 <a href="https://www.youtube.com/watch?v=cj9i-RE6-0g" target="_blank" rel="noopener noreferrer" class="artwork-tutorial-btn">
-                                    <i class="fa-brands fa-youtube text-lg" aria-hidden="true"></i>
-                                    Ver Tutorial Completo
+                                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                                    Full Tutorial
                                 </a>
                             </div>
                         </div>
 
                         <div style="display: flex; flex-direction: column; gap: 2.5rem;">
-                            
-                            <div class="artwork-video-wrapper">
+                            <div class="artwork-video-wrapper" style="aspect-ratio: 16/9;">
                                 <iframe class="artwork-iframe"
                                     src="https://www.youtube.com/embed/cj9i-RE6-0g?controls=1&modestbranding=1"
                                     title="Pastel 2D Sticker FX — Full Tutorial"
@@ -273,40 +251,32 @@
                                     loading="lazy"></iframe>
                             </div>
 
-                            <!-- Simulador de Comparación Shader / Raw -->
-                            <div class="artwork-video-wrapper" id="shader-slider">
-                                <span class="absolute top-4 left-4 text-[9px] font-bold px-3 py-1 rounded-full z-30 uppercase tracking-widest backdrop-blur-md" style="background: rgba(0,0,0,0.6); color: var(--vanilla); position: absolute;" aria-hidden="true">
+                            <div class="artwork-video-wrapper" id="shader-slider" style="position: relative; user-select: none;">
+                                <span style="position: absolute; top: 1rem; left: 1rem; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 99px; background: rgba(0,0,0,0.6); color: var(--vanilla); z-index: 30; pointer-events: none;" aria-hidden="true">
                                     Raw Render
                                 </span>
-                                <span class="absolute top-4 right-4 text-[9px] font-bold px-3 py-1 rounded-full z-30 uppercase tracking-widest" style="background: var(--card-bg); color: var(--ganache); position: absolute;" aria-hidden="true">
+                                <span style="position: absolute; top: 1rem; right: 1rem; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 99px; background: var(--card-bg); color: var(--ganache); z-index: 30; pointer-events: none;" aria-hidden="true">
                                     Final Shader
                                 </span>
 
-                                <img src="../assets/images/artwork/3D/radio car/FINAL.png"
-                                    alt="Book 3D model with final color shader"
-                                    loading="lazy">
+                                <div class="bg-shader-img" style="width: 100%; height: 100%; position: absolute; top:0; left:0;" role="img" aria-label="Raw Render"></div>
 
                                 <div id="shader-overlay">
-                                    <img src="../assets/images/artwork/3D/radio car/FINAL_CLAY.png"
-                                        alt="Book 3D model raw viewport render"
-                                        loading="lazy"
-                                        id="shader-top-image">
+                                    <div class="bg-shader-img" style="width: 100%; height: 100%; position: absolute; top:0; left:0;" role="img" aria-label="Final Shader"></div>
                                 </div>
 
                                 <div id="shader-handle"
                                     aria-label="Drag to compare before and after"
-                                    class="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center z-30 shadow-lg" style="left: 50%; background-color: var(--card-bg); color: var(--ganache); cursor: ew-resize; position: absolute;">
+                                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 2.5rem; height: 2.5rem; border-radius: 50%; background-color: var(--card-bg); color: var(--ganache); display: flex; align-items: center; justify-content: center; z-index: 40; box-shadow: 0 4px 15px rgba(0,0,0,0.3); cursor: ew-resize;">
                                     <i class="fa-solid fa-arrows-left-right text-xs" aria-hidden="true"></i>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </section>
 
-            <!-- 4. Motion & Lighting Section -->
+            <!-- 4. Motion & Lighting Section (Con videos integrados) -->
             <section id="motion-section" class="artwork-section reveal-section" aria-labelledby="motion-title">
                 <div class="artwork-section-header-row" style="margin-bottom: 3.5rem;">
                     <div>
@@ -317,10 +287,9 @@
 
                 <div class="artwork-motion-grid">
                     <div class="artwork-motion-main-col">
-                        <div class="artwork-video-card group">
-                            <video class="artwork-video-element" autoplay muted loop playsinline poster="../assets/images/artwork/3D/COCINA/1.png" aria-label="Full scene render — Japanese temple real-time lighting showcase">
-                                <source src="../assets/videos/Video_templo_japones.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
+                        <div class="artwork-video-card group" style="background:#120f0d;">
+                            <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; position:absolute;">
+                                <source src="../assets/videos/artwork/Proyecto de vídeo 5.mp4" type="video/mp4">
                             </video>
                             <div class="artwork-video-caption">
                                 <h3 class="font-display text-xl text-white mb-1">Full Scene Render</h3>
@@ -328,26 +297,23 @@
                             </div>
                         </div>
 
-                        <div class="artwork-mini-video-card group" style="margin-top: 2rem;">
-                            <video class="artwork-video-element" autoplay muted loop playsinline aria-label="2D vertical timelapse animation">
-                                <source src="../assets/images/artwork/2D/vertical timelapse.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
+                        <div class="artwork-mini-video-card group" style="background:#120f0d; aspect-ratio:16/9;">
+                            <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; position:absolute; border-radius:8px;">
+                                <source src="../assets/videos/artwork/f4cb94467a42b49240889f040d69981b.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
 
                     <div class="artwork-motion-side-col">
-                        <div class="artwork-side-video-box group">
-                            <video class="artwork-video-element" autoplay muted loop playsinline aria-label="Animated 3D environment — square format">
-                                <source src="../assets/videos/cuadrado.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
+                        <div class="artwork-side-video-box group" style="background:#120f0d;">
+                            <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; position:absolute; border-radius:8px;">
+                                <source src="../assets/videos/artwork/cuadrado.mp4" type="video/mp4">
                             </video>
                         </div>
 
-                        <div class="artwork-side-video-box group">
-                            <video class="artwork-video-element" autoplay muted loop playsinline aria-label="3D animation showcase">
-                                <source src="../assets/videos/f4cb94467a42b49240889f040d69981b.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
+                        <div class="artwork-side-video-box group" style="background:#120f0d;">
+                            <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; position:absolute; border-radius:8px;">
+                                <source src="../assets/videos/artwork/Proyecto de vídeo 5.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -375,8 +341,7 @@
                 </div>
             </section>
 
-
-            <!-- 6. Art Gallery Section -->
+            <!-- 5. Art Gallery Section -->
             <section id="gallery" class="artwork-section reveal-section" aria-labelledby="gallery-title">
                 <div class="text-center mb-16 space-y-6">
                     <h2 id="gallery-title" class="artwork-section-title">Art Gallery</h2>
@@ -391,46 +356,22 @@
                 </div>
 
                 <div id="gallery-container" class="artwork-gallery-masonry">
-                    <div class="gallery-item artwork">
-                        <img src="../assets/images/artwork/3D/COCINA/1.png" alt="Cozy kitchen 3D environment render" width="800" height="600" loading="lazy" class="artwork-gallery-img">
-                    </div>
-                    <div class="gallery-item artwork">
-                        <img src="../assets/images/artwork/3D/navidad/0750.png" alt="Christmas 3D scene render" width="800" height="600" loading="lazy" class="artwork-gallery-img">
-                    </div>
-                    <div class="gallery-item artwork">
-                        <img src="../assets/images/artwork/3D/otoño mesa/render definitivo.png" alt="Autumn table 3D environment render" width="800" height="600" loading="lazy" class="artwork-gallery-img">
-                    </div>
-                    <div class="gallery-item artwork">
-                        <img src="../assets/images/artwork/3D/radio car/FINAL.png" alt="Radio car 3D model final render" width="800" height="600" loading="lazy" class="artwork-gallery-img">
-                    </div>
-                    <div class="gallery-item concept">
-                        <img src="../assets/images/artwork/2D/Escenario luces.jpg" alt="2D scene with lights concept art" width="800" height="600" loading="lazy" class="artwork-gallery-img">
-                    </div>
-                    <div class="gallery-item concept">
-                        <img src="../assets/images/artwork/2D/Copia de Ivy post 1.jpg" alt="Ivy character concept art post 1" width="800" height="600" loading="lazy" class="artwork-gallery-img">
-                    </div>
-                    <div class="gallery-item concept">
-                        <img src="../assets/images/artwork/2D/Copia de Ivy post 2.jpg" alt="Ivy character concept art post 2" width="800" height="600" loading="lazy" class="artwork-gallery-img">
-                    </div>
-                    <div class="gallery-item concept">
-                        <img src="../assets/images/artwork/2D/IMG_0648.JPG" alt="2D traditional artwork" width="800" height="600" loading="lazy" class="artwork-gallery-img">
-                    </div>
-                    <div class="gallery-item sculpt">
-                        <img src="../assets/images/artwork/3D/personjes/blue-cycles.jpg" alt="Blue character 3D sculpt Cycles render" width="800" height="600" loading="lazy" class="artwork-gallery-img">
-                    </div>
-                    <div class="gallery-item sculpt">
-                        <img src="../assets/images/artwork/3D/personjes/orange-cycles.jpg" alt="Orange character 3D sculpt Cycles render" width="800" height="600" loading="lazy" class="artwork-gallery-img">
-                    </div>
-                    <div class="gallery-item sculpt">
-                        <img src="../assets/images/artwork/3D/personjes/pink-cycles.jpg" alt="Pink character 3D sculpt Cycles render" width="800" height="600" loading="lazy" class="artwork-gallery-img">
-                    </div>
-                    <div class="gallery-item materials">
-                        <img src="../assets/images/artwork/3D/COCINA/1.png" alt="Kitchen materials study PBR textures showcase" width="800" height="600" loading="lazy" class="artwork-gallery-img">
-                    </div>
+                    <div class="gallery-item artwork"><div class="gallery-img-box gallery-artwork-1" role="img" aria-label="Gallery Item 1"></div></div>
+                    <div class="gallery-item artwork"><div class="gallery-img-box gallery-artwork-2" role="img" aria-label="Gallery Item 2"></div></div>
+                    <div class="gallery-item artwork"><div class="gallery-img-box gallery-artwork-3" role="img" aria-label="Gallery Item 3"></div></div>
+                    <div class="gallery-item artwork"><div class="gallery-img-box gallery-artwork-4" role="img" aria-label="Gallery Item 4"></div></div>
+                    <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-1" role="img" aria-label="Concept Art 1"></div></div>
+                    <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-2" role="img" aria-label="Concept Art 2"></div></div>
+                    <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-3" role="img" aria-label="Concept Art 3"></div></div>
+                    <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-4" role="img" aria-label="Concept Art 4"></div></div>
+                    <div class="gallery-item sculpt"><div class="gallery-img-box gallery-sculpt-1" role="img" aria-label="Sculpt 1"></div></div>
+                    <div class="gallery-item sculpt"><div class="gallery-img-box gallery-sculpt-2" role="img" aria-label="Sculpt 2"></div></div>
+                    <div class="gallery-item sculpt"><div class="gallery-img-box gallery-sculpt-3" role="img" aria-label="Sculpt 3"></div></div>
+                    <div class="gallery-item materials"><div class="gallery-img-box gallery-materials-1" role="img" aria-label="Materials Study"></div></div>
                 </div>
             </section>
 
-            <!-- Call to Action Final -->
+            <!-- CTA Final -->
             <section class="artwork-section reveal-section text-center" aria-label="Contact call to action" style="margin-bottom: 2rem;">
                 <div class="artwork-cta-box">
                     <div class="artwork-cta-icon-wrap" aria-hidden="true">
@@ -442,8 +383,8 @@
                     </div>
                     <div class="artwork-cta-divider" aria-hidden="true"></div>
                     <div class="flex gap-4">
-                        <a href="contact.html" class="artwork-cta-btn-primary">Contact</a>
-                        <a href="../files/CV_2025_English.pdf" target="_blank" rel="noopener noreferrer" class="artwork-cta-btn-secondary">CV</a>
+                        <a href="contact.html" class="hero-btn-primary">Contact</a>
+                        <a href="../files/CV_2025_English.pdf" target="_blank" rel="noopener noreferrer" class="hero-btn-secondary">CV</a>
                     </div>
                 </div>
             </section>
@@ -451,7 +392,6 @@
         </div>
     </main>
 
-    <!-- Footer Unificado -->
     <div class="footer-wrap">
         <svg class="footer-wave" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
             <path d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,139,576,170.7C672,203,768,245,864,240C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
@@ -506,12 +446,10 @@
         </footer>
     </div>
 
-    <!-- Back to Top Button -->
     <button id="backToTop" aria-label="Back to top" class="back-to-top">
         <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <!-- SCRIPTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="../js/main.js"></script>

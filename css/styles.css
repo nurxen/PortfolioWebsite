@@ -45,21 +45,21 @@
 
 
 /* ==========================================================
-   VARIABLES - PALETA TÉCNICA VAINILLA & OLIVA GRISÁCEO
+   VARIABLES - PALETA VAINILLA, OLIVA, MARRÓN
    ========================================================== */
 :root {
-    --vanilla:       #EFE9DF;      /* Fondo general de la web (Arcilla cálida) */
-    --card-bg:       #DFD5C3;      /* Contenedores y tarjetas (Arena con contraste) */
+    --vanilla:       #EFE9DF;      /* Fondo general */
+    --card-bg:       #DFD5C3;      /* Contenedores y tarjetas */
     
-    --ganache:       #4A3B32;      /* Marrón café suave y acogedor para textos y botones principales */
-    --ganache-dark:  #342821;      /* Variante ligeramente más profunda para contrastes extremos */
+    --ganache:       #4A3B32;      /* Marrón café - texto principal */
+    --ganache-dark:  #342821;      /* Variante más profunda */
     
     --border-subtle: #C8BCAB;      /* Líneas y bordes finos */
     
-    --brand-accent:  #636B58;      /* El acento: Verde Oliva Grisáceo (Técnico y sobrio) */
+    --brand-accent:  #636B58;      /* Verde oliva grisáceo - acento */
     
-    --charcoal:      #26201D;      /* Fondo cinematográfico del Hero (suavizado, ya no es negro puro) */
-    --surface-light: #D5C9B6;      /* Superficie alternativa sólida */
+    --charcoal:      #26201D;      /* Fondo cinematográfico del Hero */
+    --surface-light: #D5C9B6;      /* Superficie alternativa */
 }
 
 /* ==========================================================
@@ -157,8 +157,33 @@ section {
     margin-bottom: 0.75rem;
     display: inline-block;
     padding: 0.2rem 0.6rem;
-    background-color: rgba(99, 107, 88, 0.08); /* Fondo verde oliva suave */
+    background-color: rgba(99, 107, 88, 0.08);
     border-radius: 4px;
+}
+
+.section-title {
+    font-family: "Lora", serif;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    color: var(--ganache);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.section-paragraph {
+    font-size: 1rem;
+    color: rgba(35, 26, 23, 0.78);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.text-strong {
+    font-weight: 700;
+    color: var(--ganache);
+}
+
+.text-strong-red {
+    color: var(--brand-accent);
 }
 
 /* ==========================================================
@@ -193,6 +218,10 @@ section {
 
 .accent-blue { 
     color: var(--brand-accent); 
+}
+
+.accent-red {
+    color: var(--brand-accent);
 }
 
 .navbar-links {
@@ -531,71 +560,161 @@ section {
     to   { transform: translateX(-50%); }
 }
 
-/* =========================
-   GENERIC BUTTONS (reusable)
-========================= */
-.btn-standard,
-.btn-standard-inverted,
-.btn-peach-skill {
-    display: inline-flex;
+/* ==========================================================
+   PLACEHOLDER STYLES
+   ========================================================== */
+.project-image-placeholder,
+.artwork-featured-placeholder,
+.artwork-subcard-placeholder,
+.artwork-asset-placeholder,
+.artwork-shader-placeholder,
+.artwork-video-placeholder,
+.games-main-placeholder,
+.games-video-placeholder,
+.games-static-placeholder,
+.artwork-gallery-placeholder,
+.about-photo-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #E5DCD0 0%, #D5C9B6 100%);
+    border-radius: 8px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.6rem;
+    color: rgba(35, 26, 23, 0.4);
+    font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border-radius: 6px;
-    padding: 1rem 2rem;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    font-family: "Manrope", sans-serif;
-    border: 1px solid transparent;
-    outline-offset: 3px;
-    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    animation: placeholderShimmer 2s ease-in-out infinite;
 }
 
-.btn-standard {
-    background-color: var(--ganache);
-    color: var(--vanilla);
-    border-color: var(--ganache);
+.project-image-placeholder {
+    min-height: 300px;
 }
 
-.btn-standard:hover {
-    background-color: var(--brand-accent);
-    color: var(--vanilla);
-    border-color: var(--brand-accent);
-    transform: translateY(-2px);
+.artwork-featured-placeholder {
+    min-height: 400px;
 }
 
-.btn-standard:focus-visible { outline: 3px solid var(--brand-accent); }
-
-.btn-standard-inverted {
-    background-color: var(--card-bg);
-    color: var(--ganache);
-    border-color: var(--border-subtle);
+.artwork-subcard-placeholder {
+    min-height: 250px;
 }
 
-.btn-standard-inverted:hover {
-    background-color: var(--brand-accent);
-    color: var(--vanilla);
-    border-color: var(--brand-accent);
-    transform: translateY(-2px);
+.artwork-asset-placeholder {
+    min-height: 300px;
 }
 
-.btn-standard-inverted:focus-visible { outline: 3px solid var(--brand-accent); }
-
-.btn-peach-skill {
-    background-color: var(--card-bg);
-    color: var(--ganache);
-    padding: 0.5rem 1.25rem;
-    border-color: var(--border-subtle);
-    font-size: 0.68rem;
+.artwork-shader-placeholder {
+    min-height: 400px;
+    aspect-ratio: 16 / 9;
 }
 
-.btn-peach-skill:hover {
-    background-color: var(--brand-accent);
-    color: var(--vanilla);
-    border-color: var(--brand-accent);
-    transform: scale(1.03);
+.artwork-video-placeholder,
+.games-video-placeholder {
+    min-height: 300px;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, #2c2420 0%, #3a322a 100%);
+    color: rgba(239, 233, 223, 0.4);
+    animation: placeholderShimmerDark 2s ease-in-out infinite;
 }
 
+.games-main-placeholder {
+    aspect-ratio: 16 / 9;
+    min-height: 250px;
+}
+
+.games-static-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    aspect-ratio: 16 / 9;
+}
+
+.artwork-gallery-placeholder {
+    aspect-ratio: 1;
+    min-height: 250px;
+}
+
+.about-photo-placeholder {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 12px;
+    border: 1px solid var(--border-subtle);
+    font-size: 3rem;
+    color: rgba(35, 26, 23, 0.2);
+}
+
+@keyframes placeholderShimmer {
+    0%, 100% {
+        background: linear-gradient(135deg, #E5DCD0 0%, #D5C9B6 100%);
+    }
+    50% {
+        background: linear-gradient(135deg, #D5C9B6 0%, #E5DCD0 100%);
+    }
+}
+
+@keyframes placeholderShimmerDark {
+    0%, 100% {
+        background: linear-gradient(135deg, #2c2420 0%, #3a322a 100%);
+    }
+    50% {
+        background: linear-gradient(135deg, #3a322a 0%, #2c2420 100%);
+    }
+}
+
+/* ==========================================================
+   RESPONSIVO
+   ========================================================== */
+@media (max-width: 768px) {
+    .navbar-main {
+        padding: 1rem 1.5rem;
+    }
+
+    .navbar-links {
+        gap: 1.25rem;
+        font-size: 0.7rem;
+    }
+
+    .footer-wrap {
+        margin-top: 4rem;
+    }
+
+    .site-footer {
+        padding: 3rem 1.5rem 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-main {
+        padding: 0.85rem 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .navbar-links {
+        gap: 0.75rem;
+        font-size: 0.65rem;
+    }
+
+    .navlink-button {
+        padding: 0.45rem 1rem;
+        font-size: 0.6rem;
+    }
+
+    .footer-brand {
+        font-size: 2rem;
+    }
+
+    .footer-copy,
+    .footer-credit {
+        font-size: 0.55rem;
+    }
+}
