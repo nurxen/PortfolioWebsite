@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artwork Gallery - Nuria Serrano | 3D Environment & Technical Artist</title>
+    <title data-i18n="meta_title">Artwork Gallery - Nuria Serrano | 3D Environment & Technical Artist</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234A3B32'/><text x='50%' y='52%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='42' fill='%23EFE9DF'>NS</text></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,18 +14,17 @@
 
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/artwork.css" />
-    <script src="https://gtranslate.net/zh/autoload.js" defer></script>
 </head>
 
 <body>
 
     <nav id="side-nav" aria-label="Page sections" class="artwork-side-nav">
         <div class="artwork-side-line" aria-hidden="true"></div>
-        <a href="#featured" class="artwork-side-link">Featured</a>
-        <a href="#optimization" class="artwork-side-link">Technical</a>
-        <a href="#materials" class="artwork-side-link">Materials</a>
-        <a href="#lighting" class="artwork-side-link">Lighting</a>
-        <a href="#gallery" class="artwork-side-link">Gallery</a>
+        <a href="#featured" class="artwork-side-link" data-i18n="side_featured">Featured</a>
+        <a href="#optimization" class="artwork-side-link" data-i18n="side_technical">Technical</a>
+        <a href="#materials" class="artwork-side-link" data-i18n="side_materials">Materials</a>
+        <a href="#lighting" class="artwork-side-link" data-i18n="side_lighting">Lighting</a>
+        <a href="#gallery" class="artwork-side-link" data-i18n="side_gallery">Gallery</a>
         <div class="artwork-side-line" aria-hidden="true"></div>
     </nav>
 
@@ -36,23 +35,28 @@
             </a>
 
             <div class="navbar-links">
-                <a href="../index.html" class="navlink">Home</a>
+                <a href="../index.html" class="navlink" data-i18n="nav_home">Home</a>
 
                 <div class="navlink-dropdown">
                     <button class="dropdown-toggle" aria-expanded="false">
-                        Work <i class="fa-solid fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+                        <span data-i18n="nav_work">Work</span> <i class="fa-solid fa-chevron-down dropdown-icon" aria-hidden="true"></i>
                     </button>
                     <div class="dropdown-panel">
                         <div class="dropdown-card">
-                            <a href="artwork.html" class="dropdown-item" aria-current="page">3D & Technical Art</a>
-                            <a href="games.html" class="dropdown-item">Games & Sims</a>
+                            <a href="artwork.html" class="dropdown-item" aria-current="page" data-i18n="nav_artwork">3D & Technical Art</a>
+                            <a href="games.html" class="dropdown-item" data-i18n="nav_games">Games & Sims</a>
                         </div>
                     </div>
                 </div>
 
-                <a href="about.html" class="navlink">About me</a>
-                <a href="resume.html" class="navlink">Resumé</a>
-                <a href="contact.html" class="navlink navlink-button">Contact</a>
+                <a href="about.html" class="navlink" data-i18n="nav_about">About me</a>
+                <a href="resume.html" class="navlink" data-i18n="nav_resume">Resumé</a>
+                
+                <button id="lang-toggle" class="navlink" style="background: none; border: none; cursor: pointer; font-weight: 700;">
+                    ES
+                </button>
+
+                <a href="contact.html" class="navlink navlink-button" data-i18n="nav_contact">Contact</a>
             </div>
         </div>
     </nav>
@@ -61,11 +65,11 @@
         <div class="artwork-container">
             
             <header class="artwork-header reveal-section">
-                <span class="section-eyebrow">✦ TECHNICAL ART PORTFOLIO</span>
+                <span class="section-eyebrow" data-i18n="hero_eyebrow">✦ TECHNICAL ART PORTFOLIO</span>
                 <h1 class="artwork-main-title">
-                    3D Environment<br /><span>Optimization</span>
+                    <span data-i18n="hero_title_1">3D Environment</span><br /><span data-i18n="hero_title_2">Optimization</span>
                 </h1>
-                <p class="artwork-main-subtitle">
+                <p class="artwork-main-subtitle" data-i18n="hero_subtitle">
                     Real-time rendering, technical pipeline optimization, and shader development for professional simulation and interactive experiences.
                 </p>
             </header>
@@ -77,11 +81,11 @@
 
                     <div class="artwork-section-header-row">
                         <div>
-                            <span class="artwork-category-tag">Full Pipeline Project</span>
-                            <h2 id="featured-title" class="artwork-section-title">
+                            <span class="artwork-category-tag" data-i18n="feat_tag">Full Pipeline Project</span>
+                            <h2 id="featured-title" class="artwork-section-title" data-i18n="feat_title">
                                 ECOE 3D Simulator
                             </h2>
-                            <p class="artwork-section-desc">
+                            <p class="artwork-section-desc" data-i18n="feat_desc">
                                 Complete technical direction for a clinical simulation platform. 5+ months developing modular PBR assets, implementing shader graph solutions, optimizing render pipeline, and compositing post-processing effects for real-time performance.
                             </p>
                         </div>
@@ -90,27 +94,27 @@
                     <!-- ASYMMETRIC GRID -->
                     <div class="asymmetric-grid-1">
                         <div>
-                            <p style="font-size: 0.8rem; color: var(--brand-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">Render View</p>
+                            <p style="font-size: 0.8rem; color: var(--brand-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;" data-i18n="render_view">Render View</p>
                             <div class="bg-featured-img" role="img" aria-label="ECOE 3D Environment — Final Render"></div>
                         </div>
                         <div>
-                            <p style="font-size: 0.8rem; color: var(--brand-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">Technical Breakdown</p>
+                            <p style="font-size: 0.8rem; color: var(--brand-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;" data-i18n="tech_breakdown">Technical Breakdown</p>
                             <div style="background: var(--vanilla); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1.5rem; gap: 1rem;">
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.8rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--border-subtle);">
-                                    <span style="font-size: 0.75rem; font-weight: 700; color: rgba(35, 26, 23, 0.6); text-transform: uppercase;">Triangles</span>
+                                    <span style="font-size: 0.75rem; font-weight: 700; color: rgba(35, 26, 23, 0.6); text-transform: uppercase;" data-i18n="spec_triangles">Triangles</span>
                                     <span style="font-size: 0.9rem; font-weight: 700; color: var(--brand-accent);">45K</span>
                                 </div>
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.8rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--border-subtle);">
-                                    <span style="font-size: 0.75rem; font-weight: 700; color: rgba(35, 26, 23, 0.6); text-transform: uppercase;">Draw Calls</span>
+                                    <span style="font-size: 0.75rem; font-weight: 700; color: rgba(35, 26, 23, 0.6); text-transform: uppercase;" data-i18n="spec_drawcalls">Draw Calls</span>
                                     <span style="font-size: 0.9rem; font-weight: 700; color: var(--brand-accent);">12</span>
                                 </div>
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.8rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--border-subtle);">
-                                    <span style="font-size: 0.75rem; font-weight: 700; color: rgba(35, 26, 23, 0.6); text-transform: uppercase;">Atlased Textures</span>
+                                    <span style="font-size: 0.75rem; font-weight: 700; color: rgba(35, 26, 23, 0.6); text-transform: uppercase;" data-i18n="spec_textures">Atlased Textures</span>
                                     <span style="font-size: 0.9rem; font-weight: 700; color: var(--brand-accent);">2K PBR</span>
                                 </div>
                                 <div style="display: flex; justify-content: space-between;">
-                                    <span style="font-size: 0.75rem; font-weight: 700; color: rgba(35, 26, 23, 0.6); text-transform: uppercase;">Lighting</span>
-                                    <span style="font-size: 0.9rem; font-weight: 700; color: var(--brand-accent);">Hybrid</span>
+                                    <span style="font-size: 0.75rem; font-weight: 700; color: rgba(35, 26, 23, 0.6); text-transform: uppercase;" data-i18n="spec_lighting">Lighting</span>
+                                    <span style="font-size: 0.9rem; font-weight: 700; color: var(--brand-accent);" data-i18n="spec_lighting_val">Hybrid</span>
                                 </div>
                             </div>
                         </div>
@@ -120,19 +124,19 @@
                     <div class="tech-stats-grid" style="margin-top: 3rem;">
                         <div class="tech-stat-card">
                             <div class="tech-stat-value">3</div>
-                            <div class="tech-stat-label">Material Variants</div>
+                            <div class="tech-stat-label" data-i18n="stat_mat_variants">Material Variants</div>
                         </div>
                         <div class="tech-stat-card">
                             <div class="tech-stat-value">4</div>
-                            <div class="tech-stat-label">Texture Maps</div>
+                            <div class="tech-stat-label" data-i18n="stat_tex_maps">Texture Maps</div>
                         </div>
                         <div class="tech-stat-card">
                             <div class="tech-stat-value">Unity URP</div>
-                            <div class="tech-stat-label">Pipeline</div>
+                            <div class="tech-stat-label" data-i18n="stat_pipeline">Pipeline</div>
                         </div>
                         <div class="tech-stat-card">
                             <div class="tech-stat-value">60 FPS</div>
-                            <div class="tech-stat-label">Target Performance</div>
+                            <div class="tech-stat-label" data-i18n="stat_target_perf">Target Performance</div>
                         </div>
                     </div>
 
@@ -140,18 +144,18 @@
                     <div class="artwork-subgrid" style="margin-top: 3rem;">
                         <div class="artwork-subcard">
                             <div class="bg-sub-1-img" role="img" aria-label="Wireframe"></div>
-                            <h3 class="artwork-subcard-title">Topology & Wireframe</h3>
-                            <p class="artwork-subcard-text">Clean quad-based topology. Optimized edge flow for deformation, supporting modular assembly across scenes.</p>
+                            <h3 class="artwork-subcard-title" data-i18n="sub1_title">Topology & Wireframe</h3>
+                            <p class="artwork-subcard-text" data-i18n="sub1_desc">Clean quad-based topology. Optimized edge flow for deformation, supporting modular assembly across scenes.</p>
                         </div>
                         <div class="artwork-subcard">
                             <div class="bg-sub-2-img" role="img" aria-label="UV Layout"></div>
-                            <h3 class="artwork-subcard-title">Efficient UVs & Atlasing</h3>
-                            <p class="artwork-subcard-text">Channel-packed RGBA maps. Consistent texel density (512px/m). Multiple materials sharing single atlas.</p>
+                            <h3 class="artwork-subcard-title" data-i18n="sub2_title">Efficient UVs & Atlasing</h3>
+                            <p class="artwork-subcard-text" data-i18n="sub2_desc">Channel-packed RGBA maps. Consistent texel density (512px/m). Multiple materials sharing single atlas.</p>
                         </div>
                         <div class="artwork-subcard">
                             <div class="bg-sub-3-img" role="img" aria-label="Lighting Setup"></div>
-                            <h3 class="artwork-subcard-title">Hybrid Lighting Approach</h3>
-                            <p class="artwork-subcard-text">Baked GI + Light Probes + Real-time lights. Compositing passes for post-pro mood and ambient occlusion.</p>
+                            <h3 class="artwork-subcard-title" data-i18n="sub3_title">Hybrid Lighting Approach</h3>
+                            <p class="artwork-subcard-text" data-i18n="sub3_desc">Baked GI + Light Probes + Real-time lights. Compositing passes for post-pro mood and ambient occlusion.</p>
                         </div>
                     </div>
                 </div>
@@ -161,46 +165,46 @@
             <section id="optimization" class="artwork-section reveal-section" aria-labelledby="optimization-title">
                 <div class="artwork-section-header-row">
                     <div>
-                        <p class="artwork-category-tag" style="margin-bottom: 0.5rem;">Performance Metrics & Pipeline</p>
-                        <h2 id="optimization-title" class="artwork-section-title">Technical Optimization</h2>
-                        <p class="artwork-section-desc">ECOE Simulator: From 2,000 draw calls to 200. Real-time profiling data from Unity Profiler.</p>
+                        <p class="artwork-category-tag" style="margin-bottom: 0.5rem;" data-i18n="opt_tag">Performance Metrics & Pipeline</p>
+                        <h2 id="optimization-title" class="artwork-section-title" data-i18n="opt_title">Technical Optimization</h2>
+                        <p class="artwork-section-desc" data-i18n="opt_desc">ECOE Simulator: From 2,000 draw calls to 200. Real-time profiling data from Unity Profiler.</p>
                     </div>
                 </div>
 
-<!-- OPTIMIZATION COMPARISON BEFORE/AFTER -->
+                <!-- OPTIMIZATION COMPARISON BEFORE/AFTER -->
                 <div style="margin-bottom: 3rem;">
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
                         <div>
-                            <p style="font-size: 0.8rem; color: var(--brand-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">Before Optimization (Raw Import)</p>
+                            <p style="font-size: 0.8rem; color: var(--brand-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;" data-i18n="opt_before">Before Optimization (Raw Import)</p>
                             <img src="../assets/images/artwork/3D/ecoe/renders/ProfilerRenderingBeforeAtlasMedicaments.png" alt="Profiler metrics before optimization" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-subtle);" />
                         </div>
                         <div>
-                            <p style="font-size: 0.8rem; color: var(--brand-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">After Optimization (Best Practices)</p>
+                            <p style="font-size: 0.8rem; color: var(--brand-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;" data-i18n="opt_after">After Optimization (Best Practices)</p>
                             <img src="../assets/images/artwork/3D/ecoe/Textures/ProfilerRenderingBuildDevelopement.png" alt="Profiler metrics after optimization" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-subtle);" />
                         </div>
                     </div>
 
                     <!-- METRICS TABLE -->
                     <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
-                        <h3 style="font-family: 'Lora', serif; font-size: 1rem; font-weight: 700; color: var(--ganache); margin-bottom: 1.5rem;">Performance Comparison</h3>
+                        <h3 style="font-family: 'Lora', serif; font-size: 1rem; font-weight: 700; color: var(--ganache); margin-bottom: 1.5rem;" data-i18n="perf_comp_title">Performance Comparison</h3>
                         <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1rem; font-size: 0.85rem;">
                             <div style="padding: 1rem; background: rgba(99, 107, 88, 0.08); border-radius: 6px;">
-                                <div style="font-weight: 700; color: var(--ganache); margin-bottom: 0.3rem;">SetPass Calls</div>
+                                <div style="font-weight: 700; color: var(--ganache); margin-bottom: 0.3rem;" data-i18n="table_setpass">SetPass Calls</div>
                                 <div style="color: rgba(35, 26, 23, 0.6); font-size: 0.75rem;">2.5k → 31</div>
                                 <div style="color: var(--brand-accent); font-weight: 700; margin-top: 0.5rem;">-98.8%</div>
                             </div>
                             <div style="padding: 1rem; background: rgba(99, 107, 88, 0.08); border-radius: 6px;">
-                                <div style="font-weight: 700; color: var(--ganache); margin-bottom: 0.3rem;">Draw Calls</div>
+                                <div style="font-weight: 700; color: var(--ganache); margin-bottom: 0.3rem;" data-i18n="table_drawcalls">Draw Calls</div>
                                 <div style="color: rgba(35, 26, 23, 0.6); font-size: 0.75rem;">~2.7k → 54</div>
                                 <div style="color: var(--brand-accent); font-weight: 700; margin-top: 0.5rem;">-98.0%</div>
                             </div>
                             <div style="padding: 1rem; background: rgba(99, 107, 88, 0.08); border-radius: 6px;">
-                                <div style="font-weight: 700; color: var(--ganache); margin-bottom: 0.3rem;">Triangles</div>
+                                <div style="font-weight: 700; color: var(--ganache); margin-bottom: 0.3rem;" data-i18n="table_triangles">Triangles</div>
                                 <div style="color: rgba(35, 26, 23, 0.6); font-size: 0.75rem;">765k → 85k</div>
                                 <div style="color: var(--brand-accent); font-weight: 700; margin-top: 0.5rem;">-88.9%</div>
                             </div>
                             <div style="padding: 1rem; background: rgba(99, 107, 88, 0.08); border-radius: 6px;">
-                                <div style="font-weight: 700; color: var(--ganache); margin-bottom: 0.3rem;">Frame Rate</div>
+                                <div style="font-weight: 700; color: var(--ganache); margin-bottom: 0.3rem;" data-i18n="table_framerate">Frame Rate</div>
                                 <div style="color: rgba(35, 26, 23, 0.6); font-size: 0.75rem;">&lt;30 FPS → 120 FPS</div>
                                 <div style="color: var(--brand-accent); font-weight: 700; margin-top: 0.5rem;">+300%</div>
                             </div>
@@ -211,35 +215,35 @@
                 <!-- ASYMMETRIC GRID 2 -->
                 <div class="asymmetric-grid-2">
                     <div>
-                        <h3 style="font-family: 'Lora', serif; font-size: 1.1rem; font-weight: 700; color: var(--ganache); margin-bottom: 1.5rem;">Optimization Techniques</h3>
+                        <h3 style="font-family: 'Lora', serif; font-size: 1.1rem; font-weight: 700; color: var(--ganache); margin-bottom: 1.5rem;" data-i18n="tech_opt_title">Optimization Techniques</h3>
                         <div class="optimization-section">
                             <div class="breakdown-list">
                                 <div class="breakdown-item">
                                     <span class="breakdown-icon"><i class="fa-solid fa-cube"></i></span>
                                     <div class="breakdown-content">
-                                        <div class="breakdown-title">Static Batching</div>
-                                        <div class="breakdown-desc">Grouped meshes sharing materials. Allowed the GPU to render in combined batches rather than thousands of individual calls.</div>
+                                        <div class="breakdown-title" data-i18n="tech1_title">Static Batching</div>
+                                        <div class="breakdown-desc" data-i18n="tech1_desc">Grouped meshes sharing materials. Allowed the GPU to render in combined batches rather than thousands of individual calls.</div>
                                     </div>
                                 </div>
                                 <div class="breakdown-item">
                                     <span class="breakdown-icon"><i class="fa-solid fa-image"></i></span>
                                     <div class="breakdown-content">
-                                        <div class="breakdown-title">Texture Atlasing</div>
-                                        <div class="breakdown-desc">Combined multiple object textures into unified atlases, drastically dropping state changes and SetPass overhead (2.5k → 31).</div>
+                                        <div class="breakdown-title" data-i18n="tech2_title">Texture Atlasing</div>
+                                        <div class="breakdown-desc" data-i18n="tech2_desc">Combined multiple object textures into unified atlases, drastically dropping state changes and SetPass overhead (2.5k → 31).</div>
                                     </div>
                                 </div>
                                 <div class="breakdown-item">
                                     <span class="breakdown-icon"><i class="fa-solid fa-wind"></i></span>
                                     <div class="breakdown-content">
-                                        <div class="breakdown-title">Mesh Collider Removal</div>
-                                        <div class="breakdown-desc">Replaced overly complex mesh colliders with simplified primitive Box Colliders to minimize physics overhead.</div>
+                                        <div class="breakdown-title" data-i18n="tech3_title">Mesh Collider Removal</div>
+                                        <div class="breakdown-desc" data-i18n="tech3_desc">Replaced overly complex mesh colliders with simplified primitive Box Colliders to minimize physics overhead.</div>
                                     </div>
                                 </div>
                                 <div class="breakdown-item">
                                     <span class="breakdown-icon"><i class="fa-solid fa-lightbulb"></i></span>
                                     <div class="breakdown-content">
-                                        <div class="breakdown-title">Baked Lighting</div>
-                                        <div class="breakdown-desc">Pre-calculated illumination and utilized Light Probes for dynamic elements, eliminating real-time per-frame calculations.</div>
+                                        <div class="breakdown-title" data-i18n="tech4_title">Baked Lighting</div>
+                                        <div class="breakdown-desc" data-i18n="tech4_desc">Pre-calculated illumination and utilized Light Probes for dynamic elements, eliminating real-time per-frame calculations.</div>
                                     </div>
                                 </div>
                             </div>
@@ -247,23 +251,23 @@
                     </div>
 
                     <div>
-                        <h3 style="font-family: 'Lora', serif; font-size: 1.1rem; font-weight: 700; color: var(--ganache); margin-bottom: 1.5rem;">Target Specifications</h3>
+                        <h3 style="font-family: 'Lora', serif; font-size: 1.1rem; font-weight: 700; color: var(--ganache); margin-bottom: 1.5rem;" data-i18n="target_specs_title">Target Specifications</h3>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;">
                             <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1.5rem; text-align: center;">
                                 <div style="font-family: 'Lora', serif; font-size: 2.2rem; font-weight: 700; color: var(--brand-accent); margin-bottom: 0.3rem;">120</div>
-                                <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);">FPS (Achieved)</div>
+                                <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);" data-i18n="spec_fps">FPS (Achieved)</div>
                             </div>
                             <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1.5rem; text-align: center;">
                                 <div style="font-family: 'Lora', serif; font-size: 2.2rem; font-weight: 700; color: var(--brand-accent); margin-bottom: 0.3rem;">54</div>
-                                <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);">Draw Calls</div>
+                                <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);" data-i18n="spec_drawcalls_card">Draw Calls</div>
                             </div>
                             <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1.5rem; text-align: center;">
                                 <div style="font-family: 'Lora', serif; font-size: 2.2rem; font-weight: 700; color: var(--brand-accent); margin-bottom: 0.3rem;">85K</div>
-                                <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);">Triangles</div>
+                                <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);" data-i18n="spec_triangles_card">Triangles</div>
                             </div>
                             <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1.5rem; text-align: center;">
                                 <div style="font-family: 'Lora', serif; font-size: 2.2rem; font-weight: 700; color: var(--brand-accent); margin-bottom: 0.3rem;">31</div>
-                                <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);">SetPass Calls</div>
+                                <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);" data-i18n="spec_setpass_card">SetPass Calls</div>
                             </div>
                         </div>
                     </div>
@@ -274,9 +278,9 @@
             <section id="materials" class="artwork-section reveal-section" aria-labelledby="materials-title">
                 <div class="artwork-section-header-row">
                     <div>
-                        <p class="artwork-category-tag" style="margin-bottom: 0.5rem;">PBR & Texture Optimization</p>
-                        <h2 id="materials-title" class="artwork-section-title">Channel Packing</h2>
-                        <p class="artwork-section-desc">60% memory reduction using RGBA channel optimization. One atlas replaces 5 separate textures.</p>
+                        <p class="artwork-category-tag" style="margin-bottom: 0.5rem;" data-i18n="mat_tag">PBR & Texture Optimization</p>
+                        <h2 id="materials-title" class="artwork-section-title" data-i18n="mat_title">Channel Packing</h2>
+                        <p class="artwork-section-desc" data-i18n="mat_desc">60% memory reduction using RGBA channel optimization. One atlas replaces 5 separate textures.</p>
                     </div>
                 </div>
 
@@ -284,57 +288,57 @@
                 <div class="channel-demo" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
                     <div style="text-align: center;">
                         <img src="../assets/images/artwork/3D/ecoe/Textures/Atlas_Modular_Metallic.png" alt="Red Channel - Metallic" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-subtle); margin-bottom: 0.8rem;" />
-                        <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);">R Channel</div>
-                        <div style="font-size: 0.85rem; font-weight: 700; color: var(--ganache);">Metallic</div>
+                        <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);" data-i18n="chan_r">R Channel</div>
+                        <div style="font-size: 0.85rem; font-weight: 700; color: var(--ganache);" data-i18n="chan_metallic">Metallic</div>
                     </div>
                     
                     <div style="text-align: center;">
                         <img src="../assets/images/artwork/3D/ecoe/Textures/Atlas_Modular_AO.png" alt="Green Channel - Ambient Occlusion" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-subtle); margin-bottom: 0.8rem;" />
-                        <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);">G Channel</div>
-                        <div style="font-size: 0.85rem; font-weight: 700; color: var(--ganache);">Ambient Occlusion</div>
+                        <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);" data-i18n="chan_g">G Channel</div>
+                        <div style="font-size: 0.85rem; font-weight: 700; color: var(--ganache);" data-i18n="chan_ao">Ambient Occlusion</div>
                     </div>
                     
                     <div style="text-align: center;">
                         <img src="../assets/images/artwork/3D/ecoe/Textures/Atlas_Modular_Roughness.png" alt="Blue Channel - Roughness" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-subtle); margin-bottom: 0.8rem;" />
-                        <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);">B Channel</div>
-                        <div style="font-size: 0.85rem; font-weight: 700; color: var(--ganache);">Roughness</div>
+                        <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);" data-i18n="chan_b">B Channel</div>
+                        <div style="font-size: 0.85rem; font-weight: 700; color: var(--ganache);" data-i18n="chan_roughness">Roughness</div>
                     </div>
                     
                     <div style="text-align: center;">
                         <img src="../assets/images/artwork/3D/ecoe/Textures/Atlas_Modular_TintMask.png" alt="Alpha Channel - Detail Mask" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-subtle); margin-bottom: 0.8rem;" />
-                        <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);">A Channel</div>
-                        <div style="font-size: 0.85rem; font-weight: 700; color: var(--ganache);">Mask / Detail</div>
+                        <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6);" data-i18n="chan_a">A Channel</div>
+                        <div style="font-size: 0.85rem; font-weight: 700; color: var(--ganache);" data-i18n="chan_mask">Mask / Detail</div>
                     </div>
                     
                     <div style="text-align: center;">
                         <img src="../assets/images/artwork/3D/ecoe/Textures/Atlas_Modular_Mask.png" alt="Combined ORM Texture" style="width: 100%; border-radius: 8px; border: 2px solid var(--brand-accent); margin-bottom: 0.8rem;" />
-                        <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--brand-accent);">RGBA Combined</div>
-                        <div style="font-size: 0.85rem; font-weight: 700; color: var(--brand-accent);">Final ORM Atlas</div>
+                        <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--brand-accent);" data-i18n="chan_rgba">RGBA Combined</div>
+                        <div style="font-size: 0.85rem; font-weight: 700; color: var(--brand-accent);" data-i18n="chan_final">Final ORM Atlas</div>
                     </div>
                 </div>
 
                 <div class="optimization-section" style="margin-top: 3rem;">
-                    <h3 style="font-family: 'Lora', serif; font-size: 1rem; font-weight: 700; color: var(--ganache); margin-bottom: 1.5rem;">Channel Packing Benefits</h3>
+                    <h3 style="font-family: 'Lora', serif; font-size: 1rem; font-weight: 700; color: var(--ganache); margin-bottom: 1.5rem;" data-i18n="benefits_title">Channel Packing Benefits</h3>
                     <div class="breakdown-list">
                         <div class="breakdown-item">
                             <span class="breakdown-icon"><i class="fa-solid fa-compress"></i></span>
                             <div class="breakdown-content">
-                                <div class="breakdown-title">60% Texture Memory Reduction</div>
-                                <div class="breakdown-desc">Combines Metallic (R), Ambient Occlusion (G), Roughness (B) in single RGBA texture. Bandwidth savings verified with Unity Profiler.</div>
+                                <div class="breakdown-title" data-i18n="ben1_title">60% Texture Memory Reduction</div>
+                                <div class="breakdown-desc" data-i18n="ben1_desc">Combines Metallic (R), Ambient Occlusion (G), Roughness (B) in single RGBA texture. Bandwidth savings verified with Unity Profiler.</div>
                             </div>
                         </div>
                         <div class="breakdown-item">
                             <span class="breakdown-icon"><i class="fa-solid fa-bolt"></i></span>
                             <div class="breakdown-content">
-                                <div class="breakdown-title">Single Texture Sample</div>
-                                <div class="breakdown-desc">GPU reads one file instead of three. Reduces fragment shader instructions. Improves cache locality.</div>
+                                <div class="breakdown-title" data-i18n="ben2_title">Single Texture Sample</div>
+                                <div class="breakdown-desc" data-i18n="ben2_desc">GPU reads one file instead of three. Reduces fragment shader instructions. Improves cache locality.</div>
                             </div>
                         </div>
                         <div class="breakdown-item">
                             <span class="breakdown-icon"><i class="fa-solid fa-gauge-high"></i></span>
                             <div class="breakdown-content">
-                                <div class="breakdown-title">Scalable Asset Pipeline</div>
-                                <div class="breakdown-desc">New objects integrate into existing atlas without increasing draw calls or SetPass calls. Future-proof architecture.</div>
+                                <div class="breakdown-title" data-i18n="ben3_title">Scalable Asset Pipeline</div>
+                                <div class="breakdown-desc" data-i18n="ben3_desc">New objects integrate into existing atlas without increasing draw calls or SetPass calls. Future-proof architecture.</div>
                             </div>
                         </div>
                     </div>
@@ -342,7 +346,6 @@
             </section>
 
             <!-- 4. SHADERS & TECHNICAL ART -->
-            <!-- 3. Shaders / Technical Section -->
             <section id="shaders" class="artwork-section reveal-section" aria-labelledby="shaders-title">
                 <div class="artwork-shaders-box">
                     <div class="artwork-shaders-glow-1" aria-hidden="true"></div>
@@ -350,36 +353,36 @@
 
                     <div class="artwork-shaders-grid">
                         <div>
-                            <p class="artwork-category-tag artwork-category-tag-dark" style="margin-bottom: 0.5rem;">Technical Art & Shaders</p>
+                            <p class="artwork-category-tag artwork-category-tag-dark" style="margin-bottom: 0.5rem;" data-i18n="shader_tag">Technical Art & Shaders</p>
 
-                            <h2 id="shaders-title" class="artwork-shaders-title">
+                            <h2 id="shaders-title" class="artwork-shaders-title" data-i18n="shader_main_title">
                                 Pastel 2D <br />
                                 <span style="color: var(--vanilla);">Sticker</span> <span style="color: #D3C5B4;">FX</span>
                             </h2>
 
-                            <p class="artwork-shaders-desc">
+                            <p class="artwork-shaders-desc" data-i18n="shader_desc">
                                 How to convert a 3D model into a 2D illustration? I developed a workflow combining <strong style="color: var(--vanilla);">Grease Pencil</strong> and <strong style="color: var(--vanilla);">Compositing</strong> to achieve this "hand-drawn" look.
                             </p>
 
                             <div class="artwork-steps-list">
                                 <div class="artwork-step-item">
                                     <span class="artwork-step-num" aria-hidden="true">01</span>
-                                    <p style="font-size: 0.8rem; margin: 0; font-weight:700; text-transform:uppercase;">Clean Outlines with Grease Pencil</p>
+                                    <p style="font-size: 0.8rem; margin: 0; font-weight:700; text-transform:uppercase;" data-i18n="step1">Clean Outlines with Grease Pencil</p>
                                 </div>
                                 <div class="artwork-step-item">
                                     <span class="artwork-step-num" aria-hidden="true">02</span>
-                                    <p style="font-size: 0.8rem; margin: 0; font-weight:700; text-transform:uppercase;">Compositing: Dilate/Erode Sticker Border</p>
+                                    <p style="font-size: 0.8rem; margin: 0; font-weight:700; text-transform:uppercase;" data-i18n="step2">Compositing: Dilate/Erode Sticker Border</p>
                                 </div>
                                 <div class="artwork-step-item">
                                     <span class="artwork-step-num" aria-hidden="true">03</span>
-                                    <p style="font-size: 0.8rem; margin: 0; font-weight:700; text-transform:uppercase;">Anime Style Sparkles &amp; Highlights</p>
+                                    <p style="font-size: 0.8rem; margin: 0; font-weight:700; text-transform:uppercase;" data-i18n="step3">Anime Style Sparkles &amp; Highlights</p>
                                 </div>
                             </div>
 
                             <div>
                                 <a href="https://www.youtube.com/watch?v=cj9i-RE6-0g" target="_blank" rel="noopener noreferrer" class="artwork-tutorial-btn">
                                     <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-                                    Full Tutorial
+                                    <span data-i18n="btn_tutorial">Full Tutorial</span>
                                 </a>
                             </div>
                         </div>
@@ -395,62 +398,25 @@
                             </div>
 
                             <div class="artwork-video-wrapper" id="shader-slider" style="position: relative; user-select: none; overflow: hidden; border-radius: 8px;">
-                                <span style="position: absolute; top: 1rem; left: 1rem; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 99px; background: rgba(0,0,0,0.6); color: var(--vanilla); z-index: 30; pointer-events: none;" aria-hidden="true">
+                                <span style="position: absolute; top: 1rem; left: 1rem; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 99px; background: rgba(0,0,0,0.6); color: var(--vanilla); z-index: 30; pointer-events: none;" aria-hidden="true" data-i18n="slider_raw">
                                     Raw Render
                                 </span>
-                                <span style="position: absolute; top: 1rem; right: 1rem; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 99px; background: var(--card-bg); color: var(--ganache); z-index: 30; pointer-events: none;" aria-hidden="true">
+                                <span style="position: absolute; top: 1rem; right: 1rem; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 99px; background: var(--card-bg); color: var(--ganache); z-index: 30; pointer-events: none;" aria-hidden="true" data-i18n="slider_final">
                                     Final Shader
                                 </span>
 
-                                <!-- Imagen de Fondo (Antes / Raw) -->
                                 <div class="bg-shader-before" style="width: 100%; height: 100%; position: absolute; top:0; left:0;" role="img" aria-label="Raw Render"></div>
 
-                                <!-- Contenedor Superpuesto (Después / Shader Final) recortado al 50% por defecto -->
                                 <div id="shader-overlay" style="position: absolute; top: 0; left: 0; width: 50%; height: 100%; overflow: hidden; border-right: 2px solid var(--vanilla); z-index: 20;">
                                     <div class="bg-shader-after" style="width: 100%; height: 100%; position: absolute; top:0; left:0; width: var(--slider-container-width, 100%);" role="img" aria-label="Final Shader"></div>
                                 </div>
 
-                                <!-- Manilla de arrastre -->
                                 <div id="shader-handle"
                                     aria-label="Drag to compare before and after"
                                     style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 2.5rem; height: 2.5rem; border-radius: 50%; background-color: var(--card-bg); color: var(--ganache); display: flex; align-items: center; justify-content: center; z-index: 40; box-shadow: 0 4px 15px rgba(0,0,0,0.3); cursor: ew-resize;">
                                     <i class="fa-solid fa-arrows-left-right text-xs" aria-hidden="true"></i>
                                 </div>
                             </div>
-
-                            <div class="relative w-full aspect-video rounded-[2.5rem] overflow-hidden border-[8px] border-white/10 shadow-2xl group select-none"
-                                id="shader-slider">
-
-                                <span
-                                    class="absolute top-6 left-6 bg-black/60 text-white text-[10px] font-bold px-3 py-1 rounded-full z-30 uppercase tracking-widest backdrop-blur-md border border-white/10">
-                                    Raw Render
-                                </span>
-                                <span
-                                    class="absolute top-6 right-6 bg-nb-peach text-nb-brown text-[10px] font-bold px-3 py-1 rounded-full z-30 uppercase tracking-widest border border-nb-brown/20">
-                                    Final Shader
-                                </span>
-
-                                <img src="../assets/images/artwork/3D/libro_color.png"
-                                    class="absolute inset-0 w-full h-full object-cover object-left">
-
-                                <div id="shader-overlay"
-                                    class="absolute top-0 left-0 h-full w-[50%] overflow-hidden border-r-2 border-nb-peach z-20 bg-nb-studio">
-
-                                    <img src="../assets/images/artwork/3D/libro_vieport.png"
-                                        class="absolute top-0 left-0 h-full max-w-none object-cover object-left"
-                                        id="shader-top-image">
-                                </div>
-
-                                <div id="shader-handle"
-                                    class="absolute top-1/2 left-[50%] -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-nb-peach rounded-full flex items-center justify-center z-30 shadow-[0_0_20px_rgba(0,0,0,0.3)] cursor-ew-resize hover:scale-110 transition-transform">
-                                    <i class="fa-solid fa-arrows-left-right text-nb-brown text-sm"></i>
-                                </div>
-                            </div>
-
-                            <p class="text-center text-white/40 text-xs font-bold uppercase tracking-widest mt-2">
-                                <i class="fa-solid fa-hand-pointer mr-2 animate-bounce"></i> Drag to compare
-                            </p>
-
                         </div>
                     </div>
                 </div>
@@ -460,9 +426,9 @@
             <section id="lighting" class="artwork-section reveal-section" aria-labelledby="lighting-title">
                 <div class="artwork-section-header-row">
                     <div>
-                        <p class="artwork-category-tag" style="margin-bottom: 0.5rem;">ECOE Simulator</p>
-                        <h2 id="lighting-title" class="artwork-section-title">Lighting & Optimization</h2>
-                        <p class="artwork-section-desc">Baked GI strategy for clinical environment. 20 Point/Spot lights + Reflection Probes. Real-time free.</p>
+                        <p class="artwork-category-tag" style="margin-bottom: 0.5rem;" data-i18n="light_tag">ECOE Simulator</p>
+                        <h2 id="lighting-title" class="artwork-section-title" data-i18n="light_title">Lighting & Optimization</h2>
+                        <p class="artwork-section-desc" data-i18n="light_desc">Baked GI strategy for clinical environment. 20 Point/Spot lights + Reflection Probes. Real-time free.</p>
                     </div>
                 </div>
 
@@ -473,8 +439,8 @@
                                 <source src="../assets/videos/artwork/Proyecto de vídeo 5.mp4" type="video/mp4">
                             </video>
                             <div class="artwork-video-caption">
-                                <h3 class="font-display text-xl text-white mb-1">Baked Global Illumination</h3>
-                                <p class="text-[9px] font-bold uppercase tracking-widest" style="color: var(--vanilla);">Lightmaps 512px + Light Probes Grid</p>
+                                <h3 class="font-display text-xl text-white mb-1" data-i18n="light_vid_title">Baked Global Illumination</h3>
+                                <p class="text-[9px] font-bold uppercase tracking-widest" style="color: var(--vanilla);" data-i18n="light_vid_sub">Lightmaps 512px + Light Probes Grid</p>
                             </div>
                         </div>
 
@@ -485,27 +451,27 @@
                         <img src="../assets/images/artwork/3D/navidad/0749.png" alt="ECOE Lighting rig and setup" style="width:100%; border-radius: 8px; border: 1px solid var(--border-subtle); aspect-ratio: 1; object-fit: cover; margin-bottom: 1.5rem;" />
 
                         <div class="optimization-section">
-                            <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1.2rem;">Lighting Configuration</h3>
+                            <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1.2rem;" data-i18n="light_conf_title">Lighting Configuration</h3>
                             <div class="breakdown-list">
                                 <div class="breakdown-item">
                                     <span class="breakdown-icon"><i class="fa-solid fa-circle-half-stroke"></i></span>
                                     <div class="breakdown-content">
-                                        <div class="breakdown-title">Baked GI</div>
-                                        <div class="breakdown-desc">Lightmaps 512px. Indirect bounces precalculated. Zero real-time cost.</div>
+                                        <div class="breakdown-title" data-i18n="lc1_title">Baked GI</div>
+                                        <div class="breakdown-desc" data-i18n="lc1_desc">Lightmaps 512px. Indirect bounces precalculated. Zero real-time cost.</div>
                                     </div>
                                 </div>
                                 <div class="breakdown-item">
                                     <span class="breakdown-icon"><i class="fa-solid fa-lightbulb"></i></span>
                                     <div class="breakdown-content">
-                                        <div class="breakdown-title">20 Point/Spot Lights</div>
-                                        <div class="breakdown-desc">Simulate fluorescents (5500K). Baked only. Dynamic objects use Light Probes.</div>
+                                        <div class="breakdown-title" data-i18n="lc2_title">20 Point/Spot Lights</div>
+                                        <div class="breakdown-desc" data-i18n="lc2_desc">Simulate fluorescents (5500K). Baked only. Dynamic objects use Light Probes.</div>
                                     </div>
                                 </div>
                                 <div class="breakdown-item">
                                     <span class="breakdown-icon"><i class="fa-solid fa-cube"></i></span>
                                     <div class="breakdown-content">
-                                        <div class="breakdown-title">Reflection Probes</div>
-                                        <div class="breakdown-desc">Cubemap captures. Enable realistic reflections on materials without real-time cost.</div>
+                                        <div class="breakdown-title" data-i18n="lc3_title">Reflection Probes</div>
+                                        <div class="breakdown-desc" data-i18n="lc3_desc">Cubemap captures. Enable realistic reflections on materials without real-time cost.</div>
                                     </div>
                                 </div>
                             </div>
@@ -519,8 +485,8 @@
                             <i class="fa-solid fa-map"></i>
                         </span>
                         <div>
-                            <p class="artwork-spec-label">Lightmap Resolution</p>
-                            <p class="artwork-spec-value">512 pixels</p>
+                            <p class="artwork-spec-label" data-i18n="spec_lm_label">Lightmap Resolution</p>
+                            <p class="artwork-spec-value" data-i18n="spec_lm_val">512 pixels</p>
                         </div>
                     </div>
                     <div class="artwork-spec-item">
@@ -528,8 +494,8 @@
                             <i class="fa-solid fa-cube"></i>
                         </span>
                         <div>
-                            <p class="artwork-spec-label">Light Probe Spacing</p>
-                            <p class="artwork-spec-value">1.5 meters</p>
+                            <p class="artwork-spec-label" data-i18n="spec_lp_label">Light Probe Spacing</p>
+                            <p class="artwork-spec-value" data-i18n="spec_lp_val">1.5 meters</p>
                         </div>
                     </div>
                 </div>
@@ -539,14 +505,14 @@
             <section id="props-section" class="artwork-section reveal-section" aria-labelledby="props-title">
                 <div class="artwork-section-header-row">
                     <div>
-                        <p class="artwork-category-tag" style="margin-bottom: 0.5rem;">Asset Pipeline</p>
-                        <h2 id="props-title" class="artwork-section-title">Modular Assets</h2>
-                        <p class="artwork-hint-text">Game-ready 3D models with optimization focus</p>
+                        <p class="artwork-category-tag" style="margin-bottom: 0.5rem;" data-i18n="asset_tag">Asset Pipeline</p>
+                        <h2 id="props-title" class="artwork-section-title" data-i18n="asset_title">Modular Assets</h2>
+                        <p class="artwork-hint-text" data-i18n="asset_sub">Game-ready 3D models with optimization focus</p>
                     </div>
 
                     <div class="artwork-tabs-container" role="tablist" aria-label="Asset type filter">
-                        <button onclick="switchTab('props-vg', this)" role="tab" aria-selected="true" aria-controls="props-vg" class="artwork-tab-btn active">Game Ready</button>
-                        <button onclick="switchTab('props-nvg', this)" role="tab" aria-selected="false" aria-controls="props-nvg" class="artwork-tab-btn">High Poly</button>
+                        <button onclick="switchTab('props-vg', this)" role="tab" aria-selected="true" aria-controls="props-vg" class="artwork-tab-btn active" data-i18n="tab_gameready">Game Ready</button>
+                        <button onclick="switchTab('props-nvg', this)" role="tab" aria-selected="false" aria-controls="props-nvg" class="artwork-tab-btn" data-i18n="tab_highpoly">High Poly</button>
                     </div>
                 </div>
 
@@ -554,20 +520,20 @@
                     <div class="artwork-asset-card group">
                         <div class="artwork-asset-media">
                             <div class="bg-asset-1-img" role="img" aria-label="Modular Town Wall"></div>
-                            <span class="artwork-asset-pill">Optimized</span>
+                            <span class="artwork-asset-pill" data-i18n="pill_opt">Optimized</span>
                         </div>
                         <div class="artwork-asset-info">
                             <div>
-                                <h3 class="artwork-asset-name">Modular Town Wall</h3>
-                                <p class="artwork-asset-sub">Environment Set · 2026</p>
+                                <h3 class="artwork-asset-name" data-i18n="asset1_name">Modular Town Wall</h3>
+                                <p class="artwork-asset-sub" data-i18n="asset1_sub">Environment Set · 2026</p>
                             </div>
                             <div class="artwork-asset-stats">
                                 <div>
-                                    <p class="artwork-stat-label">Triangles</p>
+                                    <p class="artwork-stat-label" data-i18n="card_tri">Triangles</p>
                                     <p class="artwork-stat-val">1,240</p>
                                 </div>
                                 <div>
-                                    <p class="artwork-stat-label">Texel D.</p>
+                                    <p class="artwork-stat-label" data-i18n="card_texel">Texel D.</p>
                                     <p class="artwork-stat-val">512px/m</p>
                                 </div>
                             </div>
@@ -577,20 +543,20 @@
                     <div class="artwork-asset-card group">
                         <div class="artwork-asset-media">
                             <div class="bg-asset-2-img" role="img" aria-label="Ancient Magic Chest"></div>
-                            <span class="artwork-asset-pill">Hero Prop</span>
+                            <span class="artwork-asset-pill" data-i18n="pill_hero">Hero Prop</span>
                         </div>
                         <div class="artwork-asset-info">
                             <div>
-                                <h3 class="artwork-asset-name">Ancient Magic Chest</h3>
-                                <p class="artwork-asset-sub">Hero Prop · Animated</p>
+                                <h3 class="artwork-asset-name" data-i18n="asset2_name">Ancient Magic Chest</h3>
+                                <p class="artwork-asset-sub" data-i18n="asset2_sub">Hero Prop · Animated</p>
                             </div>
                             <div class="artwork-asset-stats">
                                 <div>
-                                    <p class="artwork-stat-label">Triangles</p>
+                                    <p class="artwork-stat-label" data-i18n="card_tri">Triangles</p>
                                     <p class="artwork-stat-val">850</p>
                                 </div>
                                 <div>
-                                    <p class="artwork-stat-label">Maps</p>
+                                    <p class="artwork-stat-label" data-i18n="card_maps">Maps</p>
                                     <p class="artwork-stat-val">2K PBR</p>
                                 </div>
                             </div>
@@ -602,16 +568,16 @@
                     <div class="artwork-asset-card group">
                         <div class="artwork-asset-media">
                             <div class="bg-sculpt-img" role="img" aria-label="High Poly Sculpt"></div>
-                            <span class="artwork-asset-pill">High Poly</span>
+                            <span class="artwork-asset-pill" data-i18n="pill_highpoly">High Poly</span>
                         </div>
                         <div class="artwork-asset-info">
                             <div>
-                                <h3 class="artwork-asset-name">Detailed Sculpt Pass</h3>
-                                <p class="artwork-asset-sub">ZBrush Raw Asset</p>
+                                <h3 class="artwork-asset-name" data-i18n="asset3_name">Detailed Sculpt Pass</h3>
+                                <p class="artwork-asset-sub" data-i18n="asset3_sub">ZBrush Raw Asset</p>
                             </div>
                             <div class="artwork-asset-stats">
                                 <div>
-                                    <p class="artwork-stat-label">Subdivisions</p>
+                                    <p class="artwork-stat-label" data-i18n="card_subs">Subdivisions</p>
                                     <p class="artwork-stat-val">Level 5</p>
                                 </div>
                             </div>
@@ -620,148 +586,149 @@
                 </div>
             </section>
 
-<!-- 5.5 RENDERING SETTINGS TOGGLE -->
-<section id="rendering-settings" class="artwork-section reveal-section" aria-labelledby="rendering-title">
-    <div class="artwork-section-header-row">
-        <div>
-            <p class="artwork-category-tag" style="margin-bottom: 0.5rem;">Educational Tool</p>
-            <h2 id="rendering-title" class="artwork-section-title">Rendering Settings</h2>
-            <p class="artwork-section-desc">Interactive toggles to visualize optimization impact. Inspect how each technique affects frame rate and quality.</p>
-        </div>
-    </div>
-
-    <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 2.5rem;">
-        
-        <!-- Settings Grid -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2.5rem;">
-            
-            <!-- Baked Lighting -->
-            <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(99, 107, 88, 0.04); border-radius: 8px; border: 1px solid var(--border-subtle);">
-                <input type="checkbox" id="baked-lighting" checked style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--brand-accent);" />
-                <div style="flex: 1;">
-                    <label for="baked-lighting" style="cursor: pointer; display: block; font-weight: 700; color: var(--ganache); font-size: 0.9rem;">Baked Lighting</label>
-                    <span style="font-size: 0.75rem; color: rgba(35, 26, 23, 0.6);">GPU-free · +0 draw calls</span>
+            <!-- 5.5 RENDERING SETTINGS TOGGLE -->
+            <section id="rendering-settings" class="artwork-section reveal-section" aria-labelledby="rendering-title">
+                <div class="artwork-section-header-row">
+                    <div>
+                        <p class="artwork-category-tag" style="margin-bottom: 0.5rem;" data-i18n="tool_tag">Educational Tool</p>
+                        <h2 id="rendering-title" class="artwork-section-title" data-i18n="tool_title">Rendering Settings</h2>
+                        <p class="artwork-section-desc" data-i18n="tool_desc">Interactive toggles to visualize optimization impact. Inspect how each technique affects frame rate and quality.</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Post-Processing -->
-            <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(99, 107, 88, 0.04); border-radius: 8px; border: 1px solid var(--border-subtle);">
-                <input type="checkbox" id="post-processing" checked style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--brand-accent);" />
-                <div style="flex: 1;">
-                    <label for="post-processing" style="cursor: pointer; display: block; font-weight: 700; color: var(--ganache); font-size: 0.9rem;">Post-Processing</label>
-                    <span style="font-size: 0.75rem; color: rgba(35, 26, 23, 0.6);">AO · Bloom · Color Grading</span>
+                <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 2.5rem;">
+                    
+                    <!-- Settings Grid -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2.5rem;">
+                        
+                        <!-- Baked Lighting -->
+                        <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(99, 107, 88, 0.04); border-radius: 8px; border: 1px solid var(--border-subtle);">
+                            <input type="checkbox" id="baked-lighting" checked style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--brand-accent);" />
+                            <div style="flex: 1;">
+                                <label for="baked-lighting" style="cursor: pointer; display: block; font-weight: 700; color: var(--ganache); font-size: 0.9rem;" data-i18n="set_light">Baked Lighting</label>
+                                <span style="font-size: 0.75rem; color: rgba(35, 26, 23, 0.6);" data-i18n="set_light_sub">GPU-free · +0 draw calls</span>
+                            </div>
+                        </div>
+
+                        <!-- Post-Processing -->
+                        <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(99, 107, 88, 0.04); border-radius: 8px; border: 1px solid var(--border-subtle);">
+                            <input type="checkbox" id="post-processing" checked style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--brand-accent);" />
+                            <div style="flex: 1;">
+                                <label for="post-processing" style="cursor: pointer; display: block; font-weight: 700; color: var(--ganache); font-size: 0.9rem;" data-i18n="set_post">Post-Processing</label>
+                                <span style="font-size: 0.75rem; color: rgba(35, 26, 23, 0.6);" data-i18n="set_post_sub">AO · Bloom · Color Grading</span>
+                            </div>
+                        </div>
+
+                        <!-- Shadow Quality -->
+                        <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(99, 107, 88, 0.04); border-radius: 8px; border: 1px solid var(--border-subtle);">
+                            <select id="shadow-quality" style="background: var(--vanilla); color: var(--ganache); border: 1px solid var(--border-subtle); padding: 0.6rem 0.8rem; border-radius: 4px; font-weight: 700; cursor: pointer; font-family: 'Manrope', sans-serif;">
+                                <option value="high" data-i18n="opt_high">High Resolution</option>
+                                <option value="medium" data-i18n="opt_med">Medium Resolution</option>
+                                <option value="low" data-i18n="opt_low">Low / Disabled</option>
+                            </select>
+                            <div style="flex: 1;">
+                                <label style="display: block; font-weight: 700; color: var(--ganache); font-size: 0.9rem;" data-i18n="set_shadow">Shadow Quality</label>
+                                <span style="font-size: 0.75rem; color: rgba(35, 26, 23, 0.6);" data-i18n="set_shadow_sub">Quality/Performance tradeoff</span>
+                            </div>
+                        </div>
+
+                        <!-- Particles -->
+                        <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(99, 107, 88, 0.04); border-radius: 8px; border: 1px solid var(--border-subtle);">
+                            <input type="checkbox" id="particles" style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--brand-accent);" />
+                            <div style="flex: 1;">
+                                <label for="particles" style="cursor: pointer; display: block; font-weight: 700; color: var(--ganache); font-size: 0.9rem;" data-i18n="set_part">Particle Effects</label>
+                                <span style="font-size: 0.75rem; color: rgba(35, 26, 23, 0.6);" data-i18n="set_part_sub">Dust & atmospheric elements</span>
+                            </div>
+                        </div>
+
+                        <!-- Real-time Reflections -->
+                        <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(99, 107, 88, 0.04); border-radius: 8px; border: 1px solid var(--border-subtle);">
+                            <input type="checkbox" id="realtime-reflections" style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--brand-accent);" />
+                            <div style="flex: 1;">
+                                <label for="realtime-reflections" style="cursor: pointer; display: block; font-weight: 700; color: var(--ganache); font-size: 0.9rem;" data-i18n="set_ref">Real-time Reflections</label>
+                                <span style="font-size: 0.75rem; color: rgba(35, 26, 23, 0.6);" data-i18n="set_ref_sub">SSR disabled · Uses probes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FPS Display -->
+                    <div style="background: rgba(99, 107, 88, 0.08); border: 1px solid var(--brand-accent); border-radius: 8px; padding: 1.5rem; text-align: center;">
+                        <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6); margin-bottom: 0.5rem;" data-i18n="perf_est">Estimated Performance</div>
+                        <div id="fps-display-line" style="font-family: 'Lora', serif; font-size: 2rem; font-weight: 700; color: var(--brand-accent);">120 FPS</div>
+                        <div style="font-size: 0.7rem; color: rgba(35, 26, 23, 0.6); margin-top: 0.5rem;">RTX 3070 · 1080p</div>
+                    </div>
+
                 </div>
-            </div>
 
-            <!-- Shadow Quality -->
-            <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(99, 107, 88, 0.04); border-radius: 8px; border: 1px solid var(--border-subtle);">
-                <select id="shadow-quality" style="background: var(--vanilla); color: var(--ganache); border: 1px solid var(--border-subtle); padding: 0.6rem 0.8rem; border-radius: 4px; font-weight: 700; cursor: pointer; font-family: 'Manrope', sans-serif;">
-                    <option value="high">High Resolution</option>
-                    <option value="medium">Medium Resolution</option>
-                    <option value="low">Low / Disabled</option>
-                </select>
-                <div style="flex: 1;">
-                    <label style="display: block; font-weight: 700; color: var(--ganache); font-size: 0.9rem;">Shadow Quality</label>
-                    <span style="font-size: 0.75rem; color: rgba(35, 26, 23, 0.6);">Quality/Performance tradeoff</span>
-                </div>
-            </div>
+                <p style="font-size: 0.85rem; color: rgba(35, 26, 23, 0.7); margin-top: 1.5rem; font-style: italic; text-align: center;" data-i18n="tool_note">
+                    This is an educational visualization. The simulator achieves 120+ FPS with all quality settings enabled. Toggle options to understand the performance cost of each optimization technique.
+                </p>
+            </section>
 
-            <!-- Particles -->
-            <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(99, 107, 88, 0.04); border-radius: 8px; border: 1px solid var(--border-subtle);">
-                <input type="checkbox" id="particles" style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--brand-accent);" />
-                <div style="flex: 1;">
-                    <label for="particles" style="cursor: pointer; display: block; font-weight: 700; color: var(--ganache); font-size: 0.9rem;">Particle Effects</label>
-                    <span style="font-size: 0.75rem; color: rgba(35, 26, 23, 0.6);">Dust & atmospheric elements</span>
-                </div>
-            </div>
-
-            <!-- Real-time Reflections -->
-            <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(99, 107, 88, 0.04); border-radius: 8px; border: 1px solid var(--border-subtle);">
-                <input type="checkbox" id="realtime-reflections" style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--brand-accent);" />
-                <div style="flex: 1;">
-                    <label for="realtime-reflections" style="cursor: pointer; display: block; font-weight: 700; color: var(--ganache); font-size: 0.9rem;">Real-time Reflections</label>
-                    <span style="font-size: 0.75rem; color: rgba(35, 26, 23, 0.6);">SSR disabled · Uses probes</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- FPS Display -->
-        <div style="background: rgba(99, 107, 88, 0.08); border: 1px solid var(--brand-accent); border-radius: 8px; padding: 1.5rem; text-align: center;">
-            <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(35, 26, 23, 0.6); margin-bottom: 0.5rem;">Estimated Performance</div>
-            <div id="fps-display-line" style="font-family: 'Lora', serif; font-size: 2rem; font-weight: 700; color: var(--brand-accent);">120 FPS</div>
-            <div style="font-size: 0.7rem; color: rgba(35, 26, 23, 0.6); margin-top: 0.5rem;">RTX 3070 · 1080p</div>
-        </div>
-
-    </div>
-
-    <p style="font-size: 0.85rem; color: rgba(35, 26, 23, 0.7); margin-top: 1.5rem; font-style: italic; text-align: center;">
-        This is an educational visualization. The simulator achieves 120+ FPS with all quality settings enabled. Toggle options to understand the performance cost of each optimization technique.
-    </p>
-</section>
             <!-- 5.6 TECHNICAL STACK -->
             <section id="tech-stack" class="artwork-section reveal-section" aria-labelledby="stack-title">
                 <div class="artwork-section-header-row">
                     <div>
-                        <p class="artwork-category-tag" style="margin-bottom: 0.5rem;">Tools & Technologies</p>
-                        <h2 id="stack-title" class="artwork-section-title">Technical Stack</h2>
-                        <p class="artwork-section-desc">Production software and engine configuration used for ECOE Simulator development.</p>
+                        <p class="artwork-category-tag" style="margin-bottom: 0.5rem;" data-i18n="stack_tag">Tools & Technologies</p>
+                        <h2 id="stack-title" class="artwork-section-title" data-i18n="stack_title">Technical Stack</h2>
+                        <p class="artwork-section-desc" data-i18n="stack_desc">Production software and engine configuration used for ECOE Simulator development.</p>
                     </div>
                 </div>
 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
                     <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 1.5rem;">
-                        <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1rem; border-bottom: 2px solid var(--brand-accent); padding-bottom: 0.5rem;">3D Modeling</h3>
+                        <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1rem; border-bottom: 2px solid var(--brand-accent); padding-bottom: 0.5rem;" data-i18n="stack_box1_title">3D Modeling</h3>
                         <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; line-height: 1.6; color: rgba(35, 26, 23, 0.8);">
-                            <li><strong>Blender</strong> (advanced)</li>
-                            <li>3ds Max (rigging)</li>
-                            <li>SketchUp (blockout)</li>
+                            <li><strong data-i18n="s1_i1">Blender</strong> <span data-i18n="s1_i1_sub">(advanced)</span></li>
+                            <li data-i18n="s1_i2">3ds Max (rigging)</li>
+                            <li data-i18n="s1_i3">SketchUp (blockout)</li>
                         </ul>
                     </div>
 
                     <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 1.5rem;">
-                        <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1rem; border-bottom: 2px solid var(--brand-accent); padding-bottom: 0.5rem;">Rendering & Shaders</h3>
+                        <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1rem; border-bottom: 2px solid var(--brand-accent); padding-bottom: 0.5rem;" data-i18n="stack_box2_title">Rendering & Shaders</h3>
                         <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; line-height: 1.6; color: rgba(35, 26, 23, 0.8);">
-                            <li><strong>Unity URP</strong> 6000.0.39f1</li>
-                            <li>Shader Graph</li>
-                            <li>HLSL basics</li>
+                            <li><strong data-i18n="s2_i1">Unity URP</strong> 6000.0.39f1</li>
+                            <li data-i18n="s2_i2">Shader Graph</li>
+                            <li data-i18n="s2_i3">HLSL basics</li>
                         </ul>
                     </div>
 
                     <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 1.5rem;">
-                        <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1rem; border-bottom: 2px solid var(--brand-accent); padding-bottom: 0.5rem;">Optimization</h3>
+                        <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1rem; border-bottom: 2px solid var(--brand-accent); padding-bottom: 0.5rem;" data-i18n="stack_box3_title">Optimization</h3>
                         <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; line-height: 1.6; color: rgba(35, 26, 23, 0.8);">
-                            <li>Unity Profiler</li>
-                            <li>Frame Debugger basics</li>
-                            <li>Static Batching</li>
-                            <li>Occlusion Culling</li>
+                            <li data-i18n="s3_i1">Unity Profiler</li>
+                            <li data-i18n="s3_i2">Frame Debugger basics</li>
+                            <li data-i18n="s3_i3">Static Batching</li>
+                            <li data-i18n="s3_i4">Occlusion Culling</li>
                         </ul>
                     </div>
 
                     <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 1.5rem;">
-                        <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1rem; border-bottom: 2px solid var(--brand-accent); padding-bottom: 0.5rem;">Texturing</h3>
+                        <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1rem; border-bottom: 2px solid var(--brand-accent); padding-bottom: 0.5rem;" data-i18n="stack_box4_title">Texturing</h3>
                         <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; line-height: 1.6; color: rgba(35, 26, 23, 0.8);">
-                            <li>Substance Painter</li>
-                            <li>Blender Compositor</li>
-                            <li>Channel Packing (ORM)</li>
+                            <li data-i18n="s4_i1">Substance Painter</li>
+                            <li data-i18n="s4_i2">Blender Compositor</li>
+                            <li data-i18n="s4_i3">Channel Packing (ORM)</li>
                         </ul>
                     </div>
 
                     <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 1.5rem;">
-                        <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1rem; border-bottom: 2px solid var(--brand-accent); padding-bottom: 0.5rem;">Pipeline</h3>
+                        <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1rem; border-bottom: 2px solid var(--brand-accent); padding-bottom: 0.5rem;" data-i18n="stack_box5_title">Pipeline</h3>
                         <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; line-height: 1.6; color: rgba(35, 26, 23, 0.8);">
-                            <li>UV Unwrap (Advanced)</li>
-                            <li>Texture Baking</li>
-                            <li>Normal Maps</li>
+                            <li data-i18n="s5_i1">UV Unwrap (Advanced)</li>
+                            <li data-i18n="s5_i2">Texture Baking</li>
+                            <li data-i18n="s5_i3">Normal Maps</li>
                         </ul>
                     </div>
 
                     <div style="background: var(--card-bg); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 1.5rem;">
-                        <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1rem; border-bottom: 2px solid var(--brand-accent); padding-bottom: 0.5rem;">Version Control</h3>
+                        <h3 style="font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 700; color: var(--ganache); margin-bottom: 1rem; border-bottom: 2px solid var(--brand-accent); padding-bottom: 0.5rem;" data-i18n="stack_box6_title">Version Control</h3>
                         <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; line-height: 1.6; color: rgba(35, 26, 23, 0.8);">
-                            <li>Git / GitHub</li>
-                            <li>GitHub Desktop</li>
-                            <li>Agile/Scrum</li>
-                            <li>Jira (tracking)</li>
+                            <li data-i18n="s6_i1">Git / GitHub</li>
+                            <li data-i18n="s6_i2">GitHub Desktop</li>
+                            <li data-i18n="s6_i3">Agile/Scrum</li>
+                            <li data-i18n="s6_i4">Jira (tracking)</li>
                         </ul>
                     </div>
                 </div>
@@ -770,14 +737,14 @@
             <!-- 7. ART GALLERY -->
             <section id="gallery" class="artwork-section reveal-section" aria-labelledby="gallery-title">
                 <div class="text-center mb-16 space-y-6">
-                    <h2 id="gallery-title" class="artwork-section-title">Technical Gallery</h2>
+                    <h2 id="gallery-title" class="artwork-section-title" data-i18n="gallery_title">Technical Gallery</h2>
                     
                     <div class="artwork-filter-buttons" role="group" aria-label="Filter gallery by category">
-                        <button class="artwork-filter-btn active" onclick="filterGallery('all', this)" aria-pressed="true">All Works</button>
-                        <button class="artwork-filter-btn" onclick="filterGallery('artwork', this)" aria-pressed="false">3D Artwork</button>
-                        <button class="artwork-filter-btn" onclick="filterGallery('concept', this)" aria-pressed="false">Concepts</button>
-                        <button class="artwork-filter-btn" onclick="filterGallery('sculpt', this)" aria-pressed="false">Sculpting</button>
-                        <button class="artwork-filter-btn" onclick="filterGallery('materials', this)" aria-pressed="false">Materials</button>
+                        <button class="artwork-filter-btn active" onclick="filterGallery('all', this)" aria-pressed="true" data-i18n="filter_all">All Works</button>
+                        <button class="artwork-filter-btn" onclick="filterGallery('artwork', this)" aria-pressed="false" data-i18n="filter_artwork">3D Artwork</button>
+                        <button class="artwork-filter-btn" onclick="filterGallery('concept', this)" aria-pressed="false" data-i18n="filter_concept">Concepts</button>
+                        <button class="artwork-filter-btn" onclick="filterGallery('sculpt', this)" aria-pressed="false" data-i18n="filter_sculpt">Sculpting</button>
+                        <button class="artwork-filter-btn" onclick="filterGallery('materials', this)" aria-pressed="false" data-i18n="filter_materials">Materials</button>
                     </div>
                 </div>
 
@@ -804,13 +771,13 @@
                         <i class="fa-solid fa-comments"></i>
                     </div>
                     <div class="text-left">
-                        <h2 class="font-display text-xl md:text-2xl" style="color: var(--ganache);">Let's build something optimized</h2>
-                        <p class="text-[0.68rem] font-bold uppercase tracking-widest mt-1" style="color: rgba(35, 26, 23, 0.5);">Technical art for real-time performance</p>
+                        <h2 class="font-display text-xl md:text-2xl" style="color: var(--ganache);" data-i18n="cta_title">Let's build something optimized</h2>
+                        <p class="text-[0.68rem] font-bold uppercase tracking-widest mt-1" style="color: rgba(35, 26, 23, 0.5);" data-i18n="cta_sub">Technical art for real-time performance</p>
                     </div>
                     <div class="artwork-cta-divider" aria-hidden="true"></div>
                     <div class="flex gap-4">
-                        <a href="contact.html" class="hero-btn-primary">Contact</a>
-                        <a href="../assets/files/CV_Nuria_Serrano_Espanol.pdf" target="_blank" rel="noopener noreferrer" class="hero-btn-secondary">CV</a>
+                        <a href="contact.html" class="hero-btn-primary" data-i18n="cta_btn_contact">Contact</a>
+                        <a href="../assets/files/CV_Nuria_Serrano_Espanol.pdf" target="_blank" rel="noopener noreferrer" class="hero-btn-secondary" data-i18n="cta_btn_cv">CV</a>
                     </div>
                 </div>
             </section>
@@ -831,7 +798,7 @@
                         <a href="../index.html" class="footer-brand">
                             nurxen<span class="accent-blue">.</span>
                         </a>
-                        <p class="footer-tagline">3D Technical Artist | Real-time Optimization</p>
+                        <p class="footer-tagline" data-i18n="footer_tagline">3D Technical Artist | Real-time Optimization</p>
                         
                         <div class="footer-social">
                             <a href="https://www.instagram.com/nurxen_" target="_blank" rel="noopener noreferrer" aria-label="Nurxen on Instagram" class="footer-social-icon">
@@ -847,24 +814,24 @@
                     </div>
 
                     <div class="footer-col">
-                        <p class="footer-col-title">Explore</p>
-                        <a href="../index.html" class="footer-link">Home</a>
-                        <a href="artwork.html" class="footer-link">Technical Art</a>
-                        <a href="games.html" class="footer-link">Games & Sims</a>
+                        <p class="footer-col-title" data-i18n="footer_explore">Explore</p>
+                        <a href="../index.html" class="footer-link" data-i18n="nav_home">Home</a>
+                        <a href="artwork.html" class="footer-link" data-i18n="footer_artwork">Technical Art</a>
+                        <a href="games.html" class="footer-link" data-i18n="footer_games">Games & Sims</a>
                     </div>
 
                     <div class="footer-col">
-                        <p class="footer-col-title">Get in Touch</p>
-                        <a href="contact.html" class="footer-link">Contact Form</a>
-                        <a href="mailto:nurxen21@gmail.com" class="footer-link footer-link-underline">Email Me</a>
-                        <p class="footer-note">Available for freelance & collaboration.</p>
+                        <p class="footer-col-title" data-i18n="footer_touch">Get in Touch</p>
+                        <a href="contact.html" class="footer-link" data-i18n="footer_contact_form">Contact Form</a>
+                        <a href="mailto:nurxen21@gmail.com" class="footer-link footer-link-underline" data-i18n="footer_email">Email Me</a>
+                        <p class="footer-note" data-i18n="footer_note">Available for freelance & collaboration.</p>
                     </div>
                 </div>
 
                 <div class="footer-bottom">
-                    <p class="footer-copy">©2026 Nurxen. All Rights Reserved.</p>
+                    <p class="footer-copy">©2026 Nurxen. <span data-i18n="footer_rights">All Rights Reserved.</span></p>
                     <div class="footer-credit">
-                        <span>Built with technical precision &amp; Blender</span>
+                        <span data-i18n="footer_credit">Built with technical precision &amp; Blender</span>
                         <i class="fa-solid fa-heart footer-heart animate-pulse" aria-hidden="true"></i>
                     </div>
                 </div>
@@ -880,6 +847,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/artwork.js"></script>
+    <script src="../js/translate-artwork.js"></script> <!-- SCRIPT DE TRADUCCIÓN PARA ARTWORK -->
 </body>
 
 </html>
