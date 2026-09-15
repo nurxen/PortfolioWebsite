@@ -1,0 +1,385 @@
+/* ==========================================================
+   RESUME PAGE STYLES
+   Homogeneizado con la estética de HOME
+   ========================================================== */
+
+/* ==========================================================
+   LAYOUT BASE
+   ========================================================== */
+.resume-main {
+    padding: 4rem 2.5rem;
+    background-color: var(--vanilla);
+    min-height: calc(100vh - 3.75rem);
+}
+
+/* ==========================================================
+   WRAPPER CARD
+   ========================================================== */
+.resume-wrapper-card {
+    max-width: 84rem;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 4.5rem;
+    box-shadow: 0 10px 35px rgba(35, 26, 23, 0.08);
+}
+
+@media (max-width: 768px) {
+    .resume-wrapper-card {
+        padding: 2.5rem;
+    }
+}
+
+.resume-container-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+@media (max-width: 768px) {
+    .resume-header {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+.resume-header-info {
+    flex: 1;
+}
+
+.resume-eyebrow {
+    color: var(--brand-accent);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    display: inline-block;
+}
+
+.resume-name {
+    font-family: "Lora", serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    color: var(--ganache);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.resume-title {
+    font-size: 1rem;
+    color: rgba(35, 26, 23, 0.8);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.resume-title-accent {
+    color: var(--brand-accent);
+}
+
+.resume-location {
+    font-size: 0.85rem;
+    color: rgba(35, 26, 23, 0.7);
+    font-weight: 500;
+}
+
+.resume-header-actions {
+    flex-shrink: 0;
+}
+
+.hero-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.8rem;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-color: var(--vanilla);
+    color: var(--charcoal);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hero-btn-primary:hover {
+    background-color: var(--brand-accent);
+    color: var(--vanilla);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(99, 107, 88, 0.3);
+}
+
+/* ==========================================================
+   GRID SYSTEM
+   ========================================================== */
+.resume-grid-compact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+    .resume-grid-compact {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .resume-grid-compact {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+.resume-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ==========================================================
+   SECTION BLOCKS
+   ========================================================== */
+.resume-block {
+    background: rgba(239, 233, 223, 0.5);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.resume-block:hover {
+    background: linear-gradient(135deg, rgba(239, 233, 223, 0.7) 0%, rgba(223, 213, 195, 0.5) 100%);
+    box-shadow: 0 6px 15px rgba(35, 26, 23, 0.06);
+}
+
+.resume-block h2 {
+    font-family: "Lora", serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--ganache);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.resume-block h2 i {
+    color: var(--brand-accent);
+    font-size: 0.95rem;
+}
+
+.resume-summary-text {
+    font-size: 0.9rem;
+    color: rgba(35, 26, 23, 0.8);
+    line-height: 1.7;
+}
+
+/* ==========================================================
+   TAGS INLINE
+   ========================================================== */
+.resume-tags-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+}
+
+.resume-tags-inline span {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ganache);
+    background: rgba(99, 107, 88, 0.08);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    border: 1px solid rgba(99, 107, 88, 0.15);
+    transition: all 0.2s ease;
+}
+
+.resume-tags-inline span:hover {
+    background: var(--brand-accent);
+    color: var(--vanilla);
+    border-color: var(--brand-accent);
+}
+
+/* ==========================================================
+   EXPERIENCE ITEMS
+   ========================================================== */
+.resume-item-compact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.item-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.resume-item-compact h3 {
+    font-family: "Lora", serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--ganache);
+}
+
+.item-date {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--brand-accent);
+    white-space: nowrap;
+}
+
+.item-role {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(99, 107, 88, 0.9);
+    margin-top: 0.2rem;
+}
+
+.item-desc {
+    font-size: 0.85rem;
+    color: rgba(35, 26, 23, 0.75);
+    line-height: 1.6;
+    margin-top: 0.3rem;
+}
+
+/* ==========================================================
+   RECOGNITION
+   ========================================================== */
+.resume-recognition-text {
+    font-size: 0.9rem;
+    color: rgba(35, 26, 23, 0.8);
+    line-height: 1.7;
+}
+
+.resume-quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.resume-quick-links a {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--vanilla);
+    background: var(--ganache);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.resume-quick-links a:hover {
+    background: var(--brand-accent);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media (max-width: 768px) {
+    .resume-main {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .resume-wrapper-card {
+        padding: 2rem;
+    }
+
+    .resume-header {
+        border-bottom: 1px solid var(--border-subtle);
+        padding-bottom: 2rem;
+    }
+
+    .resume-name {
+        font-size: 2rem;
+    }
+
+    .resume-title {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-main {
+        padding: 1.5rem 1rem;
+    }
+
+    .resume-wrapper-card {
+        padding: 1.5rem;
+    }
+
+    .resume-name {
+        font-size: 1.6rem;
+    }
+
+    .resume-header-actions {
+        width: 100%;
+    }
+
+    .hero-btn-primary {
+        width: 100%;
+        padding: 0.7rem 1.5rem;
+        font-size: 0.65rem;
+    }
+
+    .resume-block {
+        padding: 1.5rem;
+    }
+
+    .resume-block h2 {
+        font-size: 0.95rem;
+    }
+
+    .resume-tags-inline span {
+        font-size: 0.6rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .item-title-row {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .resume-quick-links {
+        gap: 0.6rem;
+    }
+
+    .resume-quick-links a {
+        font-size: 0.65rem;
+        padding: 0.4rem 0.8rem;
+    }
+}

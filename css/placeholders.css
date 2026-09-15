@@ -1,0 +1,261 @@
+/* ==========================================================
+   PLACEHOLDER STYLES - Para elementos sin imagen
+   Mantiene la estética homogénea cuando no hay imágenes reales
+   ========================================================== */
+
+.project-image-placeholder,
+.artwork-featured-placeholder,
+.artwork-subcard-placeholder,
+.artwork-asset-placeholder,
+.artwork-shader-placeholder,
+.artwork-video-placeholder,
+.games-main-placeholder,
+.games-video-placeholder,
+.games-static-placeholder,
+.artwork-gallery-placeholder,
+.about-photo-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #E5DCD0 0%, #D5C9B6 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(35, 26, 23, 0.4);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.project-image-placeholder {
+    min-height: 300px;
+}
+
+.artwork-featured-placeholder {
+    min-height: 400px;
+}
+
+.artwork-subcard-placeholder {
+    min-height: 250px;
+}
+
+.artwork-asset-placeholder {
+    min-height: 300px;
+}
+
+.artwork-shader-placeholder {
+    min-height: 400px;
+    aspect-ratio: 16 / 9;
+}
+
+.artwork-video-placeholder,
+.games-video-placeholder {
+    min-height: 300px;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, #2c2420 0%, #3a322a 100%);
+    color: rgba(239, 233, 223, 0.4);
+}
+
+.games-main-placeholder {
+    aspect-ratio: 16 / 9;
+    min-height: 250px;
+}
+
+.games-static-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    aspect-ratio: 16 / 9;
+}
+
+.artwork-gallery-placeholder {
+    aspect-ratio: 1;
+    min-height: 250px;
+}
+
+.about-photo-placeholder {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 12px;
+    border: 1px solid var(--border-subtle);
+    font-size: 3rem;
+    color: rgba(35, 26, 23, 0.2);
+}
+
+/* ==========================================================
+   PLACEHOLDER ANIMATIONS (subtil)
+   ========================================================== */
+
+.project-image-placeholder,
+.artwork-featured-placeholder,
+.artwork-subcard-placeholder,
+.artwork-asset-placeholder,
+.artwork-video-placeholder,
+.games-main-placeholder,
+.games-video-placeholder,
+.artwork-gallery-placeholder {
+    animation: placeholderShimmer 2s ease-in-out infinite;
+}
+
+@keyframes placeholderShimmer {
+    0%, 100% {
+        background: linear-gradient(135deg, #E5DCD0 0%, #D5C9B6 100%);
+    }
+    50% {
+        background: linear-gradient(135deg, #D5C9B6 0%, #E5DCD0 100%);
+    }
+}
+
+.artwork-video-placeholder,
+.games-video-placeholder {
+    animation: placeholderShimmerDark 2s ease-in-out infinite;
+}
+
+@keyframes placeholderShimmerDark {
+    0%, 100% {
+        background: linear-gradient(135deg, #2c2420 0%, #3a322a 100%);
+    }
+    50% {
+        background: linear-gradient(135deg, #3a322a 0%, #2c2420 100%);
+    }
+}
+
+/* ==========================================================
+   HERO BUTTONS HOMOGENIZACIÓN
+   Asegurar que todos los botones sigan el mismo patrón
+   ========================================================== */
+
+.hero-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.8rem;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-color: var(--vanilla);
+    color: var(--charcoal);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hero-btn-primary:hover {
+    background-color: var(--brand-accent);
+    color: var(--vanilla);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(99, 107, 88, 0.3);
+}
+
+.hero-btn-primary i {
+    transition: transform 0.3s ease;
+}
+
+.hero-btn-primary:hover i {
+    transform: translateX(2px);
+}
+
+.hero-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.8rem;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    color: var(--vanilla);
+    border: 1px solid rgba(239, 233, 223, 0.3);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hero-btn-secondary:hover {
+    border-color: var(--vanilla);
+    background-color: rgba(239, 233, 223, 0.08);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================
+   PROYECTOS GRID - PLACEHOLDER CARDS
+   ========================================================== */
+
+.project-image-wrap {
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    background-color: #120f0d;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+/* ==========================================================
+   GALLERY ITEMS PLACEHOLDER
+   ========================================================== */
+
+.gallery-item {
+    margin-bottom: 2rem;
+    break-inside: avoid;
+}
+
+.artwork-gallery-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================================
+   RESPONSIVE PLACEHOLDERS
+   ========================================================== */
+
+@media (max-width: 768px) {
+    .project-image-placeholder,
+    .artwork-featured-placeholder,
+    .games-main-placeholder {
+        min-height: 200px;
+    }
+
+    .artwork-video-placeholder,
+    .games-video-placeholder {
+        min-height: 200px;
+    }
+
+    .about-photo-placeholder {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-image-placeholder,
+    .artwork-subcard-placeholder {
+        min-height: 150px;
+    }
+
+    .artwork-featured-placeholder {
+        min-height: 250px;
+    }
+
+    .artwork-gallery-placeholder {
+        min-height: 150px;
+    }
+
+    .about-photo-placeholder {
+        max-width: 150px;
+    }
+}
