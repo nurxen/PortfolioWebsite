@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuria Serrano | 3D Environment & Technical Artist</title>
+    <title data-i18n="meta_title">Nuria Serrano | 3D Environment & Technical Artist</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234A3B32'/><text x='50%' y='52%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='42' fill='%23EFE9DF'>NS</text></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/home.css">
 
-    <meta name="description"
+    <meta name="description" data-i18n-attr="content|meta_desc"
         content="Portfolio of Nuria Serrano. 3D Environment Artist & Technical Artist specializing in modular workflows and Unity integration.">
 </head>
 
@@ -29,45 +29,31 @@
             </a>
 
             <div class="navbar-links">
-                <a href="index.html" class="navlink">Home</a>
+                <a href="index.html" class="navlink" data-i18n="nav_home">Home</a>
 
                 <div class="navlink-dropdown">
                     <button class="navlink dropdown-toggle">
-                        Work <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                        <span data-i18n="nav_work">Work</span> <i class="fa-solid fa-chevron-down dropdown-icon"></i>
                     </button>
                     <div class="dropdown-panel">
                         <div class="dropdown-card">
-                            <a href="pages/artwork.html" class="dropdown-item">3D & Technical Art</a>
-                            <a href="pages/games.html" class="dropdown-item">Games & Sims</a>
+                            <a href="pages/artwork.html" class="dropdown-item" data-i18n="nav_artwork">3D & Technical Art</a>
+                            <a href="pages/games.html" class="dropdown-item" data-i18n="nav_games">Games & Sims</a>
                         </div>
                     </div>
                 </div>
 
-                <a href="pages/about.html" class="navlink">About me</a>
-                <a href="pages/resume.html" class="navlink">Resumé</a>
+                <a href="pages/about.html" class="navlink" data-i18n="nav_about">About me</a>
+                <a href="pages/resume.html" class="navlink" data-i18n="nav_resume">Resumé</a>
                 
-                <div class="gtranslate_wrapper"></div>
+                <button id="lang-toggle" class="navlink" style="background: none; border: none; cursor: pointer; font-weight: 700;">
+                    ES
+                </button>
 
-                <a href="pages/contact.html" class="navlink navlink-button">Contact</a>
+                <a href="pages/contact.html" class="navlink navlink-button" data-i18n="nav_contact">Contact</a>
             </div>
         </div>
     </nav>
-
-<!-- GTRANSLATE AUTOMÁTICO (FLOTANTE) -->
-<script>
-    window.gtranslateSettings = {
-        "default_language": "en",
-        "languages": ["en", "es"],
-        "wrapper_selector": ".gtranslate_wrapper",
-        "flag_size": 24,
-        "flag_style": "3d",
-        "switcher_horizontal_position": "right",
-        "switcher_vertical_position": "bottom",
-        "float_switcher_open_direction": "top",
-        "alt_flags": { "en": "us", "es": "es" }
-    };
-</script>
-<script src="https://cdn.gtranslate.net/latest/gtranslate.js" defer></script>
 
     <main class="page-view active page-main">
 
@@ -82,29 +68,27 @@
                     <h1 class="hero-title">
                         Nuria Serrano
                     </h1>
-                    <p class="hero-subtitle">
+                    <p class="hero-subtitle" data-i18n="hero_subtitle">
                         Technical Art & Environments
                     </p>
 
                     <div class="hero-tags">
-                        <span class="hero-tag">MODULAR WORKFLOWS</span>
-                        <span class="hero-tag">ENGINE INTEGRATION</span>
-                        <span class="hero-tag">SHADER GRAPH</span>
-                        <span class="hero-tag">UNITY PIPELINE</span>
+                        <span class="hero-tag" data-i18n="tag_modular">MODULAR WORKFLOWS</span>
+                        <span class="hero-tag" data-i18n="tag_engine">ENGINE INTEGRATION</span>
+                        <span class="hero-tag" data-i18n="tag_shader">SHADER GRAPH</span>
+                        <span class="hero-tag" data-i18n="tag_pipeline">UNITY PIPELINE</span>
                     </div>
 
-                    <p class="hero-description">
-                        I am an Environment Artist with a solid technical background in Game Development. My focus is on
-                        creating high-quality assets that are fully optimized for real-time rendering and integrated
-                        smoothly into pipelines.
+                    <p class="hero-description" data-i18n="hero_desc">
+                        I am an Environment Artist with a solid technical background in Game Development. My focus is on creating high-quality assets that are fully optimized for real-time rendering and integrated smoothly into pipelines.
                     </p>
 
                     <div class="hero-actions">
                         <a href="pages/artwork.html" class="hero-btn-primary">
-                            View Portfolio <i class="fa-solid fa-arrow-right"></i>
+                            <span data-i18n="btn_view_portfolio">View Portfolio</span> <i class="fa-solid fa-arrow-right"></i>
                         </a>
                         <a href="assets/files/CV_Nuria_Serrano_Espanol.pdf" target="_blank" rel="noopener noreferrer" class="hero-btn-secondary">
-                            See CV <i class="fa-solid fa-file-arrow-down"></i>
+                            <span data-i18n="btn_see_cv">See CV</span> <i class="fa-solid fa-file-arrow-down"></i>
                         </a>
                     </div>
                 </div>
@@ -127,17 +111,17 @@
             <div class="selected-work-container">
                 
                 <div class="selected-work-header">
-                    <span class="section-eyebrow">✦ CASE STUDIES</span>
-                    <h2 class="section-title">Selected Work</h2>
+                    <span class="section-eyebrow" data-i18n="work_eyebrow">✦ CASE STUDIES</span>
+                    <h2 class="section-title" data-i18n="work_title">Selected Work</h2>
                     <p class="section-paragraph">
-                        Each project includes a look behind the scenes: <strong class="text-strong">my exact role, the specific technical challenges</strong> and the optimized pipeline decisions that shaped the final playable experience.
+                        <span data-i18n="work_p1_part1">Each project includes a look behind the scenes:</span> <strong class="text-strong" data-i18n="work_p1_bold">my exact role, the specific technical challenges</strong> <span data-i18n="work_p1_part2">and the optimized pipeline decisions that shaped the final playable experience.</span>
                     </p>
-                    <p class="section-paragraph">
+                    <p class="section-paragraph" data-i18n="work_p2">
                         I enjoy sharing both the beauty of the environment art and the technical engineering behind it.
                     </p>
                     <div class="selected-work-cta">
                         <a href="pages/artwork.html" class="link-pill">
-                            View Portfolio <i class="fa-solid fa-arrow-right link-pill-icon"></i>
+                            <span data-i18n="btn_view_portfolio">View Portfolio</span> <i class="fa-solid fa-arrow-right link-pill-icon"></i>
                         </a>
                     </div>
                 </div>
@@ -149,8 +133,8 @@
                             <div class="project-image-1"></div>
                         </div>
                         <div class="project-info">
-                            <span class="project-category">Videogame</span>
-                            <p class="project-desc">
+                            <span class="project-category" data-i18n="proj1_cat">Videogame</span>
+                            <p class="project-desc" data-i18n="proj1_desc">
                                 Unchained - Environment art and character rigging for Steam performance.
                             </p>
                         </div>
@@ -162,8 +146,8 @@
                             <div class="project-image-2"></div>
                         </div>
                         <div class="project-info">
-                            <span class="project-category">Medical Simulation</span>
-                            <p class="project-desc">
+                            <span class="project-category" data-i18n="proj2_cat">Medical Simulation</span>
+                            <p class="project-desc" data-i18n="proj2_desc">
                                 ECOE 3D environment, modular architecture, and technical optimizations.
                             </p>
                         </div>
@@ -175,8 +159,8 @@
                             <div class="project-image-3"></div>
                         </div>
                         <div class="project-info">
-                            <span class="project-category">Lighting & Compo</span>
-                            <p class="project-desc">
+                            <span class="project-category" data-i18n="proj3_cat">Lighting & Compo</span>
+                            <p class="project-desc" data-i18n="proj3_desc">
                                 Autumn Table - Atmospheric lookdev and cozy interior lighting study.
                             </p>
                         </div>
@@ -190,44 +174,42 @@
         <section id="specialties-showcase" class="specialties-section">
             <div class="specialties-container">
                 <div class="specialties-header-minimal">
-                    <span class="section-eyebrow">✦ CORE PILLARS</span>
-                    <h2 class="section-title">What I Bring to a Team</h2>
+                    <span class="section-eyebrow" data-i18n="pillars_eyebrow">✦ CORE PILLARS</span>
+                    <h2 class="section-title" data-i18n="pillars_title">What I Bring to a Team</h2>
                 </div>
 
                 <div class="specialties-row-grid">
-                    
                     <div class="specialty-pill-card">
                         <div class="specialty-pill-icon"><i class="fa-solid fa-code"></i></div>
                         <div class="specialty-pill-content">
-                            <h4>Shader Development</h4>
-                            <p>Custom node-based systems for unique stylized visuals.</p>
+                            <h4 data-i18n="pillar1_h">Shader Development</h4>
+                            <p data-i18n="pillar1_p">Custom node-based systems for unique stylized visuals.</p>
                         </div>
                     </div>
 
                     <div class="specialty-pill-card">
                         <div class="specialty-pill-icon"><i class="fa-solid fa-gears"></i></div>
                         <div class="specialty-pill-content">
-                            <h4>Pipeline Optimization</h4>
-                            <p>Asset workflows and texture atlasing for peak performance.</p>
+                            <h4 data-i18n="pillar2_h">Pipeline Optimization</h4>
+                            <p data-i18n="pillar2_p">Asset workflows and texture atlasing for peak performance.</p>
                         </div>
                     </div>
 
                     <div class="specialty-pill-card">
                         <div class="specialty-pill-icon"><i class="fa-solid fa-lightbulb"></i></div>
                         <div class="specialty-pill-content">
-                            <h4>Real-time Lighting</h4>
-                            <p>Baked GI and probes tailored for atmosphere and efficiency.</p>
+                            <h4 data-i18n="pillar3_h">Real-time Lighting</h4>
+                            <p data-i18n="pillar3_p">Baked GI and probes tailored for atmosphere and efficiency.</p>
                         </div>
                     </div>
 
                     <div class="specialty-pill-card">
                         <div class="specialty-pill-icon"><i class="fa-solid fa-cube"></i></div>
                         <div class="specialty-pill-content">
-                            <h4>Technical 3D</h4>
-                            <p>Modular environment structures with an engine-first mindset.</p>
+                            <h4 data-i18n="pillar4_h">Technical 3D</h4>
+                            <p data-i18n="pillar4_p">Modular environment structures with an engine-first mindset.</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -236,16 +218,15 @@
         <section id="skills" class="skills-section-compact">
             <div class="skills-container-compact">
                 <div class="skills-header-compact">
-                    <span class="section-eyebrow">✦ TECHNICAL EXPERTISE</span>
-                    <h2 class="section-title">Technical Stack</h2>
+                    <span class="section-eyebrow" data-i18n="stack_eyebrow">✦ TECHNICAL EXPERTISE</span>
+                    <h2 class="section-title" data-i18n="stack_title">Technical Stack</h2>
                 </div>
 
                 <div class="skills-categories-grid">
-                    
                     <div class="skill-category">
                         <div class="skill-category-header">
                             <div class="skill-category-icon"><i class="fa-solid fa-gamepad"></i></div>
-                            <h3 class="skill-category-title">Engines & Tech Art</h3>
+                            <h3 class="skill-category-title" data-i18n="stack1_title">Engines & Tech Art</h3>
                         </div>
                         <div class="skill-category-tags">
                             <span class="skill-tag-compact">Unity 6</span>
@@ -254,14 +235,14 @@
                             <span class="skill-tag-compact">Profiler</span>
                             <span class="skill-tag-compact">Light Probes</span>
                         </div>
-                        <p class="skill-category-note">Procedural materials, Channel Packing RGBA, MPB, Advanced lighting.</p>
+                        <p class="skill-category-note" data-i18n="stack1_note">Procedural materials, Channel Packing RGBA, MPB, Advanced lighting.</p>
                     </div>
 
                     <div class="skill-category skill-category-featured">
                         <div class="skill-category-header">
                             <div class="skill-category-icon"><i class="fa-solid fa-cube"></i></div>
-                            <h3 class="skill-category-title">3D Pipeline & DCC</h3>
-                            <span class="skill-badge-small">Main Focus</span>
+                            <h3 class="skill-category-title" data-i18n="stack2_title">3D Pipeline & DCC</h3>
+                            <span class="skill-badge-small" data-i18n="stack2_badge">Main Focus</span>
                         </div>
                         <div class="skill-category-tags">
                             <span class="skill-tag-compact">Blender (Adv)</span>
@@ -269,13 +250,13 @@
                             <span class="skill-tag-compact">3ds Max</span>
                             <span class="skill-tag-compact">SketchUp</span>
                         </div>
-                        <p class="skill-category-note">Complete pipeline: High/Low Poly, UV Unwrap, Baking (Normal, AO, ORM), Texture Atlasing.</p>
+                        <p class="skill-category-note" data-i18n="stack2_note">Complete pipeline: High/Low Poly, UV Unwrap, Baking (Normal, AO, ORM), Texture Atlasing.</p>
                     </div>
 
                     <div class="skill-category">
                         <div class="skill-category-header">
                             <div class="skill-category-icon"><i class="fa-solid fa-code"></i></div>
-                            <h3 class="skill-category-title">Programming & DevOps</h3>
+                            <h3 class="skill-category-title" data-i18n="stack3_title">Programming & DevOps</h3>
                         </div>
                         <div class="skill-category-tags">
                             <span class="skill-tag-compact">C#</span>
@@ -283,9 +264,8 @@
                             <span class="skill-tag-compact">C++</span>
                             <span class="skill-tag-compact">Java</span>
                         </div>
-                        <p class="skill-category-note">Git/GitHub Desktop, Jira, Notion. Agile/Scrum methodologies applied to development.</p>
+                        <p class="skill-category-note" data-i18n="stack3_note">Git/GitHub Desktop, Jira, Notion. Agile/Scrum methodologies applied to development.</p>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -294,25 +274,25 @@
         <div class="marquee-wrap">
             <div class="marquee-track">
                 <div class="marquee-content" aria-hidden="true">
-                    <span class="marquee-text">Technical Artist</span>
+                    <span class="marquee-text" data-i18n="mq_tech">Technical Artist</span>
                     <i class="fa-solid fa-star marquee-star"></i>
                     <span class="marquee-text">Shader Graph</span>
                     <i class="fa-solid fa-star marquee-star"></i>
-                    <span class="marquee-text">Pipeline Optimization</span>
+                    <span class="marquee-text" data-i18n="mq_opt">Pipeline Optimization</span>
                     <i class="fa-solid fa-star marquee-star"></i>
-                    <span class="marquee-text">Environment Design</span>
+                    <span class="marquee-text" data-i18n="mq_env">Environment Design</span>
                     <i class="fa-solid fa-star marquee-star"></i>
                     <span class="marquee-text">Unity & Blender</span>
                     <i class="fa-solid fa-star marquee-star"></i>
                 </div>
                 <div class="marquee-content marquee-content-second" aria-hidden="true">
-                    <span class="marquee-text">Technical Artist</span>
+                    <span class="marquee-text" data-i18n="mq_tech">Technical Artist</span>
                     <i class="fa-solid fa-star marquee-star"></i>
                     <span class="marquee-text">Shader Graph</span>
                     <i class="fa-solid fa-star marquee-star"></i>
-                    <span class="marquee-text">Pipeline Optimization</span>
+                    <span class="marquee-text" data-i18n="mq_opt">Pipeline Optimization</span>
                     <i class="fa-solid fa-star marquee-star"></i>
-                    <span class="marquee-text">Environment Design</span>
+                    <span class="marquee-text" data-i18n="mq_env">Environment Design</span>
                     <i class="fa-solid fa-star marquee-star"></i>
                     <span class="marquee-text">Unity & Blender</span>
                     <i class="fa-solid fa-star marquee-star"></i>
@@ -324,28 +304,27 @@
         <section id="contact-cv" class="contact-section reveal-section">
             <div class="contact-card">
                 <div class="contact-content">
-                    <span class="contact-eyebrow">✦ Let's build something meaningful</span>
+                    <span class="contact-eyebrow" data-i18n="contact_eyebrow">✦ Let's build something meaningful</span>
 
                     <h2 class="contact-title">
-                        Let's stay <br>
-                        <span class="text-strong-red">connected</span>
+                        <span data-i18n="contact_h1">Let's stay</span> <br>
+                        <span class="text-strong-red" data-i18n="contact_h2">connected</span>
                     </h2>
 
-                    <p class="contact-description">
-                        I am available for freelance opportunities and full-time positions. If you like my workflow and
-                        standard, let's create something together.
+                    <p class="contact-description" data-i18n="contact_desc">
+                        I am available for freelance opportunities and full-time positions. If you like my workflow and standard, let's create something together.
                     </p>
 
                     <div class="contact-actions">
                         <a href="pages/contact.html" class="contact-btn-primary group">
                             <i class="fa-solid fa-paper-plane contact-btn-icon" aria-hidden="true"></i>
-                            Go to Contact
+                            <span data-i18n="btn_contact_go">Go to Contact</span>
                         </a>
 
                         <a href="assets/files/CV_Nuria_Serrano_Espanol.pdf" target="_blank" rel="noopener noreferrer"
                             class="contact-btn-secondary group">
                             <i class="fa-solid fa-file-arrow-down contact-btn-icon" aria-hidden="true"></i>
-                            See CV
+                            <span data-i18n="btn_see_cv">See CV</span>
                         </a>
                     </div>
 
@@ -382,7 +361,7 @@
                         <a href="index.html" class="footer-brand">
                             nurxen<span class="accent-red">.</span>
                         </a>
-                        <p class="footer-tagline">
+                        <p class="footer-tagline" data-i18n="footer_tagline">
                             3D Environment & Technical Artist
                         </p>
 
@@ -403,27 +382,27 @@
                     </div>
 
                     <div class="footer-col">
-                        <p class="footer-col-title">Explore</p>
-                        <a href="index.html" class="footer-link">Home</a>
-                        <a href="pages/artwork.html" class="footer-link">Artwork Gallery</a>
-                        <a href="pages/games.html" class="footer-link">Videogames & Sims</a>
+                        <p class="footer-col-title" data-i18n="footer_explore">Explore</p>
+                        <a href="index.html" class="footer-link" data-i18n="nav_home">Home</a>
+                        <a href="pages/artwork.html" class="footer-link" data-i18n="footer_artwork">Artwork Gallery</a>
+                        <a href="pages/games.html" class="footer-link" data-i18n="footer_games">Videogames & Sims</a>
                     </div>
 
                     <div class="footer-col">
-                        <p class="footer-col-title">Get in Touch</p>
-                        <a href="pages/contact.html" class="footer-link">Contact Form</a>
-                        <a href="mailto:nurxen21@gmail.com" class="footer-link footer-link-underline">Email Me</a>
-                        <p class="footer-note">Available for opportunities.</p>
+                        <p class="footer-col-title" data-i18n="footer_touch">Get in Touch</p>
+                        <a href="pages/contact.html" class="footer-link" data-i18n="footer_contact_form">Contact Form</a>
+                        <a href="mailto:nurxen21@gmail.com" class="footer-link footer-link-underline" data-i18n="footer_email">Email Me</a>
+                        <p class="footer-note" data-i18n="footer_note">Available for opportunities.</p>
                     </div>
                 </div>
 
                 <div class="footer-bottom">
                     <p class="footer-copy">
-                        ©2026 Nurxen. All Rights Reserved.
+                        ©2026 Nurxen. <span data-i18n="footer_rights">All Rights Reserved.</span>
                     </p>
 
                     <div class="footer-credit">
-                        <span>Engineered with precision & Blender</span>
+                        <span data-i18n="footer_credit">Engineered with precision & Blender</span>
                         <i class="fa-solid fa-code footer-heart" aria-hidden="true"></i>
                     </div>
                 </div>
@@ -440,6 +419,7 @@
 
     <script src="js/main.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/translate-index.js"></script> <!-- SCRIPT DE TRADUCCIÓN -->
 </body>
 
 </html>

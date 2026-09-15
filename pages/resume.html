@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumé - Nuria Serrano | 3D Technical Artist</title>
+    <title data-i18n="meta_title">Resumé - Nuria Serrano | 3D Technical Artist</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234A3B32'/><text x='50%' y='52%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='42' fill='%23EFE9DF'>NS</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/resume.css">
-    <script src="https://gtranslate.net/zh/autoload.js" defer></script>
 </head>
 
 <body>
@@ -20,23 +19,28 @@
             </a>
 
             <div class="navbar-links">
-                <a href="../index.html" class="navlink">Home</a>
+                <a href="../index.html" class="navlink" data-i18n="nav_home">Home</a>
 
                 <div class="navlink-dropdown">
                     <button class="dropdown-toggle" aria-expanded="false">
-                        Work <i class="fa-solid fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+                        <span data-i18n="nav_work">Work</span> <i class="fa-solid fa-chevron-down dropdown-icon" aria-hidden="true"></i>
                     </button>
                     <div class="dropdown-panel">
                         <div class="dropdown-card">
-                            <a href="artwork.html" class="dropdown-item">3D & Technical Art</a>
-                            <a href="games.html" class="dropdown-item">Games & Sims</a>
+                            <a href="artwork.html" class="dropdown-item" data-i18n="nav_artwork">3D & Technical Art</a>
+                            <a href="games.html" class="dropdown-item" data-i18n="nav_games">Games & Sims</a>
                         </div>
                     </div>
                 </div>
 
-                <a href="about.html" class="navlink">About me</a>
-                <a href="resume.html" class="navlink" aria-current="page">Resumé</a>
-                <a href="contact.html" class="navlink navlink-button">Contact</a>
+                <a href="about.html" class="navlink" data-i18n="nav_about">About me</a>
+                <a href="resume.html" class="navlink" aria-current="page" data-i18n="nav_resume">Resumé</a>
+                
+                <button id="lang-toggle" class="navlink" style="background: none; border: none; cursor: pointer; font-weight: 700;">
+                    ES
+                </button>
+
+                <a href="contact.html" class="navlink navlink-button" data-i18n="nav_contact">Contact</a>
             </div>
         </div>
     </nav>
@@ -47,14 +51,14 @@
 
                 <header class="resume-header">
                     <div class="resume-header-info">
-                        <span class="resume-eyebrow">✦ CURRICULUM VITAE</span>
+                        <span class="resume-eyebrow" data-i18n="resume_eyebrow">✦ CURRICULUM VITAE</span>
                         <h1 class="resume-name">Nuria Serrano</h1>
-                        <p class="resume-title">3D Technical Artist <span class="resume-title-accent">|</span> Real-Time Simulation & Game Development</p>
-                        <p class="resume-location">Madrid, Spain &nbsp;•&nbsp; nuriaserrano04@gmail.com &nbsp;•&nbsp; +34 688 919 229</p>
+                        <p class="resume-title"><span data-i18n="resume_role_title">3D Technical Artist</span> <span class="resume-title-accent">|</span> <span data-i18n="resume_role_subtitle">Real-Time Simulation & Game Development</span></p>
+                        <p class="resume-location" data-i18n="resume_location">Madrid, Spain &nbsp;•&nbsp; nuriaserrano04@gmail.com &nbsp;•&nbsp; +34 688 919 229</p>
                     </div>
                     <div class="resume-header-actions">
                         <a href="../assets/files/CV_Nuria_Serrano_Espanol.pdf" target="_blank" rel="noopener noreferrer" class="hero-btn-primary group">
-                            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download CV
+                            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> <span data-i18n="btn_download_cv">Download CV</span>
                         </a>
                     </div>
                 </header>
@@ -64,18 +68,18 @@
                     <!-- COLUMN 1: Summary & Skills -->
                     <div class="resume-column">
                         <section class="resume-block">
-                            <h2><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Summary</h2>
-                            <p class="resume-summary-text">
+                            <h2><i class="fa-solid fa-briefcase" aria-hidden="true"></i> <span data-i18n="sec_summary">Summary</span></h2>
+                            <p class="resume-summary-text" data-i18n="summary_text">
                                 Technical Artist specialized in simulation pipelines and game development. Expertise in modular architecture, real-time optimization, and Shader Graph. Experience ranging from clinical training simulators (Steam-published ECOE) to commercial games (UNCHAINED).
                             </p>
                         </section>
 
                         <section class="resume-block">
-                            <h2><i class="fa-solid fa-star" aria-hidden="true"></i> Core Skills</h2>
+                            <h2><i class="fa-solid fa-star" aria-hidden="true"></i> <span data-i18n="sec_skills">Core Skills</span></h2>
                             <div class="resume-tags-inline">
                                 <span>Unity 6</span> <span>Shader Graph</span> <span>C#</span> 
-                                <span>Blender (Adv)</span> <span>Substance Painter</span> <span>Channel Packing</span>
-                                <span>Pipeline Optimization</span> <span>Git</span> <span>Linux</span>
+                                <span>Blender (Adv)</span> <span>Substance Painter</span> <span data-i18n="tag_channel">Channel Packing</span>
+                                <span data-i18n="tag_opt">Pipeline Optimization</span> <span>Git</span> <span>Linux</span>
                             </div>
                         </section>
                     </div>
@@ -83,24 +87,24 @@
                     <!-- COLUMN 2: Experience -->
                     <div class="resume-column">
                         <section class="resume-block">
-                            <h2><i class="fa-solid fa-computer" aria-hidden="true"></i> Key Experience</h2>
+                            <h2><i class="fa-solid fa-computer" aria-hidden="true"></i> <span data-i18n="sec_exp">Key Experience</span></h2>
                             
                             <div class="resume-item-compact">
                                 <div class="item-title-row">
-                                    <h3>ECOE Medical Simulator (Steam)</h3>
+                                    <h3 data-i18n="exp1_title">ECOE Medical Simulator (Steam)</h3>
                                     <span class="item-date">2025</span>
                                 </div>
-                                <p class="item-role">Lead Environment Artist & Pipeline Specialist</p>
-                                <p class="item-desc">Modular architecture, optimization (ORM, Atlasing), custom shaders, and Baked GI setup for a clinical training simulator.</p>
+                                <p class="item-role" data-i18n="exp1_role">Lead Environment Artist & Pipeline Specialist</p>
+                                <p class="item-desc" data-i18n="exp1_desc">Modular architecture, optimization (ORM, Atlasing), custom shaders, and Baked GI setup for a clinical training simulator.</p>
                             </div>
 
                             <div class="resume-item-compact">
                                 <div class="item-title-row">
-                                    <h3>UNCHAINED (Commercial Game)</h3>
+                                    <h3 data-i18n="exp2_title">UNCHAINED (Commercial Game)</h3>
                                     <span class="item-date">2023 - Pres.</span>
                                 </div>
-                                <p class="item-role">Tech & Environment Artist</p>
-                                <p class="item-desc">Asset modeling, rigging, and Unity integration. Winner of Game Scholars Jam 4th Edition, released on Steam.</p>
+                                <p class="item-role" data-i18n="exp2_role">Tech & Environment Artist</p>
+                                <p class="item-desc" data-i18n="exp2_desc">Asset modeling, rigging, and Unity integration. Winner of Game Scholars Jam 4th Edition, released on Steam.</p>
                             </div>
                         </section>
                     </div>
@@ -108,19 +112,19 @@
                     <!-- COLUMN 3: Education -->
                     <div class="resume-column">
                         <section class="resume-block">
-                            <h2><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education</h2>
+                            <h2><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> <span data-i18n="sec_edu">Education</span></h2>
                             <div class="resume-item-compact">
-                                <h3>B.S. in Game Development</h3>
-                                <p class="item-role">Universidad Rey Juan Carlos (2022 - 2026)</p>
-                                <p class="item-desc">Specialized track in 3D Graphics & Real-Time Systems. Erasmus at Haaga-Helia (Helsinki).</p>
+                                <h3 data-i18n="edu1_title">B.S. in Game Development</h3>
+                                <p class="item-role" data-i18n="edu1_role">Universidad Rey Juan Carlos (2022 - 2026)</p>
+                                <p class="item-desc" data-i18n="edu1_desc">Specialized track in 3D Graphics & Real-Time Systems. Erasmus at Haaga-Helia (Helsinki).</p>
                             </div>
                         </section>
 
                         <section class="resume-block">
-                            <h2><i class="fa-solid fa-trophy" aria-hidden="true"></i> Recognition</h2>
+                            <h2><i class="fa-solid fa-trophy" aria-hidden="true"></i> <span data-i18n="sec_rec">Recognition</span></h2>
                             <p class="resume-recognition-text">
-                                <strong>Awards:</strong> 1st Place Game Scholars Jam, National Devuego Finalist, 3x Jam Podium.<br>
-                                <strong>Languages:</strong> Spanish (Native), English (C1).
+                                <strong data-i18n="rec_awards_label">Awards:</strong> <span data-i18n="rec_awards_val">1st Place Game Scholars Jam, National Devuego Finalist, 3x Jam Podium.</span><br>
+                                <strong data-i18n="rec_lang_label">Languages:</strong> <span data-i18n="rec_lang_val">Spanish (Native), English (C1).</span>
                             </p>
                             <div class="resume-quick-links">
                                 <a href="https://www.artstation.com/nurxen1" target="_blank">ArtStation</a>
@@ -149,7 +153,7 @@
                         <a href="../index.html" class="footer-brand">
                             nurxen<span class="accent-blue">.</span>
                         </a>
-                        <p class="footer-tagline">3D Environment & Technical Artist</p>
+                        <p class="footer-tagline" data-i18n="footer_tagline">3D Environment & Technical Artist</p>
                         
                         <div class="footer-social">
                             <a href="https://www.instagram.com/nurxen_" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer-social-icon">
@@ -165,24 +169,24 @@
                     </div>
 
                     <div class="footer-col">
-                        <p class="footer-col-title">Explore</p>
-                        <a href="../index.html" class="footer-link">Home</a>
-                        <a href="artwork.html" class="footer-link">Artwork Gallery</a>
-                        <a href="games.html" class="footer-link">Games & Sims</a>
+                        <p class="footer-col-title" data-i18n="footer_explore">Explore</p>
+                        <a href="../index.html" class="footer-link" data-i18n="nav_home">Home</a>
+                        <a href="artwork.html" class="footer-link" data-i18n="footer_artwork">Artwork Gallery</a>
+                        <a href="games.html" class="footer-link" data-i18n="footer_games">Games & Sims</a>
                     </div>
 
                     <div class="footer-col">
-                        <p class="footer-col-title">Get in Touch</p>
-                        <a href="contact.html" class="footer-link">Contact Form</a>
-                        <a href="mailto:nurxen21@gmail.com" class="footer-link footer-link-underline">Email Me</a>
-                        <p class="footer-note">Available for freelance.</p>
+                        <p class="footer-col-title" data-i18n="footer_touch">Get in Touch</p>
+                        <a href="contact.html" class="footer-link" data-i18n="footer_contact_form">Contact Form</a>
+                        <a href="mailto:nurxen21@gmail.com" class="footer-link footer-link-underline" data-i18n="footer_email">Email Me</a>
+                        <p class="footer-note" data-i18n="footer_note">Available for freelance.</p>
                     </div>
                 </div>
 
                 <div class="footer-bottom">
-                    <p class="footer-copy">©2026 Nurxen. All Rights Reserved.</p>
+                    <p class="footer-copy">©2026 Nurxen. <span data-i18n="footer_rights">All Rights Reserved.</span></p>
                     <div class="footer-credit">
-                        <span>Made with technical precision &amp; Blender</span>
+                        <span data-i18n="footer_credit">Made with technical precision &amp; Blender</span>
                         <i class="fa-solid fa-heart footer-heart" aria-hidden="true"></i>
                     </div>
                 </div>
@@ -197,6 +201,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/translate-resume.js"></script> <!-- SCRIPT DE TRADUCCIÓN PARA RESUME -->
 </body>
 
 </html>

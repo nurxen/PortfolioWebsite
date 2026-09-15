@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Nuria Serrano | 3D Environment & Technical Artist</title>
+    <title data-i18n="meta_title">Contact - Nuria Serrano | 3D Environment & Technical Artist</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234A3B32'/><text x='50%' y='52%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='42' fill='%23EFE9DF'>NS</text></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,6 @@
     
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/contact.css">
-    <script src="https://gtranslate.net/zh/autoload.js" defer></script>
 </head>
 
 <body>
@@ -26,23 +25,28 @@
         </a>
 
         <div class="navbar-links">
-            <a href="../index.html" class="navlink">Home</a>
+            <a href="../index.html" class="navlink" data-i18n="nav_home">Home</a>
 
             <div class="navlink-dropdown">
                 <button class="dropdown-toggle" aria-expanded="false">
-                    Work <i class="fa-solid fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+                    <span data-i18n="nav_work">Work</span> <i class="fa-solid fa-chevron-down dropdown-icon" aria-hidden="true"></i>
                 </button>
                 <div class="dropdown-panel">
                     <div class="dropdown-card">
-                        <a href="artwork.html" class="dropdown-item">3D & Technical Art</a>
-                        <a href="games.html" class="dropdown-item">Games & Sims</a>
+                        <a href="artwork.html" class="dropdown-item" data-i18n="nav_artwork">3D & Technical Art</a>
+                        <a href="games.html" class="dropdown-item" data-i18n="nav_games">Games & Sims</a>
                     </div>
                 </div>
             </div>
 
-            <a href="about.html" class="navlink">About me</a>
-            <a href="resume.html" class="navlink">Resumé</a>
-            <a href="contact.html" class="navlink navlink-button">Contact</a>
+            <a href="about.html" class="navlink" data-i18n="nav_about">About me</a>
+            <a href="resume.html" class="navlink" data-i18n="nav_resume">Resumé</a>
+            
+            <button id="lang-toggle" class="navlink" style="background: none; border: none; cursor: pointer; font-weight: 700;">
+                ES
+            </button>
+
+            <a href="contact.html" class="navlink navlink-button" data-i18n="nav_contact">Contact</a>
         </div>
     </div>
 </nav>
@@ -54,21 +58,21 @@
             <div class="contact-hero-container reveal-section">
                 <div class="contact-status-pill">
                     <span class="contact-status-dot" aria-hidden="true"></span>
-                    Available for work
+                    <span data-i18n="status_available">Available for work</span>
                 </div>
 
                 <h1 id="hero-title" class="contact-hero-title">
-                    Let's create <br> 
+                    <span data-i18n="hero_h1">Let's create</span> <br> 
                     <span class="contact-title-accent">
-                        Magic
+                        <span data-i18n="hero_magic">Magic</span>
                         <svg class="contact-underline-svg" height="12" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M2.00025 7.00002C51.867 2.05374 145.385 -3.37761 197.999 4.00002" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
                         </svg>
                     </span> 
-                    together
+                    <span data-i18n="hero_together">together</span>
                 </h1>
 
-                <p class="contact-hero-desc">
+                <p class="contact-hero-desc" data-i18n="hero_desc">
                     Do you have a game idea, a 3D world to build, or just want to say hi?
                     I'm always open to discussing new projects and creative collaborations.
                 </p>
@@ -84,15 +88,15 @@
                         <div class="contact-panel-glow-2" aria-hidden="true"></div>
 
                         <div class="relative z-10">
-                            <h2 id="form-section-title" class="contact-panel-title">Contact Info</h2>
-                            <p class="contact-panel-subtitle">Let's keep in touch</p>
+                            <h2 id="form-section-title" class="contact-panel-title" data-i18n="panel_title">Contact Info</h2>
+                            <p class="contact-panel-subtitle" data-i18n="panel_subtitle">Let's keep in touch</p>
 
                             <div class="contact-info-stack">
                                 <div class="contact-info-item">
                                     <div class="contact-info-icon" aria-hidden="true">
                                         <i class="fa-solid fa-envelope"></i>
                                     </div>
-                                    <p class="contact-info-label">Email Me</p>
+                                    <p class="contact-info-label" data-i18n="info_email_label">Email Me</p>
                                     <a href="mailto:nurxen21@gmail.com" class="contact-info-value">nurxen21@gmail.com</a>
                                 </div>
 
@@ -100,19 +104,19 @@
                                     <div class="contact-info-icon" aria-hidden="true">
                                         <i class="fa-solid fa-location-dot"></i>
                                     </div>
-                                    <p class="contact-info-label">Location</p>
-                                    <p class="contact-info-value">Spain, Europe</p>
-                                    <p class="contact-info-sub">Remote work available worldwide</p>
+                                    <p class="contact-info-label" data-i18n="info_loc_label">Location</p>
+                                    <p class="contact-info-value" data-i18n="info_loc_val">Spain, Europe</p>
+                                    <p class="contact-info-sub" data-i18n="info_loc_sub">Remote work available worldwide</p>
                                 </div>
 
                                 <div>
-                                    <p class="contact-info-label mb-2">Current Status</p>
+                                    <p class="contact-info-label mb-2" data-i18n="info_status_label">Current Status</p>
                                     <div class="contact-status-row">
                                         <div class="contact-status-dot-green"></div>
-                                        <p class="text-base font-bold">Open to Freelance</p>
+                                        <p class="text-base font-bold" data-i18n="info_status_val">Open to Freelance</p>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
 
                         <div class="contact-cv-wrap relative z-10">
@@ -120,7 +124,7 @@
                                 <div class="contact-cv-icon" aria-hidden="true">
                                     <i class="fa-solid fa-download"></i>
                                 </div>
-                                <span class="contact-cv-text">See CV</span>
+                                <span class="contact-cv-text" data-i18n="btn_see_cv">See CV</span>
                             </a>
                         </div>
                     </div>
@@ -129,48 +133,48 @@
                         <form action="https://formspree.io/f/mlgjbrnj" method="POST" id="contact-form" aria-label="Contact form" class="contact-form-grid">
                             
                             <div class="contact-input-group">
-                                <label for="input-name" class="contact-label">Your Name</label>
-                                <input type="text" id="input-name" name="name" placeholder="Name" required autocomplete="name" class="contact-text-input">
+                                <label for="input-name" class="contact-label" data-i18n="form_name_label">Your Name</label>
+                                <input type="text" id="input-name" name="name" placeholder="Name" required autocomplete="name" class="contact-text-input" data-i18n-placeholder="form_name_placeholder">
                             </div>
 
                             <div class="contact-input-group">
-                                <label for="input-email" class="contact-label">Email Address</label>
+                                <label for="input-email" class="contact-label" data-i18n="form_email_label">Email Address</label>
                                 <input type="email" id="input-email" name="email" placeholder="hello@example.com" required autocomplete="email" class="contact-text-input">
                             </div>
 
                             <div class="contact-input-group full-width">
-                                <p id="subject-label" class="contact-label">I'm interested in...</p>
+                                <p id="subject-label" class="contact-label" data-i18n="form_interest_label">I'm interested in...</p>
                                 <div class="contact-radio-grid" role="radiogroup" aria-labelledby="subject-label">
                                     <label class="contact-radio-label">
                                         <input type="radio" name="_subject" value="Game Dev Inquiry" class="contact-radio-input">
-                                        <span class="contact-radio-pill">Game Dev</span>
+                                        <span class="contact-radio-pill" data-i18n="radio_gamedev">Game Dev</span>
                                     </label>
                                     <label class="contact-radio-label">
                                         <input type="radio" name="_subject" value="3D Art Commission" class="contact-radio-input">
-                                        <span class="contact-radio-pill">3D Art</span>
+                                        <span class="contact-radio-pill" data-i18n="radio_3dart">3D Art</span>
                                     </label>
                                     <label class="contact-radio-label">
                                         <input type="radio" name="_subject" value="Freelance Opportunity" class="contact-radio-input">
-                                        <span class="contact-radio-pill">Freelance</span>
+                                        <span class="contact-radio-pill" data-i18n="radio_freelance">Freelance</span>
                                     </label>
                                     <label class="contact-radio-label">
                                         <input type="radio" name="_subject" value="Just saying Hi!" class="contact-radio-input" checked>
-                                        <span class="contact-radio-pill">Just Hi!</span>
+                                        <span class="contact-radio-pill" data-i18n="radio_hi">Just Hi!</span>
                                     </label>
                                 </div>
                             </div>
 
                             <div class="contact-input-group full-width">
-                                <label for="input-message" class="contact-label">Your Message</label>
-                                <textarea id="input-message" rows="4" name="message" placeholder="Tell me a bit about your project..." required class="contact-textarea"></textarea>
+                                <label for="input-message" class="contact-label" data-i18n="form_msg_label">Your Message</label>
+                                <textarea id="input-message" rows="4" name="message" placeholder="Tell me a bit about your project..." required class="contact-textarea" data-i18n-placeholder="form_msg_placeholder"></textarea>
                             </div>
 
                             <div class="contact-input-group full-width relative mt-2">
                                 <button type="submit" id="submit-btn" class="contact-submit-btn">
-                                    <span>Send Message</span>
+                                    <span data-i18n="btn_send">Send Message</span>
                                     <i class="fa-solid fa-paper-plane contact-submit-icon" aria-hidden="true"></i>
                                 </button>
-                                <p id="form-status" role="status" aria-live="polite" class="contact-form-status">
+                                <p id="form-status" role="status" aria-live="polite" class="contact-form-status" data-i18n="form_success">
                                     ✨ Message sent! I'll get back to you soon.
                                 </p>
                             </div>
@@ -183,8 +187,8 @@
 
         <section id="social-grid" class="contact-social-section reveal-section" aria-labelledby="social-title">
             <div class="contact-social-header">
-                <h2 id="social-title" class="contact-social-heading">Or find me online</h2>
-                <p class="contact-social-sub">I usually hang out here</p>
+                <h2 id="social-title" class="contact-social-heading" data-i18n="social_title">Or find me online</h2>
+                <p class="contact-social-sub" data-i18n="social_sub">I usually hang out here</p>
             </div>
 
             <div class="contact-social-grid">
@@ -192,7 +196,7 @@
                     <i class="fa-brands fa-artstation contact-social-card-icon" aria-hidden="true"></i>
                     <div class="text-center">
                         <p class="font-bold">ArtStation</p>
-                        <p class="contact-social-card-sub">Portfolio</p>
+                        <p class="contact-social-card-sub" data-i18n="card_portfolio">Portfolio</p>
                     </div>
                 </a>
 
@@ -200,7 +204,7 @@
                     <i class="fa-brands fa-instagram contact-social-card-icon" aria-hidden="true"></i>
                     <div class="text-center">
                         <p class="font-bold">Instagram</p>
-                        <p class="contact-social-card-sub">Daily Updates</p>
+                        <p class="contact-social-card-sub" data-i18n="card_updates">Daily Updates</p>
                     </div>
                 </a>
 
@@ -208,7 +212,7 @@
                     <i class="fa-brands fa-linkedin contact-social-card-icon" aria-hidden="true"></i>
                     <div class="text-center">
                         <p class="font-bold">LinkedIn</p>
-                        <p class="contact-social-card-sub">Professional</p>
+                        <p class="contact-social-card-sub" data-i18n="card_pro">Professional</p>
                     </div>
                 </a>
 
@@ -216,7 +220,7 @@
                     <i class="fa-solid fa-palette contact-social-card-icon" aria-hidden="true"></i>
                     <div class="text-center">
                         <p class="font-bold">Cara</p>
-                        <p class="contact-social-card-sub">WIP &amp; Art</p>
+                        <p class="contact-social-card-sub" data-i18n="card_wip">WIP &amp; Art</p>
                     </div>
                 </a>
             </div>
@@ -237,7 +241,7 @@
                         <a href="../index.html" class="footer-brand">
                             nurxen<span class="accent-blue">.</span>
                         </a>
-                        <p class="footer-tagline">3D Environment & Technical Artist</p>
+                        <p class="footer-tagline" data-i18n="footer_tagline">3D Environment & Technical Artist</p>
                         
                         <div class="footer-social">
                             <a href="https://www.instagram.com/nurxen_" target="_blank" rel="noopener noreferrer" aria-label="Nurxen on Instagram" class="footer-social-icon">
@@ -253,24 +257,24 @@
                     </div>
 
                     <div class="footer-col">
-                        <p class="footer-col-title">Explore</p>
-                        <a href="../index.html" class="footer-link">Home</a>
-                        <a href="artwork.html" class="footer-link">Artwork Gallery</a>
-                        <a href="games.html" class="footer-link">Videogames</a>
+                        <p class="footer-col-title" data-i18n="footer_explore">Explore</p>
+                        <a href="../index.html" class="footer-link" data-i18n="nav_home">Home</a>
+                        <a href="artwork.html" class="footer-link" data-i18n="footer_artwork">Artwork Gallery</a>
+                        <a href="games.html" class="footer-link" data-i18n="footer_games">Videogames</a>
                     </div>
 
                     <div class="footer-col">
-                        <p class="footer-col-title">Get in Touch</p>
-                        <a href="contact.html" class="footer-link">Contact Form</a>
-                        <a href="mailto:nurxen21@gmail.com" class="footer-link footer-link-underline">Email Me</a>
-                        <p class="footer-note">Available for freelance.</p>
+                        <p class="footer-col-title" data-i18n="footer_touch">Get in Touch</p>
+                        <a href="contact.html" class="footer-link" data-i18n="footer_contact_form">Contact Form</a>
+                        <a href="mailto:nurxen21@gmail.com" class="footer-link footer-link-underline" data-i18n="footer_email">Email Me</a>
+                        <p class="footer-note" data-i18n="footer_note">Available for freelance.</p>
                     </div>
                 </div>
 
                 <div class="footer-bottom">
-                    <p class="footer-copy">©2026 Nurxen. All Rights Reserved.</p>
+                    <p class="footer-copy">©2026 Nurxen. <span data-i18n="footer_rights">All Rights Reserved.</span></p>
                     <div class="footer-credit">
-                        <span>Made with technical precision &amp; Blender</span>
+                        <span data-i18n="footer_credit">Made with technical precision &amp; Blender</span>
                         <i class="fa-solid fa-heart footer-heart animate-pulse" aria-hidden="true"></i>
                     </div>
                 </div>
@@ -286,6 +290,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/theme.js"></script>
+    <script src="../js/translate-contact.js"></script> <!-- SCRIPT DE TRADUCCIÓN PARA CONTACT -->
 </body>
 
 </html>
