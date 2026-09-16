@@ -483,7 +483,7 @@ const artworkTranslations = {
 // ======================
 // TRANSLATION SYSTEM
 // ======================
-let currentLanguage = localStorage.getItem('language') || 'es';
+let currentLanguage = localStorage.getItem('language') || 'en';
 
 function translatePage() {
     const elements = document.querySelectorAll('[data-i18n]');
