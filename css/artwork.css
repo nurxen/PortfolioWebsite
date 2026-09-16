@@ -3,9 +3,9 @@
    ========================================================== */
 :root {
     --asset-featured: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/consulta_menu_principal.png');
-    --asset-sub-1: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/consulta_menu_principal.png');
-    --asset-sub-2: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/consulta_menu_principal.png');
-    --asset-sub-3: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/consulta_menu_principal.png');
+    --asset-sub-1: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/hero_asset_wireframe_consulta.png');
+    --asset-sub-2: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/kit_modular_piezas.png');
+    --asset-sub-3: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/Unity_validacion_escala.png');
     --asset-asset-game-1: url('../assets/images/games/OBAT/ASSETS/wireframe_1.png');
     --asset-asset-game-2: url('../assets/images/artwork/3D/assets/templo/Render1720.jpg');
     --asset-asset-high-1: url('../assets/images/artwork/3D/assets/assets_obat.png');
@@ -16,18 +16,63 @@
     --asset-motion-mini: url('../assets/videos/artwork/Proyecto\ de\ vídeo\ 5.mp4');
     --asset-motion-side-1: url('../assets/videos/artwork/f4cb94467a42b49240889f040d69981b.mp4');
     --asset-motion-side-2: url('../assets/videos/artwork/cuadrado.mp4');
-    --asset-gallery-artwork-1: url('../assets/images/artwork/3D/TEMPLO/Render1700.jpg');
-    --asset-gallery-artwork-2: url('../assets/images/artwork/3D/otono-mesa/render_definitivo.png');
-    --asset-gallery-artwork-3: url('../assets/images/artwork/3D/3D_assets/props/prop1.png');
-    --asset-gallery-artwork-4: url('../assets/images/artwork/3D/3D_assets/props/prop2.png');
-    --asset-gallery-concept-1: url('../assets/images/artwork/2D/concept/concept1.jpg');
-    --asset-gallery-concept-2: url('../assets/images/artwork/2D/concept/concept2.jpg');
-    --asset-gallery-concept-3: url('../assets/images/artwork/2D/concept/concept3.jpg');
-    --asset-gallery-concept-4: url('../assets/images/artwork/2D/concept/concept4.jpg');
-    --asset-gallery-sculpt-1: url('../assets/images/artwork/3D/navidad/0749.png');
-    --asset-gallery-sculpt-2: url('../assets/images/artwork/3D/personajes/blue-cycles.jpg');
-    --asset-gallery-sculpt-3: url('../assets/images/artwork/3D/sculpts/sculpt3.png');
-    --asset-gallery-materials-1: url('../assets/images/artwork/3D/materials/shader_preview.png');
+    --asset-gallery-artwork-1: url('../assets/images/artwork/3D/TEMPLO/Render1701.jpg');
+    --asset-gallery-artwork-2: url('../assets/images/artwork/3D/TEMPLO/Render1704.jpg');
+    --asset-gallery-artwork-3: url('../assets/images/artwork/3D/TEMPLO/Render1705.jpg');
+    --asset-gallery-artwork-4: url('../assets/images/artwork/3D/TEMPLO/Render1706.jpg');
+    --asset-gallery-artwork-5: url('../assets/images/artwork/3D/TEMPLO/Render1711.jpg');
+    --asset-gallery-artwork-6: url('../assets/images/artwork/3D/TEMPLO/Render17015.jpg');
+    --asset-gallery-artwork-7: url('../assets/images/artwork/3D/TEMPLO/Render1708.jpg');
+    --asset-gallery-artwork-8: url('../assets/images/artwork/3D/otono-mesa/render_definitivo.png');
+    --asset-gallery-artwork-9: url('../assets/images/artwork/3D/radio-car/FINAL.png');
+    --asset-gallery-artwork-10: url('../assets/images/artwork/3D/personajes/blue-cycles.jpg');
+    --asset-gallery-artwork-11: url('../assets/images/artwork/3D/personajes/brown-cycles.jpg');
+    --asset-gallery-artwork-12: url('../assets/images/artwork/3D/personajes/orange-cycles.jpg');
+    --asset-gallery-artwork-13: url('../assets/images/artwork/3D/personajes/pink-cycles.jpg');
+    --asset-gallery-artwork-14: url('../assets/images/artwork/3D/navidad/0748.png');
+    --asset-gallery-artwork-15: url('../assets/images/artwork/3D/navidad/0749_clay.png');
+    --asset-gallery-artwork-16: url('../assets/images/artwork/3D/navidad/0749.png');
+    --asset-gallery-artwork-17: url('../assets/images/artwork/3D/navidad/0751.png');
+    --asset-gallery-artwork-18: url('../assets/images/artwork/3D/navidad/0751clay.png');
+    --asset-gallery-artwork-19: url('../assets/images/artwork/3D/navidad/0752.png');
+    --asset-gallery-artwork-20: url('../assets/images/artwork/3D/navidad/0754.png');
+    --asset-gallery-artwork-21: url('../assets/images/artwork/3D/navidad/0755.png');
+    --asset-gallery-artwork-22: url('../assets/images/artwork/3D/navidad/0756.png');
+    --asset-gallery-artwork-23: url('../assets/images/artwork/3D/navidad/0757.png');
+    --asset-gallery-artwork-24: url('../assets/images/artwork/3D/navidad/0759.png');
+    --asset-gallery-artwork-25: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/consulta_area_examen.png');
+    --asset-gallery-artwork-26: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/consulta_detalle_instrumental.png');
+    --asset-gallery-artwork-27: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/consulta_menu_principal.png');
+    --asset-gallery-artwork-28: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/consulta_zona_desinfeccion.png');
+    --asset-gallery-artwork-29: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/escenario_pasillo.png');
+    --asset-gallery-artwork-30: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/escenario_sala_espera_examen.png');
+    --asset-gallery-artwork-31: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/escenario_sala_espera.png');
+    --asset-gallery-artwork-32: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/hero_asset_carrito_curas.png');
+    --asset-gallery-artwork-33: url('../assets/images/artwork/3D/cocina/1.png');
+    --asset-gallery-artwork-34: url('../assets/images/artwork/3D/cocina/2.png');
+    --asset-gallery-artwork-35: url('../assets/images/artwork/3D/cocina/3.png');
+    --asset-gallery-artwork-36: url('../assets/images/artwork/3D/cocina/4.png');
+    --asset-gallery-artwork-37: url('../assets/images/artwork/3D/cocina/5.png');
+    --asset-gallery-artwork-38: url('../assets/images/artwork/3D/cocina/6.png');
+    --asset-gallery-artwork-39: url('../assets/images/artwork/3D/cocina/7.png');
+    --asset-gallery-artwork-40: url('../assets/images/artwork/3D/cocina/RenderFinalClay.png');
+    --asset-gallery-artwork-41: url('../assets/images/artwork/3D/cocina/RenderFinalViewport.png');
+    --asset-gallery-concept-1: url('../assets/images/artwork/2d/Copia de Ivy post 1.jpg');
+    --asset-gallery-concept-2: url('../assets/images/artwork/2d/Copia de Ivy post 2.jpg');
+    --asset-gallery-concept-3: url('../assets/images/artwork/2d/Copia de Ivy post.jpg');
+    --asset-gallery-concept-4: url('../assets/images/artwork/2d/Copia de Ivy post.jpg');
+    --asset-gallery-concept-5: url('../assets/images/artwork/2d/escenario-luces.jpg');
+    --asset-gallery-concept-6: url('../assets/images/artwork/2d/IMG_0646.JPG');
+    --asset-gallery-concept-7: url('../assets/images/artwork/2d/IMG_0647.JPG');
+    --asset-gallery-concept-8: url('../assets/images/artwork/2d/IMG_0648.JPG');
+    --asset-gallery-concept-9: url('../assets/images/artwork/2d/IMG_0655.JPG');
+    --asset-gallery-concept-10: url('../assets/images/artwork/2d/Ivy post 1.jpg');
+    --asset-gallery-concept-11: url('../assets/images/artwork/2d/sketch-01.jpg');
+    --asset-gallery-concept-12: url('../assets/images/artwork/2d/sketch-02.jpg');
+    --asset-gallery-concept-13: url('../assets/images/artwork/2d/sketch-bottles.jpg');
+    --asset-gallery-concept-14: url('../assets/images/artwork/2d/sketch-broom.jpg');
+    --asset-gallery-concept-15: url('../assets/images/artwork/2d/sketch-caldron.jpg');
+    --asset-gallery-materials-1: url('../assets/images/artwork/3D/libro_color.png');
 }
 
 /* ==========================================================
@@ -390,7 +435,6 @@
     gap: 0.5rem;
     margin-bottom: 1.5rem;
 }
-
 
 .toggle-btn {
     padding: 0.5rem 1rem;
@@ -855,7 +899,7 @@
     height: 100%;
     background-image: var(--asset-shader-before, url('../assets/images/artwork/3D/libro_color.png'));
     background-size: cover;
-    background-position: left center; /* Asegura que no se desplace el encuadre */
+    background-position: left center;
     z-index: 10;
 }
 
@@ -864,23 +908,23 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%; /* Se modifica dinámicamente con el ratón */
+    width: 50%;
     height: 100%;
     overflow: hidden;
     border-right: 2px solid var(--vanilla);
     z-index: 20;
 }
 
-/* Imagen superpuesta (Derecha / Final) - Mantiene el ancho fijo del contenedor para que no se mueva al recortar */
+/* Imagen superpuesta (Derecha / Final) */
 .bg-shader-after {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    width: var(--container-width, 100%); /* JavaScript se encargará de darle el ancho exacto en píxeles del padre */
+    width: var(--container-width, 100%);
     background-image: var(--asset-shader-after, url('../assets/images/artwork/3D/libro_vieport.png'));
     background-size: cover;
-    background-position: left center; /* Mantiene la misma posición exacta que la de la izquierda */
+    background-position: left center;
 }
 
 .artwork-category-tag-dark {
@@ -1170,7 +1214,6 @@
     flex-wrap: wrap;
 }
 
-
 .artwork-filter-btn {
     padding: 0.65rem 1.5rem;
     background: transparent;
@@ -1183,7 +1226,6 @@
     letter-spacing: 0.1em;
     cursor: pointer;
     transition: all 0.3s ease;
-    /* IMPORTANTE: Establecer estilos por defecto explícitos */
     background-color: transparent !important;
     border-color: var(--border-subtle) !important;
     color: var(--ganache) !important;
@@ -1201,7 +1243,6 @@
     border-color: var(--brand-accent) !important;
 }
  
-/* Asegurar que cuando NO tiene .active, vuelve a los estilos por defecto */
 .artwork-filter-btn:not(.active) {
     background-color: transparent !important;
     border-color: var(--border-subtle) !important;
@@ -1238,15 +1279,59 @@
 .gallery-artwork-2 { background-image: var(--asset-gallery-artwork-2); }
 .gallery-artwork-3 { background-image: var(--asset-gallery-artwork-3); }
 .gallery-artwork-4 { background-image: var(--asset-gallery-artwork-4); }
+.gallery-artwork-5 { background-image: var(--asset-gallery-artwork-5); }
+.gallery-artwork-6 { background-image: var(--asset-gallery-artwork-6); }
+.gallery-artwork-7 { background-image: var(--asset-gallery-artwork-7); }
+.gallery-artwork-8 { background-image: var(--asset-gallery-artwork-8); }
+.gallery-artwork-9 { background-image: var(--asset-gallery-artwork-9); }
+.gallery-artwork-10 { background-image: var(--asset-gallery-artwork-10); }
+.gallery-artwork-11 { background-image: var(--asset-gallery-artwork-11); }
+.gallery-artwork-12 { background-image: var(--asset-gallery-artwork-12); }
+.gallery-artwork-13 { background-image: var(--asset-gallery-artwork-13); }
+.gallery-artwork-14 { background-image: var(--asset-gallery-artwork-14); }
+.gallery-artwork-15 { background-image: var(--asset-gallery-artwork-15); }
+.gallery-artwork-16 { background-image: var(--asset-gallery-artwork-16); }
+.gallery-artwork-17 { background-image: var(--asset-gallery-artwork-17); }
+.gallery-artwork-18 { background-image: var(--asset-gallery-artwork-18); }
+.gallery-artwork-19 { background-image: var(--asset-gallery-artwork-19); }
+.gallery-artwork-20 { background-image: var(--asset-gallery-artwork-20); }
+.gallery-artwork-21 { background-image: var(--asset-gallery-artwork-21); }
+.gallery-artwork-22 { background-image: var(--asset-gallery-artwork-22); }
+.gallery-artwork-23 { background-image: var(--asset-gallery-artwork-23); }
+.gallery-artwork-24 { background-image: var(--asset-gallery-artwork-24); }
+.gallery-artwork-25 { background-image: var(--asset-gallery-artwork-25); }
+.gallery-artwork-26 { background-image: var(--asset-gallery-artwork-26); }
+.gallery-artwork-27 { background-image: var(--asset-gallery-artwork-27); }
+.gallery-artwork-28 { background-image: var(--asset-gallery-artwork-28); }
+.gallery-artwork-29 { background-image: var(--asset-gallery-artwork-29); }
+.gallery-artwork-30 { background-image: var(--asset-gallery-artwork-30); }
+.gallery-artwork-31 { background-image: var(--asset-gallery-artwork-31); }
+.gallery-artwork-32 { background-image: var(--asset-gallery-artwork-32); }
+.gallery-artwork-33 { background-image: var(--asset-gallery-artwork-33); }
+.gallery-artwork-34 { background-image: var(--asset-gallery-artwork-34); }
+.gallery-artwork-35 { background-image: var(--asset-gallery-artwork-35); }
+.gallery-artwork-36 { background-image: var(--asset-gallery-artwork-36); }
+.gallery-artwork-37 { background-image: var(--asset-gallery-artwork-37); }
+.gallery-artwork-38 { background-image: var(--asset-gallery-artwork-38); }
+.gallery-artwork-39 { background-image: var(--asset-gallery-artwork-39); }
+.gallery-artwork-40 { background-image: var(--asset-gallery-artwork-40); }
+.gallery-artwork-41 { background-image: var(--asset-gallery-artwork-41); }
 
 .gallery-concept-1 { background-image: var(--asset-gallery-concept-1); }
 .gallery-concept-2 { background-image: var(--asset-gallery-concept-2); }
 .gallery-concept-3 { background-image: var(--asset-gallery-concept-3); }
 .gallery-concept-4 { background-image: var(--asset-gallery-concept-4); }
-
-.gallery-sculpt-1 { background-image: var(--asset-gallery-sculpt-1); }
-.gallery-sculpt-2 { background-image: var(--asset-gallery-sculpt-2); }
-.gallery-sculpt-3 { background-image: var(--asset-gallery-sculpt-3); }
+.gallery-concept-5 { background-image: var(--asset-gallery-concept-5); }
+.gallery-concept-6 { background-image: var(--asset-gallery-concept-6); }
+.gallery-concept-7 { background-image: var(--asset-gallery-concept-7); }
+.gallery-concept-8 { background-image: var(--asset-gallery-concept-8); }
+.gallery-concept-9 { background-image: var(--asset-gallery-concept-9); }
+.gallery-concept-10 { background-image: var(--asset-gallery-concept-10); }
+.gallery-concept-11 { background-image: var(--asset-gallery-concept-11); }
+.gallery-concept-12 { background-image: var(--asset-gallery-concept-12); }
+.gallery-concept-13 { background-image: var(--asset-gallery-concept-13); }
+.gallery-concept-14 { background-image: var(--asset-gallery-concept-14); }
+.gallery-concept-15 { background-image: var(--asset-gallery-concept-15); }
 
 .gallery-materials-1 { background-image: var(--asset-gallery-materials-1); }
 

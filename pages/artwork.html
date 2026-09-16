@@ -543,20 +543,20 @@
                     <div class="artwork-asset-card group">
                         <div class="artwork-asset-media">
                             <div class="bg-asset-2-img" role="img" aria-label="Ancient Magic Chest"></div>
-                            <span class="artwork-asset-pill">Hero Prop</span>
+                            <span class="artwork-asset-pill" data-i18n="pill_hero">Hero Prop</span>
                         </div>
                         <div class="artwork-asset-info">
                             <div>
-                                <h3 class="artwork-asset-name">Ancient Magic Chest</h3>
-                                <p class="artwork-asset-sub">Hero Prop · Animated</p>
+                                <h3 class="artwork-asset-name" data-i18n="asset2_name">Ancient Magic Chest</h3>
+                                <p class="artwork-asset-sub" data-i18n="asset2_sub">Hero Prop · Animated</p>
                             </div>
                             <div class="artwork-asset-stats">
                                 <div>
-                                    <p class="artwork-stat-label">Triangles</p>
+                                    <p class="artwork-stat-label" data-i18n="card_tri">Triangles</p>
                                     <p class="artwork-stat-val">850</p>
                                 </div>
                                 <div>
-                                    <p class="artwork-stat-label">Maps</p>
+                                    <p class="artwork-stat-label" data-i18n="card_maps">Maps</p>
                                     <p class="artwork-stat-val">2K PBR</p>
                                 </div>
                             </div>
@@ -568,16 +568,16 @@
                     <div class="artwork-asset-card group">
                         <div class="artwork-asset-media">
                             <div class="bg-sculpt-img" role="img" aria-label="High Poly Sculpt"></div>
-                            <span class="artwork-asset-pill">High Poly</span>
+                            <span class="artwork-asset-pill" data-i18n="pill_highpoly">High Poly</span>
                         </div>
                         <div class="artwork-asset-info">
                             <div>
-                                <h3 class="artwork-asset-name">Detailed Sculpt Pass</h3>
-                                <p class="artwork-asset-sub">ZBrush Raw Asset</p>
+                                <h3 class="artwork-asset-name" data-i18n="asset3_name">Detailed Sculpt Pass</h3>
+                                <p class="artwork-asset-sub" data-i18n="asset3_sub">ZBrush Raw Asset</p>
                             </div>
                             <div class="artwork-asset-stats">
                                 <div>
-                                    <p class="artwork-stat-label">Subdivisions</p>
+                                    <p class="artwork-stat-label" data-i18n="card_subs">Subdivisions</p>
                                     <p class="artwork-stat-val">Level 5</p>
                                 </div>
                             </div>
@@ -734,33 +734,91 @@
                 </div>
             </section>
 
-            <!-- 7. ART GALLERY -->
+            <!-- 7. REORGANIZED ART GALLERY -->
             <section id="gallery" class="artwork-section reveal-section" aria-labelledby="gallery-title">
                 <div class="text-center mb-16 space-y-6">
                     <h2 id="gallery-title" class="artwork-section-title" data-i18n="gallery_title">Technical Gallery</h2>
                     
                     <div class="artwork-filter-buttons" role="group" aria-label="Filter gallery by category">
                         <button class="artwork-filter-btn active" onclick="filterGallery('all', this)" aria-pressed="true" data-i18n="filter_all">All Works</button>
-                        <button class="artwork-filter-btn" onclick="filterGallery('artwork', this)" aria-pressed="false" data-i18n="filter_artwork">3D Artwork</button>
+                        <button class="artwork-filter-btn" onclick="filterGallery('environment', this)" aria-pressed="false" data-i18n="filter_env">Environments</button>
+                        <button class="artwork-filter-btn" onclick="filterGallery('props', this)" aria-pressed="false" data-i18n="filter_props">Props & Assets</button>
+                        <button class="artwork-filter-btn" onclick="filterGallery('characters', this)" aria-pressed="false" data-i18n="filter_characters">Characters</button>
+                        <button class="artwork-filter-btn" onclick="filterGallery('seasonal', this)" aria-pressed="false" data-i18n="filter_seasonal">Seasonal</button>
                         <button class="artwork-filter-btn" onclick="filterGallery('concept', this)" aria-pressed="false" data-i18n="filter_concept">Concepts</button>
-                        <button class="artwork-filter-btn" onclick="filterGallery('sculpt', this)" aria-pressed="false" data-i18n="filter_sculpt">Sculpting</button>
-                        <button class="artwork-filter-btn" onclick="filterGallery('materials', this)" aria-pressed="false" data-i18n="filter_materials">Materials</button>
                     </div>
                 </div>
 
                 <div id="gallery-container" class="artwork-gallery-masonry">
-                    <div class="gallery-item artwork"><div class="gallery-img-box gallery-artwork-1" role="img" aria-label="Gallery Item 1"></div></div>
-                    <div class="gallery-item artwork"><div class="gallery-img-box gallery-artwork-2" role="img" aria-label="Gallery Item 2"></div></div>
-                    <div class="gallery-item artwork"><div class="gallery-img-box gallery-artwork-3" role="img" aria-label="Gallery Item 3"></div></div>
-                    <div class="gallery-item artwork"><div class="gallery-img-box gallery-artwork-4" role="img" aria-label="Gallery Item 4"></div></div>
+                    <!-- ENVIRONMENTS: ECOE Simulator (7 images) -->
+                    <div class="gallery-item environment"><div class="gallery-img-box gallery-artwork-25" role="img" aria-label="ECOE - Exam Area"></div></div>
+                    <div class="gallery-item environment"><div class="gallery-img-box gallery-artwork-26" role="img" aria-label="ECOE - Instrument Detail"></div></div>
+                    <div class="gallery-item environment"><div class="gallery-img-box gallery-artwork-27" role="img" aria-label="ECOE - Main Menu"></div></div>
+                    <div class="gallery-item environment"><div class="gallery-img-box gallery-artwork-28" role="img" aria-label="ECOE - Disinfection Zone"></div></div>
+                    <div class="gallery-item environment"><div class="gallery-img-box gallery-artwork-29" role="img" aria-label="ECOE - Hallway Scenario"></div></div>
+                    <div class="gallery-item environment"><div class="gallery-img-box gallery-artwork-30" role="img" aria-label="ECOE - Waiting Area Exam"></div></div>
+                    <div class="gallery-item environment"><div class="gallery-img-box gallery-artwork-31" role="img" aria-label="ECOE - Waiting Area"></div></div>
+
+                    <!-- ENVIRONMENTS: Temple & Misc (3 images) -->
+                    <div class="gallery-item environment"><div class="gallery-img-box gallery-artwork-1" role="img" aria-label="Temple Render 1"></div></div>
+                    <div class="gallery-item environment"><div class="gallery-img-box gallery-artwork-8" role="img" aria-label="Autumn Table Environment"></div></div>
+                    <div class="gallery-item environment"><div class="gallery-img-box gallery-artwork-33" role="img" aria-label="Kitchen Environment 1"></div></div>
+
+                    <!-- PROPS & ASSETS: ECOE Props (2 images) -->
+                    <div class="gallery-item props"><div class="gallery-img-box gallery-artwork-32" role="img" aria-label="ECOE - Care Cart Asset"></div></div>
+                    <div class="gallery-item props"><div class="gallery-img-box gallery-artwork-9" role="img" aria-label="Radio Car Asset"></div></div>
+
+                    <!-- PROPS & ASSETS: Kitchen Objects (8 images) -->
+                    <div class="gallery-item props"><div class="gallery-img-box gallery-artwork-34" role="img" aria-label="Kitchen Prop 2"></div></div>
+                    <div class="gallery-item props"><div class="gallery-img-box gallery-artwork-35" role="img" aria-label="Kitchen Prop 3"></div></div>
+                    <div class="gallery-item props"><div class="gallery-img-box gallery-artwork-36" role="img" aria-label="Kitchen Prop 4"></div></div>
+                    <div class="gallery-item props"><div class="gallery-img-box gallery-artwork-37" role="img" aria-label="Kitchen Prop 5"></div></div>
+                    <div class="gallery-item props"><div class="gallery-img-box gallery-artwork-38" role="img" aria-label="Kitchen Prop 6"></div></div>
+                    <div class="gallery-item props"><div class="gallery-img-box gallery-artwork-39" role="img" aria-label="Kitchen Prop 7"></div></div>
+                    <div class="gallery-item props"><div class="gallery-img-box gallery-artwork-40" role="img" aria-label="Kitchen Final Clay Render"></div></div>
+                    <div class="gallery-item props"><div class="gallery-img-box gallery-artwork-41" role="img" aria-label="Kitchen Viewport Render"></div></div>
+
+                    <!-- PROPS & ASSETS: Temple Details (4 images) -->
+                    <div class="gallery-item props"><div class="gallery-img-box gallery-artwork-2" role="img" aria-label="Temple Render 2"></div></div>
+                    <div class="gallery-item props"><div class="gallery-img-box gallery-artwork-3" role="img" aria-label="Temple Render 3"></div></div>
+                    <div class="gallery-item props"><div class="gallery-img-box gallery-artwork-4" role="img" aria-label="Temple Render 4"></div></div>
+                    <div class="gallery-item props"><div class="gallery-img-box gallery-artwork-5" role="img" aria-label="Temple Render 5"></div></div>
+
+                    <!-- CHARACTERS: Character Studies (4 images) -->
+                    <div class="gallery-item characters"><div class="gallery-img-box gallery-artwork-10" role="img" aria-label="Character Blue Cycles"></div></div>
+                    <div class="gallery-item characters"><div class="gallery-img-box gallery-artwork-11" role="img" aria-label="Character Brown Cycles"></div></div>
+                    <div class="gallery-item characters"><div class="gallery-img-box gallery-artwork-12" role="img" aria-label="Character Orange Cycles"></div></div>
+                    <div class="gallery-item characters"><div class="gallery-img-box gallery-artwork-13" role="img" aria-label="Character Pink Cycles"></div></div>
+
+                    <!-- SEASONAL: Christmas Assets (10 images) -->
+                    <div class="gallery-item seasonal"><div class="gallery-img-box gallery-artwork-14" role="img" aria-label="Christmas 1"></div></div>
+                    <div class="gallery-item seasonal"><div class="gallery-img-box gallery-artwork-15" role="img" aria-label="Christmas Clay 1"></div></div>
+                    <div class="gallery-item seasonal"><div class="gallery-img-box gallery-artwork-16" role="img" aria-label="Christmas 2"></div></div>
+                    <div class="gallery-item seasonal"><div class="gallery-img-box gallery-artwork-17" role="img" aria-label="Christmas 3"></div></div>
+                    <div class="gallery-item seasonal"><div class="gallery-img-box gallery-artwork-18" role="img" aria-label="Christmas Clay 2"></div></div>
+                    <div class="gallery-item seasonal"><div class="gallery-img-box gallery-artwork-19" role="img" aria-label="Christmas 4"></div></div>
+                    <div class="gallery-item seasonal"><div class="gallery-img-box gallery-artwork-20" role="img" aria-label="Christmas 5"></div></div>
+                    <div class="gallery-item seasonal"><div class="gallery-img-box gallery-artwork-21" role="img" aria-label="Christmas 6"></div></div>
+                    <div class="gallery-item seasonal"><div class="gallery-img-box gallery-artwork-22" role="img" aria-label="Christmas 7"></div></div>
+                    <div class="gallery-item seasonal"><div class="gallery-img-box gallery-artwork-23" role="img" aria-label="Christmas 8"></div></div>
+                    <div class="gallery-item seasonal"><div class="gallery-img-box gallery-artwork-24" role="img" aria-label="Christmas 9"></div></div>
+
+                    <!-- CONCEPTS: 2D Concept Art (15 images) -->
                     <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-1" role="img" aria-label="Concept Art 1"></div></div>
                     <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-2" role="img" aria-label="Concept Art 2"></div></div>
                     <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-3" role="img" aria-label="Concept Art 3"></div></div>
                     <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-4" role="img" aria-label="Concept Art 4"></div></div>
-                    <div class="gallery-item sculpt"><div class="gallery-img-box gallery-sculpt-1" role="img" aria-label="Sculpt 1"></div></div>
-                    <div class="gallery-item sculpt"><div class="gallery-img-box gallery-sculpt-2" role="img" aria-label="Sculpt 2"></div></div>
-                    <div class="gallery-item sculpt"><div class="gallery-img-box gallery-sculpt-3" role="img" aria-label="Sculpt 3"></div></div>
-                    <div class="gallery-item materials"><div class="gallery-img-box gallery-materials-1" role="img" aria-label="Materials Study"></div></div>
+                    <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-5" role="img" aria-label="Concept Art 5"></div></div>
+                    <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-6" role="img" aria-label="Concept Art 6"></div></div>
+                    <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-7" role="img" aria-label="Concept Art 7"></div></div>
+                    <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-8" role="img" aria-label="Concept Art 8"></div></div>
+                    <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-9" role="img" aria-label="Concept Art 9"></div></div>
+                    <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-10" role="img" aria-label="Concept Art 10"></div></div>
+                    <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-11" role="img" aria-label="Sketch 1"></div></div>
+                    <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-12" role="img" aria-label="Sketch 2"></div></div>
+                    <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-13" role="img" aria-label="Sketch Bottles"></div></div>
+                    <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-14" role="img" aria-label="Sketch Broom"></div></div>
+                    <div class="gallery-item concept"><div class="gallery-img-box gallery-concept-15" role="img" aria-label="Sketch Caldron"></div></div>
                 </div>
             </section>
 
@@ -847,7 +905,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/artwork.js"></script>
-    <script src="../js/translate-artwork.js"></script> <!-- SCRIPT DE TRADUCCIÓN PARA ARTWORK -->
+    <script src="../js/translate-artwork.js"></script>
 </body>
 
 </html>

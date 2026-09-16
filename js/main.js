@@ -95,7 +95,7 @@ function initRenderingSettings() {
             fps: Math.round(estimatedFPS),
             duration: 0.3,
             onUpdate: function() {
-                fpsLine.textContent = `FPS: ${Math.round(this.targets()[0].fps)}`;
+                fpsLine.textContent = `${Math.round(this.targets()[0].fps)} FPS`;
             }
         });
 
@@ -105,7 +105,7 @@ function initRenderingSettings() {
         } else if (estimatedFPS >= 60) {
             fpsLine.style.color = "#EFE9DF"; // Vanilla (Claro / Legible sobre fondo oscuro) - Good
         } else {
-            fpsLine.style.color = "#C97F7F"; // Soft Red / Muted Warning (Tono acorde a tus badges de premios) - Poor
+            fpsLine.style.color = "#C97F7F"; // Soft Red / Muted Warning - Poor
         }
     };
 
@@ -156,7 +156,7 @@ function switchTab(tabId, btn) {
 }
 
 // =========================
-// 4. GALLERY FILTER - MEJORADO
+// 4. GALLERY FILTER - REORGANIZADO
 // =========================
 function filterGallery(category, btn) {
     // 1. ¡IMPORTANTE! Quitar la clase active de TODOS los botones de filtro de la galería
