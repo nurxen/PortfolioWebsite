@@ -6,9 +6,10 @@
     --asset-sub-1: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/consulta_menu_principal.png');
     --asset-sub-2: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/consulta_menu_principal.png');
     --asset-sub-3: url('../assets/images/artwork/3D/ecoe/renders/Diseño_Entorno/consulta_menu_principal.png');
-    --asset-asset-1: url('../assets/images/games/OBAT/ASSETS/wireframe_1.png');
-    --asset-asset-2: url('../assets/images/games/unchained-steam/imagekjb.png');
-    --asset-sculpt: url('../assets/images/artwork/3D/navidad/0749.png');
+    --asset-asset-game-1: url('../assets/images/games/OBAT/ASSETS/wireframe_1.png');
+    --asset-asset-game-2: url('../assets/images/artwork/3D/assets/templo/Render1720.jpg');
+    --asset-asset-high-1: url('../assets/images/artwork/3D/assets/assets_obat.png');
+    --asset-asset-high-2: url('../assets/images/games/unchained-steam/imagekjb.png');
     --asset-shader-before: url('../assets/images/artwork/3D/cartoon-shader/shader-graph/libro_vieport.png');
     --asset-shader-after: url('../assets/images/artwork/3D/cartoon-shader/shader-graph/libro_color.png');
     --asset-motion-main: url('../assets/images/artwork/3D/otono-mesa/render_definitivo.png');
@@ -390,6 +391,7 @@
     margin-bottom: 1.5rem;
 }
 
+
 .toggle-btn {
     padding: 0.5rem 1rem;
     background: transparent;
@@ -402,17 +404,26 @@
     color: var(--ganache);
     cursor: pointer;
     transition: all 0.3s ease;
+    background-color: transparent !important;
+    border-color: var(--border-subtle) !important;
+    color: var(--ganache) !important;
 }
-
+ 
 .toggle-btn.active {
-    background: var(--brand-accent);
-    color: var(--vanilla);
-    border-color: var(--brand-accent);
+    background: var(--brand-accent) !important;
+    color: var(--vanilla) !important;
+    border-color: var(--brand-accent) !important;
 }
-
+ 
 .toggle-btn:hover {
     border-color: var(--brand-accent);
     color: var(--brand-accent);
+}
+ 
+.toggle-btn:not(.active) {
+    background-color: transparent !important;
+    border-color: var(--border-subtle) !important;
+    color: var(--ganache) !important;
 }
 
 .view-content {
@@ -650,17 +661,26 @@
     letter-spacing: 0.1em;
     cursor: pointer;
     transition: all 0.3s ease;
+    background-color: transparent !important;
+    border-color: var(--border-subtle) !important;
+    color: var(--ganache) !important;
 }
-
+ 
 .artwork-tab-btn:hover {
     border-color: var(--brand-accent);
     color: var(--brand-accent);
 }
-
+ 
 .artwork-tab-btn.active {
-    background-color: var(--brand-accent);
-    color: var(--vanilla);
-    border-color: var(--brand-accent);
+    background-color: var(--brand-accent) !important;
+    color: var(--vanilla) !important;
+    border-color: var(--brand-accent) !important;
+}
+
+.artwork-tab-btn:not(.active) {
+    background-color: transparent !important;
+    border-color: var(--border-subtle) !important;
+    color: var(--ganache) !important;
 }
 
 .artwork-tab-content {
@@ -686,7 +706,7 @@
 .bg-asset-1-img {
     width: 100%;
     height: 100%;
-    background-image: var(--asset-asset-1);
+    background-image: var(--asset-asset-game-1);
     background-size: cover;
     background-position: center;
     display: block;
@@ -695,7 +715,7 @@
 .bg-asset-2-img {
     width: 100%;
     height: 100%;
-    background-image: var(--asset-asset-2);
+    background-image: var(--asset-asset-game-2);
     background-size: cover;
     background-position: center;
     display: block;
@@ -704,7 +724,7 @@
 .bg-sculpt-img {
     width: 100%;
     height: 100%;
-    background-image: var(--asset-sculpt);
+    background-image: var(--asset-asset-high-1);
     background-size: cover;
     background-position: center;
     display: block;
@@ -817,22 +837,50 @@
     display: block;
 }
 
-.bg-shader-before {
-    width: 100%;
-    height: 100%;
-    background-image: var(--asset-shader-before);
-    background-size: cover;
-    background-position: center;
-    display: block;
+/* Contenedor principal del slider de shaders */
+#shader-slider {
+    position: relative;
+    user-select: none;
+    overflow: hidden;
+    border-radius: 8px;
+    aspect-ratio: 16/9;
 }
 
-.bg-shader-after {
+/* Imagen base estática (Fondo / Izquierda) */
+.bg-shader-before {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-image: var(--asset-shader-after);
+    background-image: var(--asset-shader-before, url('../assets/images/artwork/3D/libro_color.png'));
     background-size: cover;
-    background-position: center;
-    display: block;
+    background-position: left center; /* Asegura que no se desplace el encuadre */
+    z-index: 10;
+}
+
+/* Contenedor que se recorta con el drag */
+#shader-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Se modifica dinámicamente con el ratón */
+    height: 100%;
+    overflow: hidden;
+    border-right: 2px solid var(--vanilla);
+    z-index: 20;
+}
+
+/* Imagen superpuesta (Derecha / Final) - Mantiene el ancho fijo del contenedor para que no se mueva al recortar */
+.bg-shader-after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--container-width, 100%); /* JavaScript se encargará de darle el ancho exacto en píxeles del padre */
+    background-image: var(--asset-shader-after, url('../assets/images/artwork/3D/libro_vieport.png'));
+    background-size: cover;
+    background-position: left center; /* Mantiene la misma posición exacta que la de la izquierda */
 }
 
 .artwork-category-tag-dark {
@@ -983,17 +1031,6 @@
     user-select: none;
 }
 
-#shader-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 50%;
-    overflow: hidden;
-    border-right: 2px solid var(--card-bg);
-    pointer-events: none;
-}
-
 .artwork-iframe {
     position: absolute;
     inset: 0;
@@ -1133,6 +1170,7 @@
     flex-wrap: wrap;
 }
 
+
 .artwork-filter-btn {
     padding: 0.65rem 1.5rem;
     background: transparent;
@@ -1145,13 +1183,29 @@
     letter-spacing: 0.1em;
     cursor: pointer;
     transition: all 0.3s ease;
+    /* IMPORTANTE: Establecer estilos por defecto explícitos */
+    background-color: transparent !important;
+    border-color: var(--border-subtle) !important;
+    color: var(--ganache) !important;
 }
-
-.artwork-filter-btn:hover,
-.artwork-filter-btn.active {
-    background-color: var(--brand-accent);
-    color: var(--vanilla);
+ 
+.artwork-filter-btn:hover {
     border-color: var(--brand-accent);
+    color: var(--brand-accent);
+    background-color: transparent;
+}
+ 
+.artwork-filter-btn.active {
+    background-color: var(--brand-accent) !important;
+    color: var(--vanilla) !important;
+    border-color: var(--brand-accent) !important;
+}
+ 
+/* Asegurar que cuando NO tiene .active, vuelve a los estilos por defecto */
+.artwork-filter-btn:not(.active) {
+    background-color: transparent !important;
+    border-color: var(--border-subtle) !important;
+    color: var(--ganache) !important;
 }
 
 .artwork-gallery-masonry {

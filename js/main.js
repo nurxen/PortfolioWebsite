@@ -62,7 +62,7 @@ function initRenderingSettings() {
             totalFPSCost += costData.postProcessing.fps;
         }
         
-        // Shadow Quality cost (Corregido para leer 'low' o 'off')
+        // Shadow Quality cost
         if (shadowQuality) {
             const quality = shadowQuality.value;
             if (quality === "high") {
@@ -99,7 +99,7 @@ function initRenderingSettings() {
             }
         });
 
-// Visual feedback: color change based on your brand palette
+        // Visual feedback: color change based on your brand palette
         if (estimatedFPS >= 100) {
             fpsLine.style.color = "#636B58"; // Brand Accent (Verde oliva) - Excellent
         } else if (estimatedFPS >= 60) {
@@ -121,33 +121,34 @@ function initRenderingSettings() {
 }
 
 // =========================
-// 3. TABS (Assets / Workflow Switcher)
+// 3. TABS (Assets / Workflow Switcher) - MEJORADO
 // =========================
 function switchTab(tabId, btn) {
     const container = btn.closest("section");
     if (!container) return;
 
-    // Desactivar todos los paneles de pestañas dentro de la sección
-    container.querySelectorAll(".artwork-tab-content, .tab-content").forEach((tab) => {
+    // 1. Desactivar todos los paneles de pestañas dentro de la sección
+    container.querySelectorAll(".artwork-tab-content").forEach((tab) => {
         tab.classList.remove("active");
         tab.style.display = "none";
         tab.setAttribute("hidden", "");
     });
 
-    // Resetear todos los botones de pestañas
-    container.querySelectorAll(".artwork-tab-btn, .tab-btn").forEach((b) => {
+    // 2. ¡IMPORTANTE! Limpiar la clase .active de TODOS los botones de pestañas de esta sección
+    container.querySelectorAll(".artwork-tab-btn").forEach((b) => {
         b.classList.remove("active");
         b.setAttribute("aria-selected", "false");
     });
 
-    // Activar el panel seleccionado
+    // 3. Activar el panel seleccionado
     const activePanel = document.getElementById(tabId);
     if (!activePanel) return;
+    
     activePanel.classList.add("active");
-    activePanel.style.display = "grid";
+    activePanel.style.display = "grid"; 
     activePanel.removeAttribute("hidden");
 
-    // Activar el botón seleccionado
+    // 4. Activar únicamente el botón pulsado
     btn.classList.add("active");
     btn.setAttribute("aria-selected", "true");
 
@@ -155,12 +156,14 @@ function switchTab(tabId, btn) {
 }
 
 // =========================
-// 4. GALLERY FILTER (Corregido)
+// 4. GALLERY FILTER - MEJORADO
 // =========================
 function filterGallery(category, btn) {
-    // 1. Quitar la clase active y el aria-pressed de TODOS los botones de filtro
-    const filterContainer = btn.closest(".artwork-filter-buttons") || document;
-    filterContainer.querySelectorAll(".artwork-filter-btn, .filter-btn").forEach((b) => {
+    // 1. ¡IMPORTANTE! Quitar la clase active de TODOS los botones de filtro de la galería
+    const filterContainer = btn.closest(".artwork-filter-buttons");
+    if (!filterContainer) return;
+
+    filterContainer.querySelectorAll(".artwork-filter-btn").forEach((b) => {
         b.classList.remove("active");
         b.setAttribute("aria-pressed", "false");
     });
@@ -169,15 +172,14 @@ function filterGallery(category, btn) {
     btn.classList.add("active");
     btn.setAttribute("aria-pressed", "true");
 
-    // 3. Filtrar los elementos de la galería con animación suave
+    // 3. Filtrar los elementos de la galería usando la clase .hidden
     const items = document.querySelectorAll(".gallery-item");
 
     items.forEach((item) => {
         const isVisible = category === "all" || item.classList.contains(category);
 
         if (isVisible) {
-            item.style.display = "block";
-            item.style.transition = "none";
+            item.classList.remove("hidden");
             item.style.opacity = "0";
             item.style.transform = "scale(0.95)";
 
@@ -187,8 +189,7 @@ function filterGallery(category, btn) {
             item.style.opacity = "1";
             item.style.transform = "scale(1)";
         } else {
-            item.style.transition = "none";
-            item.style.display = "none";
+            item.classList.add("hidden");
         }
     });
 
@@ -205,14 +206,14 @@ function initSlider(idContainer, idOverlay, idHandle) {
 
     if (!container || !overlay || !handle) return;
 
-    // Actualizado para buscar las nuevas clases específicas del shader
-    const overlayImg = overlay.querySelector(".bg-shader-after") || overlay.querySelector(".bg-shader-img") || overlay.querySelector("img");
-    const baseImg = container.querySelector(".bg-shader-before") || container.querySelector(".bg-shader-img") || container.querySelector(":scope > img");
+    const overlayImg = overlay.querySelector(".bg-shader-after");
 
+    // Sincronizar el ancho exacto del contenedor para que la imagen de la derecha actúe como una ventana fija
     const syncImageWidth = () => {
         const containerWidth = container.clientWidth;
-        if (overlayImg) overlayImg.style.width = `${containerWidth}px`;
-        if (baseImg) baseImg.style.width = `${containerWidth}px`;
+        if (overlayImg) {
+            overlayImg.style.width = `${containerWidth}px`;
+        }
     };
 
     syncImageWidth();
@@ -230,6 +231,7 @@ function initSlider(idContainer, idOverlay, idHandle) {
         let offsetX = clientX - rect.left;
         let percentage = (offsetX / rect.width) * 100;
         
+        // Limitar entre 0% y 100%
         percentage = Math.max(0, Math.min(percentage, 100));
 
         overlay.style.width = `${percentage}%`;
@@ -272,23 +274,6 @@ function initSlider(idContainer, idOverlay, idHandle) {
         updatePosition(e.touches[0].clientX);
         e.preventDefault();
     }, { passive: false });
-
-    // Accesibilidad por Teclado
-    container.setAttribute("tabindex", "0");
-    container.addEventListener("keydown", (e) => {
-        const step = 5;
-        let currentWidth = parseFloat(overlay.style.width) || 50;
-        if (e.key === "ArrowLeft") {
-            currentWidth = Math.max(0, currentWidth - step);
-            overlay.style.width = `${currentWidth}%`;
-            handle.style.left = `${currentWidth}%`;
-        }
-        if (e.key === "ArrowRight") {
-            currentWidth = Math.min(100, currentWidth + step);
-            overlay.style.width = `${currentWidth}%`;
-            handle.style.left = `${currentWidth}%`;
-        }
-    });
 }
 
 // =========================

@@ -397,18 +397,18 @@
                                     loading="lazy"></iframe>
                             </div>
 
-                            <div class="artwork-video-wrapper" id="shader-slider" style="position: relative; user-select: none; overflow: hidden; border-radius: 8px;">
-                                <span style="position: absolute; top: 1rem; left: 1rem; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 99px; background: rgba(0,0,0,0.6); color: var(--vanilla); z-index: 30; pointer-events: none;" aria-hidden="true" data-i18n="slider_raw">
-                                    Raw Render
-                                </span>
-                                <span style="position: absolute; top: 1rem; right: 1rem; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 99px; background: var(--card-bg); color: var(--ganache); z-index: 30; pointer-events: none;" aria-hidden="true" data-i18n="slider_final">
+                            <div class="artwork-video-wrapper" id="shader-slider" style="position: relative; user-select: none; overflow: hidden; border-radius: 8px; aspect-ratio: 16/9;">
+                                <span style="position: absolute; top: 1rem; left: 1rem; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 99px; background: var(--card-bg) ; color: var(--ganache); z-index: 30; pointer-events: none;" aria-hidden="true" data-i18n="slider_raw">
                                     Final Shader
                                 </span>
+                                <span style="position: absolute; top: 1rem; right: 1rem; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 99px; background: rgba(0,0,0,0.6); color: var(--vanilla) ; z-index: 30; pointer-events: none;" aria-hidden="true" data-i18n="slider_final">
+                                    Raw Render
+                                </span>
 
-                                <div class="bg-shader-before" style="width: 100%; height: 100%; position: absolute; top:0; left:0;" role="img" aria-label="Raw Render"></div>
+                                <div class="bg-shader-before" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" role="img" aria-label="Raw Render"></div>
 
                                 <div id="shader-overlay" style="position: absolute; top: 0; left: 0; width: 50%; height: 100%; overflow: hidden; border-right: 2px solid var(--vanilla); z-index: 20;">
-                                    <div class="bg-shader-after" style="width: 100%; height: 100%; position: absolute; top:0; left:0; width: var(--slider-container-width, 100%);" role="img" aria-label="Final Shader"></div>
+                                    <div class="bg-shader-after" style="position: absolute; top: 0; left: 0; height: 100%;" role="img" aria-label="Final Shader"></div>
                                 </div>
 
                                 <div id="shader-handle"
@@ -543,20 +543,20 @@
                     <div class="artwork-asset-card group">
                         <div class="artwork-asset-media">
                             <div class="bg-asset-2-img" role="img" aria-label="Ancient Magic Chest"></div>
-                            <span class="artwork-asset-pill" data-i18n="pill_hero">Hero Prop</span>
+                            <span class="artwork-asset-pill">Hero Prop</span>
                         </div>
                         <div class="artwork-asset-info">
                             <div>
-                                <h3 class="artwork-asset-name" data-i18n="asset2_name">Ancient Magic Chest</h3>
-                                <p class="artwork-asset-sub" data-i18n="asset2_sub">Hero Prop · Animated</p>
+                                <h3 class="artwork-asset-name">Ancient Magic Chest</h3>
+                                <p class="artwork-asset-sub">Hero Prop · Animated</p>
                             </div>
                             <div class="artwork-asset-stats">
                                 <div>
-                                    <p class="artwork-stat-label" data-i18n="card_tri">Triangles</p>
+                                    <p class="artwork-stat-label">Triangles</p>
                                     <p class="artwork-stat-val">850</p>
                                 </div>
                                 <div>
-                                    <p class="artwork-stat-label" data-i18n="card_maps">Maps</p>
+                                    <p class="artwork-stat-label">Maps</p>
                                     <p class="artwork-stat-val">2K PBR</p>
                                 </div>
                             </div>
@@ -568,16 +568,16 @@
                     <div class="artwork-asset-card group">
                         <div class="artwork-asset-media">
                             <div class="bg-sculpt-img" role="img" aria-label="High Poly Sculpt"></div>
-                            <span class="artwork-asset-pill" data-i18n="pill_highpoly">High Poly</span>
+                            <span class="artwork-asset-pill">High Poly</span>
                         </div>
                         <div class="artwork-asset-info">
                             <div>
-                                <h3 class="artwork-asset-name" data-i18n="asset3_name">Detailed Sculpt Pass</h3>
-                                <p class="artwork-asset-sub" data-i18n="asset3_sub">ZBrush Raw Asset</p>
+                                <h3 class="artwork-asset-name">Detailed Sculpt Pass</h3>
+                                <p class="artwork-asset-sub">ZBrush Raw Asset</p>
                             </div>
                             <div class="artwork-asset-stats">
                                 <div>
-                                    <p class="artwork-stat-label" data-i18n="card_subs">Subdivisions</p>
+                                    <p class="artwork-stat-label">Subdivisions</p>
                                     <p class="artwork-stat-val">Level 5</p>
                                 </div>
                             </div>
